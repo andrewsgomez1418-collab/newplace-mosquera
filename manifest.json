@@ -1,0 +1,24 @@
+{
+  "name": "Newplace Store",
+  "short_name": "Newplace",
+  "description": "Revista Publicitaria Digital - Mosquera Cundinamarca",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#E91E63",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/assets/logos/newplace-icon-192.webp",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/logos/newplace-icon-512.webp",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

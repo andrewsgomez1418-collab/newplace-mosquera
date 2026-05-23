@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<link rel="manifest" href="/manifest.json">
+<link rel="apple-touch-icon" href="assets/img/logo-color.jpeg">
+<meta name="apple-mobile-web-app-title" content="Newplace">
+<meta name="application-name" content="Newplace Store">
+<style>
+  *{-webkit-tap-highlight-color:transparent}
+  html{-webkit-text-size-adjust:100%}
+  img{max-width:100%;height:auto}
+  button,a{touch-action:manipulation}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#1c1c1b">
+<title>Newplace Store — Revista Publicitaria Digital</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVEGACIÓN -->
+<nav class="top-nav">
+  <button class="nav-back" id="backBtn" onclick="goBack()">← Volver</button>
+  <div class="nav-brand"><span class="np-new">new</span><span class="np-place">place</span> <span class="np-store">store</span></div>
+  <div style="width:60px"></div>
+</nav>
+
+<!-- PÁGINA: INICIO -->
+<div class="page active" id="page-index">
+  <header class="site-header">
+
+    <div class="hdr-inner">
+      <img src="/assets/img/logo-color.jpeg" class="hdr-logo-img" style="height: 180px; object-fit: contain; filter: drop-shadow(0 4px 16px rgba(255, 255, 255, 0.3));" alt="Logo New Place Store">
+      <div style="
+        font-family:'Poppins',sans-serif;
+        font-size:clamp(1.4rem,5vw,2.2rem);
+        font-weight:900;
+        letter-spacing:0.35em;
+        color:#1c1c1b;
+        text-shadow:none;
+        margin:6px 0 2px;
+        ">MOSQUERA</div>
+      <p class="hdr-sub" style="margin-top:4px;color:#6f6f6e">Conectamos los mejores negocios de tu zona con su comunidad</p>
+    </div>
+    <div class="wave"><svg viewBox="0 0 1440 56" preserveAspectRatio="none"><path d="M0,28 C360,56 1080,0 1440,28 L1440,56 L0,56 Z" fill="#f5f6fa"/></svg></div>
+  </header>
+
+ <div class="search-wrap">
+    <div class="search-box">
+      <span>🔍</span>
+      <input type="text" id="searchInput" placeholder="Buscar negocios o categorías..." autocomplete="off">
+    </div>
+    <div id="searchResults" class="search-results"></div>
+  </div>
+
+  <div class="blog-section" id="blogSection"></div>
+
+  <div class="section">
+    <h2 class="sec-title">Categorías</h2>
+    <div class="cat-grid" id="catGrid"></div>
+  </div>
+
+
+  <!-- ══ HERO NEWPLACE ══════════════════════════════════════ -->
+  <div class="np-hero">
+    <div class="np-hero-inner">
+      <div class="np-hero-badge">📢 Impulsa tu negocio local</div>
+      <h2 style="margin-bottom:4px;color:#1c1c1b">Haz parte de</h2>
+      <img src="/assets/img/logo-color.jpeg" class="hdr-logo-img" style="height: 120
+      px; object-fit: contain; filter: drop-shadow(0 4px 16px rgba(255, 255, 255, 0.3));" alt="hero New Place Store">
+      <p>La revista publicitaria digital que conecta negocios locales con miles de clientes en su zona. Tu negocio con presencia profesional en internet, sin complicaciones.</p>
+      <a href="#inscripcion" style="display:inline-block;background:#e5007d;color:#ffffff;padding:14px 32px;border-radius:50px;font-weight:800;text-decoration:none;font-size:.95rem;transition:opacity .2s;box-shadow:0 6px 20px rgba(229,0,125,.3)" onmouseover="this.style.opacity='.88'" onmouseout="this.style.opacity='1'">
+        ¡Quiero inscribir mi negocio! →
+      </a>
+    </div>
+  </div>
+
+  <!-- ══ BENEFICIOS ═════════════════════════════════════════ -->
+  <div class="benefits-wrap">
+    <div class="benefits-inner">
+      <h2 class="benefits-title">¿Cómo ayudamos a los negocios locales?</h2>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">🌐</div>
+          <div class="benefit-title">Presencia Digital</div>
+          <div class="benefit-desc">Tu negocio con landing page profesional accesible desde cualquier dispositivo, las 24 horas.</div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">📍</div>
+          <div class="benefit-title">Visibilidad Local</div>
+          <div class="benefit-desc">Aparece en la categoría correcta y llega exactamente a los clientes de tu zona que te buscan.</div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">💬</div>
+          <div class="benefit-title">Contacto Directo</div>
+          <div class="benefit-desc">Botones de WhatsApp, llamada, Instagram y Facebook conectados directamente con tus clientes.</div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">📸</div>
+          <div class="benefit-title">Galería de Trabajos</div>
+          <div class="benefit-desc">Muestra tus mejores proyectos y productos con galería de fotos profesional.</div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🍽️</div>
+          <div class="benefit-title">Menú o Catálogo</div>
+          <div class="benefit-desc">Para restaurantes: menú digital con precios. Para tiendas: catálogo de productos con pedido por WhatsApp.</div>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🚀</div>
+          <div class="benefit-title">Sin Complicaciones</div>
+          <div class="benefit-desc">Nosotros nos encargamos de todo. Tú solo nos das los datos y fotos, y en horas tu negocio está publicado.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ PLANES ═════════════════════════════════════════════ -->
+  <div class="planes-wrap">
+    <div class="planes-inner">
+      <h2 class="planes-title">Planes de Publicación</h2>
+      <p class="planes-sub">Elige el plan que mejor se adapte a tu negocio</p>
+      <div class="planes-grid">
+        <div class="plan-card">
+          <div class="plan-name">🌱 Básico</div>
+          <div class="plan-price">$349.900 <span>/ año</span></div>
+          <ul class="plan-features">
+            <li>Landing page estándar</li>
+            <li>Logo + descripción</li>
+            <li>Botón WhatsApp</li>
+            <li>Botón de llamada</li>
+            <li>Ubicación en el mapa</li>
+            <li>5 fotos</li>
+          </ul>
+          <a href="#inscripcion" class="plan-btn">Quiero este plan</a>
+        </div>
+        <div class="plan-card featured" style="border-color:#e5007d">
+          <div class="plan-badge" style="background:#e5007d">⭐ Más Popular</div>
+          <div class="plan-name">🚀 Profesional</div>
+          <div class="plan-price">$519.900 <span>/ año</span></div>
+          <ul class="plan-features">
+            <li>Todo lo del plan Básico</li>
+            <li>Galería de fotos (hasta 10)</li>
+            <li>Redes sociales enlazadas</li>
+            <li>Botón de llamada directa</li>
+            <li>Menú o Catálogo digital</li>
+            <li>Actualización de contenido, soporte y reporte trimestral</li>
+          </ul>
+          <a href="#inscripcion" class="plan-btn">Quiero este plan</a>
+        </div>
+        <div class="plan-card">
+          <div class="plan-name">💎 Premium PARA EMPRESAS GRANDES Y MAXIMA EXPANCION</div>
+          <div class="plan-price">$899.900 <span>/ año</span></div>
+          <ul class="plan-features">
+            <li>Todo lo del plan Profesional</li>
+            <li>Fotos ilimitadas</li>
+            <li>Posición destacada</li>
+            <li>Aparece en página principal</li>
+            <li>Soporte y actualizacion de contenido prioritario</li>
+            <li>Reportes mensuales</li>
+            <li>IMPORTANTE: Se permiten maximo 3 NEGOCIOS PREMIUM de cada categoria</li>
+          </ul>
+          <a href="#inscripcion" class="plan-btn">Quiero este plan</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ CONTACTO ═══════════════════════════════════════════ -->
+  <div class="contact-wrap">
+    <div class="contact-inner" style="text-align:center">
+      <h2 class="contact-title">Contáctanos</h2>
+      <p class="contact-sub">¿Tienes dudas? Escríbenos o llámanos, estamos listos para ayudarte</p>
+      <div class="contact-cards" style="grid-template-columns:repeat(auto-fill,minmax(160px,1fr))">
+        <a href="https://wa.me/573003629925?text=Hola!%20Quiero%20información%20sobre%20Newplace%20Store" target="_blank" class="contact-card">
+          <div class="contact-card-icon">💬</div>
+          <div class="contact-card-label">WhatsApp</div>
+          <div class="contact-card-value">300 362 9925</div>
+        </a>
+        <a href="tel:+573003629925" class="contact-card">
+          <div class="contact-card-icon">📞</div>
+          <div class="contact-card-label">Llamar</div>
+          <div class="contact-card-value">300 362 9925</div>
+        </a>
+
+        <a href="mailto:produccionrevistanps@gmail.com" class="contact-card" style="min-height:110px;justify-content:center;text-align:center">
+          <div class="contact-card-icon">📧</div>
+          <div class="contact-card-label">Email</div>
+          <div class="contact-card-value" style="font-size:.78rem;text-align:center;line-height:1.5">produccionrevistanps@gmail.com</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ FORMULARIO DE INSCRIPCIÓN ══════════════════════════ -->
+  <div class="form-wrap" id="inscripcion">
+    <div class="form-inner">
+      <h2 class="form-title">📋 Inscribe tu Negocio</h2>
+      <p class="form-sub">Llena el formulario y en menos de 24 horas te contactamos para publicar tu negocio</p>
+
+      <div id="formSuccess" class="form-success">
+        <h3>✅ ¡Solicitud enviada!</h3>
+        <p>Recibimos tu información. En menos de 24 horas uno de nuestros asesores se comunicará contigo por WhatsApp para completar tu publicación.</p>
+      </div>
+
+      <div id="formBody">
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label">Nombre del negocio *</label>
+            <input class="form-input" id="fNombre" type="text" placeholder="Ej: Panadería El Buen Pan">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Tu nombre *</label>
+            <input class="form-input" id="fContacto" type="text" placeholder="Nombre del propietario">
+          </div>
+          <div class="form-group">
+            <label class="form-label">WhatsApp *</label>
+            <input class="form-input" id="fWa" type="tel" placeholder="3001234567">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Teléfono fijo</label>
+            <input class="form-input" id="fTel" type="tel" placeholder="Opcional">
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Categoría *</label>
+            <select class="form-select" id="fCat">
+              <option value="">— Selecciona una categoría —</option>
+              <option>🍎 Salud</option>
+              <option>🍔 Antojos</option>
+              <option>🏠 Soluciones del Hogar</option>
+              <option>🛒 Consumo Frecuente</option>
+              <option>💼 Soluciones Empresariales</option>
+              <option>🔧 Servicios</option>
+              <option>🍷 Experiencia Gourmet</option>
+              <option>💆 Bienestar</option>
+              <option>🛍️ Shopping</option>
+              <option>✂️ Imagen y Estilo</option>
+              <option>🐾 Mundo Mascotas</option>
+              <option>📚 Educación</option>
+              <option>🚗 Movilidad & Talleres</option>
+              <option>🎭 Clasificados & Entretenimiento</option>
+            </select>
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Municipio *</label>
+            <select class="form-select" id="fmunicipio">
+              <option value="">— Selecciona un municipio —</option>
+              <option>🏭 MOSQUERA</option>
+              <option>🚜 FUNZA</option>
+              <option>🏰 FACATATIVA</option>
+            </select>
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Dirección</label>
+            <input class="form-input" id="fDir" type="text" placeholder="Barrio, ciudad o dirección exacta">
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Instagram / Facebook</label>
+            <input class="form-input" id="fRedes" type="text" placeholder="@tunegocio o URL completa">
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Cuéntanos sobre tu negocio *</label>
+            <textarea class="form-textarea" id="fDesc" placeholder="¿Qué productos o servicios ofreces? ¿Cuántos años llevas? ¿Qué te hace diferente?"></textarea>
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Plan de interés</label>
+            <select class="form-select" id="fPlan">
+              <option value="">— Selecciona un plan —</option>
+              <option>🌱 Básico</option>
+              <option>🚀 Profesional (más popular)</option>
+              <option>💎 Premium</option>
+              <option>No sé aún, quiero asesoría</option>
+            </select>
+          </div>
+        </div>
+        <button class="form-submit" onclick="enviarFormulario()">
+          📧 Enviar solicitud — produccionrevistanps@gmail.com
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <img src="/assets/img/logo-bn.webp" class="hdr-logo-img" style="height: 80px; object-fit: contain; filter: drop-shadow(0 4px 12px rgba(0,0,0,0.2));" alt="New Place Store Footer">
+    <p>© 2025 Newplace Store · Todos los derechos reservados</p>
+    <p style="font-size:.73rem;opacity:.6">La revista digital que conecta negocios locales con su comunidad</p>
+  </footer>
+</div>
+
+<!-- PÁGINA: CATEGORÍA -->
+<div class="page" id="page-cat">
+  <header class="cat-hdr" id="catHdrEl">
+    <div class="cat-hdr-inner">
+      <div class="cat-hdr-emoji" id="catEmoji"></div>
+      <h1 class="cat-hdr-title" id="catTitle"></h1>
+      <p class="cat-hdr-sub" id="catSub"></p>
+    </div>
+    <div class="wave"><svg viewBox="0 0 1440 56" preserveAspectRatio="none"><path d="M0,28 C360,56 1080,0 1440,28 L1440,56 L0,56 Z" fill="#f5f6fa"/></svg></div>
+  </header>
+  <div class="section">
+    <div class="biz-grid" id="catBizGrid"></div>
+  </div>
+  <footer class="site-footer"><p>© 2025 Newplace Store</p></footer>
+</div>
+
+<!-- PÁGINA: NEGOCIO -->
+<div class="page" id="page-neg">
+  <div class="prof-cover" id="profCover"><div class="prof-cover-ov"></div></div>
+  <div class="prof-header">
+    <div class="prof-logo-wrap">
+      <div class="prof-logo" id="profLogo"></div>
+    </div>
+    <div class="prof-info">
+      <span class="prof-badge" id="profBadge"></span>
+      <h1 class="prof-name" id="profName"></h1>
+      <p class="prof-slogan" id="profSlogan"></p>
+    </div>
+  </div>
+  <div class="action-bar" id="profActions"></div>
+  <div class="tabs-wrap">
+    <div class="tabs" id="negTabs"></div>
+  </div>
+  <div id="negTabContent">
+    <div class="tab-body active" id="tab-info"></div>
+    <div class="tab-body" id="tab-menu"></div>
+    <div class="tab-body" id="tab-catalogo"></div>
+  </div>
+  <footer class="site-footer" style="margin-top:40px">
+    <p style="font-size:.78rem;opacity:.7">Publicado en <strong>Newplace Store</strong></p>
+  </footer>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+  ⭐ DATOS — AQUÍ EDITAS TODO EL CONTENIDO DEL SITIO
+  ═══════════════════════════════════════════════════════════ -->
+</body>
+<script src="/js/datos.js"></script>
+<script src="/js/app.js"></script>
+</body>
+</html>
