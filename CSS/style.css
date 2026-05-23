@@ -486,11 +486,11 @@ body{font-family:var(--font);background:var(--bg);color:var(--text)}
   border: 3px solid;
 }
 .biz-card.featured-1 {
-  border-color: #ff0080; /* ORO */
+  border-color: #ffffff; /* ORO */
 }
 .biz-card.featured-2 {
-  border-color: #ff0080; /* PLATA */
+  border-color: #ffffff; /* PLATA */
 }
 .biz-card.featured-3 {
-  border-color: #ff0080; /* BRONCE */
+  border-color: #ffffff; /* BRONCE */
 }
