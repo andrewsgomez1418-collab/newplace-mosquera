@@ -337,7 +337,14 @@ function openCat(cat) {
   
   // Actualizar contenido
   document.getElementById('catEmoji').textContent = cat.e;
+  if (cat.showTitle !== false) {
   document.getElementById('catTitle').textContent = cat.n;
+} else {
+  document.getElementById('catTitle').textContent = '';
+}
+
+// O más corto:
+document.getElementById('catTitle').textContent = cat.showTitle !== false ? cat.n : '';
  
   // ═══════════════════════════════════════════════════════════
   // RENDERIZAR NEGOCIOS DE LA CATEGORÍA

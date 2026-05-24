@@ -35,21 +35,21 @@ const BLOG = {
    Si no hay foto, se usa el color de fondo + emoji.
    ───────────────────────────────────────────────────────────── */
 const CATS = [
-  { id:"salud",        n:"",                          e:"", c:"#27ae60", img:"assets/categorias/categoria-salud.webp", imgHdr:"assets/categorias/destacados/destacados-salud.webp"},
-  { id:"antojos",      n:"",                        e:"", c:"#e74c3c", img:"assets/categorias/categoria-antojos.webp", imgHdr:"assets/categorias/destacados/destacados-antojos.webp"},
-  { id:"hogar",        n:"",           e:"", c:"#2980b9", img:"assets/categorias/categoria-hogar.webp", imgHdr:"assets/categorias/destacados/destacados-soluciones-hogar.webp"},
-  { id:"consumo",      n:"",              e:"", c:"#8e44ad", img:"assets/categorias/categoria-consumofrecuente.webp", imgHdr:"assets/categorias/destacados/destacados-consumo-frecuente.webp"},
-  { id:"empresarial",  n:"",       e:"", c:"#2c3e50", img:"assets/categorias/categoria-empresarial.webp", imgHdr:"assets/categorias/destacados/salud.webp"},
-  { id:"servicios",    n:"",                      e:"", c:"#d35400", img:"assets/categorias/categoria-servicios.webp", imgHdr:"assets/categorias/destacados/salud.jpg"},
-  { id:"gourmet",      n:"",            e:"", c:"#922b21", img:"assets/categorias/categoria-gourmet.webp", imgHdr:"assets/categorias/destacados/salud.jpg"},
-  { id:"bienestar",    n:"",                      e:"", c:"#1abc9c", img:"assets/categorias/categoria-bienestar.webp", imgHdr:"assets/categorias/destacados/destacado-bienestar.webp"},
-  { id:"shopping",     n:"",                       e:"", c:"#e5007d", img:"assets/categorias/categoria-shopping.webp", imgHdr:"assets/categorias/destacados/destacados-shopping.webp"},
-  { id:"imagen",       n:"",                e:"", c:"#9b59b6", img:"assets/categorias/categoria-estilo.webp", imgHdr:"assets/categorias/destacados/destacados-imagen-estilos.webp"},
-  { id:"mascotas",     n:"",                 e:"", c:"#f39c12", img:"assets/categorias/mascotas.webp", imgHdr:"assets/categorias/destacados/destacados-macotas.webp"},
-  { id:"educacion",    n:"",                      e:"", c:"#3498db", img:"assets/categorias/categoria-educacion.webp", imgHdr:"assets/categorias/destacados/destacados-educacion.webp"},
-  { id:"movilidad",    n:"",           e:"", c:"#616161", img:"assets/categorias/categoria-talleres.webp", imgHdr:"assets/categorias/destacados/salud.jpg"},
-  { id:"clasificados",    n:"",                e:"", c:"#e65100", img:"assets/categorias/categoria-clasificados.webp", imgHdr:"assets/categorias/destacados/salud.jpg"},
-  { id:"entretenimiento", n:"",             e:"", c:"#7b1fa2", img:"assets/categorias/categoria-entretenimiento.webp", imgHdr:"assets/categorias/destacados/salud.jpg"},
+  { id:"salud",        n:"SALUD",                          e:"", c:"#27ae60", img:"assets/categorias/categoria-salud.webp", imgHdr:"assets/categorias/destacados/destacados-salud.webp", showTitle: false},
+  { id:"antojos",      n:"ANTOJOS",                        e:"", c:"#e74c3c", img:"assets/categorias/categoria-antojos.webp", imgHdr:"assets/categorias/destacados/destacados-antojos.webp", showTitle: false},
+  { id:"hogar",        n:"SOLUCIONES DEL HOGAR",           e:"", c:"#2980b9", img:"assets/categorias/categoria-hogar.webp", imgHdr:"assets/categorias/destacados/destacados-soluciones-hogar.webp", showTitle: false},
+  { id:"consumo",      n:"CONSUMO FRECUENTE",              e:"", c:"#8e44ad", img:"assets/categorias/categoria-consumofrecuente.webp", imgHdr:"assets/categorias/destacados/destacados-consumo-frecuente.webp", showTitle: false},
+  { id:"empresarial",  n:"SOLUCIONES EMPRESARIALES",       e:"", c:"#2c3e50", img:"assets/categorias/categoria-empresarial.webp", imgHdr:"assets/categorias/destacados/salud.webp", showTitle: false},
+  { id:"servicios",    n:"SERVICIOS",                      e:"", c:"#d35400", img:"assets/categorias/categoria-servicios.webp", imgHdr:"assets/categorias/destacados/salud.jpg", showTitle: false},
+  { id:"gourmet",      n:"EXPERIENCIA GOURMET",            e:"", c:"#922b21", img:"assets/categorias/categoria-gourmet.webp", imgHdr:"assets/categorias/destacados/salud.jpg", showTitle: false},
+  { id:"bienestar",    n:"SALUD Y BIENESTAR",                      e:"", c:"#1abc9c", img:"assets/categorias/categoria-bienestar.webp", imgHdr:"assets/categorias/destacados/destacado-bienestar.webp", showTitle: false},
+  { id:"shopping",     n:"SHOPPING",                       e:"", c:"#e5007d", img:"assets/categorias/categoria-shopping.webp", imgHdr:"assets/categorias/destacados/destacados-shopping.webp", showTitle: false},
+  { id:"imagen",       n:"IMAGEN Y ESTILO",                e:"", c:"#9b59b6", img:"assets/categorias/categoria-estilo.webp", imgHdr:"assets/categorias/destacados/destacados-imagen-estilos.webp", showTitle: false},
+  { id:"mascotas",     n:"MUNDO MASCOTAS",                 e:"", c:"#f39c12", img:"assets/categorias/mascotas.webp", imgHdr:"assets/categorias/destacados/destacados-macotas.webp", showTitle: false},
+  { id:"educacion",    n:"EDUCACION Y APRENDIZAGE",                      e:"", c:"#3498db", img:"assets/categorias/categoria-educacion.webp", imgHdr:"assets/categorias/destacados/destacados-educacion.webp", showTitle: false},
+  { id:"movilidad",    n:"TALLERES Y MOVILIDAD",           e:"", c:"#616161", img:"assets/categorias/categoria-talleres.webp", imgHdr:"assets/categorias/destacados/salud.jpg", showTitle: false},
+  { id:"clasificados",    n:"CLASIFICADOS",                e:"", c:"#e65100", img:"assets/categorias/categoria-clasificados.webp", imgHdr:"assets/categorias/destacados/salud.jpg", showTitle: false},
+  { id:"entretenimiento", n:"ENTRETENIMIENTO",             e:"", c:"#7b1fa2", img:"assets/categorias/categoria-entretenimiento.webp", imgHdr:"assets/categorias/destacados/salud.jpg", showTitle: false},
 ];
  
 /* ──────────────────────────────────────────────────────────
@@ -385,7 +385,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573224456329",
-    tel:         "",
+    tel:         "3224456329",
     ig:          "https://www.instagram.com/consultorioterapeuticoom25?igsh=dGliNXQ1dDJkN2U3",
     fb:          "https://www.facebook.com/share/14bsWWuNbz5/",
     tk:          "https://vt.tiktok.com/ZSxJF7V66/",
@@ -430,7 +430,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573009914883",
-    tel:         "",
+    tel:         "3009914883",
     ig:          "https://www.instagram.com/lydatovar.od?igsh=MWMzdDNmOG12bzA4MQ==",
     fb:          "https://www.facebook.com/share/1BuDKFfnNx/",
     tk:          "https://www.tiktok.com/@lydatovar.od?_r=1&_t=ZS-91YqqBHeTk0",
@@ -475,7 +475,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573123397984",
-    tel:         "",
+    tel:         "3123397984",
     ig:          "https://www.instagram.com/bio.careoficial?igsh=cDU5NW8zejYyMXZo",
     fb:          "https://www.facebook.com/share/184oFmhcGQ/",
     tk:          "",
@@ -565,7 +565,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573208293216",
-    tel:         "",
+    tel:         "3208293216",
     ig:          "https://www.instagram.com/p/DL8ip8DxWMS/?igsh=MWsxZHN2ZWU5MWtjYw==",
     fb:          "",
     tk:          "",
@@ -660,7 +660,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573115866976",
-    tel:         "",
+    tel:         "3115866976",
     ig:          "",
     fb:          "",
     web:         "",
@@ -1340,7 +1340,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573133828058",
-    tel:         "",
+    tel:         "3133828058",
     ig:          "https://www.instagram.com/maytonarteymadera?igsh=MWhxczk1dnhpaXY4cQ==",
     fb:          "",
     web:         "",
@@ -2496,7 +2496,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573208298353",
-    tel:         "",
+    tel:         "3208298353",
     ig:          "",
     fb:          "",
     tk:          "",
@@ -2541,7 +2541,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573008784892",
-    tel:         "",
+    tel:         "3008784892",
     ig:          "https://www.instagram.com/chicharronbendito/",
     fb:          "https://www.facebook.com/share/18K55QiAk4/",
     tk:          "https://www.tiktok.com/@benditochicharron?_r=1&_t=ZS-94YUPKvGits",
@@ -2586,7 +2586,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573125572621",
-    tel:         "",
+    tel:         "3125572621",
     ig:          "https://www.instagram.com/pomodoro_pizza_y_pasta?igsh=MWZ0bnBmN2E5NWg5Yw==",
     fb:          "",
     tk:          "",
@@ -3579,9 +3579,9 @@ const NEGOCIOS = [
     logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
-    logoPerfil:  "assets/logos/valentina/",
-    cardImage:   "assets/logos/valentina/",
-    portada:     "assets/logos/valentina/",
+    logoPerfil:  "assets/logos/valentina/logo-academia-valentina.jpg",
+    cardImage:   "assets/logos/valentina/inicio-academia-valentina.jpg",
+    portada:     "assets/logos/valentina/portada-academia-valentina.jpg",
  
     /* ─── TAMAÑOS RESPONSIVOS (clamp: min, preferido, max) ─── */
     cardHeight:      "clamp(350px, 180vw, 250px)",
