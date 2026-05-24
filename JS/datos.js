@@ -36,17 +36,17 @@ const BLOG = {
    ───────────────────────────────────────────────────────────── */
 const CATS = [
   { id:"salud",        n:"",                          e:"", c:"#27ae60", img:"assets/categorias/categoria-salud.webp", imgHdr:"assets/categorias/destacados/destacados-salud.webp"},
-  { id:"antojos",      n:"",                        e:"", c:"#e74c3c", img:"assets/categorias/categoria-antojos.webp", imgHdr:"assets/categorias/destacados/destacados-antojos.jpg"},
-  { id:"hogar",        n:"",           e:"", c:"#2980b9", img:"assets/categorias/categoria-hogar.webp", imgHdr:"assets/categorias/destacados/destacados-soluciones-hogar.jpg"},
-  { id:"consumo",      n:"",              e:"", c:"#8e44ad", img:"assets/categorias/categoria-consumofrecuente.webp", imgHdr:"assets/categorias/destacados/destacados-consumo-frecuente.jpg"},
-  { id:"empresarial",  n:"",       e:"", c:"#2c3e50", img:"assets/categorias/categoria-empresarial.webp", imgHdr:"assets/categorias/destacados/salud.jpg"},
+  { id:"antojos",      n:"",                        e:"", c:"#e74c3c", img:"assets/categorias/categoria-antojos.webp", imgHdr:"assets/categorias/destacados/destacados-antojos.webp"},
+  { id:"hogar",        n:"",           e:"", c:"#2980b9", img:"assets/categorias/categoria-hogar.webp", imgHdr:"assets/categorias/destacados/destacados-soluciones-hogar.webp"},
+  { id:"consumo",      n:"",              e:"", c:"#8e44ad", img:"assets/categorias/categoria-consumofrecuente.webp", imgHdr:"assets/categorias/destacados/destacados-consumo-frecuente.webp"},
+  { id:"empresarial",  n:"",       e:"", c:"#2c3e50", img:"assets/categorias/categoria-empresarial.webp", imgHdr:"assets/categorias/destacados/salud.webp"},
   { id:"servicios",    n:"",                      e:"", c:"#d35400", img:"assets/categorias/categoria-servicios.webp", imgHdr:"assets/categorias/destacados/salud.jpg"},
   { id:"gourmet",      n:"",            e:"", c:"#922b21", img:"assets/categorias/categoria-gourmet.webp", imgHdr:"assets/categorias/destacados/salud.jpg"},
-  { id:"bienestar",    n:"",                      e:"", c:"#1abc9c", img:"assets/categorias/categoria-bienestar.webp", imgHdr:"assets/categorias/destacados/destacado-bienestar.jpg"},
-  { id:"shopping",     n:"",                       e:"", c:"#e5007d", img:"assets/categorias/categoria-shopping.webp", imgHdr:"assets/categorias/destacados/destacados-shopping.jpg"},
-  { id:"imagen",       n:"",                e:"", c:"#9b59b6", img:"assets/categorias/categoria-estilo.webp", imgHdr:"assets/categorias/destacados/destacados-imagen-estilos.jpg"},
-  { id:"mascotas",     n:"",                 e:"", c:"#f39c12", img:"assets/categorias/mascotas.webp", imgHdr:"assets/categorias/destacados/destacados-macotas.jpg"},
-  { id:"educacion",    n:"",                      e:"", c:"#3498db", img:"assets/categorias/categoria-educacion.webp", imgHdr:"assets/categorias/destacados/destacados-educacion.jpg"},
+  { id:"bienestar",    n:"",                      e:"", c:"#1abc9c", img:"assets/categorias/categoria-bienestar.webp", imgHdr:"assets/categorias/destacados/destacado-bienestar.webp"},
+  { id:"shopping",     n:"",                       e:"", c:"#e5007d", img:"assets/categorias/categoria-shopping.webp", imgHdr:"assets/categorias/destacados/destacados-shopping.webp"},
+  { id:"imagen",       n:"",                e:"", c:"#9b59b6", img:"assets/categorias/categoria-estilo.webp", imgHdr:"assets/categorias/destacados/destacados-imagen-estilos.webp"},
+  { id:"mascotas",     n:"",                 e:"", c:"#f39c12", img:"assets/categorias/mascotas.webp", imgHdr:"assets/categorias/destacados/destacados-macotas.webp"},
+  { id:"educacion",    n:"",                      e:"", c:"#3498db", img:"assets/categorias/categoria-educacion.webp", imgHdr:"assets/categorias/destacados/destacados-educacion.webp"},
   { id:"movilidad",    n:"",           e:"", c:"#616161", img:"assets/categorias/categoria-talleres.webp", imgHdr:"assets/categorias/destacados/salud.jpg"},
   { id:"clasificados",    n:"",                e:"", c:"#e65100", img:"assets/categorias/categoria-clasificados.webp", imgHdr:"assets/categorias/destacados/salud.jpg"},
   { id:"entretenimiento", n:"",             e:"", c:"#7b1fa2", img:"assets/categorias/categoria-entretenimiento.webp", imgHdr:"assets/categorias/destacados/salud.jpg"},
@@ -91,6 +91,9 @@ const NEGOCIOS = [
     /* ─── INFORMACIÓN BÁSICA ─── */
     id:          "estandar",
     cat:         "",
+    destacado: 1,  // ORO 🥇
+    destacado: 2,  // PLATA 🥈
+    destacado: 3,  // BRONCE 🥉
     nombre:      "",
     slogan:      "",
     desc:        "",
@@ -111,7 +114,9 @@ const NEGOCIOS = [
     galeriaHeight:   "clamp(150px, 20vw, 240px)",
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
-    wa:          "57",
+    was: [
+  { nombre: "", numero: "" },
+],
     tel:         "",
     ig:          "",
     fb:          "",
@@ -121,7 +126,11 @@ const NEGOCIOS = [
     /* ─── UBICACIÓN Y MAPA ─── */
     dir:         "",
     mapUrl:      "",
-    mapsLink:    "",
+    mapsLinks: [
+      { nombre: "", url: "" },
+      { nombre: "", url: "" },
+      { nombre: "", url: "" },
+    ],
  
     /* ─── GALERÍA DE FOTOS ─── */
     galeria:     [
@@ -263,6 +272,7 @@ const NEGOCIOS = [
     /* ─── INFORMACIÓN BÁSICA ─── */
     id:          "dra-ingrid",
     cat:         "salud",
+    destacado:   1,
     nombre:      "DRA INGRID MEDICO CIRUJANO",
     slogan:      "Especialista en medicina alternativa y farmacología vegetal médica funcional y estética ",
     desc:        "METABOLISMO: * sobrepeso * hígado graso * diabetes * estreñimiento * gastritis * hipotiroidismo * resistencia a la insulina * desintoxicación básica y profunda. MEDICINA ESTÉTICA: * tratamientos faciales avanzadas * tratamiento de acné * rejuvenecimiento facial * reducción de grasa localizada * tratamiento para acidez * terapias capilares * depilación laser permanente. SALUD MENTAL: * ansiedad * depresión y estrés * alteraciones de sueño. DOLOR Y REGENERACIÓN CELULAR: * artritis y artrosis * dolor lumbar * migraña * parálisis facial * neuralgia * fibromialgia * cansancio y fatiga crónica * contracturas musculares",
@@ -284,11 +294,11 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573212406305",
-    tel:         "",
+    tel:         "3212406305",
     ig:          "https://www.instagram.com/dra.ingrid.manrique/",
     fb:          "https://www.facebook.com/p/Dra-Ingrid-Andrea-Manrique-100064058706256/?locale=es_LA",
     tk:          "",
-    web:         "https://doctoraingridmanrique.com.co/",
+    web:         "",
  
     /* ─── UBICACIÓN Y MAPA ─── */
     dir:         "carrera 5 # 1-64 PISO 2 entrada por la calle 2da MOSQUERA",
@@ -308,6 +318,7 @@ const NEGOCIOS = [
     /* ─── INFORMACIÓN BÁSICA ─── */
     id:          "dra-julia",
     cat:         "salud",
+    destacado:   1,
     nombre:      "DRA JULIA PSICOLOGA",
     slogan:      "SALUD MENTAL, PSICOTERAPIA, BIENESTAR EMOCIONAL, APOYO TERAPEUTICO, ATENCIÓN PSICOLOGIA ",
     desc:        " Egresada de la universidad Santo Tomás, con más de 35 años de experiencia en el abordaje de diversas problemáticas que afectan la salud mental de niños(as), adolescentes, jóvenes, adultos y personas mayores. Mi enfoque es sistémico, orientado a resultados, utilizando estrategias efectivas que facilitan la resolución de los conflictos y el bienestar emocional del paciente. Me caracterizo por ser una persona empática, amable, centrada en las necesidades individuales de cada consultante, ofreciendo un espacio seguro y de confianza para el proceso terapéutico.",
@@ -329,7 +340,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573125369622",
-    tel:         "573144441385",
+    tel:         "3144441385",
     ig:          "",
     fb:          "",
     tk:          "",
@@ -508,8 +519,8 @@ const NEGOCIOS = [
     galeriaHeight:   "clamp(150px, 20vw, 240px)",
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
-    wa:          "573138395531",
-    tel:         "573053020214",
+    wa:          "573053020214",
+    tel:         "3138395531",
     ig:          "",
     fb:          "https://www.facebook.com/telemedicinadoctorflorian",
     tk:          "https://www.tiktok.com/@drdavidflorian?_r=1&_t=ZS-91mTBKjsUyq",
@@ -558,7 +569,7 @@ const NEGOCIOS = [
     ig:          "https://www.instagram.com/p/DL8ip8DxWMS/?igsh=MWsxZHN2ZWU5MWtjYw==",
     fb:          "",
     tk:          "",
-    web:         "https://share.google/4hgLeOYaIPYUflVQ9",
+    web:         "",
  
     /* ─── UBICACIÓN Y MAPA ─── */
     dir:         "Cra. 2a #22-02, Barrio el cabrero, Mosquera, Cundinamarca",
@@ -599,7 +610,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573103346547",
-    tel:         "",
+    tel:         "3103346547",
     ig:          "https://www.instagram.com/psi2024yolima?igsh=Zjl0ZHk3Z3Vrazhm",
     fb:          "https://www.facebook.com/profile.php?id=61567573120873",
     tk:          "",
@@ -608,7 +619,7 @@ const NEGOCIOS = [
     /* ─── UBICACIÓN Y MAPA ─── */
     dir:         "CALLE 5 # 1-28 ESTE MOSQUERA",
     mapUrl:      "",
-    mapsLink:    "",
+    mapsLink:    "https://maps.app.goo.gl/kn3Lp99LxDr9hz6S9",
  
     /* ─── GALERÍA DE FOTOS ─── */
     galeria:     [
@@ -627,6 +638,7 @@ const NEGOCIOS = [
     /* ─── INFORMACIÓN BÁSICA ─── */
     id:          "lagranparada",
     cat:         "antojos",
+    destacado:   1,
     nombre:      "LA GRAN PARADA",
     slogan:      "El placer de comer.",
     desc:        "Somos un espacio ideal para disfrutar sabores tradicionales y productos frescos todos los días. Trabajamos con calidad, sabor casero y atención amable para brindar a nuestros clientes una experiencia deliciosa en cada visita. SURTIMOS TU NEGOCIO: buñuelos, pan de bono, empanadas, palitos de queso }arepas de maiz con queso, pan de queso, crema de avena, masa lista para buñuelos, masa lista para pan de bonos",
@@ -672,6 +684,7 @@ const NEGOCIOS = [
     /* ─── INFORMACIÓN BÁSICA ─── */
     id:          "gustoso",
     cat:         "antojos",
+    destacado:   1,
     nombre:      "GUSTOSO ARROZ PAISA",
     slogan:      "Lo mejor del sabor !",
     desc:        "Gustoso no nació en una oficina, nació en una cocina de casa, entre el aroma del arroz recién salteado y el sonido crujiente de una milanesa en su punto exacto.​Quisimos crear algo que nos hiciera sentir orgullosos de nuestra tierra: una comida honesta, abundante y con ese toque artesanal que solo se logra cuando se cocina sin afán. Por eso, cada salsa es nuestra, cada arroz tiene su secreto y cada milanesa se prepara pensando en que tú, nuestro vecino, vuelvas siempre por más.​¡Gracias por ser parte de nuestra mesa!. sabor tradicional ,arroz chino ,comida paisa,cocina fusión,almuerzos especiales",
@@ -693,7 +706,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573118202319",
-    tel:         "573224523902",
+    tel:         "3224523902",
     ig:          "",
     fb:          "",
     tk:          "",
@@ -738,7 +751,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573238233537",
-    tel:         "",
+    tel:         "3238233537",
     ig:          "https://www.instagram.com/elbroasterdelchefmosquera?igsh=cGo5ODkzbGtodzU2",
     fb:          "https://www.facebook.com/share/1LJHjdGQpA/",
     tk:          "https://www.tiktok.com/@el.broaster.del.chef.mos?_r=1&_t=ZS-94Zq0FIUFMq",
@@ -783,7 +796,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573143522518",
-    tel:         "",
+    tel:         "3143522518",
     ig:          "",
     fb:          "",
     web:         "",
@@ -827,7 +840,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573209077219",
-    tel:         "",
+    tel:         "3209077219",
     ig:          "",
     fb:          "",
     web:         "",
@@ -871,7 +884,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573503987052",
-    tel:         "",
+    tel:         "3503987052",
     ig:          "",
     fb:          "",
     web:         "",
@@ -915,7 +928,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573102507039",
-    tel:         "",
+    tel:         "3102507039",
     ig:          "",
     fb:          "https://www.facebook.com/share/14MfWbLTjSt/",
     web:         "",
@@ -959,7 +972,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573134901857",
-    tel:         "",
+    tel:         "3134901857",
     ig:          "https://www.instagram.com/ricatentacionfru?igsh=MXhtOTBjdjQ1dDlkMw==",
     fb:          "https://www.facebook.com/share/1KjtX7pkij/",
     tk:          "https://www.tiktok.com/@rica.tentacion.rt1?_r=1&_t=ZS-9511vbKhTEq",
@@ -1003,8 +1016,11 @@ const NEGOCIOS = [
     galeriaHeight:   "clamp(150px, 20vw, 240px)",
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
-    wa:          "573118984012",
-    tel:         "573212860408",
+    was: [
+  { nombre: "WHATSAPP", numero: "573118984012" },
+  { nombre: "WHATSAPP", numero: "573212860408" },
+],
+    tel:         "3118984012",
     ig:          "",
     fb:          "",
     web:         "",
@@ -1051,7 +1067,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573183909968",
-    tel:         "",
+    tel:         "3183909968",
     ig:          "",
     fb:          "",
     web:         "",
@@ -1078,6 +1094,7 @@ const NEGOCIOS = [
     /* ─── INFORMACIÓN BÁSICA ─── */
     id:          "steel304",
     cat:         "hogar",
+    destacado:   1,
     nombre:      "STTEL  304",
     slogan:      "SOLUCIONES EN VIDRIOS Y ACERO INOXIDABLES A MEDIDA DISEÑO- FABRICACION INSTALACION",
     desc:        "Divisiones de baño en vidrio Barandales y fachadas Accesorios en acero inoxidables Sandblasting y mecanizado Ventas de cortinas",
@@ -1098,12 +1115,12 @@ const NEGOCIOS = [
     galeriaHeight:   "clamp(150px, 20vw, 240px)",
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
-    wa:          "573138506002",
-    tel:         "573102927384",
+    wa:          "573102927384",
+    tel:         "3138506002",
     ig:          "https://www.instagram.com/steel304_co?igsh=YTRsczllNXU1Zmoz",
     fb:          "https://www.facebook.com/share/1L6kwFco9d/",
     tk:          "https://www.tiktok.com/@steel.3041?_r=1&_t=ZS-96MEppVmnxg",
-    web:         "http://www.steel304.com.com",
+    web:         "",
  
     /* ─── UBICACIÓN Y MAPA ─── */
     dir:         "Carrera 10a 14 46 MOSQUERA",
@@ -1144,7 +1161,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573212557963",
-    tel:         "",
+    tel:         "3212557963",
     ig:          "https://www.instagram.com/cerrajeria_maxsecurity?utm_source=qr&igsh=bGs0a3F3ZDR2Y2Rr",
     fb:          "https://www.facebook.com/share/14KRHsVkWn8/",
     tk:          "https://www.tiktok.com/@cerrajera.maxsecu?_t=ZS-90RcqNFUc5Q&_r=1",
@@ -1189,7 +1206,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573123726267",
-    tel:         "573105512663",
+    tel:         "3105512663",
     ig:          "https://www.instagram.com/galleryhomecortinas?igsh=MWc2aXJtbmpiZGdodA==",
     fb:          "https://www.facebook.com/share/1CFGbiHuda/",
     tk:          "https://www.tiktok.com/@galleryhomecortinas?_r=1&_t=ZS-93Go1I9buNw",
@@ -1234,7 +1251,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573138446394",
-    tel:         "",
+    tel:         "3138446394",
     ig:          "",
     fb:          "",
     web:         "",
@@ -1242,7 +1259,7 @@ const NEGOCIOS = [
     /* ─── UBICACIÓN Y MAPA ─── */
     dir:         "Calle 18 # 3a esté 04 MOSQUERA",
     mapUrl:      "",
-    mapsLink:    "https://maps.app.goo.gl/eg9PC6htMDcXEBDbA",
+    mapsLink:    "",
  
     /* ─── GALERÍA DE FOTOS ─── */
     galeria:     [
@@ -1278,7 +1295,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573202801379",
-    tel:         "",
+    tel:         "3202801379",
     ig:          "https://www.instagram.com/innova_herrajeser?igsh=Z255NWp5MjdrMWxj",
     fb:          "https://www.facebook.com/share/15bxZij47iF/",
     tk:          "https://www.tiktok.com/@innova_herrajes?_r=1&_t=ZS-94gruQRpsOI",
@@ -1367,7 +1384,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573123718939",
-    tel:         "",
+    tel:         "3123718939",
     ig:          "https://www.instagram.com/modularesvr?igsh=bDcwN2w5amhxbXYz",
     fb:          "https://www.facebook.com/share/1CRN3KLWKe/",
     tk:          "https://www.tiktok.com/@modularesvr?_r=1&_t=ZS-96MO0izLGbg",
@@ -1412,7 +1429,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573228982393",
-    tel:         "",
+    tel:         "3228982393",
     ig:          "",
     fb:          "",
     web:         "",
@@ -1444,9 +1461,9 @@ const NEGOCIOS = [
     logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
-    logoPerfil:  "assets/logos/ALUMINGLASS/logo-aluminglass.jpg",
-    cardImage:   "assets/logos/ALUMINGLASS/inicio-aluminglass.jpg",
-    portada:     "assets/logos/ALUMINGLASS/portada-aluminglass.jpg",
+    logoPerfil:  "assets/logos/ALUMINGLASS/logo-aluminglass.webp",
+    cardImage:   "assets/logos/ALUMINGLASS/inicio-aluminglass.webp",
+    portada:     "assets/logos/ALUMINGLASS/portada-aluminglass.webp",
  
     /* ─── TAMAÑOS RESPONSIVOS (clamp: min, preferido, max) ─── */
     cardHeight:      "clamp(350px, 180vw, 250px)",
@@ -1456,7 +1473,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573126321030",
-    tel:         "",
+    tel:         "3126321030",
     ig:          "https://www.instagram.com/alumiglass.col?igsh=czN4eWFkcGg0OThn",
     fb:          "",
     web:         "",
@@ -1468,7 +1485,7 @@ const NEGOCIOS = [
  
     /* ─── GALERÍA DE FOTOS ─── */
     galeria:     [
-      "assets/logos/aluminglass/aluminglass1.jpeg","assets/logos/aluminglass/aluminglass2.jpeg","assets/logos/aluminglass/aluminglass3.jpeg","assets/logos/ALUMINGLASS/aluminglass4.jpeg","assets/logos/aluminglass/aluminglass5.jpeg",
+      "assets/logos/aluminglass/aluminglass1.webp","assets/logos/aluminglass/aluminglass2.webp","assets/logos/aluminglass/aluminglass3.webp","assets/logos/ALUMINGLASS/aluminglass4.webp","assets/logos/aluminglass/aluminglass5.webp",
     ],
   },
 // ══ SHOPPING ════════════════════════════════════════════════
@@ -1483,6 +1500,7 @@ const NEGOCIOS = [
     /* ─── INFORMACIÓN BÁSICA ─── */
     id:          "patikoo",
     cat:         "shopping",
+    destacado:   1,
     nombre:      "PATIKOO PAÑALERIA",
     slogan:      "Celebraciones creativas y llenas de amor.",
     desc:        "Piñatería Patikoo nace para crear celebraciones creativas y llenas de amor, donde cada detalle cuenta. Es un emprendimiento dedicado a la ambientación y decoración de eventos infantiles y familiares, ofreciendo propuestas personalizadas para cumpleaños, baby showers, bautizos y fechas especiales.Además, en Piñatería Patikoo los clientes pueden encontrar todo lo necesario para decorar sus fiestas en un solo lugar, como guirnaldas, bombas, serpentinas, piñatas, globos metalizados, velas y diversos accesorios para celebraciones. Su trabajo se distingue por la creatividad, el cuidado en los detalles y el compromiso de convertir cada evento en un recuerdo especial.",
@@ -1504,7 +1522,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573112484143",
-    tel:         "",
+    tel:         "3112484143",
     ig:          "https://www.instagram.com/pinateria_patikoo?igsh=bXd3cmRmY3A3dGF0&utm_source=qr",
     fb:          "https://www.facebook.com/share/1CnVw5AK38/?mibextid=wwXIfr",
     tk:          "https://www.tiktok.com/@pinateria_patikoo?_r=1&_t=ZS-93HppPfDs3s",
@@ -1549,7 +1567,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573195888525",
-    tel:         "",
+    tel:         "3195888525",
     ig:          "",
     fb:          "",
     web:         "",
@@ -1593,7 +1611,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573237985111",
-    tel:         "",
+    tel:         "3237985111",
     ig:          "https://www.instagram.com/floraliaflowermarket?igsh=MWFyMXFpNjIyYzFncw==",
     fb:          "https://www.facebook.com/share/19s9ggfRbC/?mibextid=wwXIfr",
     tk:          "https://www.tiktok.com/@floraliaflowermarket?_r=1&_t=ZT-925VAzsBSDv",
@@ -1638,7 +1656,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573116780284",
-    tel:         "",
+    tel:         "3116780284",
     ig:          "",
     fb:          "",
     web:         "",
@@ -1670,9 +1688,9 @@ const NEGOCIOS = [
     logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
-    logoPerfil:  "assets/logos/merkasa/logo-merkasa.jpg",
-    cardImage:   "assets/logos/merkasa/inicio-merkasa.jpg",
-    portada:     "assets/logos/merkasa/portada-merkasa.jpg",
+    logoPerfil:  "assets/logos/merkasa/logo-merkasa.webp",
+    cardImage:   "assets/logos/merkasa/inicio-merkasa.webp",
+    portada:     "assets/logos/merkasa/portada-merkasa.webp",
  
     /* ─── TAMAÑOS RESPONSIVOS (clamp: min, preferido, max) ─── */
     cardHeight:      "clamp(350px, 180vw, 250px)",
@@ -1682,7 +1700,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573237112012",
-    tel:         "",
+    tel:         "3237112012",
     ig:          "",
     fb:          "https://www.facebook.com/share/1GrKzjuDB7/",
     tk:          "https://www.tiktok.com/@merkasals7?_r=1&_t=ZS-94dhPGnR4T4",
@@ -1726,8 +1744,11 @@ const NEGOCIOS = [
     galeriaHeight:   "clamp(150px, 20vw, 240px)",
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
-    wa:          "573504523048",
-    tel:         "573128467477",
+    was: [
+  { nombre: "WHATSAPP", numero: "573128467477" },
+  { nombre: "WHATSAPP", numero: "573504523048" },
+],
+    tel:         "3128467477",
     ig:          "https://www.instagram.com/old_school_tienda?igsh=MTFoYmxtbGpnN2R1dg==",
     fb:          "https://www.facebook.com/share/17uuuS9qKp/",
     tk:          "https://www.tiktok.com/@tiendaoldschool?_r=1&_t=ZS-93SR1n35QWn",
@@ -1772,7 +1793,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573143458641",
-    tel:         "",
+    tel:         "3143458641",
     ig:          "https://www.instagram.com/pinateriasaavedra/",
     fb:          "",
     web:         "",
@@ -1804,9 +1825,9 @@ const NEGOCIOS = [
     logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
-    logoPerfil:  "assets/logos/aguatecnicos/logo-aguatecnicos.jpg",
-    cardImage:   "assets/logos/aguatecnicos/inicio-aguatecnicos.jpg",
-    portada:     "assets/logos/aguatecnicos/portada-aguatecnicos.jpg",
+    logoPerfil:  "assets/logos/aguatecnicos/logo-aguatecnicos.webp",
+    cardImage:   "assets/logos/aguatecnicos/inicio-aguatecnicos.webp",
+    portada:     "assets/logos/aguatecnicos/portada-aguatecnicos.webp",
  
     /* ─── TAMAÑOS RESPONSIVOS (clamp: min, preferido, max) ─── */
     cardHeight:      "clamp(350px, 180vw, 250px)",
@@ -1816,7 +1837,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573503944060",
-    tel:         "",
+    tel:         "3503944060",
     ig:          "https://www.instagram.com/aguatecnicoscolombiasas/",
     fb:          "https://www.facebook.com/aguatecnicoscolombiasas",
     web:         "http://www.aguatecnicos.com",
@@ -1860,7 +1881,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573224521315",
-    tel:         "",
+    tel:         "3224521315",
     ig:          "https://www.instagram.com/baruchmobile?igsh=MTUxeWloYjFreWtwNA%3D%3D&utm_source=qr",
     fb:          "https://www.facebook.com/share/1C5ygezP8G/?mibextid=wwXIfr",
     tk:          "https://www.tiktok.com/@baruch.comunicaci?_r=1&_t=ZS-94HKWtXoxla",
@@ -1888,6 +1909,7 @@ const NEGOCIOS = [
     /* ─── INFORMACIÓN BÁSICA ─── */
     id:          "elnovillo",
     cat:         "consumo",
+    destacado:   1,
     nombre:      "EL NOVILLO",
     slogan:      "La calidad y el sabor se cortan a tu medida.",
     desc:        "Más que Carniceros, Asesores Gastronómicos. El verdadero valor diferencial de Carnicería El Novillo reside en su equipo humano. Detrás del mostrador no solo hay expertos en el manejo del cuchillo, sino auténticos asesores gastronómicos. El cliente de hoy no solo busca un corte; busca el consejo experto sobre el tiempo de maduración, el método de cocción ideal (ya sea a la plancha, al horno o a las brasas) y el maridaje perfecto. En El Novillo, cada interacción es una oportunidad para educar el paladar y honrar el oficio del carnicero tradicional. Calidad premium, productos, pollo y cerdo, cortes especiales, carne fresca ",
@@ -1909,7 +1931,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573176914707",
-    tel:         "",
+    tel:         "3176914707",
     ig:          "",
     fb:          "",
     tk:          "",
@@ -1922,7 +1944,7 @@ const NEGOCIOS = [
  
     /* ─── GALERÍA DE FOTOS ─── */
     galeria:     [
-      "assets/logos/novillo/novillofoto1.jpg",
+      "assets/logos/novillo/novillo1.jpg","assets/logos/novillo/novillo2.jpg","assets/logos/novillo/novillo3.jpg","assets/logos/novillo/novillo4.jpg",
     ],
   },
   {
@@ -1933,6 +1955,7 @@ const NEGOCIOS = [
     /* ─── INFORMACIÓN BÁSICA ─── */
     id:          "amaretto",
     cat:         "consumo",
+    destacado:   1,
     nombre:      "PANADERIA AMARETTO",
     slogan:      "EL SABOR CASERO QUE ALEGRA CADA MAÑANA ",
     desc:        "En Amaretto encuentras deliciosos desayunos y comidas tradicionales preparadas con sabor casero y productos frescos. Disfruta de caldos, tamales, calentado, huevos al gusto, huevos rancheros, agua de panela con queso, porciones de fruta, yogur, migado y exquisitas ensaladas de frutas. Un lugar ideal para compartir y disfrutar de variedad, calidad y buena atención. Caldo tamales chocolate y pan moñona y jugo huevos rancheros chocolate y pan agua de panela queso y pan porción de fruta cereal con leche o yogurtmigao ensaladas de frutas",
@@ -1942,9 +1965,9 @@ const NEGOCIOS = [
     logo:        "",
     logoFill:    false,
     logoBg:      "#ffffff",
-    logoPerfil:  "assets/logos/amaretto/logo- amaretto.jpg",
-    cardImage:   "assets/logos/amaretto/inicio-amaretto.jpg",
-    portada:     "assets/logos/amaretto/portada- amaretto.jpg",
+    logoPerfil:  "assets/logos/amaretto/logo- amaretto.webp",
+    cardImage:   "assets/logos/amaretto/inicio-amaretto.webp",
+    portada:     "assets/logos/amaretto/portada- amaretto.webp",
  
     /* ─── TAMAÑOS RESPONSIVOS (clamp: min, preferido, max) ─── */
     cardHeight:      "clamp(350px, 180vw, 250px)",
@@ -1954,7 +1977,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573159548488",
-    tel:         "",
+    tel:         "3159548488",
     ig:          "",
     fb:          "",
     tk:          "",
@@ -1963,35 +1986,105 @@ const NEGOCIOS = [
     /* ─── UBICACIÓN Y MAPA ─── */
     dir:         "Carrera 3 # 10-39 MOSQUERA",
     mapUrl:      "",
-    mapsLink:    "https://maps.app.goo.gl/PXrkVRtwEQqPcdhN8",
+    mapsLink:    "https://share.google/q7zsxtEySbByj327j",
  
     /* ─── GALERÍA DE FOTOS ─── */
     galeria:[
-      "assets/logos/amaretto/amaretto1.jpg","assets/logos/amaretto/amaretto2.jpg","assets/logos/amaretto/amaretto3.jpg","assets/logos/amaretto/amaretto4.jpg","assets/logos/amaretto/amaretto5.jpg",
+      "assets/logos/amaretto/amaretto1.webp","assets/logos/amaretto/amaretto2.webp","assets/logos/amaretto/amaretto3.webp","assets/logos/amaretto/amaretto4.webp","assets/logos/amaretto/amaretto5.webp",
     ],
  
     /* ─── MENÚ DE COMIDAS ─── */
     menu: [
       {
-        s: "Entradas",
+        s: "DESAYUNOS ESPECIALES",
         items: [
-          { n:"Cazuela de mariscos", p:"$18.000", d:"Cremosa sopa de mariscos frescos" },
-          { n:"Patacones con hogao",  p:"$8.000",  d:"Clásico colombiano" },
+          { n:"MIGAO", p:"$14.000", d:"La perfecta combinación de dulce y salado en una taza. Chocolate artesanal caliente y batido al momento, acompañado de una selección premium de nuestros mejores amasijos tradicionales (almojábana, pandebono y buñuelo) y galletas artesanales. Incluye una generosa porción de queso fresco fundido que estira en cada bocado. Una experiencia reconfortante y llena de textura." },
+          { n:"AREPA ROPA VIEJA",  p:"$15.000",  d:"Nuestra tradicional arepa de maíz, dorada por fuera y suave por dentro, rellena de una jugosa sobrebarriga desmechada, sazonada lentamente en sus propios jugos y un sofrito criollo de la casa. Acompañada de hilos de queso derretido que complementan esta obra de arte de la cocina latina." },
         ]
       },
       {
-        s: "Platos Fuertes",
+        s: "CALDOS",
         items: [
-          { n:"Bandeja paisa",   p:"$32.000", d:"El plato emblema de Colombia" },
-          { n:"Churrasco",       p:"$45.000", d:"Carne de res a la parrilla" },
-          { n:"Sancocho especial", p:"$22.000", d:"Receta de la abuela" },
+          { n:"DE COSTILLA",   p:"$9.000", d:"El clásico e infaltable de la mañana. Sustancioso caldo casero preparado con costilla de res seleccionada, cocida lentamente hasta que quede increíblemente suave y se desprenda del hueso. Servido con papa sabanera, cebolla y cilantro fresco picado. Acompañado de arepa tradicional. ¡El reconfortante perfecto para empezar el día!" },
+          { n:"DE PESCADO",    p:"$9.000", d:"Una delicia ligera y nutritiva. Concentrado caldo preparado a base de pescado blanco seleccionado, sazonado con un sofrito criollo de cebolla,y un toque de especias que realzan su sabor. Servido con trozos de pescado suave, papa, y cilantro fresco. Acompañado de limón para darle el toque final a tu gusto." },
+          { n:"DE PATA",       p:"$9.000", d:"Una joya de la cocina tradicional, famosa por su consistencia única y su alto valor nutritivo. Caldo espeso preparado con pata de res cocida a fuego lento durante horas para lograr una textura suave y un sabor profundo y concentrado. Sazonado con un picadillo de cebolla, ajo y cilantro. Puro colágeno y energía para el cuerpo." },
+          { n:"DE PAJARILLA",  p:"$9.000", d:"Para los amantes de los sabores auténticos y tradicionales. Un caldo robusto y muy nutritivo preparado con pajarilla de res (bazo) y un toque de menudo, cocido en un sustancioso caldo con papa, sazonado con un potente ahogado criollo de cebolla larga, ajo y cilantro. Un plato lleno de hierro, sabor y tradición." },
+          { n:"DE POLLO",      p:"$9.000", d:"Caldo de Pollo Casero (Como el de la abuela) El remedio perfecto para consentir el cuerpo. Caldo claro y reconfortante preparado con presas de pollo seleccionadas, cocidas con verduras frescas, papa suave y un toque de cilantro. Ligero, nutritivo y con ese sazón hogareño que a todos nos encanta."},
         ]
       },
       {
-        s: "Bebidas",
+        s: "CHANGUAS",
         items: [
-          { n:"Limonada de coco", p:"$8.000", d:"Refrescante y cremosa" },
-          { n:"Jugo natural",     p:"$6.000", d:"Mango, mora o maracuyá" },
+          { n:"Changua Tradicional",  p:"$7.000", d:"Sopa típica de nuestra región a base de leche, agua y cilantro fresco, servida con calado calientico y huevo pochado que se cocina en el caldo. Un clásico bogotano." },
+          { n:"Changua Especial",     p:"$11.000", d:"Nuestra receta tradicional potenciada con almojábana, doble porción de huevo pochado y una generosa porción de queso doble crema derretido en la taza." },
+        ]
+      },
+      {
+        s: "TAMAL",
+        items: [
+          { n:"TAMAL",              p:"$7.000", d:"Masa suave de maíz sazonada, rellena de carne de cerdo, pollo, trozos de zanahoria, arveja y papa, todo envuelto y cocido al vapor en hoja de plátano para un sabor auténtico." },
+          { n:"TAMAL ESPECIAL",     p:"$8.000", d:"Nuestro tamal tradicional acompañado con una porción de jugosa costilla de cerdo premium extra, servido con pan de la casa o arepa con queso." },
+        ]
+      },
+      {
+        s: "HUEVOS",
+        items: [
+          { n:"HUEVOS FRITOS", p:"$5.000", d:"Dos huevos frescos preparados al término de tu elección, con la yema suave o bien cocida. El clásico que nunca falla." },
+          { n:"HUEVOS PERICOS",     p:"$5.000", d:"Tradición en tu mesa. Dos huevos revueltos con un fresco y jugoso sofrito casero de tomate y cebolla larga." },
+          { n:"HUEVOS EN TORTILLA",     p:"$5.000", d:"Tortilla suave, ligera y esponjosa de dos huevos bien batidos, perfectamente sazonada y dorada." },
+          { n:"HUEVOS RANCHEROS",     p:"$8.000", d:"Dos huevos revueltos con trozos de salchicha seleccionada y maíz tierno, todo bañado en un toque de queso de la casa." },
+        ]
+      },
+      {
+        s: "PLATOS FUERTES Y CALENTADOS",
+        items: [
+          { n:"MOÑONA", p:"$13.000", d:"El plato fuerte de la casa para los de buen apetito. Un jugoso filete de carne en bistec bañado en nuestro guiso tradicional de tomate y cebolla cabezona, servido sobre una base de arroz blanco y papa sudada bien sazonada. Todo coronado con dos huevos al gusto encima. ¡Tradición, sustancia y puro sabor en un solo plato!" },
+          { n:"CALENTADO PAISA",     p:"$12.000", d:"El rey de las mañanas. Mezcla perfecta de fríjoles del día anterior, arroz, sazón de hogao casero y trocitos de chicharrón o carne, servido con huevo frito y arepa." },
+        ]
+      },
+      {
+        s: "OPCION LIGERA",
+        items: [
+          { n:"CEREAL CON LECHE O YOGURT", p:"$7.000", d:"Una opción fresca y ligera para iniciar el día. Crujientes hojuelas de maíz acompañadas a tu elección con leche fría o yogurt cremoso (pregunta por nuestros sabores disponibles)." },
+        ]
+      },
+       {
+        s: "COMBOS",
+        items: [
+          { n:"COMBO 1", p:"$20.800", d:"CALDO DE COSTILLA, TAMAL ESPECIAL, CHOCOLATE Y PAN" },
+          { n:"COMBO 2", p:"$17.800", d:"CALDO DE COSTILLA, HUEVOS, CHOCOLATE O CAFE Y PAN" },
+          { n:"COMBO 3", p:"$13.500", d:"HUEVOS CON ARROZ, CHOCOLATE PAN Y QUESO " },
+          { n:"COMBO 4", p:"$11.500", d:"HUEVOS, CHOCOLATE O CAFE, PAN Y QUESO" },
+          { n:"COMBO 5", p:"$10.800", d:"TAMAL, CHOCOLATE O CAFE Y PAN" },
+          { n:"COMBO 6", p:"$7.000", d:"CHOCOLATE O CAFE, PAN Y QUESO" },
+          { n:"COMBO 7", p:"$15.500", d:"HUEVOS RANCHEROS, CHOCOLATE O CAFE, PAN Y QUESO" },
+          { n:"COMBO 8", p:"$19.500", d:"MOÑONA Y JUGO" },
+          { n:"COMBO 9", p:"$10.800", d:"CHANGUA, CHOCOLATE O CAFE Y PAN" },
+          { n:"COMBO 10", p:"$9.000", d:"AGUAPANELA,QUESO Y PAN" },
+          { n:"COMBO 11", p:"$10.000", d:"PORCION DE FRUTA, CEREAL CON LECHE O YOGURT" },
+        ]
+      },
+      {
+        s: "BEBIDAS",
+        items: [
+          { n:"SODAS", p:"$10.000", d:"FRUTOS ROJOS, FRUTOS AMARILLOS, CHICLE" },
+          { n:"MALTEADAS", p:"$10.000", d:"FRESA, MORA, AREQUIPE, NATA, MANDARINA, VAINILLA, BROWNIE, RON CON PASAS" },
+          { n:"JUGOS NATURALES", p:"$6.000 o $7.000", d:"GUANABANA, MORA, FRESA, MANGO, MARACUYA., LULO, FEIJOA, MANGO VICHE" },
+          { n:"LIMONADAS", p:"$6.000 o $7.000", d:"NATURAL, HIERVA BUENA, COCO, CEREZADA" },
+        ]
+      },
+      {
+        s: "HELADERIA",
+        items: [
+          { n:"CONO SENCILLO", p:"$4.000" },
+          { n:"CONO DOBLE", p:"$6.000" },
+          { n:"VASO DE HELADO X2 1 TOPPING", p:"$7.500" },
+          { n:"VASO DE HELADO X3 2 TOPPING Y 1 SALSA", p:"$10.000" },
+          { n:"GUSANITO", p:"$10.000" },
+          { n:"PAYASO", p:"$10.000" },
+          { n:"UNICORNIO", p:"$10.000" },
+          { n:"PANDA", p:"$10.000" },
+          { n:"MERENGONES", p:"$10.000" },
         ]
       },
     ],
@@ -2025,7 +2118,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573217776025",
-    tel:         "",
+    tel:         "3217776025",
     ig:          "",
     fb:          "",
     tk:          "",
@@ -2069,8 +2162,11 @@ const NEGOCIOS = [
     galeriaHeight:   "clamp(150px, 20vw, 240px)",
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
-    wa:          "573024605951",
-    tel:         "",
+    was: [
+  { nombre: "WHATSAPP", numero: "573024605951" },
+  { nombre: "WHATSAPP", numero: "573212405093" },
+],
+    tel:         "3024605951",
     ig:          "",
     fb:          "",
     tk:          "",
@@ -2115,11 +2211,11 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573209270400",
-    tel:         "",
+    tel:         "3209270400",
     ig:          "",
     fb:          "",
     tk:          "",
-    web:         "https://www.canva.com/design/DAG9l5_QAyA/voLwmGRZkv4in_KFAt41KA/view?utm_content=DAG9l5_QAyA&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h9ffa2f3971",
+    web:         "",
  
     /* ─── UBICACIÓN Y MAPA ─── */
     dir:         "Carrera 15 Calle 9d 03 MOSQUERA ",
@@ -2164,7 +2260,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573177304265",
-    tel:         "",
+    tel:         "3177304265",
     ig:          "https://www.instagram.com/perfileriajyd?igsh=MTA3ajhjNmJ5YmlmdA==",
     fb:          "https://www.facebook.com/share/17JUAECBk9/",
     tk:          "",
@@ -2213,7 +2309,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573054061750",
-    tel:         "",
+    tel:         "3054061750",
     ig:          "https://www.instagram.com/lavanderialaundrymm?igsh=MTRyZmoyeXBhZ3lyNQ%3D%3D&utm_source=qr",
     fb:          "",
     tk:          "https://www.tiktok.com/@laundry.mm?_t=ZS-901xGgX8MNE&_r=1",
@@ -2257,8 +2353,11 @@ const NEGOCIOS = [
     galeriaHeight:   "clamp(150px, 20vw, 240px)",
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
-    wa:          "573174210785",
-    tel:         "573208950252",
+    was: [
+  { nombre: "WHATSAPP", numero: "573208950252" },
+  { nombre: "WHATSAPP", numero: "573174210785" },
+],
+    tel:         "3208950252",
     ig:          "",
     fb:          "",
     tk:          "",
@@ -2303,7 +2402,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573214291976",
-    tel:         "",
+    tel:         "3214291976",
     ig:          "https://www.instagram.com/photoimagendigital?igsh=b3Fhem1zeDNicHZ6",
     fb:          "https://www.facebook.com/share/14Zbmbj6agB/",
     tk:          "",
@@ -2581,7 +2680,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573132543923",
-    tel:         "",
+    tel:         "3132543923",
     ig:          "https://www.instagram.com/armimotos_oficial?igsh=MXd6M294dWszcXk1bA==",
     fb:          "https://www.facebook.com/share/1GksRpRR6s/",
     tk:          "https://www.tiktok.com/@armimotos_oficial?_r=1&_t=ZS-95vKBflAs80",
@@ -2626,7 +2725,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573002196754",
-    tel:         "",
+    tel:         "3002196754",
     ig:          "https://www.instagram.com/_maxi_oil_?igsh=MWQ2OWJobDZlM3M0dw==",
     fb:          "",
     tk:          "",
@@ -2671,7 +2770,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573245943454",
-    tel:         "573028511471",
+    tel:         "3028511471",
     ig:          "",
     fb:          "",
     tk:          "",
@@ -2716,16 +2815,19 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573203626549",
-    tel:         "",
+    tel:         "3203626549",
     ig:          "https://www.instagram.com/bike_shops_tp2?igsh=MTB1NzZuY2xtMThmcw==",
     fb:          "",
     tk:          "https://www.tiktok.com/@bike_shops_tp2?_r=1&_t=ZS-93e8wqLP8h2",
-    web:         "https://wa.me/c/226177423781933",
+    web:         "",
  
     /* ─── UBICACIÓN Y MAPA ─── */
     dir:         " Cl 10a # 12c - 56 BARRIO VILLA SAJONIA 2: CRA 12 # 8b - 61 LOCAL 2 BARRIO SANTANA",
     mapUrl:      "",
-    mapsLink:    "https://maps.app.goo.gl/sSCqhMrVJcmXythBA",
+    mapsLinks: [
+      { nombre: "VILLA SAJONIA", url: "https://maps.app.goo.gl/sSCqhMrVJcmXythBA" },
+      { nombre: "SANTANA", url: "https://maps.app.goo.gl/xxrzq5brdveRCS8H9" },
+    ],
  
     /* ─── GALERÍA DE FOTOS ─── */
     galeria:     [
@@ -2761,7 +2863,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573002500554",
-    tel:         "",
+    tel:         "3002500554",
     ig:          "",
     fb:          "",
     tk:          "",
@@ -2806,7 +2908,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573208903912",
-    tel:         "",
+    tel:         "3208903912",
     ig:          "",
     fb:          "",
     tk:          "",
@@ -2834,6 +2936,7 @@ const NEGOCIOS = [
     /* ─── INFORMACIÓN BÁSICA ─── */
     id:          "cheramy",
     cat:         "mascotas",
+    destacado:   1,
     nombre:      "Cheramy Spa Mascotas",
     slogan:      "Cuidamos tu mascota como parte de nuestra familia",
     desc:        "CHERAMY SPA MASCOTAS es un centro de estética y bienestar animal diseñado para ofrecer una experiencia de relajación y cuidado integral a los consentidos del hogar. Su enfoque no es solo la limpieza, sino el equilibrio emocional y físico de cada mascota a través de servicios personalizados. Trato amoroso y responsable. ✔Personal capacitado✔Productos Seleccionados Con Cuidado✔Ambiente limpio y segur✔Experiencia Pensada Para El Bienestar De Tu Mascota",
@@ -2855,10 +2958,10 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573223934817",
-    tel:         "",
+    tel:         "3223934817",
     ig:          "https://www.instagram.com/cher_ami070?igsh=MTc5NG14YjhxbXdmZA==",
-    fb:          "https://www.facebook.com/share/1FTTDayDCM/?mibextid=wwXIfr",
-    tk:          "https://www.tiktok.com/@cher_ami070",
+    fb:          "",
+    tk:          "",
     web:         "",
     agendamiento:"https://cheramipets.site.agendapro.com/co",
  
@@ -2877,6 +2980,7 @@ const NEGOCIOS = [
     /* ─── INFORMACIÓN BÁSICA ─── */
     id:          "javivet",
     cat:         "mascotas",
+    destacado:   1,
     nombre:      "Medicina Veterinaria Javi Vet",
     slogan:      "Porque tu mascota merece lo mejor, estamos aquí! medicina veterinaria con amor, calidad y profesionalismo",
     desc:        "Medicina Veterinaria Javi Vet es un centro especializado en el cuidado integral de mascotas, comprometido con la excelencia médica y el bienestar animal. Contamos con un equipo de profesionales dedicados a ofrecer servicios de consulta general, diagnóstico y tratamientos preventivos, utilizando tecnología adecuada y un enfoque ético. En Javi Vet, entendemos que tu mascota es parte de la familia, por lo que priorizamos una atención personalizada y transparente para garantizar su salud en cada etapa de su vida.",
@@ -2898,7 +3002,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573002651539",
-    tel:         "",
+    tel:         "3002651539",
     ig:          "https://www.instagram.com/javivet_medicinaveterinaria?igsh=NDYxMnMyM3Y5OGxt",
     fb:          "",
     tk:          "",
@@ -2920,6 +3024,7 @@ const NEGOCIOS = [
     /* ─── INFORMACIÓN BÁSICA ─── */
     id:          "de-mascot·s",
     cat:         "mascotas",
+    destacado:   1,
     nombre:      "De Maskot·s",
     slogan:      "Todo lo relacionado para tu mascota, pregunta por la comida favorita de tu perro o gato. ",
     desc:        "Tienda especializada en concentrados, accesorios y productos para el cuidado integral de mascotas, ofreciendo alimentos de las mejores marcas, dieta BARF, juguetes, camas, guacales y artículos esenciales para perros y gatos. En “De Maskot’s” trabajamos con variedad, calidad y atención personalizada para brindar bienestar, nutrición y comodidad a cada mascota. Nuestro compromiso es ayudar a las familias a encontrar todo lo necesario para consentir y cuidar a sus compañeros de vida. Equipos de gimnasios, suplementos deportivos, alimento para mascotas, comida para gatos, accesorios y entretenimientos.",
@@ -2941,7 +3046,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573223761816",
-    tel:         "",
+    tel:         "3223761816",
     ig:          "",
     fb:          "",
     tk:          "",
@@ -2992,7 +3097,7 @@ const NEGOCIOS = [
     /* ─── UBICACIÓN Y MAPA ─── */
     dir:         "calle 19 con carrera 1b este Mosquera, Colombia",
     mapUrl:      "",
-    mapsLink:    "https://maps.app.goo.gl/GiMaeGHev4KBMfCR6",
+    mapsLink:    "https://share.google/tcgexGkf5hNkf0pm0",
  
     /* --- GALERÍA DE FOTOS --- */
     galeria:     [],
@@ -3025,7 +3130,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573022726793",
-    tel:         "",
+    tel:         "3022726793",
     ig:          "https://www.instagram.com/surgicalcare2023?igsh=bTB3MGh1dHlyeDk4",
     fb:          "https://www.facebook.com/share/1DNdUgAUR3/",
     tk:          "https://www.tiktok.com/@surgical.care8?_r=1&_t=ZS-92HLxwgyYRr",
@@ -3067,7 +3172,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573108003827",
-    tel:         "",
+    tel:         "3108003827",
     ig:          "https://www.instagram.com/distrimascotas_sabana?igsh=MWFlYnFzd2YwdjVyOQ==",
     fb:          "",
     tik:         "https://www.tiktok.com/@distrimascotas_sabana?_r=1&_t=ZS-95mWMxpB28O",
@@ -3114,7 +3219,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573118068424",
-    tel:         "",
+    tel:         "3118068424",
     ig:          "https://www.instagram.com/figurasarmoniosas?igsh=NW5udmZkNHg3bnF",
     fb:          "https://www.facebook.com/share/1XcRG7nMMN/",
     tk:          "",
@@ -3132,13 +3237,13 @@ const NEGOCIOS = [
   },
   {
     /* ══════════════════════════════════════════════════════════════
-       HUGO LEN´S 
+       GUHO LEN´S 
        ══════════════════════════════════════════════════════════════ */
  
     /* ─── INFORMACIÓN BÁSICA ─── */
     id:          "guholens",
     cat:         "bienestar",
-    nombre:      "HUGO LEN´S ",
+    nombre:      "GUHO LEN´S ",
     slogan:      "¡Vuelve a ver el mundo con claridad!",
     desc:        "Óptica es un espacio especializado en el cuidado de la salud visual, ofreciendo monturas modernas, lentes de alta calidad y atención confiable para toda la familia. Contamos con examen visual profesional, asesoría personalizada y una amplia variedad de estilos que se adaptan a cada necesidad y personalidad. Nuestro compromiso es brindar comodidad, claridad y confianza, ayudando a nuestros clientes a cuidar su visión con productos y servicios de excelente calidad. Examen visual profesional • Monturas modernas • Lentes de alta calidad a precios justos. Gafas formuladas, examen visual, optica profesional, lentes de alta calidad, monturas modernas.",
     tipo:        "estandar",
@@ -3159,7 +3264,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573192163876",
-    tel:         "",
+    tel:         "3192163876",
     ig:          "https://www.instagram.com/guholens?igsh=MTM5eDIyZ2pvaTBsMg==",
     fb:          "https://www.facebook.com/share/1LQTDZWDtx/",
     tk:          "",
@@ -3204,7 +3309,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573114023108",
-    tel:         "",
+    tel:         "3114023108",
     ig:          "https://www.instagram.com/tiendanaturistaorigenvital?igsh=dzZlNWdtcG85OGU3",
     fb:          "",
     tk:          "",
@@ -3249,7 +3354,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573118904703",
-    tel:         "",
+    tel:         "3118904703",
     ig:          "https://www.instagram.com/estetica_cosmetologiavg?igsh=c20ydmhibmdxcWEw",
     fb:          "",
     tk:          "",
@@ -3277,6 +3382,7 @@ const NEGOCIOS = [
     /* ─── INFORMACIÓN BÁSICA ─── */
     id:          "cortesyestilos",
     cat:         "imagen",
+    destacado:   1,
     nombre:      "CORTES Y ESTILOS",
     slogan:      "SOMOS UNA SALA DE BELLEZA ( DISEÑADORES DE COLOR)",
     desc:        "Sala de belleza especializada en realzar la imagen y el estilo de cada cliente mediante servicios profesionales de colorimetría, keratina, uñas, peinados y maquillaje. En “Cortes y Estilos” trabajamos con técnicas modernas, productos de alta calidad y atención personalizada para brindar experiencias de belleza, cuidado y transformación. Nuestro compromiso es resaltar tu esencia con elegancia, creatividad y las últimas tendencias en estética y cuidado personal. Peinados profesionales, Cuidado estético, Alisados capilares, Maquillaje estético, Spa de belleza",
@@ -3297,8 +3403,11 @@ const NEGOCIOS = [
     galeriaHeight:   "clamp(150px, 20vw, 240px)",
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
-    wa:          "573124495857",
-    tel:         "573213880163",
+    was: [
+  { nombre: "WHATSAPP", numero: "573213880163" },
+  { nombre: "WHATSAPP", numero: "573124495857" },
+],
+    tel:         "3213880163",
     ig:          "https://www.instagram.com/cortesyestilosmosquera?igsh=eWJsemJuNzNxODlp",
     fb:          "https://www.facebook.com/share/1EToFzgZGG/",
     tk:          "https://www.tiktok.com/@cortes_y.estilos?_r=1&_t=ZS-96S5ca7dllo",
@@ -3343,7 +3452,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573233887811",
-    tel:         "",
+    tel:         "3233887811",
     ig:          "https://tr.ee/WZJ_WC_Fhc",
     fb:          "https://tr.ee/c9wkrEvSVZ",
     tk:          "",
@@ -3380,9 +3489,9 @@ const NEGOCIOS = [
     logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
-    logoPerfil:  "assets/logos/abicun/logo-academia-abicun.jpg",
-    cardImage:   "assets/logos/abicun/inicio-academia-abicun.jpg",
-    portada:     "assets/logos/abicun/portada-academia-abicun.jpg",
+    logoPerfil:  "assets/logos/abicun/logo-academia-abicun.webp",
+    cardImage:   "assets/logos/abicun/inicio-academia-abicun.webp",
+    portada:     "assets/logos/abicun/portada-academia-abicun.webp",
  
     /* ─── TAMAÑOS RESPONSIVOS (clamp: min, preferido, max) ─── */
     cardHeight:      "clamp(350px, 180vw, 250px)",
@@ -3392,7 +3501,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573123883183",
-    tel:         "",
+    tel:         "3123883183",
     ig:          "",
     fb:          "",
     tk:          "",
@@ -3415,7 +3524,7 @@ const NEGOCIOS = [
  
     /* ─── INFORMACIÓN BÁSICA ─── */
     id:          "estandar",
-    cat:         "eduecacion",
+    cat:         "educacion",
     nombre:      "ACADEMIA NOVA ",
     slogan:      "¡Transforma tu pasión en arte y tu arte en ingresos! ",
     desc:        "Capacítate con nuestras clases semi personalizadas, especializadas en manicura rusa semipermanente (técnicas en tendencia) acrílico básico intermedio polygel   soft gel sistema dual y sistemas híbridos.  Contamos con clases entre  semana y domingos   Vuélvete  una profesional de las uñas junto a nosotros. De 9:00am a 6:00pm Studio de uñas y pestañas nova by shalom !! Somos especialistas en resaltar tu belleza  nuestros servicios 👇🏻👇🏻 Manicure y pedicure tradicional y semipermanente  Recubrimientos en uña natural  Acrílico, Polygel, Pestañas pelo a pelo, Soft gel, Dual System",
@@ -3437,7 +3546,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573237287641",
-    tel:         "",
+    tel:         "3237287641",
     ig:          "https://www.instagram.com/academia_nova_?igsh=dGJpMngwdDlueW5x",
     fb:          "",
     tk:          "",
@@ -3482,7 +3591,7 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573144503449",
-    tel:         "",
+    tel:         "3144503449",
     ig:          "http://instagram.com/academia_valentina_2",
     fb:          "https://www.facebook.com/share/17o4rkpyrs/?mibextid=wwXIfr",
     tk:          "",

@@ -356,7 +356,7 @@ function openCat(cat) {
   } else {
     negs.forEach((neg, index) => {
       const card = document.createElement('div');
-      card.className = 'biz-card' + (index === 0 ? ' featured featured-1' : index === 1 ? ' featured featured-2' : index === 2 ? ' featured featured-3' : '');
+      card.className = 'biz-card' + (neg.destacado ? ' featured featured-' + neg.destacado : '');
       card.innerHTML = bizCardHTML(neg, cat);
       card.addEventListener('click', () => openNeg(neg));
       grid.appendChild(card);
@@ -421,7 +421,13 @@ if (neg.portada) {
   const ab = document.getElementById('profActions');
   ab.innerHTML = '';
   if (neg.agendamiento) ab.innerHTML += `<a href="${neg.agendamiento}" class="abtn agendamiento" target="_blank">📅 Agendar Cita</a>`;
-  if (neg.wa)  ab.innerHTML += `<a href="https://wa.me/${neg.wa}?text=Hola!%20Vi%20tu%20negocio%20en%20Newplace%20Store%20y%20quiero%20más%20información" class="abtn wa" target="_blank">💬 WhatsApp</a>`;
+  if (neg.was && neg.was.length > 0) {
+      neg.was.forEach(w => {
+        ab.innerHTML += `<a href="https://wa.me/${w.numero}?text=Hola!%20Vi%20tu%20negocio%20en%20Newplace%20Store%20y%20quiero%20más%20información" class="abtn wa" target="_blank">💬 ${w.nombre}</a>`;
+      });
+    } else if (neg.wa) {
+      ab.innerHTML += `<a href="https://wa.me/${neg.wa}?text=Hola!%20Vi%20tu%20negocio%20en%20Newplace%20Store%20y%20quiero%20más%20información" class="abtn wa" target="_blank">💬 WhatsApp</a>`;
+    }
   if (neg.tel) ab.innerHTML += `<a href="tel:+57${neg.tel}" class="abtn tel">📞 Llamar</a>`;
   if (neg.ig)  ab.innerHTML += `<a href="${neg.ig}" class="abtn ig" target="_blank">📸 Instagram</a>`;
   if (neg.tk)  ab.innerHTML += `<a href="${neg.tk}" class="abtn tk" target="_blank">🎵 TikTok</a>`;
@@ -436,7 +442,13 @@ if (neg.portada) {
   /* Tab Info */
   let contactHTML = '';
   if (neg.agendamiento) contactHTML += `<div class="ci"><span>📅</span><a href="${neg.agendamiento}" target="_blank">Agendar Cita</a></div>`;
-  if (neg.wa)  contactHTML += `<div class="ci"><span>💬</span><span>${neg.wa.replace('57','')}</span></div>`;
+  if (neg.was && neg.was.length > 0) {
+      neg.was.forEach(w => {
+        contactHTML += `<div class="ci"><span>💬</span><span>${w.nombre}: ${w.numero.replace('57','')}</span></div>`;
+      });
+    } else if (neg.wa) {
+      contactHTML += `<div class="ci"><span>💬</span><span>${neg.wa.replace('57','')}</span></div>`;
+    }
   if (neg.tel) contactHTML += `<div class="ci"><span>📞</span><span>${neg.tel}</span></div>`;
   if (neg.dir) contactHTML += `<div class="ci"><span>📍</span><span>${neg.dir}</span></div>`;
   if (neg.ig)  contactHTML += `<div class="ci"><span>📸</span><a href="${neg.ig}" target="_blank">Instagram</a></div>`;
