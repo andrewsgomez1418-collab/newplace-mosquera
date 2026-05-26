@@ -46,7 +46,7 @@ const CATS = [
   { id:"shopping",     n:"SHOPPING",                       e:"", c:"#e5007d", img:"assets/categorias/categoria-shopping.webp", imgHdr:"assets/categorias/destacados/destacados-shopping.webp", showTitle: false},
   { id:"imagen",       n:"IMAGEN Y ESTILO",                e:"", c:"#9b59b6", img:"assets/categorias/categoria-estilo.webp", imgHdr:"assets/categorias/destacados/destacados-imagen-estilo.webp", showTitle: false},
   { id:"mascotas",     n:"MUNDO MASCOTAS",                 e:"", c:"#f39c12", img:"assets/categorias/mascotas.webp", imgHdr:"assets/categorias/destacados/destacados-macotas.webp", showTitle: false},
-  { id:"educacion",    n:"EDUCACION Y APRENDIZAGE",                      e:"", c:"#3498db", img:"assets/categorias/categoria-educacion.webp", imgHdr:"assets/categorias/destacados/destacados-educacion.webp", showTitle: false},
+  { id:"educacion",    n:"EDUCACION Y APRENDIZAGE",        e:"", c:"#3498db", img:"assets/categorias/categoria-educacion.webp", imgHdr:"assets/categorias/destacados/destacados-educacion.webp", showTitle: false},
   { id:"movilidad",    n:"TALLERES Y MOVILIDAD",           e:"", c:"#616161", img:"assets/categorias/categoria-talleres.webp", imgHdr:"assets/categorias/destacados/salud.jpg", showTitle: false},
   { id:"clasificados",    n:"CLASIFICADOS",                e:"", c:"#e65100", img:"assets/categorias/categoria-clasificados.webp", imgHdr:"assets/categorias/destacados/salud.jpg", showTitle: false},
   { id:"entretenimiento", n:"ENTRETENIMIENTO",             e:"", c:"#7b1fa2", img:"assets/categorias/categoria-entretenimiento.webp", imgHdr:"assets/categorias/destacados/salud.jpg", showTitle: false},
@@ -448,24 +448,24 @@ const NEGOCIOS = [
   },
   {
     /* ══════════════════════════════════════════════════════════════
-       CENTRO MEDICO BIOCARE
+       ROSEMBERG
        ══════════════════════════════════════════════════════════════ */
  
     /* ─── INFORMACIÓN BÁSICA ─── */
-    id:          "biocare",
+    id:          "rosemberg",
     cat:         "salud",
-    nombre:      "CENTRO MEDICO BIOCARE",
-    slogan:      "Atención médica, bienestar integral, servicios clínicos, salud preventiva, diagnóstico especializado",
-    desc:        "¡CONTAMOS CON SERVICIO DE LABORATORIO CLÍNICO CERTIFICADO! 👩🏻‍🔬Calidad humana en la atención, eficiente oportunidad de entrega en los resultados,ambiente confortable; adecuada orientación según la necesidad de cada usuario.",
+    nombre:      "CENTRO MEDICO Y LABORATORIO CLÍNICO DE REFERENCIA",
+    slogan:      "Nuestra prioridad es tu salud y nuestra mejor herramienta es la prevención. ",
+    desc:        "👩🏻‍🔬Calidad humana en la atención, eficiente oportunidad de entrega en los resultados,ambiente confortable; adecuada orientación según la necesidad de cada usuario. PRUEBAS DE EMBARAZO,  QUÍMICA SANGUÍNEO, HEMATOLOGÍA, EXAMEN DE ORINA Y COPROLOGICO",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
     logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
-    logoPerfil:  "assets/logos/biocare/logo-biocare.jpg",
-    cardImage:   "assets/logos/biocare/inicio-biocare.png",
-    portada:     "assets/logos/biocare/portada-biocare.jpg",
+    logoPerfil:  "assets/logos/rosenberg/logo-centro-medico-rosenber.jpg",
+    cardImage:   "assets/logos/rosenberg/inicio-centro-medico-rosenber.jpg",
+    portada:     "assets/logos/rosenberg/portada-centro-medico-rosenber.jpg",
  
     /* ─── TAMAÑOS RESPONSIVOS (clamp: min, preferido, max) ─── */
     cardHeight:      "clamp(350px, 180vw, 250px)",
@@ -488,7 +488,7 @@ const NEGOCIOS = [
  
     /* ─── GALERÍA DE FOTOS ─── */
     galeria:     [
-      "",
+      "assets/logos/rosenberg/clinica1.jpg",
     ],
   },
   {
@@ -2140,7 +2140,7 @@ const NEGOCIOS = [
        ══════════════════════════════════════════════════════════════ */
  
     /* ─── INFORMACIÓN BÁSICA ─── */
-    id:          "estandar",
+    id:          "eleden",
     cat:         "consumo",
     nombre:      "EL EDEN",
     slogan:      "FRUTAS Y VERDURAS TAMBIEN MANEJAN SALSAMENTARIA Y PRODUCTOS DE ASEO ",
@@ -3478,7 +3478,7 @@ const NEGOCIOS = [
        ══════════════════════════════════════════════════════════════ */
  
     /* ─── INFORMACIÓN BÁSICA ─── */
-    id:          "estandar",
+    id:          "abicun",
     cat:         "educacion",
     nombre:      "ACADEMIA ABICUN ",
     slogan:      "Técnico en cosmetología y belleza integral educación para el trabajo y desarrollo humano.",
@@ -3523,7 +3523,7 @@ const NEGOCIOS = [
        ══════════════════════════════════════════════════════════════ */
  
     /* ─── INFORMACIÓN BÁSICA ─── */
-    id:          "estandar",
+    id:          "nova",
     cat:         "educacion",
     nombre:      "ACADEMIA NOVA ",
     slogan:      "¡Transforma tu pasión en arte y tu arte en ingresos! ",
@@ -3568,7 +3568,7 @@ const NEGOCIOS = [
        ══════════════════════════════════════════════════════════════ */
  
     /* ─── INFORMACIÓN BÁSICA ─── */
-    id:          "estandar",
+    id:          "valentina",
     cat:         "educacion",
     nombre:      "ACADEMIA VALENTINA",
     slogan:      "Aquí no solo aprendes, aquí cocinas.",
