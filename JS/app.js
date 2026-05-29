@@ -165,7 +165,7 @@ blogEl.innerHTML = `
   <div class="blog-card">
     <div class="blog-header">
       <div class="blog-header-inner">
-        <div class="blog-flag">🏙️</div>
+        <div class="blog-flag"></div>
         <div class="blog-header-text">
           <div class="blog-eyebrow">Nuestra Ciudad</div>
           <div class="blog-title">${BLOG.titulo}</div>
@@ -351,9 +351,7 @@ document.getElementById('catTitle').textContent = cat.showTitle !== false ? cat.
   // ═══════════════════════════════════════════════════════════
   const negs = NEGOCIOS.filter(n => n.cat === cat.id);
   
-  document.getElementById('catSub').textContent = negs.length
-    ? `${negs.length} negocio${negs.length > 1 ? 's' : ''} registrado${negs.length > 1 ? 's' : ''}`
-    : 'Próximamente más negocios';
+  document.getElementById('catSub').textContent = '';
   
   const grid = document.getElementById('catBizGrid');
   grid.innerHTML = '';

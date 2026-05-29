@@ -41,7 +41,7 @@ const CATS = [
   { id:"consumo",      n:"CONSUMO FRECUENTE",              e:"", c:"#8e44ad", img:"assets/categorias/categoria-consumofrecuente.webp", imgHdr:"assets/categorias/destacados/destacados-negocios- frecuentes.webp", showTitle: false},
   { id:"empresarial",  n:"SOLUCIONES EMPRESARIALES",       e:"", c:"#2c3e50", img:"assets/categorias/categoria-empresarial.webp", imgHdr:"assets/categorias/destacados/salud.webp", showTitle: false},
   { id:"servicios",    n:"SERVICIOS",                      e:"", c:"#d35400", img:"assets/categorias/categoria-servicios.webp", imgHdr:"assets/categorias/destacados/salud.jpg", showTitle: false},
-  { id:"gourmet",      n:"EXPERIENCIA GOURMET",            e:"", c:"#922b21", img:"assets/categorias/categoria-gourmet.webp", imgHdr:"assets/categorias/destacados/salud.jpg", showTitle: false},
+  { id:"gourmet",      n:"EXPERIENCIA GOURMET",            e:"", c:"#922b21", img:"assets/categorias/categoria-gourmet.webp", imgHdr:"assets/categorias/destacados/destacados-gourmet.webp", showTitle: false},
   { id:"bienestar",    n:"SALUD Y BIENESTAR",                      e:"", c:"#1abc9c", img:"assets/categorias/categoria-bienestar.webp", imgHdr:"assets/categorias/destacados/destacado-bienestar.webp", showTitle: false},
   { id:"shopping",     n:"SHOPPING",                       e:"", c:"#e5007d", img:"assets/categorias/categoria-shopping.webp", imgHdr:"assets/categorias/destacados/destacados-shopping.webp", showTitle: false},
   { id:"imagen",       n:"IMAGEN Y ESTILO",                e:"", c:"#9b59b6", img:"assets/categorias/categoria-estilo.webp", imgHdr:"assets/categorias/destacados/destacados-imagen-estilo.webp", showTitle: false},
@@ -1080,6 +1080,50 @@ const NEGOCIOS = [
     /* ─── GALERÍA DE FOTOS ─── */
     galeria:     [
       "assets/logos/POLLOSLA22/servipollo1.webp","assets/logos/POLLOSLA22/servipollo2.webp","assets/logos/POLLOSLA22/servipollo3.webp",
+    ],
+  },
+  {
+    /* ══════════════════════════════════════════════════════════════
+       LA CASA DE LOS ARROCES 
+       ══════════════════════════════════════════════════════════════ */
+ 
+    /* ─── INFORMACIÓN BÁSICA ─── */
+    id:          "lacasadelosarroces",
+    cat:         "antojos",
+    nombre:      "LA CASA DE LOS ARROCES",
+    slogan:      "Sabores que llenan, recetas que enamoran.",
+    desc:        "Disfruta el mejor sabor en cada plato con nuestra especialidad en arroz chino y arroz paisa, preparados al momento con ingredientes frescos, abundantes porciones y ese toque casero que encanta. Una combinación perfecta entre tradición, sazón y variedad para compartir en familia o disfrutar cuando quieras darte un buen gusto. Arroz chino / arroz paisa / comida rápida / sabor casero / almuerzos / domicilio / comida colombiana / comida oriental / porciones grandes / restaurante familiar.",
+    tipo:        "estandar",
+ 
+    /* ─── IMÁGENES Y LOGOS ─── */
+    logo:        "assets/logos/gallery-home-logo.jpg",
+    logoFill:    false,
+    logoBg:      "#ffffff",
+    logoPerfil:  "assets/logos/casadearroces/Logo-casa-de-los-arroces.webp",
+    cardImage:   "assets/logos/casadearroces/Inicio-casa-de-los-arroces.webp",
+    portada:     "assets/logos/casadearroces/Portada-casa-de-los-arroces.webp",
+ 
+    /* ─── TAMAÑOS RESPONSIVOS (clamp: min, preferido, max) ─── */
+    cardHeight:      "clamp(350px, 180vw, 250px)",
+    logoHeight:      "clamp(90px, 8vw, 60px)",
+    portadaHeight:   "clamp(180px, 25vh, 200px)",
+    galeriaHeight:   "clamp(150px, 20vw, 240px)",
+ 
+    /* ─── CONTACTO Y REDES SOCIALES ─── */
+    wa:          "573138207416",
+    tel:         "3138207416",
+    ig:          "",
+    fb:          "",
+    web:         "",
+ 
+    /* ─── UBICACIÓN Y MAPA ─── */
+    dir:         "Calle 17 6 - 15e maipore Mosquera",
+    mapUrl:      "",
+    mapsLink:    "https://maps.app.goo.gl/s2XKoStAmYAqJBWW9",
+ 
+    /* ─── GALERÍA DE FOTOS ─── */
+    galeria:     [
+      "assets/logos/casadearroces/casadelosarroces1.webp","assets/logos/casadearroces/casadelosarroces2.webp",
     ],
   },
 // ══ HOGAR ════════════════════════════════════════════════
@@ -3185,6 +3229,52 @@ const NEGOCIOS = [
  
     /* --- GALERÍA DE FOTOS --- */
     galeria:     ["assets/logos/distri-mascotas/distri-foto1.jpg", "assets/logos/distri-mascotas/distri-foto2.jpg", "assets/logos/distri-mascotas/distri-foto3.jpg", "assets/logos/distri-mascotas/distri-foto4.jpg", "assets/logos/distri-mascotas/distri-foto5.jpg",],
+  },{
+    /* ══════════════════════════════════════════════════════════════
+       VETERINARIA & SPA JUDATA VIP
+       ══════════════════════════════════════════════════════════════ */
+ 
+    /* ─── INFORMACIÓN BÁSICA ─── */
+    id:          "veterinariajudata",
+    cat:         "mascotas",
+    nombre:      "VETERINARIA & SPA JUDATA VIP",
+    slogan:      "Salud integral, atención humana y amor en cada latido.",
+    desc:        "En nuestra veterinaria trabajamos cada día con amor, respeto y compromiso por el bienestar de los animales y sus familias. Creemos que cada mascota merece ser atendida con paciencia, empatía y dedicación, cuidando no solo su salud física, sino también su tranquilidad, su energía y su calidad de vida. Contamos con servicios de consulta veterinaria, toma de exámenes de sangre, ecografía, radiografía, vacunación y desparasitación, además de procedimientos quirúrgicos menores como esterilizaciones, profilaxis y otros procedimientos básicos, siempre realizados con responsabilidad y cuidado. También ofrecemos servicio de spa y baño, porque sabemos que el bienestar también está en sentirse limpios, cómodos y felices. Nuestro propósito es brindar una atención integral, humana y consciente, acompañando a cada paciente y a su familia en cada etapa, generando confianza, tranquilidad y mucho amor. Estamos siempre para servirles y para ayudar a que sus compañeros de vida vibren bonito, estén sanos y reciban el cuidado que merecen. Bienestar/ desparasitanantes / vacunación / salud animal / atención veterinaria.",
+    tipo:        "estandar",
+ 
+    /* ─── IMÁGENES Y LOGOS ─── */
+    logoFill:    false,
+    logoBg:      "#ffffff",
+    logoPerfil:   "assets/logos/judata/Logo-judata.webp",
+    cardImage:   "assets/logos/judata/Portada-judata.webp",
+    portada:     "assets/logos/judata/Inicio-judata.webp",
+ 
+    /* ─── TAMAÑOS RESPONSIVOS (clamp: min, preferido, max) ─── */
+    cardHeight:      "clamp(350px, 180vw, 250px)",
+    logoHeight:      "clamp(90px, 8vw, 60px)",
+    portadaHeight:   "clamp(180px, 25vh, 200px)",
+    galeriaHeight:   "clamp(150px, 20vw, 240px)",
+ 
+    /* ─── CONTACTO Y REDES SOCIALES ─── */
+    wa:          "573115175014",
+    tel:         "3115175014",
+    ig:          "https://www.instagram.com/veterinaria_judatavip?igsh=dHN1eHJjbjY5cXlv&utm_source=qr",
+    fb:          "",
+    tik:         "",
+    web:         "",
+ 
+    /* ─── UBICACIÓN Y MAPA ─── */
+    dir:         "Calle 17 # 07-89E Maipore /  Cra 12 # 15-35 Villa Marcela",
+    mapUrl:      "",
+    mapsLinks: [
+      { nombre: "Maipore", url: "https://maps.app.goo.gl/nxtLXN2EEoLtgBpq9" },
+      { nombre: "Villa Marcela", url: "https://maps.app.goo.gl/DBhPuUBuXYCKDv4cA" },
+    ],
+ 
+    /* --- GALERÍA DE FOTOS --- */
+    galeria:     [
+      "assets/logos/judata/judata1.webp","assets/logos/judata/judata2.webp","assets/logos/judata/judata3.webp","assets/logos/judata/judata4.webp","assets/logos/judata/judata5.webp","assets/logos/judata/judata7.webp","assets/logos/judata/judata8.webp", 
+    ],
   },
   // ══ BIENESTAR ════════════════════════════════════════════════
   // ══ BIENESTAR ════════════════════════════════════════════════
