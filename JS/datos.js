@@ -1123,7 +1123,7 @@ const NEGOCIOS = [
  
     /* ─── GALERÍA DE FOTOS ─── */
     galeria:     [
-      "assets/logos/casadearroces/casadelosarroces.webp","assets/logos/casadearroces/casadelosarroces2.webp",
+      "assets/logos/casadearroces/casadelosarroces.webp","assets/logos/casadearroces/casadelosarroces2.webp","assets/logos/casadearroces/casadelosarroces3.jpeg","assets/logos/casadearroces/casadelosarroces4.jpeg","assets/logos/casadearroces/casadelosarroces5.jpeg","assets/logos/casadearroces/casadelosarroces6.jpeg","assets/logos/casadearroces/casadelosarroces7.jpeg","assets/logos/casadearroces/casadelosarroces8.jpeg","assets/logos/casadearroces/casadelosarroces9.jpeg","assets/logos/casadearroces/casadelosarroces10.jpeg",
     ],
   },
 // ══ HOGAR ════════════════════════════════════════════════
@@ -1176,6 +1176,51 @@ const NEGOCIOS = [
       "assets/logos/STTEL/steel1.jpg","assets/logos/STTEL/steel2.jpg","assets/logos/STTEL/steel3.jpg",
       ],
     },
+    {
+    /* ══════════════════════════════════════════════════════════════
+       MODULARES Vr
+       ══════════════════════════════════════════════════════════════ */
+ 
+    /* ─── INFORMACIÓN BÁSICA ─── */
+    id:          "modularesvr",
+    cat:         "hogar",
+    nombre:      "MODULARES Vr",
+    slogan:      "Transformando hogares en Mosquera con calidad, experiencia y cercanía",
+    desc:        "En Mosquera, Cundinamarca, Modulares VR SAS se ha consolidado como una empresa que entiende las necesidades reales de las familias y trabaja para transformar sus espacios en lugares funcionales, modernos y acogedores.Con más de 14 años de experiencia, la empresa se especializa en el diseño, fabricación e instalación de mobiliario en madera, ofreciendo soluciones personalizadas que se adaptan al estilo de vida, presupuesto y gustos de cada cliente.Uno de los pilares de Modulares VR SAS es su compromiso con el medio ambiente, trabajando con madera reforestada, lo que permite ofrecer productos resistentes y duraderos, aportando al mismo tiempo a la sostenibilidad y al cuidado del entorno.Su portafolio incluye la fabricación de cocinas integrales, closets, puertas, centros de entretenimiento y mobiliario personalizado, desarrollando proyectos pensados para optimizar los espacios del hogar y mejorar la calidad de vida de las familias.Más allá de fabricar muebles, Modulares VR SAS se destaca por brindar un acompañamiento cercano durante todo el proceso, desde la asesoría inicial hasta la instalación final, garantizando calidad, cumplimiento y satisfacción en cada proyecto.Hoy, la empresa continúa creciendo en Mosquera y sus alrededores, convirtiéndose en un aliado confiable para quienes desean renovar, organizar y embellecer sus hogares con soluciones hechas a la medida.",
+    tipo:        "estandar",
+ 
+    /* ─── IMÁGENES Y LOGOS ─── */
+    logo:        "assets/logos/gallery-home-logo.jpg",
+    logoFill:    false,
+    logoBg:      "#ffffff",
+    logoPerfil:  "assets/logos/modulares/logo-modulares-vr.jpg",
+    cardImage:   "assets/logos/modulares/inicio-modulares-vr.jpg",
+    portada:     "assets/logos/modulares/portada-modulares-vr.jpg",
+ 
+    /* ─── TAMAÑOS RESPONSIVOS (clamp: min, preferido, max) ─── */
+    cardHeight:      "clamp(350px, 180vw, 250px)",
+    logoHeight:      "clamp(90px, 8vw, 60px)",
+    portadaHeight:   "clamp(180px, 25vh, 200px)",
+    galeriaHeight:   "clamp(150px, 20vw, 240px)",
+ 
+    /* ─── CONTACTO Y REDES SOCIALES ─── */
+    wa:          "573123718939",
+    tel:         "3123718939",
+    ig:          "https://www.instagram.com/modularesvr?igsh=bDcwN2w5amhxbXYz",
+    fb:          "https://www.facebook.com/share/1CRN3KLWKe/",
+    tk:          "https://www.tiktok.com/@modularesvr?_r=1&_t=ZS-96MO0izLGbg",
+    web:         "",
+ 
+    /* ─── UBICACIÓN Y MAPA ─── */
+    dir:         "Carrera 15 # 9C-10, Mosquera, Cundinamarca",
+    mapUrl:      "",
+    mapsLink:    "https://maps.app.goo.gl/fFZ2DtNt2HUKntge6",
+ 
+    /* ─── GALERÍA DE FOTOS ─── */
+    galeria:     [
+      "assets/logos/modulares/modularesvr1.jpg","assets/logos/modulares/modularesvr2.jpg","assets/logos/modulares/modularesvr3.jpg","assets/logos/modulares/modularesvr4.jpg","assets/logos/modulares/modularesvr5.jpg",
+    ],
+  },
   {
     /* ══════════════════════════════════════════════════════════════
        CERRAJERIA MAXSECURITY
@@ -1397,51 +1442,6 @@ const NEGOCIOS = [
     /* ─── GALERÍA DE FOTOS ─── */
     galeria:     [
       "assets/logos/mayton/mayton1.jpg","assets/logos/mayton/mayton2.jpg","assets/logos/mayton/mayton3.jpg","assets/logos/mayton/mayton4.jpg","assets/logos/mayton/mayton5.jpeg",
-    ],
-  },
-  {
-    /* ══════════════════════════════════════════════════════════════
-       MODULARES Vr
-       ══════════════════════════════════════════════════════════════ */
- 
-    /* ─── INFORMACIÓN BÁSICA ─── */
-    id:          "modularesvr",
-    cat:         "hogar",
-    nombre:      "MODULARES Vr",
-    slogan:      "Transformando hogares en Mosquera con calidad, experiencia y cercanía",
-    desc:        "En Mosquera, Cundinamarca, Modulares VR SAS se ha consolidado como una empresa que entiende las necesidades reales de las familias y trabaja para transformar sus espacios en lugares funcionales, modernos y acogedores.Con más de 14 años de experiencia, la empresa se especializa en el diseño, fabricación e instalación de mobiliario en madera, ofreciendo soluciones personalizadas que se adaptan al estilo de vida, presupuesto y gustos de cada cliente.Uno de los pilares de Modulares VR SAS es su compromiso con el medio ambiente, trabajando con madera reforestada, lo que permite ofrecer productos resistentes y duraderos, aportando al mismo tiempo a la sostenibilidad y al cuidado del entorno.Su portafolio incluye la fabricación de cocinas integrales, closets, puertas, centros de entretenimiento y mobiliario personalizado, desarrollando proyectos pensados para optimizar los espacios del hogar y mejorar la calidad de vida de las familias.Más allá de fabricar muebles, Modulares VR SAS se destaca por brindar un acompañamiento cercano durante todo el proceso, desde la asesoría inicial hasta la instalación final, garantizando calidad, cumplimiento y satisfacción en cada proyecto.Hoy, la empresa continúa creciendo en Mosquera y sus alrededores, convirtiéndose en un aliado confiable para quienes desean renovar, organizar y embellecer sus hogares con soluciones hechas a la medida.",
-    tipo:        "estandar",
- 
-    /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
-    logoFill:    false,
-    logoBg:      "#ffffff",
-    logoPerfil:  "assets/logos/modulares/logo-modulares-vr.jpg",
-    cardImage:   "assets/logos/modulares/inicio-modulares-vr.jpg",
-    portada:     "assets/logos/modulares/portada-modulares-vr.jpg",
- 
-    /* ─── TAMAÑOS RESPONSIVOS (clamp: min, preferido, max) ─── */
-    cardHeight:      "clamp(350px, 180vw, 250px)",
-    logoHeight:      "clamp(90px, 8vw, 60px)",
-    portadaHeight:   "clamp(180px, 25vh, 200px)",
-    galeriaHeight:   "clamp(150px, 20vw, 240px)",
- 
-    /* ─── CONTACTO Y REDES SOCIALES ─── */
-    wa:          "573123718939",
-    tel:         "3123718939",
-    ig:          "https://www.instagram.com/modularesvr?igsh=bDcwN2w5amhxbXYz",
-    fb:          "https://www.facebook.com/share/1CRN3KLWKe/",
-    tk:          "https://www.tiktok.com/@modularesvr?_r=1&_t=ZS-96MO0izLGbg",
-    web:         "",
- 
-    /* ─── UBICACIÓN Y MAPA ─── */
-    dir:         "Carrera 15 # 9C-10, Mosquera, Cundinamarca",
-    mapUrl:      "",
-    mapsLink:    "https://maps.app.goo.gl/fFZ2DtNt2HUKntge6",
- 
-    /* ─── GALERÍA DE FOTOS ─── */
-    galeria:     [
-      "assets/logos/modulares/modularesvr1.jpg","assets/logos/modulares/modularesvr2.jpg","assets/logos/modulares/modularesvr3.jpg","assets/logos/modulares/modularesvr4.jpg","assets/logos/modulares/modularesvr5.jpg",
     ],
   },
   {
@@ -2419,13 +2419,13 @@ const NEGOCIOS = [
   },
   {
     /* ══════════════════════════════════════════════════════════════
-       IMAGEN DIGITAL XAVIER 
+       IMAGEN DIGITAL
        ══════════════════════════════════════════════════════════════ */
  
     /* ─── INFORMACIÓN BÁSICA ─── */
     id:          "imagendigital",
     cat:         "servicios",
-    nombre:      "IMAGEN DIGITAL XAVIER ",
+    nombre:      "PHOTO IMAGEN DIGITAL",
     slogan:      "Detenemos el tiempo para que tus mejores momentos duren para siempre",
     desc:        "En Imagen Digital, transformamos momentos e ideas en recuerdos tangibles y recursos visuales de alto impacto. Somos un equipo de profesionales de la fotografía comprometidos con la excelencia técnica y la sensibilidad artística. Ya sea retratando la calidez de un evento familiar, capturando la fuerza de un retrato personal o destacando las virtudes de un producto, nos aseguramos de que cada detalle brille con luz propia a través de la lente.",
     tipo:        "estandar",

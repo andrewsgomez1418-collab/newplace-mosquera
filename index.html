@@ -11,7 +11,245 @@
   html{-webkit-text-size-adjust:100%}
   img{max-width:100%;height:auto}
   button,a{touch-action:manipulation}
-</style>
+  
+  /* Estilos para botón de compartir */
+  .nav-share {
+    background: linear-gradient(135deg, #e5007d, #c40069);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(229, 0, 125, 0.25);
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .nav-share:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(229, 0, 125, 0.35);
+  }
+  
+  .nav-share:active {
+    transform: translateY(0);
+  }
+  
+  /* Estilos para modal de compartir */
+  .share-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: flex-end;
+    z-index: 9999;
+    animation: slideUp 0.3s ease-out;
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .share-modal {
+    background: white;
+    border-radius: 24px 24px 0 0;
+    padding: 32px 24px 40px;
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .share-modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s;
+  }
+  
+  .share-modal-close:hover {
+    color: #333;
+  }
+  
+  .share-modal-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1c1c1b;
+    margin: 0 0 8px 0;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .share-modal-desc {
+    color: #6f6f6e;
+    font-size: 0.9rem;
+    margin: 0 0 24px 0;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .share-options {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+  
+  .share-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 12px;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.75rem;
+    color: #1c1c1b;
+    gap: 8px;
+  }
+  
+  .share-option .share-icon {
+    font-size: 2rem;
+  }
+  
+  .share-option .share-label {
+    font-size: 0.7rem;
+    text-align: center;
+  }
+  
+  .share-option:hover {
+    transform: translateY(-4px);
+  }
+  
+  .share-option.whatsapp {
+    background: #E8F5E9;
+  }
+  
+  .share-option.whatsapp:hover {
+    background: #C8E6C9;
+  }
+  
+  .share-option.facebook {
+    background: #E3F2FD;
+  }
+  
+  .share-option.facebook:hover {
+    background: #BBDEFB;
+  }
+  
+  .share-option.twitter {
+    background: #F3E5F5;
+  }
+  
+  .share-option.twitter:hover {
+    background: #E1BEE7;
+  }
+  
+  .share-option.instagram {
+    background: #FCE4EC;
+  }
+  
+  .share-option.instagram:hover {
+    background: #F8BBD0;
+  }
+  
+  .share-copy {
+    display: flex;
+    gap: 8px;
+    padding: 16px;
+    background: #f5f6fa;
+    border-radius: 12px;
+  }
+  
+  .share-input {
+    flex: 1;
+    border: 1px solid #ddd;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-family: 'Courier New', monospace;
+    background: white;
+    color: #666;
+  }
+  
+  .share-copy-btn {
+    background: #e5007d;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .share-copy-btn:hover {
+    background: #c40069;
+    transform: translateY(-2px);
+  }
+  
+  /* Responsive */
+  @media (max-width: 480px) {
+    .share-modal {
+      padding: 28px 20px 36px;
+    }
+    
+    .share-options {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+    
+    .share-modal-title {
+      font-size: 1.2rem;
+    }
+    
+    .share-copy {
+      flex-direction: column;
+    }
+    
+    .share-copy-btn {
+      width: 100%;
+    }
+  }
+  
+  /* Estilos para botón de compartir de negocio */
+  .abtn.compartir-neg {
+    background: linear-gradient(135deg, #e5007d, #c40069);
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .abtn.compartir-neg:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+  }</style>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -22,14 +260,14 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
+ 
 <!-- NAVEGACIÓN -->
 <nav class="top-nav">
   <button class="nav-back" id="backBtn" onclick="goBack()">← Volver</button>
   <div class="nav-brand"><span class="np-new">new</span><span class="np-place">place</span> <span class="np-store">store</span></div>
-  <div style="width:60px"></div>
+  <button class="nav-share" id="shareBtn" onclick="compartirPlataforma()">Compartir →</button>
 </nav>
-
+ 
 <!-- PÁGINA: INICIO -->
 <div class="page active" id="page-index">
   <header class="site-header">
@@ -64,8 +302,8 @@
     <h2 class="sec-title">Categorías</h2>
     <div class="cat-grid" id="catGrid"></div>
   </div>
-
-
+ 
+ 
   <!-- ══ HERO NEWPLACE ══════════════════════════════════════ -->
   <div class="np-hero">
     <div class="np-hero-inner">
@@ -79,7 +317,7 @@
       </a>
     </div>
   </div>
-
+ 
   <!-- ══ BENEFICIOS ═════════════════════════════════════════ -->
   <div class="benefits-wrap">
     <div class="benefits-inner">
@@ -118,7 +356,7 @@
       </div>
     </div>
   </div>
-
+ 
   <!-- ══ PLANES ═════════════════════════════════════════════ -->
   <div class="planes-wrap">
     <div class="planes-inner">
@@ -152,6 +390,7 @@
             <li>Boton de clificar y opinar</li>
             <li>QR personalizado</li>
             <li>Flyer publicitario</li>
+            <li>Creacion oficial de tu negocio en GOOGLE MAPS</li>
           </ul>
           <a href="#inscripcion" class="plan-btn">Quiero este plan</a>
         </div>
@@ -166,13 +405,14 @@
             <li>Soporte y actualizacion de contenido prioritario</li>
             <li>Reportes mensuales</li>
             <li>IMPORTANTE: Se permiten maximo 3 NEGOCIOS PREMIUM de cada categoria</li>
+            <li>Creacion oficial de tu negocio en GOOGLE MAPS</li>
           </ul>
           <a href="#inscripcion" class="plan-btn">Quiero este plan</a>
         </div>
       </div>
     </div>
   </div>
-
+ 
   <!-- ══ CONTACTO ═══════════════════════════════════════════ -->
   <div class="contact-wrap">
     <div class="contact-inner" style="text-align:center">
@@ -189,7 +429,7 @@
           <div class="contact-card-label">Llamar</div>
           <div class="contact-card-value">300 362 9925</div>
         </a>
-
+ 
         <a href="mailto:produccionrevistanps@gmail.com" class="contact-card" style="min-height:110px;justify-content:center;text-align:center">
           <div class="contact-card-icon">📧</div>
           <div class="contact-card-label">Email</div>
@@ -198,18 +438,18 @@
       </div>
     </div>
   </div>
-
+ 
   <!-- ══ FORMULARIO DE INSCRIPCIÓN ══════════════════════════ -->
   <div class="form-wrap" id="inscripcion">
     <div class="form-inner">
       <h2 class="form-title">📋 Inscribe tu Negocio</h2>
       <p class="form-sub">Llena el formulario y en menos de 24 horas te contactamos para publicar tu negocio</p>
-
+ 
       <div id="formSuccess" class="form-success">
         <h3>✅ ¡Solicitud enviada!</h3>
         <p>Recibimos tu información. En menos de 24 horas uno de nuestros asesores se comunicará contigo por WhatsApp para completar tu publicación.</p>
       </div>
-
+ 
       <div id="formBody">
         <div class="form-grid">
           <div class="form-group">
@@ -286,14 +526,14 @@
       </div>
     </div>
   </div>
-
+ 
   <footer class="site-footer">
     <img src="/assets/img/logo-bn.webp" class="hdr-logo-img" style="height: 80px; object-fit: contain; filter: drop-shadow(0 4px 12px rgba(0,0,0,0.2));" alt="New Place Store Footer">
     <p>© 2025 Newplace Store · Todos los derechos reservados</p>
     <p style="font-size:.73rem;opacity:.6">La revista digital que conecta negocios locales con su comunidad</p>
   </footer>
 </div>
-
+ 
 <!-- PÁGINA: CATEGORÍA -->
 <div class="page" id="page-cat">
   <header class="cat-hdr" id="catHdrEl">
@@ -309,7 +549,7 @@
   </div>
   <footer class="site-footer"><p>© 2025 Newplace Store</p></footer>
 </div>
-
+ 
 <!-- PÁGINA: NEGOCIO -->
 <div class="page" id="page-neg">
   <div class="prof-cover" id="profCover"><div class="prof-cover-ov"></div></div>
@@ -336,8 +576,8 @@
     <p style="font-size:.78rem;opacity:.7">Publicado en <strong>Newplace Store</strong></p>
   </footer>
 </div>
-
-
+ 
+ 
 <!-- ═══════════════════════════════════════════════════════════
   ⭐ DATOS — AQUÍ EDITAS TODO EL CONTENIDO DEL SITIO
   ═══════════════════════════════════════════════════════════ -->

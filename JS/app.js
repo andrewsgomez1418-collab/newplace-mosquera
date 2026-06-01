@@ -159,7 +159,7 @@ window.addEventListener('popstate', (e) => {
   }
 });
  
-/* RENDER BLOG MOSQUERA */
+/* RENDER BLOG FACA */
 const blogEl = document.getElementById('blogSection');
 blogEl.innerHTML = `
   <div class="blog-card">
@@ -218,6 +218,7 @@ CATS.forEach(cat => {
         <span class="cat-name">${cat.n}</span>
         <div class="cat-count">${count} negocio${count !== 1 ? 's' : ''}</div>
       </div>`;
+      
   } else {
     // No image: colored background + big emoji
     el.style.background = `linear-gradient(135deg, ${cat.c}ee, ${cat.c}99)`;
@@ -342,7 +343,7 @@ function openCat(cat) {
 } else {
   document.getElementById('catTitle').textContent = '';
 }
-
+ 
 // O más corto:
 document.getElementById('catTitle').textContent = cat.showTitle !== false ? cat.n : '';
  
@@ -438,6 +439,7 @@ if (neg.portada) {
   if (neg.tk)  ab.innerHTML += `<a href="${neg.tk}" class="abtn tk" target="_blank">🎵 TikTok</a>`;
   if (neg.fb)  ab.innerHTML += `<a href="${neg.fb}" class="abtn fb" target="_blank">🔵 Facebook</a>`;
   if (neg.web) ab.innerHTML += `<a href="${neg.web}" class="abtn web" target="_blank">🌐 Sitio Web</a>`;
+  ab.innerHTML += `<button class="abtn compartir-neg" onclick="compartirNegocio('${neg.id}', '${neg.nombre.replace(/'/g, "\\'")}')">📤 Compartir</button>`;
  
   /* Tabs */
   const tabs = document.getElementById('negTabs');
@@ -710,3 +712,185 @@ function highlight(text, q) {
  
 // Arrancar buscador
 initSearch();
+ 
+/* ─── FUNCIÓN PARA COMPARTIR ─── */
+function compartirPlataforma() {
+  const urlActual = window.location.href;
+  const titulo = 'Newplace Store - Revista Publicitaria Digital';
+  const descripcion = 'Descubre los mejores negocios locales de tu zona en Newplace Store. Conectamos negocios con comunidades.';
+  
+  // Si el navegador soporta Web Share API (celulares modernos)
+  if (navigator.share) {
+    navigator.share({
+      title: titulo,
+      text: descripcion,
+      url: urlActual
+    }).catch(err => console.log('Error al compartir:', err));
+  } else {
+    // Si no soporta, mostrar modal de opciones
+    mostrarModalCompartir(urlActual, titulo, descripcion);
+  }
+}
+ 
+function mostrarModalCompartir(url, titulo, descripcion) {
+  // Crear el modal
+  const modal = document.createElement('div');
+  modal.className = 'share-modal-overlay';
+  
+  const enlaceEncodificado = encodeURIComponent(url);
+  const tituloEncodificado = encodeURIComponent(titulo);
+  const descripcionEncodificada = encodeURIComponent(descripcion);
+  
+  modal.innerHTML = `
+    <div class="share-modal">
+      <button class="share-modal-close" onclick="this.closest('.share-modal-overlay').remove()">✕</button>
+      <h3 class="share-modal-title">📤 Compartir Newplace Store</h3>
+      <p class="share-modal-desc">Invita a tus amigos a conocer los mejores negocios locales</p>
+      
+      <div class="share-options">
+        <a href="https://wa.me/?text=${descripcionEncodificada}%20${enlaceEncodificado}" target="_blank" class="share-option whatsapp">
+          <span class="share-icon">💬</span>
+          <span class="share-label">WhatsApp</span>
+        </a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=${enlaceEncodificado}" target="_blank" class="share-option facebook">
+          <span class="share-icon">f</span>
+          <span class="share-label">Facebook</span>
+        </a>
+        <a href="https://twitter.com/intent/tweet?url=${enlaceEncodificado}&text=${tituloEncodificado}" target="_blank" class="share-option twitter">
+          <span class="share-icon">𝕏</span>
+          <span class="share-label">Twitter/X</span>
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" class="share-option instagram">
+          <span class="share-icon">📷</span>
+          <span class="share-label">Instagram</span>
+        </a>
+      </div>
+      
+      <div class="share-copy">
+        <input type="text" class="share-input" value="${url}" readonly id="shareInput">
+        <button class="share-copy-btn" onclick="copiarAlPortapapeles()">📋 Copiar enlace</button>
+      </div>
+    </div>
+  `;
+  
+  document.body.appendChild(modal);
+  
+  // Cerrar modal al hacer clic en el overlay
+  modal.querySelector('.share-modal-overlay').addEventListener('click', (e) => {
+    if (e.target.classList.contains('share-modal-overlay')) {
+      modal.remove();
+    }
+  });
+}
+ 
+function copiarAlPortapapeles() {
+  const input = document.getElementById('shareInput');
+  input.select();
+  
+  try {
+    document.execCommand('copy');
+    // Feedback visual
+    const btn = document.querySelector('.share-copy-btn');
+    const textoOriginal = btn.textContent;
+    btn.textContent = '✅ ¡Copiado!';
+    btn.style.background = '#4CAF50';
+    
+    setTimeout(() => {
+      btn.textContent = textoOriginal;
+      btn.style.background = '';
+    }, 2000);
+  } catch (err) {
+    alert('No se pudo copiar el enlace');
+  }
+}
+ 
+/* ─── FUNCIÓN PARA COMPARTIR NEGOCIO ESPECÍFICO ─── */
+function compartirNegocio(negocioId, nombreNegocio) {
+  const urlNegocio = window.location.origin + '/' + negocioId;
+  const titulo = nombreNegocio + ' - Newplace Store';
+  const descripcion = 'Descubre este excelente negocio en Newplace Store. ¡Te recomiendo que lo visites!';
+  
+  // Si el navegador soporta Web Share API (celulares modernos)
+  if (navigator.share) {
+    navigator.share({
+      title: titulo,
+      text: descripcion,
+      url: urlNegocio
+    }).catch(err => console.log('Error al compartir:', err));
+  } else {
+    // Si no soporta, mostrar modal personalizado
+    mostrarModalCompartirNegocio(urlNegocio, nombreNegocio, descripcion);
+  }
+}
+ 
+function mostrarModalCompartirNegocio(url, nombreNegocio, descripcion) {
+  // Crear el modal
+  const modal = document.createElement('div');
+  modal.className = 'share-modal-overlay';
+  
+  const enlaceEncodificado = encodeURIComponent(url);
+  const nombreEncodificado = encodeURIComponent(nombreNegocio);
+  const descripcionEncodificada = encodeURIComponent(descripcion);
+  
+  modal.innerHTML = `
+    <div class="share-modal">
+      <button class="share-modal-close" onclick="this.closest('.share-modal-overlay').remove()">✕</button>
+      <h3 class="share-modal-title">📤 Compartir ${nombreNegocio}</h3>
+      <p class="share-modal-desc">Invita a tus amigos a conocer este negocio</p>
+      
+      <div class="share-options">
+        <a href="https://wa.me/?text=${descripcionEncodificada}%20${enlaceEncodificado}" target="_blank" class="share-option whatsapp">
+          <span class="share-icon">💬</span>
+          <span class="share-label">WhatsApp</span>
+        </a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=${enlaceEncodificado}" target="_blank" class="share-option facebook">
+          <span class="share-icon">f</span>
+          <span class="share-label">Facebook</span>
+        </a>
+        <a href="https://twitter.com/intent/tweet?url=${enlaceEncodificado}&text=${nombreEncodificado}" target="_blank" class="share-option twitter">
+          <span class="share-icon">𝕏</span>
+          <span class="share-label">Twitter/X</span>
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" class="share-option instagram">
+          <span class="share-icon">📷</span>
+          <span class="share-label">Instagram</span>
+        </a>
+      </div>
+      
+      <div class="share-copy">
+        <input type="text" class="share-input" value="${url}" readonly id="shareInputNeg">
+        <button class="share-copy-btn" onclick="copiarAlPortapapelesNeg()">📋 Copiar enlace</button>
+      </div>
+    </div>
+  `;
+  
+  document.body.appendChild(modal);
+  
+  // Cerrar modal al hacer clic en el overlay
+  modal.querySelector('.share-modal-overlay').addEventListener('click', (e) => {
+    if (e.target.classList.contains('share-modal-overlay')) {
+      modal.remove();
+    }
+  });
+}
+ 
+function copiarAlPortapapelesNeg() {
+  const input = document.getElementById('shareInputNeg');
+  input.select();
+  
+  try {
+    document.execCommand('copy');
+    // Feedback visual
+    const btn = document.querySelector('.share-copy-btn');
+    const textoOriginal = btn.textContent;
+    btn.textContent = '✅ ¡Copiado!';
+    btn.style.background = '#4CAF50';
+    
+    setTimeout(() => {
+      btn.textContent = textoOriginal;
+      btn.style.background = '';
+    }, 2000);
+  } catch (err) {
+    alert('No se pudo copiar el enlace');
+  }
+}
