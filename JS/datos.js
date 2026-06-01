@@ -1123,7 +1123,7 @@ const NEGOCIOS = [
  
     /* ─── GALERÍA DE FOTOS ─── */
     galeria:     [
-      "assets/logos/casadearroces/casadelosarroces1.webp","assets/logos/casadearroces/casadelosarroces2.webp",
+      "assets/logos/casadearroces/casadelosarroces.webp","assets/logos/casadearroces/casadelosarroces2.webp",
     ],
   },
 // ══ HOGAR ════════════════════════════════════════════════
