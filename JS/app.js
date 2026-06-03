@@ -439,6 +439,7 @@ if (neg.portada) {
   if (neg.tk)  ab.innerHTML += `<a href="${neg.tk}" class="abtn tk" target="_blank">🎵 TikTok</a>`;
   if (neg.fb)  ab.innerHTML += `<a href="${neg.fb}" class="abtn fb" target="_blank">🔵 Facebook</a>`;
   if (neg.web) ab.innerHTML += `<a href="${neg.web}" class="abtn web" target="_blank">🌐 Sitio Web</a>`;
+  if (neg.greviews) ab.innerHTML += `<a href="${neg.greviews}" class="abtn greviews" target="_blank">⭐ Google Reviews</a>`;
   ab.innerHTML += `<button class="abtn compartir-neg" onclick="compartirNegocio('${neg.id}', '${neg.nombre.replace(/'/g, "\\'")}')">📤 Compartir</button>`;
  
   /* Tabs */

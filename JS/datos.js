@@ -42,11 +42,11 @@ const CATS = [
   { id:"empresarial",  n:"SOLUCIONES EMPRESARIALES",       e:"", c:"#2c3e50", img:"assets/categorias/categoria-empresarial.webp", imgHdr:"assets/categorias/destacados/salud.webp", showTitle: false},
   { id:"servicios",    n:"SERVICIOS",                      e:"", c:"#d35400", img:"assets/categorias/categoria-servicios.webp", imgHdr:"assets/categorias/destacados/salud.jpg", showTitle: false},
   { id:"gourmet",      n:"EXPERIENCIA GOURMET",            e:"", c:"#922b21", img:"assets/categorias/categoria-gourmet.webp", imgHdr:"assets/categorias/destacados/destacados-gourmet.webp", showTitle: false},
-  { id:"bienestar",    n:"SALUD Y BIENESTAR",                      e:"", c:"#1abc9c", img:"assets/categorias/categoria-bienestar.webp", imgHdr:"assets/categorias/destacados/destacado-bienestar.webp", showTitle: false},
+  { id:"bienestar",    n:"SALUD Y BIENESTAR",              e:"", c:"#1abc9c", img:"assets/categorias/categoria-bienestar.webp", imgHdr:"assets/categorias/destacados/destacado-bienestar.webp", showTitle: false},
   { id:"shopping",     n:"SHOPPING",                       e:"", c:"#e5007d", img:"assets/categorias/categoria-shopping.webp", imgHdr:"assets/categorias/destacados/destacados-shopping.webp", showTitle: false},
   { id:"imagen",       n:"IMAGEN Y ESTILO",                e:"", c:"#9b59b6", img:"assets/categorias/categoria-estilo.webp", imgHdr:"assets/categorias/destacados/destacados-imagen-estilo.webp", showTitle: false},
   { id:"mascotas",     n:"MUNDO MASCOTAS",                 e:"", c:"#f39c12", img:"assets/categorias/mascotas.webp", imgHdr:"assets/categorias/destacados/destacados-macotas.webp", showTitle: false},
-  { id:"educacion",    n:"EDUCACION Y APRENDIZAGE",        e:"", c:"#3498db", img:"assets/categorias/categoria-educacion.webp", imgHdr:"assets/categorias/destacados/destacados-educacion.webp", showTitle: false},
+  { id:"educacion",    n:"EDUCACION Y APRENDIZAJE",        e:"", c:"#3498db", img:"assets/categorias/categoria-educacion.webp", imgHdr:"assets/categorias/destacados/destacados-educacion.webp", showTitle: false},
   { id:"movilidad",    n:"TALLERES Y MOVILIDAD",           e:"", c:"#616161", img:"assets/categorias/categoria-talleres.webp", imgHdr:"assets/categorias/destacados/salud.jpg", showTitle: false},
   { id:"clasificados",    n:"CLASIFICADOS",                e:"", c:"#e65100", img:"assets/categorias/categoria-clasificados.webp", imgHdr:"assets/categorias/destacados/salud.jpg", showTitle: false},
   { id:"entretenimiento", n:"ENTRETENIMIENTO",             e:"", c:"#7b1fa2", img:"assets/categorias/categoria-entretenimiento.webp", imgHdr:"assets/categorias/destacados/salud.jpg", showTitle: false},
@@ -122,6 +122,7 @@ const NEGOCIOS = [
     fb:          "",
     tk:          "",
     web:         "",
+    greviews:    "",
  
     /* ─── UBICACIÓN Y MAPA ─── */
     dir:         "",
@@ -173,6 +174,7 @@ const NEGOCIOS = [
     fb:          "https://facebook.com/restaurante",
     tk:          "",
     web:         "",
+    greviews:    "",
  
     /* ─── UBICACIÓN Y MAPA ─── */
     dir:         "Calle 10 #20-30, Bogotá",
@@ -243,6 +245,7 @@ const NEGOCIOS = [
     fb:          "",
     tk:          "",
     web:         "",
+    greviews:    "",
  
     /* ─── UBICACIÓN Y MAPA ─── */
     dir:         "",
@@ -945,13 +948,13 @@ const NEGOCIOS = [
   },
   {
     /* ══════════════════════════════════════════════════════════════
-       RICA TENTACION RT
+      RT RICA TENTACION RT
        ══════════════════════════════════════════════════════════════ */
  
     /* ─── INFORMACIÓN BÁSICA ─── */
     id:          "ricatentacion",
     cat:         "antojos",
-    nombre:      "RICA TENTACION",
+    nombre:      "RT RICA TENTACION",
     slogan:      "PORQUE MERECES LO MEJOR.",
     desc:        "Somos una frutería especializada en ofrecer productos frescos, deliciosos y llenos de sabor. Disfruta de waffles, ensaladas de frutas, jugos naturales, batidos, postres y una gran variedad de opciones perfectas para cualquier momento del día. Trabajamos con ingredientes de calidad y excelente atención para brindar una experiencia refrescante, dulce y saludable a cada cliente. Antojos dulces, postres deliciosos, sabores irresistible, repostería artesanal, dulce tentacion",
     tipo:        "estandar",
@@ -1603,9 +1606,9 @@ const NEGOCIOS = [
     logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
-    logoPerfil:  "assets/logos/patikoo/logo-patikoo-pañalera.jpg",
-    cardImage:   "assets/logos/patikoo/inicio-patikoo-pañalera.jpg",
-    portada:     "assets/logos/patikoo/portada-patikoo-pañalera.jpg",
+    logoPerfil:  "assets/logos/patikoo/logo-patikoo-pañalera.webp",
+    cardImage:   "assets/logos/patikoo/inicio-patikoo-pañalera.webp",
+    portada:     "assets/logos/patikoo/portada-patikoo-pañalera.webp",
  
     /* ─── TAMAÑOS RESPONSIVOS (clamp: min, preferido, max) ─── */
     cardHeight:      "clamp(350px, 180vw, 250px)",
@@ -1628,7 +1631,7 @@ const NEGOCIOS = [
  
     /* ─── GALERÍA DE FOTOS ─── */
     galeria:     [
-      "assets/logos/patikoo/patiko1.jpeg","assets/logos/patikoo/patiko2.jpeg","assets/logos/patikoo/patiko3.jpeg","assets/logos/patikoo/patiko4.jpeg","assets/logos/patikoo/patiko5.jpeg",
+      "assets/logos/patikoo/patiko1.webp","assets/logos/patikoo/patiko2.webp","assets/logos/patikoo/patiko3.webp","assets/logos/patikoo/patiko4.webp","assets/logos/patikoo/patiko5.webp",
     ],
   },
   {
@@ -2229,13 +2232,13 @@ const NEGOCIOS = [
   },
   {
     /* ══════════════════════════════════════════════════════════════
-       EL EDEN
+       FRUVER'S Y CARNICERIA EL EDEN
        ══════════════════════════════════════════════════════════════ */
  
     /* ─── INFORMACIÓN BÁSICA ─── */
     id:          "eleden",
     cat:         "consumo",
-    nombre:      "EL EDEN",
+    nombre:      "FRUVER'S Y CARNICERIA EL EDEN",
     slogan:      "FRUTAS Y VERDURAS TAMBIEN MANEJAN SALSAMENTARIA Y PRODUCTOS DE ASEO ",
     desc:        "Verduras frescas, fruta para jugos naturales, mercado saludable, verduras selectas, productos del campo, carnes premium, cortes gourmet, maduración especial, calidad selecta, parilla y asados ",
     tipo:        "estandar",
@@ -2578,9 +2581,9 @@ const NEGOCIOS = [
     logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
-    logoPerfil:  "assets/logos/asprilla/logo-asprilla-rivas.jpg",
-    cardImage:   "assets/logos/asprilla/inicio-asprilla-rivas.jpg",
-    portada:     "assets/logos/asprilla/portada-asprilla-rivas.jpg",
+    logoPerfil:  "assets/logos/asprilla/logo-asprilla-rivas.webp",
+    cardImage:   "assets/logos/asprilla/inicio-asprilla-rivas.webp",
+    portada:     "assets/logos/asprilla/portada-asprilla-rivas.webp",
  
     /* ─── TAMAÑOS RESPONSIVOS (clamp: min, preferido, max) ─── */
     cardHeight:      "clamp(350px, 180vw, 250px)",
@@ -2603,7 +2606,7 @@ const NEGOCIOS = [
  
     /* ─── GALERÍA DE FOTOS ─── */
     galeria:     [
-      "assets/logos/asprilla/pacifico1.jpeg","assets/logos/asprilla/pacifico2.jpeg","assets/logos/asprilla/pacifico3.jpeg","assets/logos/asprilla/pacifico4.jpeg","assets/logos/asprilla/pacifico5.jpeg",
+      "assets/logos/asprilla/pacifico1.webp","assets/logos/asprilla/pacifico2.webp","assets/logos/asprilla/pacifico3.webp","assets/logos/asprilla/pacifico4.webp","assets/logos/asprilla/pacifico5.webp",
     ],
   },
   {
@@ -2852,9 +2855,9 @@ const NEGOCIOS = [
     logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
-    logoPerfil:  "assets/logos/barrelec/logo-barrelec.jpg",
-    cardImage:   "assets/logos/barrelec/inicio-barrelet.jpg",
-    portada:     "assets/logos/barrelec/portada-barrelec.jpg",
+    logoPerfil:  "assets/logos/barrelec/logo-barrelec.webp",
+    cardImage:   "assets/logos/barrelec/inicio-barrelet.webp",
+    portada:     "assets/logos/barrelec/portada-barrelec.webp",
  
     /* ─── TAMAÑOS RESPONSIVOS (clamp: min, preferido, max) ─── */
     cardHeight:      "clamp(350px, 180vw, 250px)",
@@ -2877,7 +2880,7 @@ const NEGOCIOS = [
  
     /* ─── GALERÍA DE FOTOS ─── */
     galeria:     [
-      "assets/logos/barrelec/barrelec1.jpg","assets/logos/barrelec/barrelec2.jpg","assets/logos/barrelec/barrelec3.jpg","assets/logos/barrelec/barrelec4.jpg","assets/logos/barrelec/barrelec5.jpg",
+      "assets/logos/barrelec/barrelec1.webp","assets/logos/barrelec/barrelec2.webp","assets/logos/barrelec/barrelec3.webp","assets/logos/barrelec/barrelec4.webp","assets/logos/barrelec/barrelec5.webp",
     ],
   },
   {
@@ -3152,9 +3155,9 @@ const NEGOCIOS = [
     web:         "",
  
     /* ─── UBICACIÓN Y MAPA ─── */
-    dir:         "calle 17s 4-14 Mosquera, Colombia",
+    dir:         "calle 3A 17sur-96 local 157 CC. MALL MERIDIANO NOVATERRA Mosquera, Colombia",
     mapUrl:      "",
-    mapsLink:    "https://maps.app.goo.gl/HewyTsQwVJxBLvUb8",
+    mapsLink:    "https://maps.app.goo.gl/ebiDBeT8JX8NZFr78?g_st=iw",
  
     /* --- GALERÍA DE FOTOS --- */
     galeria:     ["assets/logos/javi-vet/javivet-foto1.jpg", "assets/logos/javi-vet/javivet-foto2.jpg", "assets/logos/javi-vet/javivet-foto3.jpg", "assets/logos/javi-vet/javivet-foto4.jpg", "assets/logos/javi-vet/javivet-foto5.jpg",],
@@ -3236,6 +3239,7 @@ const NEGOCIOS = [
     fb:          "",
     tk:          "",
     web:         "",
+    greviews:    "",
  
     /* ─── UBICACIÓN Y MAPA ─── */
     dir:         "calle 19 con carrera 1b este Mosquera, Colombia",
@@ -3393,12 +3397,12 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
+    logo:        "assets/logos/gallery-home-logo.webp",
     logoFill:    false,
     logoBg:      "#ffffff",
-    logoPerfil:  "assets/logos/ARMONIOSA/logo-estetica-figura.jpg",
-    cardImage:   "assets/logos/ARMONIOSA/inicio-estetica-figura.jpg",
-    portada:     "assets/logos/ARMONIOSA/portada-estetica-figura.jpg",
+    logoPerfil:  "assets/logos/ARMONIOSA/logo-estetica-figura.webp",
+    cardImage:   "assets/logos/ARMONIOSA/inicio-estetica-figura.webp",
+    portada:     "assets/logos/ARMONIOSA/portada-estetica-figura.webp",
  
     /* ─── TAMAÑOS RESPONSIVOS (clamp: min, preferido, max) ─── */
     cardHeight:      "clamp(350px, 180vw, 250px)",
@@ -3421,7 +3425,7 @@ const NEGOCIOS = [
  
     /* ─── GALERÍA DE FOTOS ─── */
     galeria:     [
-      "assets/logos/ARMONIOSA/armoniosa1.jpeg","assets/logos/ARMONIOSA/armoniosa2.jpeg","assets/logos/ARMONIOSA/armoniosa3.jpeg","assets/logos/ARMONIOSA/armoniosa4.jpeg","assets/logos/ARMONIOSA/armoniosa5.jpeg",
+      "assets/logos/ARMONIOSA/armoniosa1.webp","assets/logos/ARMONIOSA/armoniosa2.webp","assets/logos/ARMONIOSA/armoniosa3.webp","assets/logos/ARMONIOSA/armoniosa4.webp","assets/logos/ARMONIOSA/armoniosa5.webp",
     ],
   },
   {
@@ -3601,6 +3605,7 @@ const NEGOCIOS = [
     fb:          "https://www.facebook.com/share/1EToFzgZGG/",
     tk:          "https://www.tiktok.com/@cortes_y.estilos?_r=1&_t=ZS-96S5ca7dllo",
     web:         "",
+    greviews:    "https://g.page/r/Ca-6D0Z9d_tiEBM/review",
  
     /* ─── UBICACIÓN Y MAPA ─── */
     dir:         "Carrera 3 #21-41, Cl. 22 #2a-17a, El Cabrero, Mosquera, Cundinamarca ",

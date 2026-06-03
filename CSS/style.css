@@ -299,8 +299,9 @@ body{font-family:var(--font);background:var(--bg);color:var(--text)}
 .abtn.tel{background:var(--primary);color:#fff}
 .abtn.ig{background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff}
 .abtn.fb{background:#4267B2;color:#fff}
-.abtn.web{background:#222;color:#fff}
+.abtn.web{background:#818181;color:#fff}
 .abtn.tk{background:#000;color:#fff}
+.abtn.greviews{background:linear-gradient(135deg,#003cff,#FBBC04,#fb0404,#00b900);color:#fff}
 .abtn.agendamiento{background:#FFD700;color:#000}
 
 /* TABS */
