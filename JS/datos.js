@@ -451,13 +451,13 @@ const NEGOCIOS = [
   },
   {
     /* ══════════════════════════════════════════════════════════════
-       ROSEMBERG
+       CENTRO MEDICO Y LABORATORIO CLÍNICO
        ══════════════════════════════════════════════════════════════ */
  
     /* ─── INFORMACIÓN BÁSICA ─── */
-    id:          "rosemberg",
+    id:          "laboratorioclinico",
     cat:         "salud",
-    nombre:      "CENTRO MEDICO Y LABORATORIO CLÍNICO DE REFERENCIA",
+    nombre:      "CENTRO MEDICO Y LABORATORIO CLÍNICO",
     slogan:      "Nuestra prioridad es tu salud y nuestra mejor herramienta es la prevención. ",
     desc:        "👩🏻‍🔬Calidad humana en la atención, eficiente oportunidad de entrega en los resultados,ambiente confortable; adecuada orientación según la necesidad de cada usuario. PRUEBAS DE EMBARAZO,  QUÍMICA SANGUÍNEO, HEMATOLOGÍA, EXAMEN DE ORINA Y COPROLOGICO",
     tipo:        "estandar",
@@ -886,7 +886,10 @@ const NEGOCIOS = [
     galeriaHeight:   "clamp(150px, 20vw, 240px)",
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
-    wa:          "573503987052",
+     was: [
+  { nombre: "WhatsApp", numero: "573503987052" },
+  { nombre: "WhatsApp", numero: "573007547137" },
+],
     tel:         "3503987052",
     ig:          "",
     fb:          "",
@@ -2521,14 +2524,14 @@ const NEGOCIOS = [
   // ══ GOURMET ════════════════════════════════════════════════
   {
     /* ══════════════════════════════════════════════════════════════
-       DIMASHK
+       DIMASHK EXPERIENCIA ARABE
        ══════════════════════════════════════════════════════════════ */
  
     /* ─── INFORMACIÓN BÁSICA ─── */
     id:          "dimashk",
     cat:         "gourmet",
-    nombre:      "DIMASHK",
-    slogan:      "Somos un restaurante de comida árabe, la cual recibimos por tradición de nuestro abuelo paterno quien migró desde Siria a Damasco. ",
+    nombre:      "DIMASHK EXPERIENCIA ARABE",
+    slogan:      "Somos un restaurante de comida árabe, la cual recibimos por tradición de nuestro abuelo paterno quien migró desde Damasco, Siria a Colombia. ",
     desc:        "Comida arabe, shawarma, falafel, cocina mediterránea, kebab artesanal",
     tipo:        "estandar",
  
@@ -3610,7 +3613,7 @@ const NEGOCIOS = [
     /* ─── UBICACIÓN Y MAPA ─── */
     dir:         "Carrera 3 #21-41, Cl. 22 #2a-17a, El Cabrero, Mosquera, Cundinamarca ",
     mapUrl:      "",
-    mapsLink:    "https://maps.app.goo.gl/yowwtmxdHNpEMKQz6",
+    mapsLink:    "https://maps.app.goo.gl/jafuuuFaFNWHoU4y8",
  
     /* ─── GALERÍA DE FOTOS ─── */
     galeria:     [
