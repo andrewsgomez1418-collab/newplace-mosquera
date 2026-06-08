@@ -301,7 +301,7 @@ const NEGOCIOS = [
     ig:          "https://www.instagram.com/dra.ingrid.manrique/",
     fb:          "https://www.facebook.com/p/Dra-Ingrid-Andrea-Manrique-100064058706256/?locale=es_LA",
     tk:          "",
-    web:         "",
+    web:         "https://doctoraingridmanrique.com.co/",
  
     /* ─── UBICACIÓN Y MAPA ─── */
     dir:         "carrera 5 # 1-64 PISO 2 entrada por la calle 2da MOSQUERA",
@@ -459,7 +459,7 @@ const NEGOCIOS = [
     cat:         "salud",
     nombre:      "CENTRO MEDICO Y LABORATORIO CLÍNICO",
     slogan:      "Nuestra prioridad es tu salud y nuestra mejor herramienta es la prevención. ",
-    desc:        "👩🏻‍🔬Calidad humana en la atención, eficiente oportunidad de entrega en los resultados,ambiente confortable; adecuada orientación según la necesidad de cada usuario. PRUEBAS DE EMBARAZO,  QUÍMICA SANGUÍNEO, HEMATOLOGÍA, EXAMEN DE ORINA Y COPROLOGICO",
+    desc:        "👩🏻‍🔬Calidad humana en la atención, eficiente oportunidad de entrega en los resultados,ambiente confortable; adecuada orientación según la necesidad de cada usuario. PRUEBAS DE EMBARAZO,  EXAMEN DE SANGRE, HEMATOLOGÍA, EXAMEN DE ORINA Y COPROLOGICO",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -1691,7 +1691,7 @@ const NEGOCIOS = [
     cat:         "shopping",
     nombre:      "FLORALIA FLOWER MARKET",
     slogan:      "En floralia flower market convertimos emociones en detalles.",
-    desc:        "Imagen publicitaria de una floristería llamada Floralia Flower Market, enfocada en la venta de detalles especiales y regalos llenos de amor y elegancia. En el diseño se destacan hermosos arreglos florales con rosas rojas, bouquets personalizados, anchetas, peluches y desayunos sorpresa, ideales para sorprender en ocasiones especiales. La imagen transmite un estilo romántico, delicado y moderno, acompañado de la frase “Detalles que hablan por ti”, resaltando la importancia de expresar emociones a través de regalos únicos y memorables. Arreglos florales, Peluches, Anchetas, Desayunos sorpresa, Llenos de amor y estilo. Cada producto está diseñado para sorprender, celebrar y enamorar.",
+    desc:        "En Floralia Flower Market transformamos emociones en detalles inolvidables. Nos especializamos en la creación de arreglos florales, bouquets personalizados, anchetas, peluches y desayunos sorpresa diseñados para celebrar los momentos más importantes de la vida. Cada creación está elaborada con dedicación, elegancia y creatividad, convirtiéndose en el regalo perfecto para expresar amor, gratitud, amistad y admiración. Nuestro compromiso es ayudarte a sorprender a esa persona especial con detalles únicos que hablan por ti. Arreglo de flores, Peluches, Anchetas, Desayunos sorpresa, creatividad.",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -2896,7 +2896,7 @@ const NEGOCIOS = [
     cat:         "movilidad",
     nombre:      "BIKE SHOP",
     slogan:      "Innovación y estilo en cada pedaleo ",
-    desc:        "Somos el centro integral definitivo para los apasionados del ciclismo en todas sus formas. En nuestro espacio combinamos la venta de bicicletas convencionales y eléctricas de última generación con un servicio técnico especializado de primer nivel. Ya sea que busques la pureza del pedal tradicional, la potencia de la movilidad urbana eléctrica, o necesites un mantenimiento de precisión para tu compañera de rutas, contamos con las herramientas y el equipo experto para garantizar tu seguridad y rendimiento. Rodamos contigo, impulsando tu camino y cuidando cada detalle de tu bicicleta.",
+    desc:        "Tienda especializada en bicicletas y bicicletas eléctricas, donde encontrarás variedad de modelos, bicimotos, accesorios, repuestos y artículos para todo tipo de ciclistas. Ofrecemos productos de calidad, mantenimiento, asesoría y soluciones completas para mejorar el rendimiento, la comodidad y la movilidad de nuestros clientes. Bicicleteria, Mantenimiento General, Mantenimiento Especializado, Reparaciones, Lavadas, Alistamiento.",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -2926,7 +2926,7 @@ const NEGOCIOS = [
     mapUrl:      "",
     mapsLinks: [
       { nombre: "VILLA SAJONIA", url: "https://maps.app.goo.gl/sSCqhMrVJcmXythBA" },
-      { nombre: "SANTANA", url: "https://maps.app.goo.gl/xxrzq5brdveRCS8H9" },
+      { nombre: "SANTANA", url: "https://maps.app.goo.gl/i1wpDh4kZZndR3Ub8" },
     ],
  
     /* ─── GALERÍA DE FOTOS ─── */
@@ -3581,7 +3581,7 @@ const NEGOCIOS = [
     destacado:   1,
     nombre:      "CORTES Y ESTILOS",
     slogan:      "SOMOS UNA SALA DE BELLEZA ( DISEÑADORES DE COLOR)",
-    desc:        "Sala de belleza especializada en realzar la imagen y el estilo de cada cliente mediante servicios profesionales de colorimetría, keratina, uñas, peinados y maquillaje. En “Cortes y Estilos” trabajamos con técnicas modernas, productos de alta calidad y atención personalizada para brindar experiencias de belleza, cuidado y transformación. Nuestro compromiso es resaltar tu esencia con elegancia, creatividad y las últimas tendencias en estética y cuidado personal. Peinados profesionales, Cuidado estético, Alisados capilares, Maquillaje estético, Spa de belleza",
+    desc:        "Sala de belleza especializada en realzar la imagen y el estilo de cada cliente mediante servicios profesionales de colorimetría, keratina, uñas, peinados y maquillaje. En “Cortes y Estilos” trabajamos con técnicas modernas, productos de alta calidad y atención personalizada para brindar experiencias de belleza, cuidado y transformación. Nuestro compromiso es resaltar tu esencia con elegancia, creatividad y las últimas tendencias en estética y cuidado personal. Peluqueria, Peinados profesionales, Sala de belleza, Alisado, Maquillaje, Uñas, Keratina, Spa de belleza",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
