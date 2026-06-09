@@ -495,3 +495,123 @@ body{font-family:var(--font);background:var(--bg);color:var(--text)}
 .biz-card.featured-3 {
   border-color: #ff00aa; /* BRONCE */
 }
+/* ─── MENÚ DROPDOWN DE ZONAS ─── */
+.zonas-dropdown-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.zonas-menu-btn {
+  background: none;
+  border: 2px solid #1c1c1b;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.zonas-menu-btn:hover {
+  background: #f5f6fa;
+  border-color: #e5007d;
+  transform: scale(1.05);
+}
+
+/* Versión pequeña en el nav */
+.nav-zonas .zonas-menu-btn {
+  width: 36px;
+  height: 36px;
+  gap: 4px;
+  border: 1.5px solid #ccc;
+}
+
+.nav-zonas .zonas-menu-btn:hover {
+  border-color: #e5007d;
+  background: #fff5f9;
+}
+
+.zonas-menu-btn span {
+  width: 20px;
+  height: 2px;
+  background: #1c1c1b;
+  display: block;
+  transition: all 0.3s ease;
+  border-radius: 1px;
+}
+
+.nav-zonas .zonas-menu-btn span {
+  width: 16px;
+  height: 1.5px;
+}
+
+.zonas-menu-btn.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(10px);
+}
+
+.zonas-menu-btn.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.zonas-menu-btn.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-10px);
+}
+
+.zonas-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border: 2px solid #e5007d;
+  border-radius: 8px;
+  min-width: 180px;
+  margin-top: 8px;
+  box-shadow: 0 8px 24px rgba(229, 0, 125, 0.2);
+  display: none;
+  flex-direction: column;
+  z-index: 100;
+  animation: slideDownZonas 0.3s ease-out;
+  overflow: hidden;
+}
+
+.zonas-dropdown.active {
+  display: flex;
+}
+
+@keyframes slideDownZonas {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.zonas-option {
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #1c1c1b;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  text-align: left;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.zonas-option:last-child {
+  border-bottom: none;
+}
+
+.zonas-option:hover {
+  background: #fff5f9;
+  color: #e5007d;
+  padding-left: 20px;
+}

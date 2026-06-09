@@ -895,3 +895,24 @@ function copiarAlPortapapelesNeg() {
     alert('No se pudo copiar el enlace');
   }
 }
+/* ─── MENÚ DROPDOWN DE ZONAS ─── */
+function toggleZonasMenu() {
+  const btn = document.querySelector('.zonas-menu-btn');
+  const dropdown = document.getElementById('zonasDropdown');
+  
+  btn.classList.toggle('active');
+  dropdown.classList.toggle('active');
+}
+
+// Cerrar el menú si se hace clic fuera
+document.addEventListener('click', function(event) {
+  const wrapper = document.querySelector('.zonas-dropdown-wrapper');
+  if (wrapper && !wrapper.contains(event.target)) {
+    const btn = document.querySelector('.zonas-menu-btn');
+    const dropdown = document.getElementById('zonasDropdown');
+    if (btn && dropdown) {
+      btn.classList.remove('active');
+      dropdown.classList.remove('active');
+    }
+  }
+});
