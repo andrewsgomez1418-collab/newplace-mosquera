@@ -230,6 +230,18 @@
 <nav class="top-nav">
   <button class="nav-back" id="backBtn" onclick="goBack()">← Volver</button>
   <div class="nav-brand"><span class="np-new">new</span><span class="np-place">place</span> <span class="np-store">store</span></div>
+  
+  <!-- BOTÓN ZONAS -->
+  <div class="zonas-dropdown-wrapper nav-zonas">
+    <button class="zonas-menu-btn" onclick="toggleZonasMenu()">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="zonas-dropdown" id="zonasDropdown">
+      <a href="https://newplacefunza.netlify.app/" class="zonas-option">FUNZA.COM</a>
+      <a href="https://www.newplacefacatativa.com" class="zonas-option">FACATATIVA.COM</a>
+    </div>
+  </div>
+  
   <button class="nav-share" id="shareBtn" onclick="compartirPlataforma()">Compartir →</button>
 </nav>
 <!-- PÁGINA: INICIO -->
