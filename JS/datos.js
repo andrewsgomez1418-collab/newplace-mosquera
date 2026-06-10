@@ -301,7 +301,7 @@ const NEGOCIOS = [
     ig:          "https://www.instagram.com/dra.ingrid.manrique/",
     fb:          "https://www.facebook.com/p/Dra-Ingrid-Andrea-Manrique-100064058706256/?locale=es_LA",
     tk:          "",
-    web:         "https://doctoraingridmanrique.com.co/",
+    web:         "https://doctoraingridmanrique.com/",
  
     /* ─── UBICACIÓN Y MAPA ─── */
     dir:         "carrera 5 # 1-64 PISO 2 entrada por la calle 2da MOSQUERA",
@@ -3722,9 +3722,9 @@ const NEGOCIOS = [
     /* ─── INFORMACIÓN BÁSICA ─── */
     id:          "nova",
     cat:         "educacion",
-    nombre:      "ACADEMIA NOVA ",
+    nombre:      "NOVA ",
     slogan:      "¡Transforma tu pasión en arte y tu arte en ingresos! ",
-    desc:        "Capacítate con nuestras clases semi personalizadas, especializadas en manicura rusa semipermanente (técnicas en tendencia) acrílico básico intermedio polygel   soft gel sistema dual y sistemas híbridos.  Contamos con clases entre  semana y domingos   Vuélvete  una profesional de las uñas junto a nosotros. De 9:00am a 6:00pm Studio de uñas y pestañas nova by shalom !! Somos especialistas en resaltar tu belleza  nuestros servicios 👇🏻👇🏻 Manicure y pedicure tradicional y semipermanente  Recubrimientos en uña natural  Acrílico, Polygel, Pestañas pelo a pelo, Soft gel, Dual System",
+    desc:        "Capacitate con nuestros talleres semi personalizados, especialistas en manicura rusa semipermanente (técnicas en tendencia) acrílico básico intermedio polygel soft gel sistema dual y sistemas híbridos. Contamos con clases entre semana y domingos . De 9:00am a 6:00pm Studio de uñas y pestañas nova by shalom !! Somos especialistas en resaltar tu belleza nuestros servicios 👇🏻👇🏻 Manicure y pedicure tradicional y semipermanente Recubrimientos en uña natural Acrílico, Polygel, Pestañas pelo a pelo, Soft gel, Dual System. Acrílico, Polygel, Pestañas pelo a pelo, Soft gel, Dual System",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
