@@ -3376,7 +3376,7 @@ const NEGOCIOS = [
     cat:         "mascotas",
     nombre:      "DISTRI MASCOTAS",
     slogan:      " lo mejor para tus macotas",
-    desc:        "Distribuidora de mascotas La Sabana, especializada en ofrecer alimentos, accesorios, productos de cuidado y bienestar para perros y gatos. Brindamos variedad, calidad y atención personalizada para consentir a tus mascotas con todo lo que necesitan, desde concentrados y juguetes hasta artículos de higiene y salud animal. Nuestro compromiso es ofrecer productos confiables y un servicio cercano que garantice el cuidado, la felicidad y el bienestar de cada mascota. Alimento para perros y gatos, juguetes para mascotas, nutrición canina, accesorios para mascotas, productos veterinarios",
+    desc:        "Distrimascotas de la Sabana, especializada en ofrecer, accesorios, gimnasios para gatos, comida al granel y bultos, medicamentos y desparasitantes para perros y gatos. Brindamos variedad, calidad y atención personalizada para consentir a tus mascotas con todo lo que necesitan, desde concentrados y juguetes hasta artículos de higiene y salud animal. Contamos también con spa para tu canino o felino, nuestro compromiso es ofrecer productos confiables y un servicio cercano que garantice el cuidado, la felicidad y el bienestar de cada mascota. Alimento para perros y gatos, juguetes para mascotas, nutrición canina, accesorios para mascotas, productos veterinarios. Petshop.",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -3804,7 +3804,7 @@ const NEGOCIOS = [
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/nova/logo-academia-nova.jpg",
-    cardImage:   "assets/logos/nova/inicio-academia-nova.jpg",
+    cardImage:   "assets/logos/nova/inicio-nova.webp",
     portada:     "assets/logos/nova/portada-academia-nova.jpg",
  
     /* ─── TAMAÑOS RESPONSIVOS (clamp: min, preferido, max) ─── */
