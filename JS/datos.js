@@ -46,7 +46,7 @@ const CATS = [
   { id:"shopping",     n:"SHOPPING",                       e:"", c:"#e5007d", img:"assets/categorias/categoria-shopping.webp", imgHdr:"assets/categorias/destacados/destacados-shopping.webp", showTitle: false},
   { id:"imagen",       n:"IMAGEN Y ESTILO",                e:"", c:"#9b59b6", img:"assets/categorias/categoria-estilo.webp", imgHdr:"assets/categorias/destacados/destacados-imagen-estilo.webp", showTitle: false},
   { id:"mascotas",     n:"MUNDO MASCOTAS",                 e:"", c:"#f39c12", img:"assets/categorias/mascotas.webp", imgHdr:"assets/categorias/destacados/destacados-macotas.webp", showTitle: false},
-  { id:"educacion",    n:"EDUCACION Y APRENDIZAJE",        e:"", c:"#3498db", img:"assets/categorias/categoria-educacion.webp", imgHdr:"assets/categorias/destacados/destacados-educacion.webp", showTitle: false},
+  { id:"educacion",    n:"EDUCACION Y DEPORTES",        e:"", c:"#3498db", img:"assets/categorias/categoria-educacion.webp", imgHdr:"assets/categorias/destacados/destacados-educacion.webp", showTitle: false},
   { id:"movilidad",    n:"TALLERES Y MOVILIDAD",           e:"", c:"#616161", img:"assets/categorias/categoria-talleres.webp", imgHdr:"assets/categorias/destacados/salud.jpg", showTitle: false},
   { id:"clasificados",    n:"CLASIFICADOS",                e:"", c:"#e65100", img:"assets/categorias/categoria-clasificados.webp", imgHdr:"assets/categorias/destacados/salud.jpg", showTitle: false},
   { id:"entretenimiento", n:"ENTRETENIMIENTO",             e:"", c:"#7b1fa2", img:"assets/categorias/categoria-entretenimiento.webp", imgHdr:"assets/categorias/destacados/salud.jpg", showTitle: false},
@@ -1099,7 +1099,7 @@ const NEGOCIOS = [
     nombre:      "LA CASA DE LOS ARROCES",
     slogan:      "Sabores que llenan, recetas que enamoran.",
     desc:        "Disfruta el mejor sabor en cada plato con nuestra especialidad en arroz chino y arroz paisa, preparados al momento con ingredientes frescos, abundantes porciones y ese toque casero que encanta. Una combinación perfecta entre tradición, sazón y variedad para compartir en familia o disfrutar cuando quieras darte un buen gusto. Arroz chino / arroz paisa / comida rápida / sabor casero / almuerzos / domicilio / comida colombiana / comida oriental / porciones grandes / restaurante familiar.",
-    tipo:        "estandar",
+    tipo:        "restaurante",
  
     /* ─── IMÁGENES Y LOGOS ─── */
     logo:        "assets/logos/gallery-home-logo.jpg",
@@ -1122,15 +1122,87 @@ const NEGOCIOS = [
     fb:          "https://www.facebook.com/share/1D2jqx1Fbw/",
     tk:          "https://www.tiktok.com/@la.casa.de.los.ar76?_r=1&_t=ZS-96rADhFWtpE",
     web:         "",
+    greviews:    "https://g.page/r/CU8tp9FOuICOEBM/review",
  
     /* ─── UBICACIÓN Y MAPA ─── */
     dir:         "Calle 17 6 - 15e maipore Mosquera",
     mapUrl:      "",
-    mapsLink:    "https://maps.app.goo.gl/s2XKoStAmYAqJBWW9",
+    mapsLink:    "https://maps.app.goo.gl/Kb8DJvreubv9PboP8?g_st=ac",
  
     /* ─── GALERÍA DE FOTOS ─── */
     galeria:     [
       "assets/logos/casadearroces/casadelosarroces.webp","assets/logos/casadearroces/casadelosarroces2.webp","assets/logos/casadearroces/casadelosarroces3.jpeg","assets/logos/casadearroces/casadelosarroces4.jpeg","assets/logos/casadearroces/casadelosarroces5.jpeg","assets/logos/casadearroces/casadelosarroces6.jpeg","assets/logos/casadearroces/casadelosarroces7.jpeg","assets/logos/casadearroces/casadelosarroces8.jpeg","assets/logos/casadearroces/casadelosarroces9.jpeg","assets/logos/casadearroces/casadelosarroces10.jpeg",
+    ],
+    /* ─── MENÚ DE COMIDAS ─── */
+    menu: [
+      {
+        s: "ARROZ PAISA",
+        items: [
+          { n:"Arroz Paisa Personal + papa francesa", p:"$18.000",},
+          { n:"Arroz Paisa + papa francesa + 1/4 de pollo", p:"$29.000",},
+          { n:"Arroz Paisa + Lomo de cerdo a la plancha", p:"$29.000",},
+          { n:"Arroz Paisa Personal con alitas BBQ + papa francesa", p:"$29.000",},
+          { n:"Arroz Paisa personal con costillas BBQ", p:"$29.000",},
+          { n:"Arroz Paisa + papa francesa + mojarra", p:"$29.000",},
+          { n:"Arroz Paisa caja mediana", p:"$32.000",},
+          { n:"Arroz Paisa caja grande", p:"$47.000",},
+          { n:"Arroz Paisa americano + carnes", p:"$60.000",},
+          { n:"Arroz Paisa caja mediana + 1/4 de pollo", p:"$42.000",},
+          { n:"Arroz Paisa caja mediana + 1/2 pollo", p:"$50.000",},
+          { n:"Arroz Paisa grande + 1 pollo", p:"$75.000",},
+          { n:"Arroz Paisa agrandado + 1 pollo", p:"$90.000",},
+        ]
+      },
+      {
+        s: "ARROZ ESPECIAL FESTÍN TROPICAL",
+        items: [
+          { n:"Arroz Chino Festín Tropical Personal", p:"$20.000",},
+          { n:"Arroz Chino Festín Tropical Mediano", p:"$36.000",},
+          { n:"Arroz Chino Festín Tropical (Caja Grande para 4 a 5 personas)", p:"$55.000",},
+          { n:"Arroz Chino Festín Tropical + 1/4 de pollo", p:"$32.000",},
+          { n:"Arroz Chino Festín Tropical + Mojarra", p:"$32.000",},
+          { n:"Arroz Chino Festín Tropical + Alitas BBQ", p:"$32.000",},
+          { n:"Arroz Chino Festín Tropical (Caja mediana + 1/2 pollo)", p:"$58.000",},
+          { n:"Arroz Chino Festín Tropical (Caja grande + 1 pollo)", p:"$85.000",},
+        ]
+      },
+      {
+        s: "ARROZ CHINO A LA VALENCIANA",
+        items: [
+          { n:"Arroz Chino Personal + papa francesa", p:"$15.000",},
+          { n:"Arroz Chino a la Valenciana + papa francesa + 1/4 de pollo asado o broaster", p:"$26.000",},
+          { n:"Arroz Chino + papa francesa + mojarra", p:"$26.000",},
+          { n:"Arroz Chino + papa francesa + alitas BBQ", p:"$26.000",},
+          { n:"Arroz Chino + costillas BBQ", p:"$26.000",},
+          { n:"Arroz Chino + papa francesa + lomo de cerdo a la plancha", p:"$26.000",},
+          { n:"Arroz Chino caja mediana para 3 personas", p:"$39.000",},
+          { n:"Arroz Chino mediano ", p:"$29.000",},
+          { n:"Arroz Chino a la Valenciana + 1/2 pollo (Caja mediana)", p:"$45.000",},
+          { n:"Arroz Chino caja grande para 4 personas", p:"$43.000",},
+          { n:"Arroz Chino caja familiar para 6 personas", p:"$48.000",},
+          { n:"Arroz Chino a la Valenciana Familiar + 1 pollo ", p:"$72.000",},
+          { n:"Arroz Chino especial con camarones + papa francesa ", p:"$22.000",},
+          { n:"Arroz Chino mediano especial con camarones ", p:"$38.000",},
+          { n:"Arroz Chino especial con camarones (Caja grande para 4 personas) ", p:"$50.000",},
+          { n:"Arroz Chino agrandado para 7 a 8 personas", p:"$85.000",},
+          { n:"Arroz Chino caja mediana para 4 personas ", p:"$53.000",},
+          { n:"Arroz Chino caja grande para 6 a 7 personas ", p:"$75.000",},
+        ]
+      },
+      {
+        s: "ARROZ ORIENTAL",
+        items: [
+          { n:"Arroz Oriental personal", p:"$15.000",},
+          { n:"Arroz Oriental a la Valenciana + 1/4 de pollo (Asado o Broaster) ", p:"$26.000",},
+          { n:"Arroz Oriental + mojarra ", p:"$26.000",},
+          { n:"Arroz Oriental + cerdo a la plancha ", p:"$26.000",},
+          { n:"Arroz Oriental a la Valenciana + 1/2 pollo (Asado o Broaster) ", p:"$45.000",},
+          { n:"Arroz Oriental a la Valenciana + 1 pollo (Asado o Broaster)", p:"$72.000",},
+          { n:"Arroz Oriental a la Valenciana agrandado + 1 pollo (Asado o Broaster) ", p:"$85.000",},
+          { n:"Arroz Oriental caja mediana para 4 personas ", p:"$53.000",},
+          { n:"Arroz Oriental caja grande para 6 a 7 personas ", p:"$75.000",},
+        ]
+      },
     ],
   },
 // ══ HOGAR ════════════════════════════════════════════════
@@ -3141,7 +3213,7 @@ const NEGOCIOS = [
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/javi-vet/logo-javivet.jpg",
     cardImage:   "assets/logos/javi-vet/inicio-javivet.jpg",
-    portada:     "assets/logos/javi-vet/portada-javivet.jpg",
+    portada:     "assets/logos/javi-vet/portada-javipet.webp",
  
     /* ─── TAMAÑOS RESPONSIVOS (clamp: min, preferido, max) ─── */
     cardHeight:      "clamp(350px, 180vw, 250px)",
