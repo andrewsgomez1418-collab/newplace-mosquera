@@ -517,7 +517,7 @@ if (neg.portada) {
           <div class="prod-name">${p.n}</div>
           <div class="prod-desc">${p.d||''}</div>
           <div class="prod-price">${p.p}</div>
-          ${neg.wa ? `<a href="https://wa.me/${neg.wa}?text=Hola!%20Me%20interesa:%20${encodeURIComponent(p.n)}" class="prod-btn" target="_blank">Pedir por WhatsApp</a>` : ''}
+          ${(neg.wa || (neg.was && neg.was[0]?.numero)) ? `<a href="https://wa.me/${neg.wa || neg.was[0].numero}?text=Hola!%20Quiero%20comprar:%20${encodeURIComponent(p.n)}" class="prod-btn" target="_blank">🛒 Comprar</a>` : ''}
         </div>
       </div>`).join('')}
     </div>`;

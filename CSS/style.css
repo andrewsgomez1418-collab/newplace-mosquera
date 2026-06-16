@@ -348,7 +348,8 @@ body{font-family:var(--font);background:var(--bg);color:var(--text)}
 .prod-name{font-weight:700;font-size:.87rem;margin-bottom:3px}
 .prod-desc{font-size:.74rem;color:var(--muted);margin-bottom:7px;line-height:1.4}
 .prod-price{font-weight:800;color:var(--accent);font-size:.97rem;margin-bottom:9px}
-.prod-btn{display:block;text-align:center;background:#25D366;color:#fff;padding:9px;border-radius:8px;text-decoration:none;font-weight:700;font-size:.76rem}
+.prod-btn{display:block;text-align:center;background:#25D366;color:#fff;padding:10px 8px;border-radius:8px;text-decoration:none;font-weight:700;font-size:.77rem;transition:all .2s ease;border:none;cursor:pointer}
+.prod-btn:hover{background:#1fa853;transform:translateY(-1px);box-shadow:0 4px 12px rgba(37,211,102,.3)}
 
 /* LIGHTBOX */
 .lightbox{position:fixed;inset:0;z-index:999;display:flex;align-items:center;justify-content:center;padding:20px}
