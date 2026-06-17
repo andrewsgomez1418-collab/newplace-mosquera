@@ -1264,8 +1264,8 @@ const NEGOCIOS = [
     id:          "modularesvr",
     cat:         "hogar",
     nombre:      "MODULARES Vr",
-    slogan:      "Transformando hogares en Mosquera con calidad, experiencia y cercanía",
-    desc:        "En Mosquera, Cundinamarca, Modulares VR SAS se ha consolidado como una empresa que entiende las necesidades reales de las familias y trabaja para transformar sus espacios en lugares funcionales, modernos y acogedores.Con más de 14 años de experiencia, la empresa se especializa en el diseño, fabricación e instalación de mobiliario en madera, ofreciendo soluciones personalizadas que se adaptan al estilo de vida, presupuesto y gustos de cada cliente.Uno de los pilares de Modulares VR SAS es su compromiso con el medio ambiente, trabajando con madera reforestada, lo que permite ofrecer productos resistentes y duraderos, aportando al mismo tiempo a la sostenibilidad y al cuidado del entorno.Su portafolio incluye la fabricación de cocinas integrales, closets, puertas, centros de entretenimiento y mobiliario personalizado, desarrollando proyectos pensados para optimizar los espacios del hogar y mejorar la calidad de vida de las familias.Más allá de fabricar muebles, Modulares VR SAS se destaca por brindar un acompañamiento cercano durante todo el proceso, desde la asesoría inicial hasta la instalación final, garantizando calidad, cumplimiento y satisfacción en cada proyecto.Hoy, la empresa continúa creciendo en Mosquera y sus alrededores, convirtiéndose en un aliado confiable para quienes desean renovar, organizar y embellecer sus hogares con soluciones hechas a la medida.",
+    slogan:      "Muebles a la medida que transforman tu hogar",
+    desc:        "En Modulares VR SAS diseñamos, fabricamos e instalamos cocinas integrales, closets, puertas y mobiliario personalizado. Contamos con Más de 14 años de experiencia, con Diseños personalizados, Madera reforestada y de alta calidad, Instalación profesional, Cumplimiento y garantía Convierte tus ideas en espacios funcionales y modernos. ¡Solicita tu cotización!",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
