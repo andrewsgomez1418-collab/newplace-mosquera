@@ -1665,14 +1665,14 @@ const NEGOCIOS = [
 // ══ SHOPPING ════════════════════════════════════════════════
 {
     /* ══════════════════════════════════════════════════════════════
-        PATIKOO PAÑALERIA
+        PATIKOO PIÑATERIA
        ══════════════════════════════════════════════════════════════ */
  
     /* ─── INFORMACIÓN BÁSICA ─── */
     id:          "patikoo",
     cat:         "shopping",
     destacado:   1,
-    nombre:      "PATIKOO PAÑALERIA",
+    nombre:      "PATIKOO PIÑATERIA",
     slogan:      "Celebraciones creativas y llenas de amor.",
     desc:        "Piñatería Patikoo nace para crear celebraciones creativas y llenas de amor, donde cada detalle cuenta. Es un emprendimiento dedicado a la ambientación y decoración de eventos infantiles y familiares, ofreciendo propuestas personalizadas para cumpleaños, baby showers, bautizos y fechas especiales.Además, en Piñatería Patikoo los clientes pueden encontrar todo lo necesario para decorar sus fiestas en un solo lugar, como guirnaldas, bombas, serpentinas, piñatas, globos metalizados, velas y diversos accesorios para celebraciones. Su trabajo se distingue por la creatividad, el cuidado en los detalles y el compromiso de convertir cada evento en un recuerdo especial.",
     tipo:        "estandar",
