@@ -1211,14 +1211,14 @@ const NEGOCIOS = [
 // ══ HOGAR ════════════════════════════════════════════════
 {
     /* ══════════════════════════════════════════════════════════════
-       STTEL  304
+       STEEL  304
        ══════════════════════════════════════════════════════════════ */
  
     /* ─── INFORMACIÓN BÁSICA ─── */
     id:          "steel304",
     cat:         "hogar",
     destacado:   1,
-    nombre:      "STTEL  304",
+    nombre:      "STEEL  304",
     slogan:      "SOLUCIONES EN VIDRIOS Y ACERO INOXIDABLES A MEDIDA DISEÑO- FABRICACION INSTALACION",
     desc:        "Divisiones de baño en vidrio Barandales y fachadas Accesorios en acero inoxidables Sandblasting y mecanizado Ventas de cortinas",
     tipo:        "estandar",
@@ -1698,6 +1698,7 @@ const NEGOCIOS = [
     fb:          "https://www.facebook.com/share/1CnVw5AK38/?mibextid=wwXIfr",
     tk:          "https://www.tiktok.com/@pinateria_patikoo?_r=1&_t=ZS-93HppPfDs3s",
     web:         "",
+    greviews:    "",
  
     /* ─── UBICACIÓN Y MAPA ─── */
     dir:         "Transversal 15a # 8-35 MOSQUERA",
@@ -1835,7 +1836,7 @@ const NEGOCIOS = [
     /* ─── UBICACIÓN Y MAPA ─── */
     dir:         "Calle 18#7-76 MOSQUERA",
     mapUrl:      "",
-    mapsLink:    "https://maps.app.goo.gl/77hKTs4REUVSBWey5",
+    mapsLink:    "https://maps.app.goo.gl/YLLV5yeu7rvjRudy7",
  
     /* ─── GALERÍA DE FOTOS ─── */
     galeria:     [
@@ -3239,16 +3240,16 @@ const NEGOCIOS = [
   },
   {
     /* ══════════════════════════════════════════════════════════════
-       DE MASKOT·S
+       DE MASKOT-S
        ══════════════════════════════════════════════════════════════ */
  
     /* ─── INFORMACIÓN BÁSICA ─── */
-    id:          "de-mascot·s",
+    id:          "de-mascot-s",
     cat:         "mascotas",
     destacado:   1,
-    nombre:      "De Maskot·s",
+    nombre:      "De Maskot-s",
     slogan:      "Todo lo relacionado para tu mascota, pregunta por la comida favorita de tu perro o gato. ",
-    desc:        "Tienda especializada en concentrados, accesorios y productos para el cuidado integral de mascotas, ofreciendo alimentos de las mejores marcas, dieta BARF, juguetes, camas, guacales y artículos esenciales para perros y gatos. En “De Maskot’s” trabajamos con variedad, calidad y atención personalizada para brindar bienestar, nutrición y comodidad a cada mascota. Nuestro compromiso es ayudar a las familias a encontrar todo lo necesario para consentir y cuidar a sus compañeros de vida. Equipos de gimnasios, suplementos deportivos, alimento para mascotas, comida para gatos, accesorios y entretenimientos.",
+    desc:        "Tienda especializada en concentrados, accesorios y productos para el cuidado integral de mascotas, ofreciendo alimentos de las mejores marcas, dieta BARF, juguetes, camas, guacales y artículos esenciales para perros y gatos. En “De Maskot’s” trabajamos con variedad, calidad y atención personalizada para brindar bienestar, nutrición y comodidad a cada mascota. Nuestro compromiso es ayudar a las familias a encontrar todo lo necesario para consentir y cuidar a sus compañeros de vida. Gimnasios, suplementos deportivos, alimento para mascotas, comida para gatos, accesorios y entretenimientos.",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -3257,7 +3258,7 @@ const NEGOCIOS = [
     logoBg:      "#ffffff",
     logoPerfil:   "assets/logos/demaskot-s/logodemascots.jpg",
     cardImage:   "assets/logos/demaskot-s/inicio-demaskots.jpg",
-    portada:     "assets/logos/demaskot-s/portada-demascots.jpg",
+    portada:     "assets/logos/demaskot-s/portada-maskot.jpg",
  
     /* ─── TAMAÑOS RESPONSIVOS (clamp: min, preferido, max) ─── */
     cardHeight:      "clamp(350px, 180vw, 250px)",
@@ -3272,6 +3273,7 @@ const NEGOCIOS = [
     fb:          "",
     tk:          "",
     web:         "",
+    greviews:    "https://g.page/r/CUfQnO5kUCJZEBM/review",
  
     /* ─── UBICACIÓN Y MAPA ─── */
     dir:         "Carrera 12a 10 04 Mosquera, Colombia",

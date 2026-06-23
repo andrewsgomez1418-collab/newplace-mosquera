@@ -2,6 +2,79 @@
    NEWPLACE STORE — MOTOR DE LA APLICACIÓN
    No necesitas modificar nada aquí
    ═══════════════════════════════════════════════════════ */
+
+   /* ═══════════════════════════════════════════════════════════
+   📊 GOOGLE ANALYTICS — FUNCIONES DE TRACKING
+   ═══════════════════════════════════════════════════════════ */
+
+const ANALYTICS_CONFIG = {
+  enabled: true,
+  trackPageViews: true,
+  trackEvents: true,
+  debug: false // Cambiar a true para ver logs en consola
+};
+
+/**
+ * Envía un evento a Google Analytics
+ * @param {string} eventName - Nombre del evento
+ * @param {object} eventData - Datos adicionales del evento
+ */
+function trackEvent(eventName, eventData = {}) {
+  if (!ANALYTICS_CONFIG.enabled || typeof gtag === 'undefined') return;
+  
+  try {
+    gtag('event', eventName, eventData);
+    if (ANALYTICS_CONFIG.debug) {
+      console.log(`📊 [GA Event] ${eventName}`, eventData);
+    }
+  } catch (err) {
+    console.warn('Analytics error:', err);
+  }
+}
+
+/**
+ * Envía una vista de página a Google Analytics
+ * @param {string} pageName - Nombre de la página
+ * @param {object} pageData - Datos adicionales de la página
+ */
+function trackPageView(pageName, pageData = {}) {
+  if (!ANALYTICS_CONFIG.enabled || !ANALYTICS_CONFIG.trackPageViews) return;
+  if (typeof gtag === 'undefined') return;
+  
+  try {
+    // Detectar automáticamente el ID correcto según el dominio
+    let gaId = 'G-2DENWJZK3G'; // Default: Mosquera
+    
+    if (window.location.hostname.includes('funza')) {
+      gaId = 'G-Y27M9YBP7K'; // Funza
+    } else if (window.location.hostname.includes('faca')) {
+      gaId = 'G-KN2KGD399Y'; // Facatativá
+    }
+    
+    gtag('config', gaId, {
+      'page_title': pageName,
+      'page_path': `/${pageName}`,
+      ...pageData
+    });
+    if (ANALYTICS_CONFIG.debug) {
+      console.log(`📄 [GA PageView] ${pageName}`, pageData);
+    }
+  } catch (err) {
+    console.warn('Analytics error:', err);
+  }
+}
+
+/**
+ * Abre un enlace externo y lo rastrea en Analytics
+ */
+function openExternalLink(url, platform, businessName = '') {
+  trackEvent('click_external_link', {
+    'platform': platform,
+    'business_name': businessName,
+    'url': url
+  });
+  window.open(url, '_blank');
+}
  
 /* ═══════════════════════════════════════════════════════════
    MOTOR DEL SITIO — No necesitas modificar nada de aquí abajo
@@ -115,19 +188,26 @@ function showPage(id) {
   const backBtn = document.getElementById('backBtn');
   if (backBtn) backBtn.style.display = id === 'index' ? 'none' : 'flex';
   window.scrollTo(0, 0);
+  
+  // 📊 TRACK: Página vista
+  trackPageView(`page-${id}`, { 
+    'page_type': id,
+    'timestamp': new Date().toISOString()
+  });
+  
   // Push state for browser/mobile back button support
   if (id !== 'index') {
     history.pushState(
-  { page: id },
-  '',
-  window.location.pathname
-);
+      { page: id },
+      '',
+      window.location.pathname
+    );
   } else {
     history.replaceState(
-  { page: 'index' },
-  '',
-  '/'
-);
+      { page: 'index' },
+      '',
+      '/'
+    );
   }
 }
  
@@ -159,7 +239,7 @@ window.addEventListener('popstate', (e) => {
   }
 });
  
-/* RENDER BLOG FACA */
+/* RENDER BLOG MOSQUERA */
 const blogEl = document.getElementById('blogSection');
 blogEl.innerHTML = `
   <div class="blog-card">
@@ -284,6 +364,13 @@ function bizCardHTML(neg, cat) {
 /* ABRIR CATEGORÍA */
  
 function openCat(cat) {
+  // 📊 TRACK: Categoría abierta
+  trackEvent('view_category', {
+    'category_id': cat.id,
+    'category_name': cat.n,
+    'category_color': cat.c,
+    'timestamp': new Date().toISOString()
+  });
   navHistory.push('cat');
  
   const hdr = document.getElementById('catHdrEl');
@@ -374,6 +461,16 @@ document.getElementById('catTitle').textContent = cat.showTitle !== false ? cat.
  
 /* ABRIR NEGOCIO */
 function openNeg(neg) {
+  // 📊 TRACK: Negocio abierto
+  const catForTracking = CATS.find(c => c.id === neg.cat) || {};
+  trackEvent('view_business', {
+    'business_id': neg.id,
+    'business_name': neg.nombre,
+    'business_category': neg.cat,
+    'business_category_name': catForTracking.n,
+    'business_type': neg.tipo,
+    'timestamp': new Date().toISOString()
+  });
  
   if (window.location.pathname !== '/' + neg.id) {
  
@@ -429,17 +526,17 @@ if (neg.portada) {
   if (neg.agendamiento) ab.innerHTML += `<a href="${neg.agendamiento}" class="abtn agendamiento" target="_blank">📅 Agendar Cita</a>`;
   if (neg.was && neg.was.length > 0) {
       neg.was.forEach(w => {
-        ab.innerHTML += `<a href="https://wa.me/${w.numero}?text=Hola!%20Vi%20tu%20negocio%20en%20Newplace%20Store%20y%20quiero%20más%20información" class="abtn wa" target="_blank">💬 ${w.nombre}</a>`;
+        ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_whatsapp',{'business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}','phone':'${w.numero}'}); window.open('https://wa.me/${w.numero}?text=Hola!%20Vi%20tu%20negocio%20en%20Newplace%20Store%20y%20quiero%20más%20información', '_blank');" class="abtn wa">💬 ${w.nombre}</a>`;
       });
     } else if (neg.wa) {
-      ab.innerHTML += `<a href="https://wa.me/${neg.wa}?text=Hola!%20Vi%20tu%20negocio%20en%20Newplace%20Store%20y%20quiero%20más%20información" class="abtn wa" target="_blank">💬 WhatsApp</a>`;
+      ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_whatsapp',{'business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}','phone':'${neg.wa}'}); window.open('https://wa.me/${neg.wa}?text=Hola!%20Vi%20tu%20negocio%20en%20Newplace%20Store%20y%20quiero%20más%20información', '_blank');" class="abtn wa">💬 WhatsApp</a>`;
     }
   if (neg.tel) ab.innerHTML += `<a href="tel:+57${neg.tel}" class="abtn tel">📞 Llamar</a>`;
-  if (neg.ig)  ab.innerHTML += `<a href="${neg.ig}" class="abtn ig" target="_blank">📸 Instagram</a>`;
-  if (neg.tk)  ab.innerHTML += `<a href="${neg.tk}" class="abtn tk" target="_blank">🎵 TikTok</a>`;
-  if (neg.fb)  ab.innerHTML += `<a href="${neg.fb}" class="abtn fb" target="_blank">🔵 Facebook</a>`;
-  if (neg.web) ab.innerHTML += `<a href="${neg.web}" class="abtn web" target="_blank">🌐 Sitio Web</a>`;
-  if (neg.greviews) ab.innerHTML += `<a href="${neg.greviews}" class="abtn greviews" target="_blank">⭐ Google Reviews</a>`;
+  if (neg.ig)  ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_social',{'platform':'Instagram','business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}'}); window.open('${neg.ig}', '_blank');" class="abtn ig">📸 Instagram</a>`;
+if (neg.tk)  ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_social',{'platform':'TikTok','business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}'}); window.open('${neg.tk}', '_blank');" class="abtn tk">🎵 TikTok</a>`;
+if (neg.fb)  ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_social',{'platform':'Facebook','business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}'}); window.open('${neg.fb}', '_blank');" class="abtn fb">🔵 Facebook</a>`;
+if (neg.web) ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_social',{'platform':'Sitio Web','business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}'}); window.open('${neg.web}', '_blank');" class="abtn web">🌐 Sitio Web</a>`;
+if (neg.greviews) ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_social',{'platform':'Google Reviews','business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}'}); window.open('${neg.greviews}', '_blank');" class="abtn greviews">⭐ Google Reviews</a>`;
   ab.innerHTML += `<button class="abtn compartir-neg" onclick="compartirNegocio('${neg.id}', '${neg.nombre.replace(/'/g, "\\'")}')">📤 Compartir</button>`;
  
   /* Tabs */
@@ -551,13 +648,22 @@ function enviarFormulario() {
   const contacto = document.getElementById('fContacto').value.trim();
   const wa       = document.getElementById('fWa').value.trim();
   const cat      = document.getElementById('fCat').value;
-  const municipio      = document.getElementById('fCat').value;
+  const municipio      = document.getElementById('fmunicipio').value;
   const desc     = document.getElementById('fDesc').value.trim();
  
   if (!nombre || !contacto || !wa || !cat || !municipio || !desc) {
     alert('Por favor completa los campos obligatorios (*)');
     return;
   }
+ 
+  // 📊 TRACK: Formulario enviado
+  trackEvent('form_submit', {
+    'business_name': nombre,
+    'business_category': cat,
+    'municipality': municipio,
+    'plan': document.getElementById('fPlan').value,
+    'timestamp': new Date().toISOString()
+  });
  
   const asunto = 'Solicitud de inscripción - ' + nombre + ' | Newplace Store';
   const cuerpo = [
@@ -895,6 +1001,7 @@ function copiarAlPortapapelesNeg() {
     alert('No se pudo copiar el enlace');
   }
 }
+
 /* ─── MENÚ DROPDOWN DE ZONAS ─── */
 function toggleZonasMenu() {
   const btn = document.querySelector('.zonas-menu-btn');
