@@ -1942,7 +1942,7 @@ const NEGOCIOS = [
        ══════════════════════════════════════════════════════════════ */
  
     /* ─── INFORMACIÓN BÁSICA ─── */
-    id:          "piñateriasaavedra",
+    id:          "pinateriasaavedra",
     cat:         "shopping",
     nombre:      "PIÑATERIA SAAVEDRA",
     slogan:      "Lo hacemos posible",
@@ -2911,7 +2911,7 @@ const NEGOCIOS = [
  
     /* ─── GALERÍA DE FOTOS ─── */
     galeria:     [
-      "assets/logos/maxioil/maxioli1.jpeg","assets/logos/maxioil/maxioli2.jpeg","assets/logos/maxioil/maxioli3.jpeg","assets/logos/maxioil/maxioli4.jpeg","assets/logos/maxioil/maxioli5.jpeg",
+      "assets/logos/maxioil/maxioli1.jpeg","assets/logos/maxioil/maxioli2.jpeg","assets/logos/maxioil/maxioli3.jpeg","assets/logos/maxioil/maxioli4.jpeg",
     ],
   },
   {
@@ -3244,7 +3244,7 @@ const NEGOCIOS = [
        ══════════════════════════════════════════════════════════════ */
  
     /* ─── INFORMACIÓN BÁSICA ─── */
-    id:          "de-mascot-s",
+    id:          "de-maskot-s",
     cat:         "mascotas",
     destacado:   1,
     nombre:      "De Maskot-s",
