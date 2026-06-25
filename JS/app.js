@@ -587,7 +587,7 @@ if (neg.greviews) ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEv
   }
  
   document.getElementById('tab-info').innerHTML = `
-    <div class="info-sec"><h3 class="info-ttl">Sobre nosotros</h3><p class="info-desc">${neg.desc}</p></div>
+    <div class="info-sec"><h3 class="info-ttl">Sobre nosotros</h3><div class="info-desc">${neg.desc}</div></div>
     ${contactHTML ? `<div class="info-sec"><h3 class="info-ttl">Contacto</h3><div class="contact-list">${contactHTML}</div></div>` : ''}
     ${mapHTML}${galHTML}`;
   document.getElementById('tab-info').classList.add('active');

@@ -278,7 +278,7 @@ const NEGOCIOS = [
     destacado:   1,
     nombre:      "DRA INGRID MEDICO CIRUJANO",
     slogan:      "Especialista en medicina alternativa y farmacología vegetal médica funcional y estética ",
-    desc:        "METABOLISMO: * sobrepeso * hígado graso * diabetes * estreñimiento * gastritis * hipotiroidismo * resistencia a la insulina * desintoxicación básica y profunda. MEDICINA ESTÉTICA: * tratamientos faciales avanzadas * tratamiento de acné * rejuvenecimiento facial * reducción de grasa localizada * tratamiento para acidez * terapias capilares * depilación laser permanente. SALUD MENTAL: * ansiedad * depresión y estrés * alteraciones de sueño. DOLOR Y REGENERACIÓN CELULAR: * artritis y artrosis * dolor lumbar * migraña * parálisis facial * neuralgia * fibromialgia * cansancio y fatiga crónica * contracturas musculares",
+    desc:        "<p>METABOLISMO: * sobrepeso * hígado graso * diabetes * estreñimiento * gastritis * hipotiroidismo * resistencia a la insulina * desintoxicación básica y profunda.</p> <p>MEDICINA ESTÉTICA: * tratamientos faciales avanzadas * tratamiento de acné * rejuvenecimiento facial * reducción de grasa localizada * tratamiento para acidez * terapias capilares * depilación laser permanente.</p><p> SALUD MENTAL: * ansiedad * depresión y estrés * alteraciones de sueño.</p><p> DOLOR Y REGENERACIÓN CELULAR: * artritis y artrosis * dolor lumbar * migraña * parálisis facial * neuralgia * fibromialgia * cansancio y fatiga crónica * contracturas musculares</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -324,7 +324,7 @@ const NEGOCIOS = [
     destacado:   1,
     nombre:      "DRA JULIA PSICOLOGA",
     slogan:      "SALUD MENTAL, PSICOTERAPIA, BIENESTAR EMOCIONAL, APOYO TERAPEUTICO, ATENCIÓN PSICOLOGIA ",
-    desc:        " Egresada de la universidad Santo Tomás, con más de 35 años de experiencia en el abordaje de diversas problemáticas que afectan la salud mental de niños(as), adolescentes, jóvenes, adultos y personas mayores. Mi enfoque es sistémico, orientado a resultados, utilizando estrategias efectivas que facilitan la resolución de los conflictos y el bienestar emocional del paciente. Me caracterizo por ser una persona empática, amable, centrada en las necesidades individuales de cada consultante, ofreciendo un espacio seguro y de confianza para el proceso terapéutico.",
+    desc:        " <p>Egresada de la universidad Santo Tomás, con más de 35 años de experiencia en el abordaje de diversas problemáticas que afectan la salud mental de niños(as), adolescentes, jóvenes, adultos y personas mayores.</p><p> Mi enfoque es sistémico, orientado a resultados, utilizando estrategias efectivas que facilitan la resolución de los conflictos y el bienestar emocional del paciente.</p><p> Me caracterizo por ser una persona empática, amable, centrada en las necesidades individuales de cada consultante, ofreciendo un espacio seguro y de confianza para el proceso terapéutico.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -3249,7 +3249,7 @@ const NEGOCIOS = [
     destacado:   1,
     nombre:      "De Maskot-s",
     slogan:      "Todo lo relacionado para tu mascota, pregunta por la comida favorita de tu perro o gato. ",
-    desc:        "Tienda especializada en concentrados, accesorios y productos para el cuidado integral de mascotas, ofreciendo alimentos de las mejores marcas, dieta BARF, juguetes, camas, guacales y artículos esenciales para perros y gatos. En “De Maskot’s” trabajamos con variedad, calidad y atención personalizada para brindar bienestar, nutrición y comodidad a cada mascota. Nuestro compromiso es ayudar a las familias a encontrar todo lo necesario para consentir y cuidar a sus compañeros de vida. Gimnasios, suplementos deportivos, alimento para mascotas, comida para gatos, accesorios y entretenimientos.",
+    desc:        "<p>Tienda especializada en concentrados, accesorios y productos para el cuidado integral de mascotas, ofreciendo alimentos de las mejores marcas, dieta BARF, juguetes, camas, guacales y artículos esenciales para perros y gatos.</p>     <p>En “De Maskot’s” trabajamos con variedad, calidad y atención personalizada para brindar bienestar, nutrición y comodidad a cada mascota.</p>    <p>Nuestro compromiso es ayudar a las familias a encontrar todo lo necesario para consentir y cuidar a sus compañeros de vida.</p>    <p>Gimnasios/ Suplementos deportivos/ Alimento para mascotas/ Comida para gatos/ Accesorios/ Entretenimientos.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
