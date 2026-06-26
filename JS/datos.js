@@ -3097,55 +3097,6 @@ const NEGOCIOS = [
       "assets/logos/wrecords/wrecors1.jpeg","assets/logos/wrecords/wrecors2.jpeg","assets/logos/wrecords/wrecors3.jpeg","assets/logos/wrecords/wrecors4.jpeg","assets/logos/wrecords/wrecors5.jpg",
     ],
   },
-  {
-    /* ══════════════════════════════════════════════════════════════
-       NISSI
-       ══════════════════════════════════════════════════════════════ */
- 
-    /* ─── INFORMACIÓN BÁSICA ─── */
-    id:          "nissi",
-    cat:         "movilidad",
-    nombre:      "NISSI",
-    slogan:      "Bienvenidos a tu tienda de ciclismo.",
-    desc:        "Encuentras todo lo que necesitas para vivir la pasión del ciclismo. Somos especialistas en venta de bicicletas MTB, ruta, gravel y urbanas, además de accesorios, repuestos y servicio técnico profesional. Trabajamos con marcas reconocidas y brindamos asesoría personalizada para que cada cliente encuentre la bicicleta ideal según su estilo y necesidad. Nuestro compromiso es ofrecer calidad, confianza y la mejor experiencia sobre dos ruedas para ciclistas aficionados y expertos en Mosquera y sus alrededores.Bicicletas Mosquera/taller de bicicletas/bicicletas MTB/repuestos para bicicletas/ciclismo Mosquera/accesorios para bicicleta",
-    tipo:        "estandar",
- 
-    /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
-    logoFill:    false,
-    logoBg:      "#ffffff",
-    logoPerfil:  "assets/logos/nissi/logo-nissi.webp",
-    cardImage:   "assets/logos/nissi/inicio-nissi.webp",
-    portada:     "assets/logos/nissi/portada-nissi.webp",
- 
-    /* ─── TAMAÑOS RESPONSIVOS (clamp: min, preferido, max) ─── */
-    cardHeight:      "clamp(350px, 180vw, 250px)",
-    logoHeight:      "clamp(90px, 8vw, 60px)",
-    portadaHeight:   "clamp(180px, 25vh, 200px)",
-    galeriaHeight:   "clamp(150px, 20vw, 240px)",
- 
-    /* ─── CONTACTO Y REDES SOCIALES ─── */
-    was: [
-  { nombre: "WhatsApp", numero: "573219875558" },
-],
-    tel:         "3219875558",
-    ig:          "https://www.instagram.com/nissi.mosquera?igsh=MWs3MDRseXhxd3d4NA==",
-    fb:          "",
-    tk:          "",
-    web:         "",
- 
-    /* ─── UBICACIÓN Y MAPA ─── */
-    dir:         "Cl. 22 2-38, Mosquera, Cundinamarca ",
-    mapUrl:      "",
-    mapsLinks: [
-      { nombre: "NISSI", url: "https://maps.app.goo.gl/DmkYxuNfb8cYi96aA" },
-    ],
- 
-    /* ─── GALERÍA DE FOTOS ─── */
-    galeria:     [
-      "assets/logos/nissi/nissi1.jpg","assets/logos/nissi/nissi2.jpg","assets/logos/nissi/nissi3.jpg","assets/logos/nissi/nissi4.jpg","assets/logos/nissi/nissi5.jpg",
-    ],
-  },
   // ══ MASCOTAS ════════════════════════════════════════════════
   // ══ MASCOTAS ════════════════════════════════════════════════
   // ══ MASCOTAS ════════════════════════════════════════════════
@@ -3743,51 +3694,6 @@ const NEGOCIOS = [
   // ══ EDUCACION ════════════════════════════════════════════════
   // ══ EDUCACION ════════════════════════════════════════════════
   // ══ EDUCACION ════════════════════════════════════════════════
-  {
-    /* ══════════════════════════════════════════════════════════════
-       ACADEMIA ABICUN 
-       ══════════════════════════════════════════════════════════════ */
- 
-    /* ─── INFORMACIÓN BÁSICA ─── */
-    id:          "abicun",
-    cat:         "educacion",
-    nombre:      "ACADEMIA ABICUN ",
-    slogan:      "Técnico en cosmetología y belleza integral educación para el trabajo y desarrollo humano.",
-    desc:        "Abicun Academia es un centro de formación especializado en cosmetología y belleza integral, comprometido con preparar profesionales altamente capacitados en el mundo de la estética. Ofrecemos cursos y capacitaciones en maquillaje, peluquería, barbería, uñas, tratamientos faciales y corporales, brindando enseñanza práctica, técnicas actualizadas y acompañamiento profesional. Nos destacamos por formar talentos con creatividad, disciplina y pasión por la belleza, en un ambiente moderno y de aprendizaje continuo. Estética integral, cuidado facial y corporal, belleza avanzada, tecnicas de spa, cosmetologia profecional",
-    tipo:        "estandar",
- 
-    /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
-    logoFill:    false,
-    logoBg:      "#ffffff",
-    logoPerfil:  "assets/logos/abicun/logo-abicun.webp",
-    cardImage:   "assets/logos/abicun/inicio-abicun.webp",
-    portada:     "assets/logos/abicun/portada-abicun.webp",
- 
-    /* ─── TAMAÑOS RESPONSIVOS (clamp: min, preferido, max) ─── */
-    cardHeight:      "clamp(350px, 180vw, 250px)",
-    logoHeight:      "clamp(90px, 8vw, 60px)",
-    portadaHeight:   "clamp(180px, 25vh, 200px)",
-    galeriaHeight:   "clamp(150px, 20vw, 240px)",
- 
-    /* ─── CONTACTO Y REDES SOCIALES ─── */
-    wa:          "573123883183",
-    tel:         "3123883183",
-    ig:          "",
-    fb:          "",
-    tk:          "",
-    web:         "",
- 
-    /* ─── UBICACIÓN Y MAPA ─── */
-    dir:         "Calle 22 #2a - 30 barrio el cabrero MOSQUERA",
-    mapUrl:      "",
-    mapsLink:    "https://maps.app.goo.gl/jJhS7V84DYKrXhoG9",
- 
-    /* ─── GALERÍA DE FOTOS ─── */
-    galeria:     [
-      ""
-    ],
-  },
   {
     /* ══════════════════════════════════════════════════════════════
        ACADEMIA NOVA 
