@@ -742,9 +742,9 @@ const NEGOCIOS = [
     logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
-    logoPerfil:  "assets/logos/broasterdelchef/logo-broaster- chef.jpg",
-    cardImage:   "assets/logos/broasterdelchef/inicio-broaster-chef.jpg",
-    portada:     "assets/logos/broasterdelchef/portada-broaster-chef.jpg",
+    logoPerfil:  "assets/logos/broasterdelchef/logo-broaster- chef.webp",
+    cardImage:   "assets/logos/broasterdelchef/inicio-broaster-chef.webp",
+    portada:     "assets/logos/broasterdelchef/portada-broaster-chef.webp",
  
     /* ─── TAMAÑOS RESPONSIVOS (clamp: min, preferido, max) ─── */
     cardHeight:      "clamp(350px, 180vw, 250px)",
@@ -767,7 +767,7 @@ const NEGOCIOS = [
  
     /* ─── GALERÍA DE FOTOS ─── */
     galeria:     [
-      "assets/logos/broasterdelchef/boasterchef1.jpeg","assets/logos/broasterdelchef/boasterchef2.jpeg","assets/logos/broasterdelchef/boasterchef3.jpeg","assets/logos/broasterdelchef/boasterchef4.jpeg","assets/logos/broasterdelchef/boasterchef5.jpeg",
+      "assets/logos/broasterdelchef/boasterchef1.webp","assets/logos/broasterdelchef/boasterchef2.webp","assets/logos/broasterdelchef/boasterchef3.webp","assets/logos/broasterdelchef/boasterchef4.webp","assets/logos/broasterdelchef/boasterchef5.webp",
     ],
   },
   {
@@ -2041,9 +2041,9 @@ const NEGOCIOS = [
     logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
-    logoPerfil:  "assets/logos/baruch/logo-baruch.jpg",
-    cardImage:   "assets/logos/baruch/inicio-baruch.jpg",
-    portada:     "assets/logos/baruch/portada-baruch.jpg",
+    logoPerfil:  "assets/logos/baruch/logo-baruch.webp",
+    cardImage:   "assets/logos/baruch/inicio-baruch.webp",
+    portada:     "assets/logos/baruch/portada-baruch.webp",
  
     /* ─── TAMAÑOS RESPONSIVOS (clamp: min, preferido, max) ─── */
     cardHeight:      "clamp(350px, 180vw, 250px)",
@@ -2066,7 +2066,7 @@ const NEGOCIOS = [
  
     /* ─── GALERÍA DE FOTOS ─── */
     galeria:     [
-      "assets/logos/baruch/baruch1.webp","assets/logos/baruch/baruch2.jpg","assets/logos/baruch/baruch3.jpg","assets/logos/baruch/baruch4.jpg","assets/logos/baruch/baruch5.jpg",
+      "assets/logos/baruch/baruch1.webp","assets/logos/baruch/baruch2.webp","assets/logos/baruch/baruch3.webp","assets/logos/baruch/baruch4.webp","assets/logos/baruch/baruch5.webp",
     ],
   },
   // ══ CONSUMO ════════════════════════════════════════════════
@@ -2976,9 +2976,9 @@ const NEGOCIOS = [
     logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
-    logoPerfil:  "assets/logos/bikeshop/logo-bike.jpg",
-    cardImage:   "assets/logos/bikeshop/inicio-bike.jpg",
-    portada:     "assets/logos/bikeshop/portada-bike.jpg",
+    logoPerfil:  "assets/logos/bikeshop/logo-bike.webp",
+    cardImage:   "assets/logos/bikeshop/inicio-bike.webp",
+    portada:     "assets/logos/bikeshop/portada-bike.webp",
  
     /* ─── TAMAÑOS RESPONSIVOS (clamp: min, preferido, max) ─── */
     cardHeight:      "clamp(350px, 180vw, 250px)",
@@ -3004,7 +3004,7 @@ const NEGOCIOS = [
  
     /* ─── GALERÍA DE FOTOS ─── */
     galeria:     [
-      "assets/logos/bikeshop/bike1.jpeg","assets/logos/bikeshop/bike2.jpeg","assets/logos/bikeshop/bike3.jpeg","assets/logos/bikeshop/bike4.jpeg","assets/logos/bikeshop/bike5.jpeg",
+      "assets/logos/bikeshop/bike1.webp","assets/logos/bikeshop/bike2.webp","assets/logos/bikeshop/bike3.webp","assets/logos/bikeshop/bike4.webp","assets/logos/bikeshop/bike5.webp",
     ],
   },
   {
