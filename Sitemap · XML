@@ -800,5 +800,14 @@
       <image:loc>https://newplacemosquera.com/assets/logos/valentina/inicio-academia-valentina.jpg</image:loc>
     </image:image>
   </url>
+  <url>
+    <loc>https://newplacemosquera.com/intervidriosgualteros</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://newplacemosquera.com/assets/logos/intervidriosgualteros/inicio-intervidrios.webp</image:loc>
+    </image:image>
+  </url>
 
 </urlset>

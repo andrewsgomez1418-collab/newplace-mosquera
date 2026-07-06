@@ -1659,6 +1659,53 @@ const NEGOCIOS = [
       "assets/logos/frescolombia/frescolombia1.webp","assets/logos/frescolombia/frescolombia2.webp","assets/logos/frescolombia/frescolombia3.webp","assets/logos/frescolombia/frescolombia4.webp","assets/logos/frescolombia/frescolombia5.webp",
     ],
   },
+  {
+    /* ══════════════════════════════════════════════════════════════
+       INTERVIDRIOS GUALTEROS
+       ══════════════════════════════════════════════════════════════ */
+ 
+    /* ─── INFORMACIÓN BÁSICA ─── */
+    id:          "intervidriosgualteros",
+    cat:         "hogar",
+    nombre:      "INTERVIDRIOS GUALTEROS",
+    slogan:      "Cumplimiento y calidad.",
+    desc:        "Es su aliado estratégico en soluciones arquitectónicas y decorativas en vidrio y aluminio. Nos especializamos en el diseño, fabricación e instalación de ventanería, divisiones de baño, fachadas comerciales, espejos y vidrios de seguridad de alta calidad. Combinamos precisión técnica, materiales resistentes y un servicio experto para transformar y dar elegancia a sus proyectos residenciales, comerciales o empresariales.</P><P>Inter vidrios Gualteros / Vidrios y aluminios / Divisiones de baño en vidrio / Ventaneria arquitectónica / Instalación de vidrios de seguridad.",
+    tipo:        "estandar",
+ 
+    /* ─── IMÁGENES Y LOGOS ─── */
+    logo:        "assets/logos/gallery-home-logo.jpg",
+    logoFill:    false,
+    logoBg:      "#ffffff",
+    logoPerfil:  "assets/logos/gualteros/logo-intervidrios.webp",
+    cardImage:   "assets/logos/gualteros/inicio-intervidrios.webp",
+    portada:     "assets/logos/gualteros/portada-intervidrios.webp",
+ 
+    /* ─── TAMAÑOS RESPONSIVOS (clamp: min, preferido, max) ─── */
+    cardHeight:      "clamp(350px, 180vw, 250px)",
+    logoHeight:      "clamp(90px, 8vw, 60px)",
+    portadaHeight:   "clamp(180px, 25vh, 200px)",
+    galeriaHeight:   "clamp(150px, 20vw, 240px)",
+ 
+    /* ─── CONTACTO Y REDES SOCIALES ─── */
+    was: [
+  { nombre: "WhatsApp", numero: "573212746380" },
+],
+    tel:         "3212746380",
+    ig:          "https://www.instagram.com/intervidrios_gualteros?igsh=MXg3a2c2OHU1aWdlNQ==",
+    fb:          "https://www.facebook.com/share/1BqCfCgbSS/",
+    tk:          "",
+    web:         "",
+ 
+    /* ─── UBICACIÓN Y MAPA ─── */
+    dir:         "Calle 9d  16b-09 MOSQUERA",
+    mapUrl:      "",
+    mapsLink:    "https://maps.app.goo.gl/7eKAxGDBvWWzVpmE6?g_st=awb",
+ 
+    /* ─── GALERÍA DE FOTOS ─── */
+    galeria:     [
+      "assets/logos/gualteros/intervidrios1.webp","assets/logos/gualteros/intervidrios2.webp","assets/logos/gualteros/intervidrios3.webp","assets/logos/gualteros/intervidrios4.webp","assets/logos/gualteros/intervidrios5.webp","assets/logos/gualteros/intervidrios6.webp","assets/logos/gualteros/intervidrios7.webp","assets/logos/gualteros/intervidrios8.webp","assets/logos/gualteros/intervidrios9.webp","assets/logos/gualteros/intervidrios10.webp",
+    ],
+  },
 // ══ SHOPPING ════════════════════════════════════════════════
 // ══ SHOPPING ════════════════════════════════════════════════
 // ══ SHOPPING ════════════════════════════════════════════════

@@ -75,6 +75,216 @@ function openExternalLink(url, platform, businessName = '') {
   });
   window.open(url, '_blank');
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   JSON-LD STRUCTURED DATA — GENERADOR DINÁMICO
+   ═══════════════════════════════════════════════════════════════ */
+
+/**
+ * Actualiza los meta tags dinámicamente cuando se abre un negocio
+ * @param {object} negocio - Objeto del negocio desde NEGOCIOS array
+ * @param {object} categoria - Objeto de la categoría desde CATS array
+ */
+function updateMetaTags(negocio, categoria) {
+  const domain = window.location.origin;
+  const urlNegocio = `${domain}/${negocio.id}`;
+
+  document.title = `${negocio.nombre} — Newplace Store`;
+  updateMetaTag('description', negocio.slogan || negocio.desc);
+  updateMetaTag('og:title', negocio.nombre);
+  updateMetaTag('og:description', negocio.slogan || negocio.desc);
+  updateMetaTag('og:url', urlNegocio);
+  updateMetaTag('twitter:title', negocio.nombre);
+  updateMetaTag('twitter:description', negocio.slogan || negocio.desc);
+  updateCanonicalTag(urlNegocio);
+
+  if (negocio.cardImage) {
+    const imgUrl = `${domain}/${negocio.cardImage}`;
+    updateMetaTag('og:image', imgUrl);
+    updateMetaTag('twitter:image', imgUrl);
+  } else if (negocio.portada) {
+    const imgUrl = `${domain}/${negocio.portada}`;
+    updateMetaTag('og:image', imgUrl);
+    updateMetaTag('twitter:image', imgUrl);
+  } else if (negocio.galeria && negocio.galeria.length > 0) {
+    const imgUrl = `${domain}/${negocio.galeria[0]}`;
+    updateMetaTag('og:image', imgUrl);
+    updateMetaTag('twitter:image', imgUrl);
+  }
+
+  const jsonLd = generateBusinessJSON(negocio, categoria, urlNegocio, domain);
+  updateJsonLd(jsonLd);
+}
+
+/**
+ * Genera el JSON-LD Structured Data para un negocio
+ */
+function generateBusinessJSON(negocio, categoria, url, domain) {
+  let jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": negocio.nombre,
+    "url": url,
+    "description": negocio.slogan || negocio.desc,
+  };
+
+  if (negocio.cardImage) {
+    jsonLd.image = `${domain}/${negocio.cardImage}`;
+  } else if (negocio.portada) {
+    jsonLd.image = `${domain}/${negocio.portada}`;
+  } else if (negocio.galeria && negocio.galeria.length > 0) {
+    jsonLd.image = `${domain}/${negocio.galeria[0]}`;
+  }
+
+  if (negocio.dir) {
+    jsonLd.address = {
+      "@type": "PostalAddress",
+      "streetAddress": negocio.dir,
+      "addressLocality": "Mosquera",
+      "addressRegion": "Cundinamarca",
+      "addressCountry": "CO"
+    };
+  }
+
+  if (negocio.tel) {
+    jsonLd.telephone = negocio.tel;
+  }
+
+  if (negocio.wa || (negocio.was && negocio.was.length > 0)) {
+    const whatsappNumber = negocio.wa || negocio.was[0].numero;
+    if (whatsappNumber) {
+      jsonLd.contactPoint = {
+        "@type": "ContactPoint",
+        "contactType": "WhatsApp",
+        "telephone": whatsappNumber
+      };
+    }
+  }
+
+  const sameAs = [];
+  if (negocio.ig) {
+    sameAs.push(negocio.ig.startsWith('http') ? negocio.ig : `https://instagram.com/${negocio.ig}`);
+  }
+  if (negocio.fb) {
+    sameAs.push(negocio.fb.startsWith('http') ? negocio.fb : `https://facebook.com/${negocio.fb}`);
+  }
+  if (sameAs.length > 0) {
+    jsonLd.sameAs = sameAs;
+  }
+
+  if (negocio.greviews) {
+    jsonLd.sameAs = jsonLd.sameAs || [];
+    jsonLd.sameAs.push(negocio.greviews);
+  }
+
+  return jsonLd;
+}
+
+/**
+ * Actualiza un meta tag existente o lo crea
+ */
+function updateMetaTag(property, content) {
+  let meta = document.querySelector(`meta[property="${property}"], meta[name="${property}"]`);
+
+  if (!meta) {
+    meta = document.createElement('meta');
+    const isProperty = property.includes(':');
+    if (isProperty) {
+      meta.setAttribute('property', property);
+    } else {
+      meta.setAttribute('name', property);
+    }
+    document.head.appendChild(meta);
+  }
+
+  meta.setAttribute('content', content);
+}
+
+/**
+ * Actualiza el <link rel="canonical"> (no es un meta tag, necesita su propia función)
+ */
+function updateCanonicalTag(url) {
+  let link = document.querySelector('link[rel="canonical"]');
+
+  if (!link) {
+    link = document.createElement('link');
+    link.setAttribute('rel', 'canonical');
+    document.head.appendChild(link);
+  }
+
+  link.setAttribute('href', url);
+}
+
+/**
+ * Actualiza o crea el script JSON-LD
+ */
+function updateJsonLd(jsonLdObject) {
+  let scriptTag = document.querySelector('script[type="application/ld+json"][data-type="business"]');
+
+  if (!scriptTag) {
+    scriptTag = document.createElement('script');
+    scriptTag.type = 'application/ld+json';
+    scriptTag.setAttribute('data-type', 'business');
+    document.head.appendChild(scriptTag);
+  }
+
+  scriptTag.textContent = JSON.stringify(jsonLdObject);
+}
+
+/**
+ * Restaura los meta tags a los valores por defecto (homepage)
+ */
+function resetMetaTags() {
+  const domain = window.location.origin;
+
+  document.title = 'Newplace Store — Centro Comercial Digital';
+  updateMetaTag('description', 'Newplace Store: Centro comercial digital que conecta negocios locales con su comunidad en Mosquera, Cundinamarca.');
+  updateMetaTag('og:title', 'Newplace Store — Centro Comercial Digital');
+  updateMetaTag('og:description', 'Descubre los mejores negocios locales de Mosquera. Conectamos negocios con comunidades.');
+  updateMetaTag('og:url', domain);
+  updateMetaTag('og:image', `${domain}/assets/img/og-image.jpg`);
+  updateMetaTag('twitter:title', 'Newplace Store — Centro Comercial Digital');
+  updateMetaTag('twitter:description', 'Descubre los mejores negocios locales de Mosquera. Conectamos negocios con comunidades.');
+  updateMetaTag('twitter:image', `${domain}/assets/img/og-image.jpg`);
+  updateCanonicalTag(domain + '/');
+
+  const defaultJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Newplace Store Mosquera",
+    "url": domain,
+    "image": `${domain}/assets/img/logo-color.jpeg`,
+    "description": "Centro comercial digital que conecta negocios locales con su comunidad"
+  };
+
+  updateJsonLd(defaultJsonLd);
+}
+
+/**
+ * Actualiza title, description y OG tags para una página de categoría
+ */
+function updateCategoryMetaTags(cat) {
+  const domain = window.location.origin;
+  const urlCat = `${domain}/categoria/${cat.id}`;
+  const nombreCat = cat.n.charAt(0) + cat.n.slice(1).toLowerCase();
+  const titulo = `${nombreCat} en Mosquera — Newplace Store`;
+  const descripcion = `Encuentra los mejores negocios de ${nombreCat.toLowerCase()} en Mosquera, Cundinamarca. Contacto directo por WhatsApp con negocios locales verificados.`;
+
+  document.title = titulo;
+  updateMetaTag('description', descripcion);
+  updateMetaTag('og:title', titulo);
+  updateMetaTag('og:description', descripcion);
+  updateMetaTag('og:url', urlCat);
+  updateMetaTag('twitter:title', titulo);
+  updateMetaTag('twitter:description', descripcion);
+  updateCanonicalTag(urlCat);
+
+  if (cat.imgHdr || cat.img) {
+    const imgUrl = `${domain}/${cat.imgHdr || cat.img}`;
+    updateMetaTag('og:image', imgUrl);
+    updateMetaTag('twitter:image', imgUrl);
+  }
+}
  
 /* ═══════════════════════════════════════════════════════════
    MOTOR DEL SITIO — No necesitas modificar nada de aquí abajo
@@ -148,12 +358,7 @@ function openExternalLink(url, platform, businessName = '') {
         if (cat) {
  
           openCat(cat);
- 
-          setTimeout(() => {
- 
-            openNeg(negocio);
- 
-          }, 400);
+          openNeg(negocio);
  
         }
       }
@@ -183,6 +388,7 @@ function openExternalLink(url, platform, businessName = '') {
 let navHistory = ['index'];
  
 function showPage(id) {
+  if (id === 'index') resetMetaTags();
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.getElementById('page-' + id).classList.add('active');
   const backBtn = document.getElementById('backBtn');
@@ -222,6 +428,7 @@ window.addEventListener('popstate', (e) => {
   const page = e.state && e.state.page;
   if (!page || page === 'index') {
     navHistory = ['index'];
+    resetMetaTags();
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     document.getElementById('page-index').classList.add('active');
     const backBtn = document.getElementById('backBtn');
@@ -456,6 +663,7 @@ document.getElementById('catTitle').textContent = cat.showTitle !== false ? cat.
     });
   }
   
+  updateCategoryMetaTags(cat);
   showPage('cat');
 }
  
@@ -630,6 +838,7 @@ if (neg.greviews) ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEv
     });
   });
  
+  updateMetaTags(neg, cat);
   showPage('neg');
 }
  
