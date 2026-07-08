@@ -79,6 +79,10 @@ const CATS = [
    PARA LA GALERÍA:
      - Pon las fotos en la misma carpeta que este archivo
      - Escríbelas así: galeria:["foto1.jpg","foto2.jpg"]
+
+   PARA DIDI FOOD Y RAPPI:
+     - Pega el link directo a tu negocio en esas apps
+     - Si no vendes por ahí, déjalo en blanco: didi:"" / rappi:""
    ────────────────────────────────────────────────────────── */
 const NEGOCIOS = [
  
@@ -100,7 +104,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/",
@@ -121,6 +124,8 @@ const NEGOCIOS = [
     ig:          "",
     fb:          "",
     tk:          "",
+    didi:        "",
+    rappi:       "",
     web:         "",
     greviews:    "",
  
@@ -173,6 +178,8 @@ const NEGOCIOS = [
     ig:          "https://instagram.com/restaurante",
     fb:          "https://facebook.com/restaurante",
     tk:          "",
+    didi:        "https://didi-food.com/restaurante",
+    rappi:       "https://www.rappi.com.co/restaurantes/restaurante",
     web:         "",
     greviews:    "",
  
@@ -244,6 +251,8 @@ const NEGOCIOS = [
     ig:          "https://instagram.com/tienda",
     fb:          "",
     tk:          "",
+    didi:        "",
+    rappi:       "",
     web:         "",
     greviews:    "",
  
@@ -282,7 +291,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/draingrid/logo-doctora-ingrid.jpg",
@@ -328,7 +336,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/drajulia/logo-doctora-julia.jpg",
@@ -373,7 +380,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/terapeutico/logo-terapeutico.jpg",
@@ -418,7 +424,7 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
+
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/lydatovar/logo-doctora-tovar.webp",
@@ -463,7 +469,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/rosenberg/logo-centro-medico-rosenber.jpg",
@@ -508,7 +513,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/fast/logo-fast- medical.jpg",
@@ -553,7 +557,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/zalaque/logo-doctora- claudia.jpg",
@@ -598,7 +601,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/yer/logo-doctora-yolima.jpg",
@@ -648,7 +650,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/granparada/logo-gran-parada.jpg",
@@ -694,7 +695,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/gustoso/logo-gustoso.jpg",
@@ -739,7 +739,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/broasterdelchef/logo-broaster- chef.webp",
@@ -780,11 +779,10 @@ const NEGOCIOS = [
     cat:         "antojos",
     nombre:      "BROASTER RAPI EXPRESS",
     slogan:      "Hecho con sabor, servido con amor, COMIDA CHINA Y PLATOS A LA CARTA",
-    desc:        "En Broaster Rapi Express ofrecemos una deliciosa variedad de comida rápida, comida china y platos a la carta preparados con sabor, calidad y frescura. Disfruta de pollo broaster crujiente, arroces especiales, carnes, acompañamientos y recetas ideales para compartir en familia o con amigos. Nos destacamos por nuestra atención rápida, buen servicio y sabores que conquistan en cada bocado. COMIDA CHINA Y PLATOS A LA CARTA Pollo broaster, comida rápida, domicilios express, sabor crujiente, atención rápida",
+    desc:        "En Broaster Rapi Express ofrecemos una deliciosa variedad de comida rápida, comida china y platos a la carta preparados con sabor, calidad y frescura. Disfruta de pollo broaster crujiente, arroces especiales, carnes, acompañamientos y recetas ideales para compartir en familia o con amigos.<p> Nos destacamos por nuestra atención rápida, buen servicio y sabores que conquistan en cada bocado.</p><p> COMIDA CHINA Y PLATOS A LA CARTA Pollo broaster, comida rápida, domicilios express, sabor crujiente, atención rápida",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/rapiexpress/logo-rapi-express.jpg",
@@ -807,7 +805,7 @@ const NEGOCIOS = [
     /* ─── UBICACIÓN Y MAPA ─── */
     dir:         "Calle 19 # 1-36 Barrio La Esperanza MOSQUERA",
     mapUrl:      "",
-    mapsLink:    "https://maps.app.goo.gl/2eWhcta4MNHvnz4D6?g_st=awb",
+    mapsLink:    "https://maps.app.goo.gl/CuCLFTJGAsyxsbYYA",
  
     /* ─── GALERÍA DE FOTOS ─── */
     galeria:     [
@@ -828,7 +826,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/hojaviva/logo-hoja-viva.jpg",
@@ -872,7 +869,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/hojaldre/logo-hojaldre.jpg",
@@ -919,7 +915,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/pizzaexpress/logo-pizza-express.jpg",
@@ -963,7 +958,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/TENTACION/logo-rica-tentacion.jpg",
@@ -1008,7 +1002,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/SANDWICH/logo-sandwich-burguer.jpg",
@@ -1058,7 +1051,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/POLLOSLA22/logo-servipollos.jpg",
@@ -1102,7 +1094,6 @@ const NEGOCIOS = [
     tipo:        "restaurante",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/casadearroces/Logo-casa-de-los-arroces.webp",
@@ -1122,6 +1113,8 @@ const NEGOCIOS = [
     fb:          "https://www.facebook.com/share/1D2jqx1Fbw/",
     tk:          "https://www.tiktok.com/@la.casa.de.los.ar76?_r=1&_t=ZS-96rADhFWtpE",
     web:         "",
+    didi:        "Https://order.top/es-CO/store/la_casa_de_los_arroc/nWickS",
+    rappi:       "",
     greviews:    "https://g.page/r/CU8tp9FOuICOEBM/review",
  
     /* ─── UBICACIÓN Y MAPA ─── */
@@ -1224,7 +1217,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/STTEL/logo-stell.jpg",
@@ -1269,7 +1261,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/modulares/logo-modulares-vr.jpg",
@@ -1314,7 +1305,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/MAXSECURITY/logo-cerrajeria-maxsecurity.jpg",
@@ -1359,7 +1349,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/GALLERY/logo-gallery-home.webp",
@@ -1404,7 +1393,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/gama/logo-gama.jpg",
@@ -1448,7 +1436,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/innova/logo-innova.jpg",
@@ -1493,7 +1480,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/mayton/logo-mayton.jpg",
@@ -1537,7 +1523,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/multiexpress/logo-multiexpress.jpg",
@@ -1581,7 +1566,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/ALUMINGLASS/logo-aluminglass.webp",
@@ -1625,7 +1609,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/frescolombia/logo-frescolombia.webp",
@@ -1673,7 +1656,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/gualteros/logo-intervidrios.webp",
@@ -1706,6 +1688,53 @@ const NEGOCIOS = [
       "assets/logos/gualteros/intervidrios1.webp","assets/logos/gualteros/intervidrios2.webp","assets/logos/gualteros/intervidrios3.webp","assets/logos/gualteros/intervidrios4.webp","assets/logos/gualteros/intervidrios5.webp","assets/logos/gualteros/intervidrios6.webp","assets/logos/gualteros/intervidrios7.webp","assets/logos/gualteros/intervidrios8.webp","assets/logos/gualteros/intervidrios9.webp","assets/logos/gualteros/intervidrios10.webp",
     ],
   },
+  {
+    /* ══════════════════════════════════════════════════════════════
+       SISTEMAS Y SERVICIOS GAS NATURAL
+       ══════════════════════════════════════════════════════════════ */
+ 
+    /* ─── INFORMACIÓN BÁSICA ─── */
+    id:          "serviciosgasnatural",
+    cat:         "hogar",
+    nombre:      "SISTEMAS Y SERVICIOS GAS NATURAL",
+    slogan:      "Eficiencia y seguridad en cada instalación",
+    desc:        "Sistemas y Servicios Gas Natural es una empresa experta en la instalación, mantenimiento y certificación de redes de gas residencial, comercial e industrial. Garantizamos la máxima seguridad, cumplimiento normativo y eficiencia en gasodomésticos con un equipo técnico calificado y confiable.</p><p>Sistemas y servicios gas natural / Instalación de redes de gas, Mantenimiento y reparación de calentadores de agua y estufas, Certificación de gas natural, Técnico de gas certificado",
+    tipo:        "estandar",
+ 
+    /* ─── IMÁGENES Y LOGOS ─── */
+    logoFill:    false,
+    logoBg:      "#ffffff",
+    logoPerfil:  "assets/logos/gasnatural/logo-gas.webp",
+    cardImage:   "assets/logos/gasnatural/inicio-gas.webp",
+    portada:     "assets/logos/gasnatural/portada-gas.webp",
+ 
+    /* ─── TAMAÑOS RESPONSIVOS (clamp: min, preferido, max) ─── */
+    cardHeight:      "clamp(350px, 180vw, 250px)",
+    logoHeight:      "clamp(90px, 8vw, 60px)",
+    portadaHeight:   "clamp(180px, 25vh, 200px)",
+    galeriaHeight:   "clamp(150px, 20vw, 240px)",
+ 
+    /* ─── CONTACTO Y REDES SOCIALES ─── */
+    was: [
+  { nombre: "WhatsApp", numero: "573153528225" },
+],
+    tel:         "3153528225",
+    ig:          "",
+    fb:          "",
+    tk:          "",
+    web:         "",
+    greviews:    "https://g.page/r/CR9q4smUhTuJEBM/review",
+ 
+    /* ─── UBICACIÓN Y MAPA ─── */
+    dir:         "Kra 3 No 19-37 Local 120 Centro Comercial Hacienda Villa Nueva  MOSQUERA",
+    mapUrl:      "",
+    mapsLink:    "https://maps.app.goo.gl/jn4ePG6nxFfVHMpy5",
+ 
+    /* ─── GALERÍA DE FOTOS ─── */
+    galeria:     [
+      "assets/logos/gasnatural/GAS1.webp","assets/logos/gasnatural/GAS2.webp","assets/logos/gasnatural/GAS3.webp","assets/logos/gasnatural/GAS4.webp","assets/logos/gasnatural/GAS5.webp",
+    ],
+  },
 // ══ SHOPPING ════════════════════════════════════════════════
 // ══ SHOPPING ════════════════════════════════════════════════
 // ══ SHOPPING ════════════════════════════════════════════════
@@ -1725,7 +1754,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/patikoo/logo-patikoo-pañalera.webp",
@@ -1771,7 +1799,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/compraventa/logo-compra-y-venta.jpg",
@@ -1815,7 +1842,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/floralia/logo-floralia.jpg",
@@ -1860,7 +1886,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/conamor/logo-flores-y-detalles-con-amor.jpg",
@@ -1904,7 +1929,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/merkasa/logo-merkasa.webp",
@@ -1949,7 +1973,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/oldschool/logo-old-school.jpg",
@@ -1997,7 +2020,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/saavedra/logo-piñateria-saavedra.jpg",
@@ -2041,7 +2063,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/aguatecnicos/logo-aguatecnicos.webp",
@@ -2085,7 +2106,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/baruch/logo-baruch.webp",
@@ -2135,7 +2155,7 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
+    
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/novillo/logo-el-novillo.jpg",
@@ -2322,7 +2342,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/ferrelectricos/logo-madenel.jpg",
@@ -2367,7 +2386,7 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
+    
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/eleden/logo- fruvery-carniceria.jpg",
@@ -2415,7 +2434,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/variedadessl/logo-papeleria-y-variedades.jpg",
@@ -2465,7 +2483,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/jd/logo-jd-perfileria.jpg",
@@ -2514,7 +2531,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/mym/logo-lavanderia-mym.jpg",
@@ -2559,7 +2575,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/mismundo/logo-mis-mundo.jpg",
@@ -2607,7 +2622,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/imagendigital/logo- imagen-digital-xavier.jpg",
@@ -2656,7 +2670,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/dimashk/logo-arabe-dimashk.jpg",
@@ -2701,7 +2714,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/asprilla/logo-asprilla-rivas.webp",
@@ -2746,7 +2758,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/chicharron/logo- bendito-chicharron.jpg",
@@ -2791,7 +2802,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/pomodoro/logo- pomodoro.jpg",
@@ -2836,7 +2846,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/muralla/logo- la-gran-muralla.jpg",
@@ -2885,7 +2894,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/armotos/logo-ar-motos.webp",
@@ -2930,7 +2938,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/maxioil/logo-maxi-oil.jpg",
@@ -2975,7 +2982,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/barrelec/logo-barrelec.webp",
@@ -3020,7 +3026,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/bikeshop/logo-bike.webp",
@@ -3068,7 +3073,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/cristal/logo-cristal-cars.jpg",
@@ -3113,7 +3117,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/wrecords/logo-w-records.jpg",
@@ -3517,7 +3520,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/guholens/logo-guho-lens-optica.jpg",
@@ -3562,7 +3564,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/origenvital/logo-origen-vital.jpg",
@@ -3607,7 +3608,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/VICTORIAESTETICA/logo-victoria-estetica.jpg",
@@ -3657,7 +3657,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/cortes/logo-cortes-y-estilos.jpg",
@@ -3706,7 +3705,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/lapeluqueria/logo-la-peluqueria.jpg",
@@ -3755,7 +3753,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/nova/logo-academia-nova.jpg",
@@ -3800,7 +3797,6 @@ const NEGOCIOS = [
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
-    logo:        "assets/logos/gallery-home-logo.jpg",
     logoFill:    false,
     logoBg:      "#ffffff",
     logoPerfil:  "assets/logos/valentina/logo-academia-valentina.jpg",

@@ -565,6 +565,8 @@ function bizCardHTML(neg, cat) {
       ${neg.tk ? '<span class="btag tk">🎵 TikTok</span>' : ''}
       ${neg.ig ? '<span class="btag ig">📸 Instagram</span>' : ''}
       ${neg.fb ? '<span class="btag fb">🔵 Facebook</span>' : ''}
+      ${neg.didi ? '<span class="btag didi">🛵 Didi Food</span>' : ''}
+      ${neg.rappi ? '<span class="btag rappi">🛵 Rappi</span>' : ''}
     </div>`;
 }
  
@@ -743,6 +745,8 @@ if (neg.portada) {
   if (neg.ig)  ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_social',{'platform':'Instagram','business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}'}); window.open('${neg.ig}', '_blank');" class="abtn ig">📸 Instagram</a>`;
 if (neg.tk)  ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_social',{'platform':'TikTok','business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}'}); window.open('${neg.tk}', '_blank');" class="abtn tk">🎵 TikTok</a>`;
 if (neg.fb)  ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_social',{'platform':'Facebook','business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}'}); window.open('${neg.fb}', '_blank');" class="abtn fb">🔵 Facebook</a>`;
+if (neg.didi) ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_social',{'platform':'Didi Food','business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}'}); window.open('${neg.didi}', '_blank');" class="abtn didi">🛵 Didi Food</a>`;
+if (neg.rappi) ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_social',{'platform':'Rappi','business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}'}); window.open('${neg.rappi}', '_blank');" class="abtn rappi">🛵 Rappi</a>`;
 if (neg.web) ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_social',{'platform':'Sitio Web','business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}'}); window.open('${neg.web}', '_blank');" class="abtn web">🌐 Sitio Web</a>`;
 if (neg.greviews) ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_social',{'platform':'Google Reviews','business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}'}); window.open('${neg.greviews}', '_blank');" class="abtn greviews">⭐ Google Reviews</a>`;
   ab.innerHTML += `<button class="abtn compartir-neg" onclick="compartirNegocio('${neg.id}', '${neg.nombre.replace(/'/g, "\\'")}')">📤 Compartir</button>`;
@@ -767,16 +771,24 @@ if (neg.greviews) ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEv
   if (neg.ig)  contactHTML += `<div class="ci"><span>📸</span><a href="${neg.ig}" target="_blank">Instagram</a></div>`;
   if (neg.tk)  contactHTML += `<div class="ci"><span>🎵</span><a href="${neg.tk}" target="_blank">TikTok</a></div>`;
   if (neg.fb)  contactHTML += `<div class="ci"><span>🔵</span><a href="${neg.fb}" target="_blank">Facebook</a></div>`;
+  if (neg.didi) contactHTML += `<div class="ci"><span>🛵</span><a href="${neg.didi}" target="_blank">Didi Food</a></div>`;
+  if (neg.rappi) contactHTML += `<div class="ci"><span>🛵</span><a href="${neg.rappi}" target="_blank">Rappi</a></div>`;
   if (neg.web) contactHTML += `<div class="ci"><span>🌐</span><a href="${neg.web}" target="_blank">${neg.web.replace('https://','')}</a></div>`;
  
   let galHTML = '';
   if (neg.galeria && neg.galeria.length) {
     const galeriaHeight = neg.galeriaHeight || '180px';
+    const imgsGaleria = neg.galeria.filter(f => f.startsWith('data:') || f.startsWith('assets') || f.includes('.'));
+    window._negGaleria = imgsGaleria;
+    let imgIndex = -1;
     galHTML = `<div class="info-sec"><h3 class="info-ttl">📷 Galería</h3><div class="gal-grid">
-      ${neg.galeria.map(f => f.startsWith('data:') || f.startsWith('assets') || f.includes('.')
-        ? `<img src="${f.startsWith('http') ? f : '/' + f}" class="gal-img" style="height:${galeriaHeight};object-fit:cover;" loading="lazy" onclick="openLB('${f}')">`
-        : `<div class="gal-emoji">${f}</div>`
-      ).join('')}
+      ${neg.galeria.map(f => {
+        const esImagen = f.startsWith('data:') || f.startsWith('assets') || f.includes('.');
+        if (esImagen) imgIndex++;
+        return esImagen
+          ? `<img src="${f.startsWith('http') ? f : '/' + f}" class="gal-img" style="height:${galeriaHeight};object-fit:cover;" loading="lazy" onclick="openLB(window._negGaleria, ${imgIndex})">`
+          : `<div class="gal-emoji">${f}</div>`;
+      }).join('')}
     </div></div>`;
   }
  
@@ -842,13 +854,105 @@ if (neg.greviews) ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEv
   showPage('neg');
 }
  
-/* LIGHTBOX */
-function openLB(src) {
+/* LIGHTBOX / CARRUSEL DE GALERÍA */
+function ensureLBStyles() {
+  if (document.getElementById('lb-carousel-styles')) return;
+  const style = document.createElement('style');
+  style.id = 'lb-carousel-styles';
+  style.textContent = `
+    .lb-carousel{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;touch-action:pan-y;}
+    .lb-carousel-bg{position:absolute;inset:0;background:rgba(0,0,0,.9);}
+    .lb-carousel-img{position:relative;max-width:92vw;max-height:85vh;object-fit:contain;border-radius:8px;user-select:none;-webkit-user-select:none;pointer-events:none;}
+    .lb-carousel-close{position:absolute;top:16px;right:16px;z-index:2;background:rgba(255,255,255,.15);color:#fff;border:none;width:40px;height:40px;border-radius:50%;font-size:1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;}
+    .lb-carousel-close:hover{background:rgba(255,255,255,.3);}
+    .lb-carousel-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:2;background:rgba(255,255,255,.15);color:#fff;border:none;width:48px;height:48px;border-radius:50%;font-size:1.6rem;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:0;}
+    .lb-carousel-arrow:hover{background:rgba(255,255,255,.3);}
+    .lb-carousel-prev{left:12px;}
+    .lb-carousel-next{right:12px;}
+    .lb-carousel-counter{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);z-index:2;background:rgba(255,255,255,.15);color:#fff;padding:6px 16px;border-radius:20px;font-size:.85rem;font-weight:600;}
+    @media (max-width:600px){
+      .lb-carousel-arrow{width:40px;height:40px;font-size:1.3rem;}
+      .lb-carousel-prev{left:6px;}
+      .lb-carousel-next{right:6px;}
+    }
+  `;
+  document.head.appendChild(style);
+}
+
+function openLB(galeria, startIndex) {
+  window._lbGaleria = galeria;
+  window._lbIndex = startIndex || 0;
+  ensureLBStyles();
+  renderLB();
+  document.addEventListener('keydown', lbKeyHandler);
+}
+
+function renderLB() {
+  document.querySelectorAll('.lb-carousel').forEach(el => el.remove());
+
+  const galeria = window._lbGaleria || [];
+  const idx = window._lbIndex || 0;
+  const total = galeria.length;
+  if (!total) return;
+  const f = galeria[idx];
+  const imgSrc = f.startsWith('http') || f.startsWith('data:') ? f : '/' + f;
+
   const lb = document.createElement('div');
-  lb.className = 'lightbox';
-  lb.innerHTML = `<div class="lb-bg"></div><img src="/${src}" class="lb-img"><button class="lb-close" onclick="this.parentElement.remove()">✕</button>`;
-  lb.querySelector('.lb-bg').onclick = () => lb.remove();
+  lb.className = 'lb-carousel';
+  lb.innerHTML = `
+    <div class="lb-carousel-bg"></div>
+    <button class="lb-carousel-close" aria-label="Cerrar">✕</button>
+    ${total > 1 ? '<button class="lb-carousel-arrow lb-carousel-prev" aria-label="Anterior">‹</button>' : ''}
+    <img src="${imgSrc}" class="lb-carousel-img" alt="Foto ${idx + 1} de ${total}">
+    ${total > 1 ? '<button class="lb-carousel-arrow lb-carousel-next" aria-label="Siguiente">›</button>' : ''}
+    ${total > 1 ? `<div class="lb-carousel-counter">${idx + 1} / ${total}</div>` : ''}
+  `;
   document.body.appendChild(lb);
+
+  lb.querySelector('.lb-carousel-bg').onclick = closeLB;
+  lb.querySelector('.lb-carousel-close').onclick = closeLB;
+
+  if (total > 1) {
+    lb.querySelector('.lb-carousel-prev').onclick = (e) => { e.stopPropagation(); lbIrA((idx - 1 + total) % total); };
+    lb.querySelector('.lb-carousel-next').onclick = (e) => { e.stopPropagation(); lbIrA((idx + 1) % total); };
+  }
+
+  /* Swipe táctil */
+  let touchStartX = 0;
+  let touchStartY = 0;
+  lb.addEventListener('touchstart', (e) => {
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+  }, { passive: true });
+
+  lb.addEventListener('touchend', (e) => {
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    const dy = e.changedTouches[0].clientY - touchStartY;
+    // Solo reacciona a swipes horizontales (ignora scroll vertical accidental)
+    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) && total > 1) {
+      if (dx > 0) lbIrA((idx - 1 + total) % total);
+      else lbIrA((idx + 1) % total);
+    }
+  }, { passive: true });
+}
+
+function lbIrA(nuevoIndex) {
+  window._lbIndex = nuevoIndex;
+  renderLB();
+}
+
+function closeLB() {
+  document.querySelectorAll('.lb-carousel').forEach(el => el.remove());
+  document.removeEventListener('keydown', lbKeyHandler);
+}
+
+function lbKeyHandler(e) {
+  const galeria = window._lbGaleria || [];
+  const total = galeria.length;
+  if (e.key === 'Escape') { closeLB(); return; }
+  if (!total) return;
+  if (e.key === 'ArrowLeft' && total > 1) lbIrA((window._lbIndex - 1 + total) % total);
+  if (e.key === 'ArrowRight' && total > 1) lbIrA((window._lbIndex + 1) % total);
 }
  
 /* FORMULARIO */

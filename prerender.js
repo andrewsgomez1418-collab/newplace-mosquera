@@ -43,8 +43,23 @@ const CONFIG = {
 const ROOT = __dirname;
 
 /* ─── 1. CARGAR DATOS.JS SIN MODIFICARLO (ejecutado en sandbox) ─── */
+function encontrarArchivo(nombre) {
+  const candidatos = [
+    path.join(ROOT, nombre),
+    path.join(ROOT, 'js', nombre),
+    path.join(ROOT, 'JS', nombre),
+  ];
+  for (const ruta of candidatos) {
+    if (fs.existsSync(ruta)) return ruta;
+  }
+  throw new Error(
+    `No se encontró "${nombre}" en ninguna de estas rutas:\n` +
+    candidatos.map(r => '  - ' + r).join('\n')
+  );
+}
+
 function cargarDatos() {
-  let codigo = fs.readFileSync(path.join(ROOT, 'datos.js'), 'utf8');
+  let codigo = fs.readFileSync(encontrarArchivo('datos.js'), 'utf8');
   // NOTA: esto NO modifica datos.js en disco, solo la copia en memoria.
   // "const" de nivel superior no se adjunta al objeto global del sandbox
   // de Node (vm module), así que la cambiamos por "var" únicamente
@@ -220,7 +235,7 @@ function construirPagina(plantillaHTML, nuevoBloqueHead) {
     throw new Error('No se encontró el marcador <!-- SEO BASICO --> en index.html. ¿Se modificó la estructura del head?');
   }
   // En vez de buscar un comentario fijo tipo "<!-- GOOGLE ANALYTICS -->"
-  // (que cambia de formato entre Funza/Facatativá/Mosquera), cortamos
+  // (que cambia de formato entre Funza/Mosquera/Mosquera), cortamos
   // justo después del </script> que cierra el bloque JSON-LD. Así,
   // sea cual sea el comentario o código que venga después (Analytics,
   // manifest, etc.), queda intacto sin depender de su redacción exacta.
