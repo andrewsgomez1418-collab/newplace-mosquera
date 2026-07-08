@@ -2815,8 +2815,8 @@ const NEGOCIOS = [
     galeriaHeight:   "clamp(150px, 20vw, 240px)",
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
-    wa:          "573125572621",
-    tel:         "3125572621",
+    wa:          "573125772621",
+    tel:         "3125772621",
     ig:          "https://www.instagram.com/pomodoro_pizza_y_pasta?igsh=MWZ0bnBmN2E5NWg5Yw==",
     fb:          "",
     tk:          "",
