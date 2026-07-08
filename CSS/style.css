@@ -328,10 +328,15 @@ body{font-family:var(--font);background:var(--bg);color:var(--text)}
 .ci a{color:var(--accent);font-weight:600;text-decoration:none}
 
 /* GALERÍA */
-.gal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px}
-.gal-img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px;cursor:pointer;transition:transform .2s}
-.gal-img:hover{transform:scale(1.04)}
-.gal-emoji{aspect-ratio:1;border-radius:12px;background:linear-gradient(135deg,#e8e8e8,#f5f5f5);display:flex;align-items:center;justify-content:center;font-size:2rem}
+.gal-strip{display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:4px;}
+.gal-strip::-webkit-scrollbar{display:none;}
+.gal-strip-item{flex:0 0 auto;height:150px;scroll-snap-align:start;border-radius:10px;overflow:hidden;cursor:pointer;}
+.gal-strip-img{height:100%;width:auto;max-width:70vw;object-fit:contain;display:block;background:#f0f0f0;}
+.gal-strip-emoji{width:150px;display:flex;align-items:center;justify-content:center;font-size:2.4rem;background:linear-gradient(135deg,#e8e8e8,#f5f5f5);}
+@media (max-width:600px){
+  .gal-strip-item{height:120px;}
+  .gal-strip-emoji{width:120px;}
+}
 
 /* MENÚ RESTAURANTE */
 .menu-sec{margin-bottom:22px}

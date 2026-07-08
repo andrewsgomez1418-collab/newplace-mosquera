@@ -777,19 +777,19 @@ if (neg.greviews) ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEv
  
   let galHTML = '';
   if (neg.galeria && neg.galeria.length) {
-    const galeriaHeight = neg.galeriaHeight || '180px';
     const imgsGaleria = neg.galeria.filter(f => f.startsWith('data:') || f.startsWith('assets') || f.includes('.'));
     window._negGaleria = imgsGaleria;
     let imgIndex = -1;
-    galHTML = `<div class="info-sec"><h3 class="info-ttl">📷 Galería</h3><div class="gal-grid">
-      ${neg.galeria.map(f => {
-        const esImagen = f.startsWith('data:') || f.startsWith('assets') || f.includes('.');
-        if (esImagen) imgIndex++;
-        return esImagen
-          ? `<img src="${f.startsWith('http') ? f : '/' + f}" class="gal-img" style="height:${galeriaHeight};object-fit:cover;" loading="lazy" onclick="openLB(window._negGaleria, ${imgIndex})">`
-          : `<div class="gal-emoji">${f}</div>`;
-      }).join('')}
-    </div></div>`;
+    galHTML = `<div class="info-sec"><h3 class="info-ttl">📷 Galería</h3>
+      <div class="gal-strip">
+        ${neg.galeria.map(f => {
+          const esImagen = f.startsWith('data:') || f.startsWith('assets') || f.includes('.');
+          if (esImagen) imgIndex++;
+          return esImagen
+            ? `<div class="gal-strip-item" onclick="openLB(window._negGaleria, ${imgIndex})"><img src="${f.startsWith('http') ? f : '/' + f}" class="gal-strip-img" loading="lazy"></div>`
+            : `<div class="gal-strip-item gal-strip-emoji">${f}</div>`;
+        }).join('')}
+      </div></div>`;
   }
  
   let mapHTML = '';
@@ -854,7 +854,7 @@ if (neg.greviews) ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEv
   showPage('neg');
 }
  
-/* LIGHTBOX / CARRUSEL DE GALERÍA */
+
 function ensureLBStyles() {
   if (document.getElementById('lb-carousel-styles')) return;
   const style = document.createElement('style');
