@@ -777,19 +777,26 @@ if (neg.greviews) ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEv
  
   let galHTML = '';
   if (neg.galeria && neg.galeria.length) {
-    const galeriaHeight = neg.galeriaHeight || '180px';
     const imgsGaleria = neg.galeria.filter(f => f.startsWith('data:') || f.startsWith('assets') || f.includes('.'));
     window._negGaleria = imgsGaleria;
     let imgIndex = -1;
-    galHTML = `<div class="info-sec"><h3 class="info-ttl">📷 Galería</h3><div class="gal-grid">
-      ${neg.galeria.map(f => {
-        const esImagen = f.startsWith('data:') || f.startsWith('assets') || f.includes('.');
-        if (esImagen) imgIndex++;
-        return esImagen
-          ? `<img src="${f.startsWith('http') ? f : '/' + f}" class="gal-img" style="height:${galeriaHeight};object-fit:cover;" loading="lazy" onclick="openLB(window._negGaleria, ${imgIndex})">`
-          : `<div class="gal-emoji">${f}</div>`;
-      }).join('')}
-    </div></div>`;
+    const totalFotos = imgsGaleria.length;
+    galHTML = `<div class="info-sec"><h3 class="info-ttl">📷 Galería</h3>
+      <div class="gal-coverflow">
+        <div class="gal-coverflow-track" id="galCoverflowTrack">
+          <div class="gal-coverflow-spacer"></div>
+          ${neg.galeria.map(f => {
+            const esImagen = f.startsWith('data:') || f.startsWith('assets') || f.includes('.');
+            if (esImagen) imgIndex++;
+            return esImagen
+              ? `<div class="gal-coverflow-item" onclick="openLB(window._negGaleria, ${imgIndex})"><img src="${f.startsWith('http') ? f : '/' + f}" class="gal-coverflow-img" loading="lazy"></div>`
+              : `<div class="gal-coverflow-item gal-coverflow-emoji">${f}</div>`;
+          }).join('')}
+          <div class="gal-coverflow-spacer"></div>
+        </div>
+      </div>
+      ${totalFotos > 1 ? '<div class="gal-coverflow-hint">👉 Desliza para ver más fotos</div>' : ''}
+    </div>`;
   }
  
   let mapHTML = '';
@@ -811,6 +818,7 @@ if (neg.greviews) ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEv
     ${contactHTML ? `<div class="info-sec"><h3 class="info-ttl">Contacto</h3><div class="contact-list">${contactHTML}</div></div>` : ''}
     ${mapHTML}${galHTML}`;
   document.getElementById('tab-info').classList.add('active');
+  initGalCoverflow();
  
   /* Tab Menú */
   if (neg.tipo === 'restaurante' && neg.menu && neg.menu.length) {
@@ -854,7 +862,55 @@ if (neg.greviews) ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEv
   showPage('neg');
 }
  
-/* LIGHTBOX / CARRUSEL DE GALERÍA */
+/* GALERÍA — EFECTO COVERFLOW (foto central grande, laterales chicas) */
+function initGalCoverflow() {
+  const track = document.getElementById('galCoverflowTrack');
+  if (!track) return;
+
+  const items = Array.from(track.querySelectorAll('.gal-coverflow-item'));
+  if (!items.length) return;
+
+  function actualizarActivo() {
+    const trackRect = track.getBoundingClientRect();
+    const centerX = trackRect.left + trackRect.width / 2;
+    let masCercano = null;
+    let distMin = Infinity;
+
+    items.forEach(item => {
+      const r = item.getBoundingClientRect();
+      const itemCenter = r.left + r.width / 2;
+      const dist = Math.abs(itemCenter - centerX);
+      if (dist < distMin) {
+        distMin = dist;
+        masCercano = item;
+      }
+    });
+
+    items.forEach(item => item.classList.toggle('is-active', item === masCercano));
+  }
+
+  let ticking = false;
+  track.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        actualizarActivo();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
+
+  /* Centrar la primera foto y marcarla activa */
+  requestAnimationFrame(() => {
+    const primero = items[0];
+    if (primero) {
+      track.scrollLeft = primero.offsetLeft - (track.clientWidth - primero.clientWidth) / 2;
+    }
+    actualizarActivo();
+  });
+}
+
+
 function ensureLBStyles() {
   if (document.getElementById('lb-carousel-styles')) return;
   const style = document.createElement('style');
