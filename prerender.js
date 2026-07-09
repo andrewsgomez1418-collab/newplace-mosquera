@@ -235,7 +235,7 @@ function construirPagina(plantillaHTML, nuevoBloqueHead) {
     throw new Error('No se encontró el marcador <!-- SEO BASICO --> en index.html. ¿Se modificó la estructura del head?');
   }
   // En vez de buscar un comentario fijo tipo "<!-- GOOGLE ANALYTICS -->"
-  // (que cambia de formato entre Funza/Mosquera/Mosquera), cortamos
+  // (que cambia de formato entre Funza/Facatativa/Mosquera), cortamos
   // justo después del </script> que cierra el bloque JSON-LD. Así,
   // sea cual sea el comentario o código que venga después (Analytics,
   // manifest, etc.), queda intacto sin depender de su redacción exacta.
