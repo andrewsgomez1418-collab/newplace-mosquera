@@ -2798,15 +2798,15 @@ const NEGOCIOS = [
     cat:         "gourmet",
     nombre:      "POMODORO",
     slogan:      "¡Tradición italiana con manos colombianas!",
-    desc:        "El restaurante Pizza & Pasta Pomodoro funciona desde abril del año 2020, en el municipio de Mosquera-Cundinamarca. Nace con el objetivo de ofrecer un servicio gastronómico novedoso de tipo italiano, en específico pizzas y pastas, así como ofrecer un menú variado, único y de alta calidad a los clientes. Nuestra oferta gastronómica está dirigida a todo cliente que desee probar una receta 100% italiana de pizza con masa multigrano y madurada a 72 horas. Así como una amplia y exclusiva oferta en pastas, lasañas y bebidas. Siempre hemos conservado lineamientos y estandarización de alta calidad en la materia prima de nuestros productos ofrecidos, siendo así reconocidos en la zona como la mejor pizzería.“Pomodoro” traduce del italiano al español algo tan sencillo como “tomate”. Sin lugar a duda, es un ingrediente esencial en toda la gastronomía; su preparación y combinación se fundamenta en el placer, tradición y conocimiento de toda cocina. Esta es la razón por la cual decidimos que este proyecto tuviera este nombre y para resaltar y ser reconocidos por tener la mejor receta italiana de pizza con masa madurada y cocida en horno de piedra 100% italiano. Nuestro lema:",
+    desc:        "El restaurante Pizza & Pasta Pomodoro funciona desde abril del año 2020, en el municipio de Mosquera-Cundinamarca. Nace con el objetivo de ofrecer un servicio gastronómico novedoso de tipo italiano, en específico pizzas y pastas, así como ofrecer un menú variado, único y de alta calidad a los clientes. Nuestra oferta gastronómica está dirigida a todo cliente que desee probar una receta 100% italiana de pizza con masa multigrano y madurada a 72 horas.<p> Así como una amplia y exclusiva oferta en pastas, lasañas y bebidas. Siempre hemos conservado lineamientos y estandarización de alta calidad en la materia prima de nuestros productos ofrecidos, siendo así reconocidos en la zona como la mejor pizzería.<p>“Pomodoro” traduce del italiano al español algo tan sencillo como “tomate”. Sin lugar a duda, es un ingrediente esencial en toda la gastronomía; su preparación y combinación se fundamenta en el placer, tradición y conocimiento de toda cocina. Esta es la razón por la cual decidimos que este proyecto tuviera este nombre y para resaltar y ser reconocidos por tener la mejor receta italiana de pizza con masa madurada y cocida en horno de piedra 100% italiano.</p><p>Restaurante Italiano, Pastas, Lasagna, Pizza.",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
     logoFill:    false,
     logoBg:      "#ffffff",
-    logoPerfil:  "assets/logos/pomodoro/logo- pomodoro.jpg",
-    cardImage:   "assets/logos/pomodoro/inicio-pomodoro.jpg",
-    portada:     "assets/logos/pomodoro/portada- pomodoro.jpg",
+    logoPerfil:  "assets/logos/pomodoro/logo- pomodoro.webp",
+    cardImage:   "assets/logos/pomodoro/inicio-pomodoro.webp",
+    portada:     "assets/logos/pomodoro/portada- pomodoro.webp",
  
     /* ─── TAMAÑOS RESPONSIVOS (clamp: min, preferido, max) ─── */
     cardHeight:      "clamp(350px, 180vw, 250px)",
@@ -2829,7 +2829,7 @@ const NEGOCIOS = [
  
     /* ─── GALERÍA DE FOTOS ─── */
     galeria:     [
-      "assets/logos/pomodoro/pododoro1.webp","assets/logos/pomodoro/pomodoro2.jpg","assets/logos/pomodoro/pomodoro3.jpg","assets/logos/pomodoro/pomodoro4.jpg", "assets/logos/pomodoro/pomodoro5.jpg",
+      "assets/logos/pomodoro/pododoro1.webp","assets/logos/pomodoro/pomodoro2.webp","assets/logos/pomodoro/pomodoro3.jpg","assets/logos/pomodoro/pomodoro4.jpg", "assets/logos/pomodoro/pomodoro5.jpg",
     ],
   },
   {
