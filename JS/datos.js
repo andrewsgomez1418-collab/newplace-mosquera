@@ -1115,7 +1115,7 @@ const NEGOCIOS = [
     tk:          "https://www.tiktok.com/@la.casa.de.los.ar76?_r=1&_t=ZS-96rADhFWtpE",
     web:         "",
     didi:        "Https://order.top/es-CO/store/la_casa_de_los_arroc/nWickS",
-    rappi:       "Https://order.top/es-CO/store/la_casa_de_los_arroc/nWickS",
+    rappi:       "",
     greviews:    "https://g.page/r/CU8tp9FOuICOEBM/review",
  
     /* ─── UBICACIÓN Y MAPA ─── */
