@@ -733,23 +733,32 @@ if (neg.portada) {
   /* Botones acción */
   const ab = document.getElementById('profActions');
   ab.innerHTML = '';
-  if (neg.agendamiento) ab.innerHTML += `<a href="${neg.agendamiento}" class="abtn agendamiento" target="_blank">📅 Agendar Cita</a>`;
+  const ICOS = {
+    cal: '<svg viewBox="0 0 24 24"><path fill="#111" d="M7 2v2H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V6a2 2 0 00-2-2h-2V2h-2v2H9V2H7zm12 8H5v10h14V10zM5 6h14v2H5V6z"/></svg>',
+    wa: '<svg viewBox="0 0 24 24"><path fill="#25D366" d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2m5.98 14.09c-.24.68-1.42 1.32-1.96 1.4-.5.08-1.13.11-1.83-.11-.42-.13-.96-.31-1.65-.61-2.91-1.26-4.8-4.19-4.95-4.38-.15-.2-1.19-1.58-1.19-3.01s.75-2.13 1.02-2.42c.26-.29.58-.36.77-.36h.55c.18 0 .42-.07.65.5.24.58.81 2 .88 2.15.07.15.11.32.02.51-.09.19-.13.3-.26.46-.13.15-.27.34-.39.46-.13.13-.26.27-.11.53.15.26.68 1.12 1.46 1.81 1 .89 1.85 1.17 2.11 1.3.26.13.41.11.56-.06.15-.18.65-.75.82-1.01.17-.26.35-.22.58-.13.24.09 1.5.71 1.76.84.26.13.43.19.5.3.07.11.07.63-.17 1.31"/></svg>',
+    tel: '<svg viewBox="0 0 24 24"><path fill="#111" d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.55.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.55 1 1 0 01-.25 1.01l-2.2 2.23z"/></svg>',
+    ig: '<svg viewBox="0 0 24 24"><defs><linearGradient id="igGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f09433"/><stop offset="25%" stop-color="#e6683c"/><stop offset="50%" stop-color="#dc2743"/><stop offset="75%" stop-color="#cc2366"/><stop offset="100%" stop-color="#bc1888"/></linearGradient></defs><rect width="24" height="24" rx="6" fill="url(#igGrad)"/><rect x="6" y="6" width="12" height="12" rx="4" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="12" cy="12" r="3" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="17" cy="7" r="1" fill="#fff"/></svg>',
+    tk: '<svg viewBox="0 0 24 24"><path fill="#000" d="M16.6 5.82s.51.5 0 0A4.278 4.278 0 0115.54 3h-3.09v12.4a2.592 2.592 0 01-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 004.3 1.38V7.3s-1.88.09-3.24-1.48z"/></svg>',
+    fb: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#1877F2"/><path fill="#fff" d="M15.12 12.5h-2.2V20h-3.1v-7.5H8.3V9.9h1.52V8.3c0-1.5.72-3.4 3.4-3.4l2.5.01v2.6h-1.8c-.3 0-.72.15-.72.8v1.6h2.5z"/></svg>',
+    web: '<svg viewBox="0 0 24 24"><path fill="#111" d="M12 2a10 10 0 100 20 10 10 0 000-20zm6.93 8h-3.1a15.6 15.6 0 00-1.2-4.87A8.02 8.02 0 0118.93 10zM12 4.07c.86 1.1 1.6 2.94 1.94 5.93H10.06c.34-2.99 1.08-4.83 1.94-5.93zM4.07 12H7.1a15.6 15.6 0 001.2 4.87A8.02 8.02 0 014.07 12zM4.07 10a8.02 8.02 0 014.23-5.87A15.6 15.6 0 007.1 10H4.07zm3.03 4h3.03c.34 2.99 1.08 4.83 1.94 5.93a8.02 8.02 0 01-4.97-5.93zm5.86 5.93c.86-1.1 1.6-2.94 1.94-5.93h3.03a8.02 8.02 0 01-4.97 5.93zM13.94 12H10.06a13.9 13.9 0 010-4h3.88a13.9 13.9 0 010 4zm2.69 4.87A15.6 15.6 0 0017.9 12h2.96a8.02 8.02 0 01-4.23 4.87z"/></svg>',
+    greviews: '<svg viewBox="0 0 24 24"><path fill="#4285F4" d="M23.04 12.27c0-.79-.07-1.54-.2-2.27H12v4.3h6.18a5.28 5.28 0 01-2.29 3.47v2.88h3.7c2.17-2 3.42-4.95 3.42-8.38z"/><path fill="#34A853" d="M12 24c3.1 0 5.7-1.03 7.6-2.79l-3.7-2.88c-1.03.69-2.35 1.1-3.9 1.1-3 0-5.55-2.03-6.46-4.75H1.7v2.98A11.99 11.99 0 0012 24z"/><path fill="#FBBC05" d="M5.54 14.68A7.2 7.2 0 015.16 12c0-.93.16-1.83.38-2.68V6.34H1.7A12 12 0 000 12c0 1.94.46 3.77 1.7 6l3.84-2.98z"/><path fill="#EA4335" d="M12 4.75c1.68 0 3.19.58 4.38 1.71l3.28-3.28C17.7 1.19 15.1 0 12 0 7.4 0 3.4 2.6 1.7 6.34l3.84 2.98C6.45 6.6 9 4.75 12 4.75z"/></svg>',
+    compartir: '<svg viewBox="0 0 24 24"><path fill="#E6007A" d="M18 8a3 3 0 10-2.83-4H15a3 3 0 00-2.98 2.66l-5.35 3.06a3 3 0 100 4.56l5.35 3.06A3 3 0 1015 15a2.99 2.99 0 00-.94.15l-5.14-2.94a3.03 3.03 0 000-.42l5.14-2.94c.45.14.93.15.94.15z"/></svg>'
+  };
+  if (neg.agendamiento) ab.innerHTML += `<a href="${neg.agendamiento}" class="abtn agendamiento" target="_blank"><span class="abtn-ico">${ICOS.cal}</span><span class="abtn-txt">Agendar Cita</span></a>`;
   if (neg.was && neg.was.length > 0) {
       neg.was.forEach(w => {
-        ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_whatsapp',{'business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}','phone':'${w.numero}'}); window.open('https://wa.me/${w.numero}?text=Hola!%20Vi%20tu%20negocio%20en%20Newplace%20Store%20y%20quiero%20más%20información', '_blank');" class="abtn wa">💬 ${w.nombre}</a>`;
+        ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_whatsapp',{'business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}','phone':'${w.numero}'}); window.open('https://wa.me/${w.numero}?text=Hola!%20Vi%20tu%20negocio%20en%20Newplace%20Store%20y%20quiero%20más%20información', '_blank');" class="abtn wa"><span class="abtn-ico">${ICOS.wa}</span><span class="abtn-txt">${w.nombre}</span></a>`;
       });
     } else if (neg.wa) {
-      ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_whatsapp',{'business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}','phone':'${neg.wa}'}); window.open('https://wa.me/${neg.wa}?text=Hola!%20Vi%20tu%20negocio%20en%20Newplace%20Store%20y%20quiero%20más%20información', '_blank');" class="abtn wa">💬 WhatsApp</a>`;
+      ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_whatsapp',{'business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}','phone':'${neg.wa}'}); window.open('https://wa.me/${neg.wa}?text=Hola!%20Vi%20tu%20negocio%20en%20Newplace%20Store%20y%20quiero%20más%20información', '_blank');" class="abtn wa"><span class="abtn-ico">${ICOS.wa}</span><span class="abtn-txt">WhatsApp</span></a>`;
     }
-  if (neg.tel) ab.innerHTML += `<a href="tel:+57${neg.tel}" class="abtn tel">📞 Llamar</a>`;
-  if (neg.ig)  ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_social',{'platform':'Instagram','business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}'}); window.open('${neg.ig}', '_blank');" class="abtn ig">📸 Instagram</a>`;
-if (neg.tk)  ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_social',{'platform':'TikTok','business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}'}); window.open('${neg.tk}', '_blank');" class="abtn tk">🎵 TikTok</a>`;
-if (neg.fb)  ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_social',{'platform':'Facebook','business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}'}); window.open('${neg.fb}', '_blank');" class="abtn fb">🔵 Facebook</a>`;
-if (neg.didi) ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_social',{'platform':'Didi Food','business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}'}); window.open('${neg.didi}', '_blank');" class="abtn didi">🛵 Didi Food</a>`;
-if (neg.rappi) ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_social',{'platform':'Rappi','business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}'}); window.open('${neg.rappi}', '_blank');" class="abtn rappi">🛵 Rappi</a>`;
-if (neg.web) ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_social',{'platform':'Sitio Web','business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}'}); window.open('${neg.web}', '_blank');" class="abtn web">🌐 Sitio Web</a>`;
-if (neg.greviews) ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_social',{'platform':'Google Reviews','business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}'}); window.open('${neg.greviews}', '_blank');" class="abtn greviews">⭐ Google Reviews</a>`;
-  ab.innerHTML += `<button class="abtn compartir-neg" onclick="compartirNegocio('${neg.id}', '${neg.nombre.replace(/'/g, "\\'")}')">📤 Compartir</button>`;
+  if (neg.tel) ab.innerHTML += `<a href="tel:+57${neg.tel}" class="abtn tel"><span class="abtn-ico">${ICOS.tel}</span><span class="abtn-txt">Llamar</span></a>`;
+  if (neg.ig)  ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_social',{'platform':'Instagram','business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}'}); window.open('${neg.ig}', '_blank');" class="abtn ig"><span class="abtn-ico">${ICOS.ig}</span><span class="abtn-txt">Instagram</span></a>`;
+if (neg.tk)  ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_social',{'platform':'TikTok','business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}'}); window.open('${neg.tk}', '_blank');" class="abtn tk"><span class="abtn-ico">${ICOS.tk}</span><span class="abtn-txt">TikTok</span></a>`;
+if (neg.fb)  ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_social',{'platform':'Facebook','business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}'}); window.open('${neg.fb}', '_blank');" class="abtn fb"><span class="abtn-ico">${ICOS.fb}</span><span class="abtn-txt">Facebook</span></a>`;
+if (neg.web) ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_social',{'platform':'Sitio Web','business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}'}); window.open('${neg.web}', '_blank');" class="abtn web"><span class="abtn-ico">${ICOS.web}</span><span class="abtn-txt">${neg.web.replace('https://','')}</span></a>`;
+if (neg.greviews) ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_social',{'platform':'Google Reviews','business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}'}); window.open('${neg.greviews}', '_blank');" class="abtn greviews"><span class="abtn-ico">${ICOS.greviews}</span><span class="abtn-txt">Google Reviews</span></a>`;
+  ab.innerHTML += `<button class="abtn compartir-neg" onclick="compartirNegocio('${neg.id}', '${neg.nombre.replace(/'/g, "\\'")}')"><span class="abtn-ico">${ICOS.compartir}</span><span class="abtn-txt">Compartir</span></button>`;
  
   /* Tabs */
   const tabs = document.getElementById('negTabs');
@@ -826,7 +835,9 @@ if (neg.greviews) ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEv
  
   /* Tab Catálogo */
   if (neg.tipo === 'catalogo' && neg.catalogo && neg.catalogo.length) {
-    tabs.innerHTML += `<button class="tab" data-tab="catalogo">🛍️ Catálogo</button>`;
+    const catEsMenu = neg.catalogoNombre === 'menu';
+    const catLabel = catEsMenu ? '🍽️ Menú' : '🛍️ Catálogo';
+    tabs.innerHTML += `<button class="tab tab-catalogo" data-tab="catalogo">${catLabel}</button>`;
     document.getElementById('tab-catalogo').innerHTML = `<div class="prod-grid">
       ${neg.catalogo.map(p => `<div class="prod-card">
         <div class="prod-img-box">${p.img && p.img.includes('.') ? `<img src="/${p.img}" alt="${p.n}">` : `<div class="prod-img-emoji">${p.img||'📦'}</div>`}</div>
@@ -1169,19 +1180,19 @@ function mostrarModalCompartir(url, titulo, descripcion) {
       
       <div class="share-options">
         <a href="https://wa.me/?text=${descripcionEncodificada}%20${enlaceEncodificado}" target="_blank" class="share-option whatsapp">
-          <span class="share-icon">💬</span>
+          <span class="share-icon"><svg viewBox="0 0 24 24"><path fill="#25D366" d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2m5.98 14.09c-.24.68-1.42 1.32-1.96 1.4-.5.08-1.13.11-1.83-.11-.42-.13-.96-.31-1.65-.61-2.91-1.26-4.8-4.19-4.95-4.38-.15-.2-1.19-1.58-1.19-3.01s.75-2.13 1.02-2.42c.26-.29.58-.36.77-.36h.55c.18 0 .42-.07.65.5.24.58.81 2 .88 2.15.07.15.11.32.02.51-.09.19-.13.3-.26.46-.13.15-.27.34-.39.46-.13.13-.26.27-.11.53.15.26.68 1.12 1.46 1.81 1 .89 1.85 1.17 2.11 1.3.26.13.41.11.56-.06.15-.18.65-.75.82-1.01.17-.26.35-.22.58-.13.24.09 1.5.71 1.76.84.26.13.43.19.5.3.07.11.07.63-.17 1.31"/></svg></span>
           <span class="share-label">WhatsApp</span>
         </a>
         <a href="https://www.facebook.com/sharer/sharer.php?u=${enlaceEncodificado}" target="_blank" class="share-option facebook">
-          <span class="share-icon">f</span>
+          <span class="share-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#1877F2"/><path fill="#fff" d="M15.12 12.5h-2.2V20h-3.1v-7.5H8.3V9.9h1.52V8.3c0-1.5.72-3.4 3.4-3.4l2.5.01v2.6h-1.8c-.3 0-.72.15-.72.8v1.6h2.5z"/></svg></span>
           <span class="share-label">Facebook</span>
         </a>
         <a href="https://twitter.com/intent/tweet?url=${enlaceEncodificado}&text=${tituloEncodificado}" target="_blank" class="share-option twitter">
-          <span class="share-icon">𝕏</span>
+          <span class="share-icon"><svg viewBox="0 0 24 24"><path fill="#000" d="M18.9 2H22l-7.4 8.4L23 22h-6.8l-5.3-6.9L4.8 22H1.7l7.9-9L1 2h7l4.8 6.3L18.9 2zm-1.2 18h1.9L7.4 4H5.4l12.3 16z"/></svg></span>
           <span class="share-label">Twitter/X</span>
         </a>
         <a href="https://www.instagram.com/" target="_blank" class="share-option instagram">
-          <span class="share-icon">📷</span>
+          <span class="share-icon"><svg viewBox="0 0 24 24"><defs><linearGradient id="igGrad1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f09433"/><stop offset="25%" stop-color="#e6683c"/><stop offset="50%" stop-color="#dc2743"/><stop offset="75%" stop-color="#cc2366"/><stop offset="100%" stop-color="#bc1888"/></linearGradient></defs><rect width="24" height="24" rx="6" fill="url(#igGrad1)"/><rect x="6" y="6" width="12" height="12" rx="4" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="12" cy="12" r="3" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="17" cy="7" r="1" fill="#fff"/></svg></span>
           <span class="share-label">Instagram</span>
         </a>
       </div>
@@ -1260,19 +1271,19 @@ function mostrarModalCompartirNegocio(url, nombreNegocio, descripcion) {
       
       <div class="share-options">
         <a href="https://wa.me/?text=${descripcionEncodificada}%20${enlaceEncodificado}" target="_blank" class="share-option whatsapp">
-          <span class="share-icon">💬</span>
+          <span class="share-icon"><svg viewBox="0 0 24 24"><path fill="#25D366" d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2m5.98 14.09c-.24.68-1.42 1.32-1.96 1.4-.5.08-1.13.11-1.83-.11-.42-.13-.96-.31-1.65-.61-2.91-1.26-4.8-4.19-4.95-4.38-.15-.2-1.19-1.58-1.19-3.01s.75-2.13 1.02-2.42c.26-.29.58-.36.77-.36h.55c.18 0 .42-.07.65.5.24.58.81 2 .88 2.15.07.15.11.32.02.51-.09.19-.13.3-.26.46-.13.15-.27.34-.39.46-.13.13-.26.27-.11.53.15.26.68 1.12 1.46 1.81 1 .89 1.85 1.17 2.11 1.3.26.13.41.11.56-.06.15-.18.65-.75.82-1.01.17-.26.35-.22.58-.13.24.09 1.5.71 1.76.84.26.13.43.19.5.3.07.11.07.63-.17 1.31"/></svg></span>
           <span class="share-label">WhatsApp</span>
         </a>
         <a href="https://www.facebook.com/sharer/sharer.php?u=${enlaceEncodificado}" target="_blank" class="share-option facebook">
-          <span class="share-icon">f</span>
+          <span class="share-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#1877F2"/><path fill="#fff" d="M15.12 12.5h-2.2V20h-3.1v-7.5H8.3V9.9h1.52V8.3c0-1.5.72-3.4 3.4-3.4l2.5.01v2.6h-1.8c-.3 0-.72.15-.72.8v1.6h2.5z"/></svg></span>
           <span class="share-label">Facebook</span>
         </a>
         <a href="https://twitter.com/intent/tweet?url=${enlaceEncodificado}&text=${nombreEncodificado}" target="_blank" class="share-option twitter">
-          <span class="share-icon">𝕏</span>
+          <span class="share-icon"><svg viewBox="0 0 24 24"><path fill="#000" d="M18.9 2H22l-7.4 8.4L23 22h-6.8l-5.3-6.9L4.8 22H1.7l7.9-9L1 2h7l4.8 6.3L18.9 2zm-1.2 18h1.9L7.4 4H5.4l12.3 16z"/></svg></span>
           <span class="share-label">Twitter/X</span>
         </a>
         <a href="https://www.instagram.com/" target="_blank" class="share-option instagram">
-          <span class="share-icon">📷</span>
+          <span class="share-icon"><svg viewBox="0 0 24 24"><defs><linearGradient id="igGrad2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f09433"/><stop offset="25%" stop-color="#e6683c"/><stop offset="50%" stop-color="#dc2743"/><stop offset="75%" stop-color="#cc2366"/><stop offset="100%" stop-color="#bc1888"/></linearGradient></defs><rect width="24" height="24" rx="6" fill="url(#igGrad2)"/><rect x="6" y="6" width="12" height="12" rx="4" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="12" cy="12" r="3" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="17" cy="7" r="1" fill="#fff"/></svg></span>
           <span class="share-label">Instagram</span>
         </a>
       </div>

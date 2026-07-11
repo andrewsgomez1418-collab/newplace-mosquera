@@ -231,6 +231,7 @@ const NEGOCIOS = [
     slogan:      "Tendencias urbanas a precios accesibles",
     desc:        "Ropa y accesorios de moda para toda la familia. Las últimas tendencias a precios que no creerás. Nuevas colecciones cada semana.",
     tipo:        "catalogo",
+    catalogoNombre: "menu",
  
     /* ─── IMÁGENES Y LOGOS ─── */
     logo:        "",
@@ -3552,13 +3553,13 @@ const NEGOCIOS = [
   },
   {
     /* ══════════════════════════════════════════════════════════════
-       ORIGEN VITAL
+       TIENDA NATURISTA ORIGEN VITAL
        ══════════════════════════════════════════════════════════════ */
  
     /* ─── INFORMACIÓN BÁSICA ─── */
     id:          "origenvital",
     cat:         "bienestar",
-    nombre:      "ORIGEN VITAL",
+    nombre:      "TIENDA NATURISTA ORIGEN VITAL",
     slogan:      "Consiente tu salud de manera natural. ¡ tenemos lo que buscas!",
     desc:        "Origen Vital es una tienda naturista dedicada al bienestar, la salud y el cuidado integral de las personas. Ofrecemos productos naturales, suplementos, vitaminas, cuidado personal y alternativas saludables para mejorar la calidad de vida de nuestros clientes. Brindamos atención personalizada y asesoría para ayudarte a encontrar opciones naturales que aporten equilibrio, energía y bienestar para tu día a día. Un espacio pensado para quienes buscan vivir de manera más saludable y natural. Bienestar integral, alimentos saludables, medicina natural, suplemento vitamínico, productos naturales",
     tipo:        "estandar",
@@ -3566,9 +3567,9 @@ const NEGOCIOS = [
     /* ─── IMÁGENES Y LOGOS ─── */
     logoFill:    false,
     logoBg:      "#ffffff",
-    logoPerfil:  "assets/logos/origenvital/logo-origen-vital.jpg",
-    cardImage:   "assets/logos/origenvital/inicio-origen-vital.jpg",
-    portada:     "assets/logos/origenvital/portada-origen-vital.jpg",
+    logoPerfil:  "assets/logos/origenvital/logo-origen-vital.webp",
+    cardImage:   "assets/logos/origenvital/inicio-origen-vital.webp",
+    portada:     "assets/logos/origenvital/portada-origen-vital.webp",
  
     /* ─── TAMAÑOS RESPONSIVOS (clamp: min, preferido, max) ─── */
     cardHeight:      "clamp(350px, 180vw, 250px)",
@@ -3585,13 +3586,13 @@ const NEGOCIOS = [
     web:         "",
  
     /* ─── UBICACIÓN Y MAPA ─── */
-    dir:         "3 A 17 sur 96 Moll meridiano novatora local 155 MOSQUERA",
+    dir:         "3 A 17 sur 96 Moll meridiano novatora local 155 MOSQUERA<P>Calle 7 8 - 16 local 62 Cc Los Pinos MADRID",
     mapUrl:      "",
     mapsLink:    "https://maps.app.goo.gl/nYTqYr8v5Rd5EX9R7",
  
     /* ─── GALERÍA DE FOTOS ─── */
     galeria:     [
-      "",
+      "assets/logos/origenvital/vital1.webp","assets/logos/origenvital/vital2.webp","assets/logos/origenvital/vital3.webp","assets/logos/origenvital/vital4.webp","assets/logos/origenvital/vital5.webp","assets/logos/origenvital/vital6.webp",
     ],
   },
   {

@@ -294,19 +294,12 @@ body{font-family:var(--font);background:var(--bg);color:var(--text)}
 .prof-slogan{font-size:.82rem;color:var(--muted);margin-top:3px}
 
 /* BOTONES ACCIÓN */
-.action-bar{display:flex;flex-wrap:wrap;gap:9px;padding:14px 20px;background:#fff;border-bottom:1px solid #eee}
-.abtn{display:inline-flex;align-items:center;gap:6px;padding:11px 20px;border-radius:50px;text-decoration:none;font-weight:700;font-size:.83rem;transition:all .2s;border:none;cursor:pointer;font-family:var(--font)}
-.abtn:hover{opacity:.88;transform:translateY(-1px)}
-.abtn.wa{background:#25D366;color:#fff}
-.abtn.tel{background:var(--primary);color:#fff}
-.abtn.ig{background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff}
-.abtn.fb{background:#4267B2;color:#fff}
-.abtn.web{background:#818181;color:#fff}
-.abtn.tk{background:#000;color:#fff}
-.abtn.didi{background:#FF6C00;color:#fff}
-.abtn.rappi{background:#FF441F;color:#fff}
-.abtn.greviews{background:linear-gradient(135deg,#003cff,#FBBC04,#fb0404,#00b900);color:#fff}
-.abtn.agendamiento{background:#FFD700;color:#000}
+.action-bar{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:16px 20px;background:#fff;border-bottom:1px solid #eee}
+.abtn{display:flex;align-items:center;gap:10px;padding:13px 14px;border-radius:16px;text-decoration:none;font-weight:700;font-size:.85rem;transition:all .2s;border:1px solid #f0f0f0;cursor:pointer;font-family:var(--font);background:#fff;color:#1a1a1a;box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.abtn:hover{transform:translateY(-2px);box-shadow:0 4px 14px rgba(0,0,0,.1)}
+.abtn-ico{width:26px;height:26px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.abtn-ico svg{width:100%;height:100%;display:block}
+.abtn-txt{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 
 /* TABS */
 .tabs-wrap{background:#fff;border-bottom:2px solid #f0f0f0;position:sticky;top:57px;z-index:50}
@@ -350,16 +343,16 @@ body{font-family:var(--font);background:var(--bg);color:var(--text)}
 
 /* CATÁLOGO */
 .prod-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(165px,1fr));gap:14px}
-.prod-card{background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);transition:transform .2s,box-shadow .2s}
+.prod-card{background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column;height:100%}
 .prod-card:hover{transform:translateY(-3px);box-shadow:var(--sh2)}
-.prod-img-box{height:150px;display:flex;align-items:center;justify-content:center;background:#f5f5f5;overflow:hidden}
+.prod-img-box{height:150px;flex:0 0 auto;display:flex;align-items:center;justify-content:center;background:#f5f5f5;overflow:hidden}
 .prod-img-box img{width:100%;height:100%;object-fit:cover}
 .prod-img-emoji{font-size:3.5rem}
-.prod-body{padding:12px}
+.prod-body{padding:12px;flex:1;display:flex;flex-direction:column}
 .prod-name{font-weight:700;font-size:.87rem;margin-bottom:3px}
 .prod-desc{font-size:.74rem;color:var(--muted);margin-bottom:7px;line-height:1.4}
 .prod-price{font-weight:800;color:var(--accent);font-size:.97rem;margin-bottom:9px}
-.prod-btn{display:block;text-align:center;background:#25D366;color:#fff;padding:10px 8px;border-radius:8px;text-decoration:none;font-weight:700;font-size:.77rem;transition:all .2s ease;border:none;cursor:pointer}
+.prod-btn{display:block;text-align:center;background:#25D366;color:#fff;padding:10px 8px;border-radius:8px;text-decoration:none;font-weight:700;font-size:.77rem;transition:all .2s ease;border:none;cursor:pointer;margin-top:auto}
 .prod-btn:hover{background:#1fa853;transform:translateY(-1px);box-shadow:0 4px 12px rgba(37,211,102,.3)}
 
 /* LIGHTBOX */
@@ -488,7 +481,9 @@ body{font-family:var(--font);background:var(--bg);color:var(--text)}
   .prof-header{flex-direction:column;align-items:flex-start}
   .prod-grid{grid-template-columns:repeat(2,1fr)}
   .action-bar{padding:10px 14px}
-  .abtn{padding:9px 14px;font-size:.78rem}
+  .action-bar{grid-template-columns:repeat(2,1fr)}
+  .abtn{padding:11px 12px;font-size:.76rem;gap:8px}
+  .abtn-ico{width:22px;height:22px}
 }
 @media(max-width:380px){
   /* cat-grid 2col already default */
@@ -627,3 +622,20 @@ body{font-family:var(--font);background:var(--bg);color:var(--text)}
   color: #e5007d;
   padding-left: 20px;
 }
+/* MODAL COMPARTIR */
+.share-modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;z-index:9999;padding:20px}
+.share-modal{background:#fff;border-radius:20px;padding:24px;max-width:380px;width:100%;position:relative;box-shadow:0 10px 40px rgba(0,0,0,.2)}
+.share-modal-close{position:absolute;top:14px;right:14px;width:32px;height:32px;border-radius:50%;border:none;background:#f5f5f5;color:#333;font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.share-modal-close:hover{background:#eee}
+.share-modal-title{font-size:1.15rem;font-weight:800;margin:0 0 6px;padding-right:30px}
+.share-modal-desc{font-size:.85rem;color:var(--muted,#777);margin:0 0 20px}
+.share-options{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:20px}
+.share-option{display:flex;align-items:center;gap:10px;padding:12px;border-radius:14px;border:1px solid #f0f0f0;text-decoration:none;font-weight:700;font-size:.85rem;color:#1a1a1a;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,.05);transition:all .2s}
+.share-option:hover{transform:translateY(-2px);box-shadow:0 4px 14px rgba(0,0,0,.1)}
+.share-icon{width:24px;height:24px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.share-icon svg{width:100%;height:100%;display:block}
+.share-label{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.share-copy{display:flex;gap:8px}
+.share-input{flex:1;padding:10px 12px;border-radius:10px;border:1px solid #e0e0e0;font-size:.8rem;color:#555;background:#fafafa}
+.share-copy-btn{padding:10px 14px;border-radius:10px;border:none;background:var(--primary,#222);color:#fff;font-weight:700;font-size:.8rem;cursor:pointer;white-space:nowrap;transition:all .2s}
+.share-copy-btn:hover{opacity:.88}
