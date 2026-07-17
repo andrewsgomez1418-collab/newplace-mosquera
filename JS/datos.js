@@ -155,7 +155,7 @@ const NEGOCIOS = [
     cat:         "",
     nombre:      "Restaurante Ejemplo",
     slogan:      "Cocina casera auténtica, sabores que enamoran",
-    desc:        "El mejor restaurante de la zona con más de 15 años de tradición. Cocina casera con ingredientes frescos en un ambiente familiar.",
+    desc:        "<p>El mejor restaurante de la zona con más de 15 años de tradición. Cocina casera con ingredientes frescos en un ambiente familiar.</p>",
     tipo:        "restaurante",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -229,7 +229,7 @@ const NEGOCIOS = [
     cat:         "",
     nombre:      "Tienda Ejemplo",
     slogan:      "Tendencias urbanas a precios accesibles",
-    desc:        "Ropa y accesorios de moda para toda la familia. Las últimas tendencias a precios que no creerás. Nuevas colecciones cada semana.",
+    desc:        "<p>Ropa y accesorios de moda para toda la familia. Las últimas tendencias a precios que no creerás. Nuevas colecciones cada semana.</p>",
     tipo:        "catalogo",
     catalogoNombre: "menu",
  
@@ -288,7 +288,7 @@ const NEGOCIOS = [
     destacado:   1,
     nombre:      "DRA INGRID MEDICO CIRUJANO",
     slogan:      "Especialista en medicina alternativa y farmacología vegetal médica funcional y estética ",
-    desc:        "<p>METABOLISMO: * sobrepeso * hígado graso * diabetes * estreñimiento * gastritis * hipotiroidismo * resistencia a la insulina * desintoxicación básica y profunda.</p> <p>MEDICINA ESTÉTICA: * tratamientos faciales avanzadas * tratamiento de acné * rejuvenecimiento facial * reducción de grasa localizada * tratamiento para acidez * terapias capilares * depilación laser permanente.</p><p> SALUD MENTAL: * ansiedad * depresión y estrés * alteraciones de sueño.</p><p> DOLOR Y REGENERACIÓN CELULAR: * artritis y artrosis * dolor lumbar * migraña * parálisis facial * neuralgia * fibromialgia * cansancio y fatiga crónica * contracturas musculares</p>",
+    desc:        "<p>METABOLISMO: sobrepeso, hígado graso, diabetes, estreñimiento, gastritis, hipotiroidismo, resistencia a la insulina, desintoxicación básica y profunda.</p><p>MEDICINA ESTÉTICA: tratamientos faciales avanzados, tratamiento de acné, rejuvenecimiento facial, reducción de grasa localizada, tratamiento para acidez, terapias capilares, depilación láser permanente.</p><p>SALUD MENTAL: ansiedad, depresión y estrés, alteraciones de sueño.</p><p>DOLOR Y REGENERACIÓN CELULAR: artritis y artrosis, dolor lumbar, migraña, parálisis facial, neuralgia, fibromialgia, cansancio y fatiga crónica, contracturas musculares.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -333,7 +333,7 @@ const NEGOCIOS = [
     destacado:   1,
     nombre:      "DRA JULIA PSICOLOGA",
     slogan:      "SALUD MENTAL, PSICOTERAPIA, BIENESTAR EMOCIONAL, APOYO TERAPEUTICO, ATENCIÓN PSICOLOGIA ",
-    desc:        " <p>Egresada de la universidad Santo Tomás, con más de 35 años de experiencia en el abordaje de diversas problemáticas que afectan la salud mental de niños(as), adolescentes, jóvenes, adultos y personas mayores.</p><p> Mi enfoque es sistémico, orientado a resultados, utilizando estrategias efectivas que facilitan la resolución de los conflictos y el bienestar emocional del paciente.</p><p> Me caracterizo por ser una persona empática, amable, centrada en las necesidades individuales de cada consultante, ofreciendo un espacio seguro y de confianza para el proceso terapéutico.</p>",
+    desc:        "<p>Egresada de la Universidad Santo Tomás, con más de 35 años de experiencia en el abordaje de diversas problemáticas que afectan la salud mental de niños y niñas, adolescentes, jóvenes, adultos y personas mayores.</p><p>Mi enfoque es sistémico, orientado a resultados, utilizando estrategias efectivas que facilitan la resolución de los conflictos y el bienestar emocional del paciente.</p><p>Me caracterizo por ser una persona empática, amable, centrada en las necesidades individuales de cada consultante, ofreciendo un espacio seguro y de confianza para el proceso terapéutico.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -377,15 +377,15 @@ const NEGOCIOS = [
     cat:         "salud",
     nombre:      "CONSULTORIO TERAPEUTICO",
     slogan:      "Cada servicio es orientado a tus necesidades garantizando un tratamiento seguro y efectivo. Nuestros servicios realizados por profesionales en fisioterapia",
-    desc:        "Valoración de terapia física<p>Sesión de terapia física<p>Descarga muscular<p>Masajes de relajación y deportivos<p>Valoración y masajes reductores<p>Terapias especializadas<p>Recuperación y manejo de lesiones<p>Prevención de sobrecargas musculares<p>Hidroterapia<p>Vendaje neuromuscular y funcional<p>Sanación emocional<p>Acompañamiento terapéutico<p>Equilibrio mental<p>Desarrollo personal<p>Escucha activa",
+    desc:        "<p>Valoración de terapia física.</p><p>Sesión de terapia física.</p><p>Descarga muscular.</p><p>Masajes de relajación y deportivos.</p><p>Valoración y masajes reductores.</p><p>Terapias especializadas.</p><p>Recuperación y manejo de lesiones.</p><p>Prevención de sobrecargas musculares.</p><p>Hidroterapia.</p><p>Vendaje neuromuscular y funcional.</p><p>Sanación emocional.</p><p>Acompañamiento terapéutico.</p><p>Equilibrio mental.</p><p>Desarrollo personal.</p><p>Escucha activa.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
     logoFill:    false,
     logoBg:      "#ffffff",
-    logoPerfil:  "assets/logos/terapeutico/logo-terapeutico.jpg",
-    cardImage:   "assets/logos/terapeutico/inicio-terapeutico.jpg",
-    portada:     "assets/logos/terapeutico/portada-terapeutico.jpg",
+    logoPerfil:  "assets/logos/terapeutico/logo-terapeutico.webp",
+    cardImage:   "assets/logos/terapeutico/inicio-terapeutico.webp",
+    portada:     "assets/logos/terapeutico/portada-terapeutico.webp",
  
     /* ─── TAMAÑOS RESPONSIVOS (clamp: min, preferido, max) ─── */
     cardHeight:      "clamp(350px, 180vw, 250px)",
@@ -421,7 +421,7 @@ const NEGOCIOS = [
     cat:         "salud",
     nombre:      "LYDA TOVAR ODONTOLOGIA",
     slogan:      "Sonrisa saludable, rehabilitacion dental, blanqueamiento dental, estética dental, diseño de la sonrisa.",
-    desc:        "En “ odontología estética e integral Lyda Tovar” te ofrecemos una atención odontológica integral y personalizada, con las últimas tecnologías y tratamientos innovadores.",
+    desc:        "<p>En “Odontología Estética e Integral Lyda Tovar” te ofrecemos una atención odontológica integral y personalizada, con las últimas tecnologías y tratamientos innovadores.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -466,7 +466,7 @@ const NEGOCIOS = [
     cat:         "salud",
     nombre:      "CENTRO MEDICO Y LABORATORIO CLÍNICO",
     slogan:      "Nuestra prioridad es tu salud y nuestra mejor herramienta es la prevención. ",
-    desc:        "👩🏻‍🔬Calidad humana en la atención, eficiente oportunidad de entrega en los resultados,ambiente confortable; adecuada orientación según la necesidad de cada usuario. PRUEBAS DE EMBARAZO,  EXAMEN DE SANGRE, HEMATOLOGÍA, EXAMEN DE ORINA Y COPROLOGICO",
+    desc:        "<p>👩🏻‍🔬 Calidad humana en la atención, eficiente oportunidad de entrega en los resultados, ambiente confortable y adecuada orientación según la necesidad de cada usuario.</p><p>Pruebas de embarazo, examen de sangre, hematología, examen de orina y coprológico.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -510,7 +510,7 @@ const NEGOCIOS = [
     cat:         "salud",
     nombre:      "FAST MEDICAL I.P.S. DR DAVID",
     slogan:      "Especialista en Salud y Seguridad en el Trabajo, Diplomado en Homeosinatria y Sueroterapia Heel",
-    desc:        "Estamos comprometidos con la salud y bienestar. Brindamos servicios médicos integrales con atención profesional, humana de calidad, ofreciendo consultas, procedimientos especializados y acompañamiento en cada etapa del cuidado de nuestros pacientes. Trabajamos con responsabilidades, tecnología y equipo capacitado para garantizar confianza, seguridad y atención oportuna para toda la comunidad. salud integral, atención especializada, servicios médicos, bienestar y cuidado, calidad humana. ",
+    desc:        "<p>Estamos comprometidos con la salud y el bienestar. Brindamos servicios médicos integrales con atención profesional y humana de calidad, ofreciendo consultas, procedimientos especializados y acompañamiento en cada etapa del cuidado de nuestros pacientes.</p><p>Trabajamos con responsabilidad, tecnología y equipo capacitado para garantizar confianza, seguridad y atención oportuna para toda la comunidad.</p><p>Salud integral, atención especializada, servicios médicos, bienestar y cuidado, calidad humana.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -554,7 +554,7 @@ const NEGOCIOS = [
     cat:         "salud",
     nombre:      "ODONTOLOGIA CLAUDIA ZALAQUE",
     slogan:      "- Limpieza dental    - Blanqueamiento   - Ortodoncia  - Endodoncia - Odontología general",
-    desc:        "En nuestra clínica odontológica cuidamos tu sonrisa con atención profesional, tecnología y un servicio de calidad, ofrecemos tratamientos de odontología general, estética dental, ortodoncia, limpieza, blanqueamientos, rehabilitación oral y salud preventiva para niños y adultos. y atención personalizada para brindarte bienestar, salud y una sonrisa llena de seguridad. ortodoncia, implementos dentales, higiene oral, atención profesional, higiene y bioseguridad  ",
+    desc:        "<p>En nuestra clínica odontológica cuidamos tu sonrisa con atención profesional, tecnología y un servicio de calidad. Ofrecemos tratamientos de odontología general, estética dental, ortodoncia, limpieza, blanqueamientos, rehabilitación oral y salud preventiva para niños y adultos, con atención personalizada para brindarte bienestar, salud y una sonrisa llena de seguridad.</p><p>Ortodoncia, implementos dentales, higiene oral, atención profesional, higiene y bioseguridad.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -598,7 +598,7 @@ const NEGOCIOS = [
     cat:         "salud",
     nombre:      "PSICOLOGA YER",
     slogan:      "Donde tu mente encuentra su lugar y tu historia su propósito.",
-    desc:        "en nuestro centro de psicología brindamos acompañamiento profesional y humano para el bienestar emocional y mental. Ofrecemos atención personalizada en terapia individual, de pareja, familiar e infantil, orientada al manejo de ansiedad, estrés, autoestima, emociones y crecimiento personal. Trabajamos con compromiso, empatía y confidencialidad para ayudarte a encontrar equilibrio y bienestar en cada etapa de tu vida. Depresión * duelo * ansiedad * pautas de crianza *Anorexia",
+    desc:        "<p>En nuestro centro de psicología brindamos acompañamiento profesional y humano para el bienestar emocional y mental. Ofrecemos atención personalizada en terapia individual, de pareja, familiar e infantil, orientada al manejo de ansiedad, estrés, autoestima, emociones y crecimiento personal.</p><p>Trabajamos con compromiso, empatía y confidencialidad para ayudarte a encontrar equilibrio y bienestar en cada etapa de tu vida.</p><p>Depresión, duelo, ansiedad, pautas de crianza, anorexia.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -647,7 +647,7 @@ const NEGOCIOS = [
     destacado:   1,
     nombre:      "LA GRAN PARADA",
     slogan:      "El placer de comer.",
-    desc:        "Somos un espacio ideal para disfrutar sabores tradicionales y productos frescos todos los días. Trabajamos con calidad, sabor casero y atención amable para brindar a nuestros clientes una experiencia deliciosa en cada visita. SURTIMOS TU NEGOCIO: buñuelos, pan de bono, empanadas, palitos de queso }arepas de maiz con queso, pan de queso, crema de avena, masa lista para buñuelos, masa lista para pan de bonos",
+    desc:        "<p>Somos un espacio ideal para disfrutar sabores tradicionales y productos frescos todos los días. Trabajamos con calidad, sabor casero y atención amable para brindar a nuestros clientes una experiencia deliciosa en cada visita.</p><p>Surtimos tu negocio: buñuelos, pan de bono, empanadas, palitos de queso, arepas de maíz con queso, pan de queso, crema de avena, masa lista para buñuelos y masa lista para pan de bono.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -692,7 +692,7 @@ const NEGOCIOS = [
     destacado:   1,
     nombre:      "GUSTOSO ARROZ PAISA",
     slogan:      "Lo mejor del sabor !",
-    desc:        "Gustoso no nació en una oficina, nació en una cocina de casa, entre el aroma del arroz recién salteado y el sonido crujiente de una milanesa en su punto exacto.​Quisimos crear algo que nos hiciera sentir orgullosos de nuestra tierra: una comida honesta, abundante y con ese toque artesanal que solo se logra cuando se cocina sin afán. Por eso, cada salsa es nuestra, cada arroz tiene su secreto y cada milanesa se prepara pensando en que tú, nuestro vecino, vuelvas siempre por más.​¡Gracias por ser parte de nuestra mesa!. sabor tradicional ,arroz chino ,comida paisa,cocina fusión,almuerzos especiales",
+    desc:        "<p>Gustoso no nació en una oficina, nació en una cocina de casa, entre el aroma del arroz recién salteado y el sonido crujiente de una milanesa en su punto exacto. Quisimos crear algo que nos hiciera sentir orgullosos de nuestra tierra: una comida honesta, abundante y con ese toque artesanal que solo se logra cuando se cocina sin afán.</p><p>Por eso, cada salsa es nuestra, cada arroz tiene su secreto y cada milanesa se prepara pensando en que tú, nuestro vecino, vuelvas siempre por más. ¡Gracias por ser parte de nuestra mesa!</p><p>Sabor tradicional, arroz chino, comida paisa, cocina fusión, almuerzos especiales.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -736,7 +736,7 @@ const NEGOCIOS = [
     cat:         "antojos",
     nombre:      "EL BROASTER DEL CHEF",
     slogan:      "¡El mejor pollo del planeta!",
-    desc:        " Es el lugar ideal para disfrutar del auténtico sabor del pollo broaster crocante y una gran variedad de comidas rápidas y platos especiales. Ofrecemos almuerzos caseros, carnes a la plancha, alitas bañadas, sándwiches, nuggets y mucho más, preparados con calidad, sabor y excelente atención. Somos un espacio perfecto para compartir en familia y disfrutar de promociones, buen ambiente y el mejor sabor en cada bocado. gastronomía gourmet, cocina tradicional, experiencia culinaria, ingredientes frescos, atención de calidad",
+    desc:        "<p>Es el lugar ideal para disfrutar del auténtico sabor del pollo broaster crocante y una gran variedad de comidas rápidas y platos especiales. Ofrecemos almuerzos caseros, carnes a la plancha, alitas bañadas, sándwiches, nuggets y mucho más, preparados con calidad, sabor y excelente atención.</p><p>Somos un espacio perfecto para compartir en familia y disfrutar de promociones, buen ambiente y el mejor sabor en cada bocado.</p><p>Gastronomía gourmet, cocina tradicional, experiencia culinaria, ingredientes frescos, atención de calidad.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -780,7 +780,7 @@ const NEGOCIOS = [
     cat:         "antojos",
     nombre:      "BROASTER RAPI EXPRESS",
     slogan:      "Hecho con sabor, servido con amor, COMIDA CHINA Y PLATOS A LA CARTA",
-    desc:        "En Broaster Rapi Express ofrecemos una deliciosa variedad de comida rápida, comida china y platos a la carta preparados con sabor, calidad y frescura. Disfruta de pollo broaster crujiente, arroces especiales, carnes, acompañamientos y recetas ideales para compartir en familia o con amigos.<p> Nos destacamos por nuestra atención rápida, buen servicio y sabores que conquistan en cada bocado.</p><p> COMIDA CHINA Y PLATOS A LA CARTA Pollo broaster, comida rápida, domicilios express, sabor crujiente, atención rápida",
+    desc:        "<p>En Broaster Rapi Express ofrecemos una deliciosa variedad de comida rápida, comida china y platos a la carta preparados con sabor, calidad y frescura. Disfruta de pollo broaster crujiente, arroces especiales, carnes, acompañamientos y recetas ideales para compartir en familia o con amigos.</p><p>Nos destacamos por nuestra atención rápida, buen servicio y sabores que conquistan en cada bocado.</p><p>Comida china y platos a la carta: pollo broaster, comida rápida, domicilios express, sabor crujiente, atención rápida.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -823,7 +823,7 @@ const NEGOCIOS = [
     cat:         "antojos",
     nombre:      "HOJA VIVA",
     slogan:      "UN SABOR QUE ENVUELVE TU CORAZÓN",
-    desc:        "Somos un negocio dedicado a ofrecer sabores tradicionales y caseros con productos frescos y de excelente calidad. Disfruta de deliciosos envueltos, empanadas, arepas de maíz y tamales preparados con recetas típicas que resaltan el auténtico sabor de nuestra cocina. brindamos atención amable y un ambiente ideal para compartir meriendas tradicionales y sabor. Envueltos tradicionales, sabor casero, recetas artesanales, comida típica, maíz comlombiano",
+    desc:        "<p>Somos un negocio dedicado a ofrecer sabores tradicionales y caseros con productos frescos y de excelente calidad. Disfruta de deliciosos envueltos, empanadas, arepas de maíz y tamales preparados con recetas típicas que resaltan el auténtico sabor de nuestra cocina.</p><p>Brindamos atención amable y un ambiente ideal para compartir meriendas tradicionales y sabor.</p><p>Envueltos tradicionales, sabor casero, recetas artesanales, comida típica, maíz colombiano.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -866,7 +866,7 @@ const NEGOCIOS = [
     cat:         "antojos",
     nombre:      "DON HOJALDRE",
     slogan:      "PASTELERIA ARTESANAL",
-    desc:        "Disfruta de nuestros deliciosos pasteles en hojaldre, preparados con masa fresca, crujiente y rellenos llenos de sabor. Acompañalos con una variedad de bebidas frías y calientes ideales para cualquier momento del día. Somos el lugar perfecto para compartir un desayuno, una merienda y un antojo con calidad, sabor casero y excelente atención. pasteles artesanales, repostería creativa, sabores caseros, tortas personalizadas, postres gourmet",
+    desc:        "<p>Disfruta de nuestros deliciosos pasteles en hojaldre, preparados con masa fresca, crujiente y rellenos llenos de sabor. Acompáñalos con una variedad de bebidas frías y calientes ideales para cualquier momento del día.</p><p>Somos el lugar perfecto para compartir un desayuno, una merienda y un antojo con calidad, sabor casero y excelente atención.</p><p>Pasteles artesanales, repostería creativa, sabores caseros, tortas personalizadas, postres gourmet.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -912,7 +912,7 @@ const NEGOCIOS = [
     cat:         "antojos",
     nombre:      "PIZZA EXPRESS",
     slogan:      "AQUÍ SERVIMOS NO COMPETIMOS. ",
-    desc:        "En Pizza Express ofrecemos deliciosas pizzas preparadas al momento, acompañadas de una gran variedad de sabores para todos los gustos. Disfruta de nuestrasañas caseras, ensaladas de frutas refrescantes y muchas más opciones ideales para compartir en familia o con amigos. Nos destacamos por la calidad, el buen sabor y una atención rápida y amable que hace de cada visita una experiencia especial. Pizza artesanal, domicilios, rápidos sabor italiano, ingredientes frescos,  comida express ",
+    desc:        "<p>En Pizza Express ofrecemos deliciosas pizzas preparadas al momento, acompañadas de una gran variedad de sabores para todos los gustos. Disfruta también de nuestras lasañas caseras, ensaladas de frutas refrescantes y muchas más opciones ideales para compartir en familia o con amigos.</p><p>Nos destacamos por la calidad, el buen sabor y una atención rápida y amable que hace de cada visita una experiencia especial.</p><p>Pizza artesanal, domicilios rápidos, sabor italiano, ingredientes frescos, comida express.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -955,7 +955,7 @@ const NEGOCIOS = [
     cat:         "antojos",
     nombre:      "RT RICA TENTACION",
     slogan:      "PORQUE MERECES LO MEJOR.",
-    desc:        "Somos una frutería especializada en ofrecer productos frescos, deliciosos y llenos de sabor. Disfruta de waffles, ensaladas de frutas, jugos naturales, batidos, postres y una gran variedad de opciones perfectas para cualquier momento del día. Trabajamos con ingredientes de calidad y excelente atención para brindar una experiencia refrescante, dulce y saludable a cada cliente. Antojos dulces, postres deliciosos, sabores irresistible, repostería artesanal, dulce tentacion",
+    desc:        "<p>Somos una frutería especializada en ofrecer productos frescos, deliciosos y llenos de sabor. Disfruta de waffles, ensaladas de frutas, jugos naturales, batidos, postres y una gran variedad de opciones perfectas para cualquier momento del día.</p><p>Trabajamos con ingredientes de calidad y excelente atención para brindar una experiencia refrescante, dulce y saludable a cada cliente.</p><p>Antojos dulces, postres deliciosos, sabores irresistibles, repostería artesanal, dulce tentación.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -999,7 +999,7 @@ const NEGOCIOS = [
     cat:         "antojos",
     nombre:      "SANDWICH Y BURGER",
     slogan:      "Más sabor en cada mordida.",
-    desc:        "En sandwich & burger ofrecemos una experiencia llena de sabor con hamburguesas y sándwiches preparados al momento, utilizando ingredientes frescos y de excelente calidad. Disfruta de combinaciones irresistibles, acompañamientos deliciosos y bebidas perfectas para compartir en familia o con amigos. Somos el lugar ideal para quienes buscan comida rápida con sabor casero, buena atención y el mejor ambiente. Hamburguesas artesanales, sandwich gourmet, comida rápida,  ingredientes frescos, sabor irresistible",
+    desc:        "<p>En Sándwich &amp; Burger ofrecemos una experiencia llena de sabor con hamburguesas y sándwiches preparados al momento, utilizando ingredientes frescos y de excelente calidad. Disfruta de combinaciones irresistibles, acompañamientos deliciosos y bebidas perfectas para compartir en familia o con amigos.</p><p>Somos el lugar ideal para quienes buscan comida rápida con sabor casero, buena atención y el mejor ambiente.</p><p>Hamburguesas artesanales, sándwich gourmet, comida rápida, ingredientes frescos, sabor irresistible.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -1048,7 +1048,7 @@ const NEGOCIOS = [
     cat:         "antojos",
     nombre:      "SERVIPOLLOS LA 22",
     slogan:      "UN LUGAR DE TRADICIÓN QUE NO NECESITA PRESENTACIÓN",
-    desc:        "En nuestro asadero te ofrecemos sabor, calidad y tradición en cada preparación. Disfruta de deliciosos pollos asados, jugosos y perfectamente sazonados acompañados de papas, arepas, ensaladas, comida de variedad y muchos más. Trabajamos con ingredientes frescos y atención rápida para brindar a nuestros clientes una experiencia llena de sabor, ideal para compartir en familia o con amigos. Carnes asadas, sabor auténtico, cocina al carbón, especialidad gourmet, parrilla tradicional ",
+    desc:        "<p>En nuestro asadero te ofrecemos sabor, calidad y tradición en cada preparación. Disfruta de deliciosos pollos asados, jugosos y perfectamente sazonados, acompañados de papas, arepas, ensaladas y una gran variedad de comida.</p><p>Trabajamos con ingredientes frescos y atención rápida para brindar a nuestros clientes una experiencia llena de sabor, ideal para compartir en familia o con amigos.</p><p>Carnes asadas, sabor auténtico, cocina al carbón, especialidad gourmet, parrilla tradicional.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -1091,7 +1091,7 @@ const NEGOCIOS = [
     cat:         "antojos",
     nombre:      "LA CASA DE LOS ARROCES",
     slogan:      "Sabores que llenan, recetas que enamoran.",
-    desc:        "Disfruta el mejor sabor en cada plato con nuestra especialidad en arroz chino y arroz paisa, preparados al momento con ingredientes frescos, abundantes porciones y ese toque casero que encanta. Una combinación perfecta entre tradición, sazón y variedad para compartir en familia o disfrutar cuando quieras darte un buen gusto. Arroz chino / arroz paisa / comida rápida / sabor casero / almuerzos / domicilio / comida colombiana / comida oriental / porciones grandes / restaurante familiar.",
+    desc:        "<p>Disfruta el mejor sabor en cada plato con nuestra especialidad en arroz chino y arroz paisa, preparados al momento con ingredientes frescos, abundantes porciones y ese toque casero que encanta.</p><p>Una combinación perfecta entre tradición, sazón y variedad para compartir en familia o disfrutar cuando quieras darte un buen gusto.</p><p>Arroz chino, arroz paisa, comida rápida, sabor casero, almuerzos, domicilio, comida colombiana, comida oriental, porciones grandes, restaurante familiar.</p>",
     tipo:        "restaurante",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -1214,7 +1214,7 @@ const NEGOCIOS = [
     destacado:   1,
     nombre:      "STEEL  304",
     slogan:      "SOLUCIONES EN VIDRIOS Y ACERO INOXIDABLES A MEDIDA DISEÑO- FABRICACION INSTALACION",
-    desc:        "Divisiones de baño en vidrio Barandales y fachadas Accesorios en acero inoxidables Sandblasting y mecanizado Ventas de cortinas",
+    desc:        "<p>Divisiones de baño en vidrio, barandales y fachadas, accesorios en acero inoxidable, sandblasting y mecanizado, venta de cortinas.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -1258,7 +1258,7 @@ const NEGOCIOS = [
     cat:         "hogar",
     nombre:      "MODULARES Vr",
     slogan:      "Muebles a la medida que transforman tu hogar",
-    desc:        "En Modulares VR SAS diseñamos, fabricamos e instalamos cocinas integrales, closets, puertas y mobiliario personalizado. Contamos con Más de 14 años de experiencia, con Diseños personalizados, Madera reforestada y de alta calidad, Instalación profesional, Cumplimiento y garantía Convierte tus ideas en espacios funcionales y modernos. ¡Solicita tu cotización!",
+    desc:        "<p>En Modulares VR SAS diseñamos, fabricamos e instalamos cocinas integrales, closets, puertas y mobiliario personalizado. Contamos con más de 14 años de experiencia, diseños personalizados, madera reforestada y de alta calidad, instalación profesional, cumplimiento y garantía.</p><p>Convierte tus ideas en espacios funcionales y modernos. ¡Solicita tu cotización!</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -1302,7 +1302,7 @@ const NEGOCIOS = [
     cat:         "hogar",
     nombre:      "MAXSECURITY",
     slogan:      "Seguridad y confianza en cada acceso",
-    desc:        "Ofrecemos soluciones integrales en cerrajería y seguridad para hogares, vehículos y negocios. Contamos con apertura de puertas, duplicado de llaves, instalación de chapas, cerraduras, sistemas de seguridad y atención rápida y confiable. Trabajamos con calidad, responsabilidad y tecnología para brindarte tranquilidad y protección.",
+    desc:        "<p>Ofrecemos soluciones integrales en cerrajería y seguridad para hogares, vehículos y negocios. Contamos con apertura de puertas, duplicado de llaves, instalación de chapas, cerraduras y sistemas de seguridad, con atención rápida y confiable.</p><p>Trabajamos con calidad, responsabilidad y tecnología para brindarte tranquilidad y protección.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -1346,7 +1346,7 @@ const NEGOCIOS = [
     cat:         "hogar",
     nombre:      "GALLERY HOME ",
     slogan:      "34 AÑOS DE EXPERIENCIA",
-    desc:        "CORTINAS Y PERSIANAS, ROMANAS, ENRROLLABLES, DOMÓTICA, PANEL JAPONES, MOTORIZADOS, CORTINAS TRADICIONAL, PERSIANAS MADERAS Y ALUMINIO, MANTENIMIENTO DE CORTINAS",
+    desc:        "<p>Cortinas y persianas romanas, enrollables, domótica, panel japonés, motorizadas, cortinas tradicionales, persianas de madera y aluminio, mantenimiento de cortinas.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -1390,7 +1390,7 @@ const NEGOCIOS = [
     cat:         "hogar",
     nombre:      "GAMA ",
     slogan:      "Revisión periódica de gas (RESIDENCIAL Y COMERCIAL). Acreditados por ONAC bajo la norma ISO/ IEC 17020",
-    desc:        "garantizando seguridad, cumplimiento y correcto funcionamiento de las instalaciones residenciales y comerciales. Ofrecemos inspección, diagnóstico y certificación del sistema de gas, brindando confianza y tranquilidad a nuestros clientesRealizamos revisión periódica de gas con personal capacitado y equipos especializados.",
+    desc:        "<p>Ofrecemos servicio de revisión técnica de gas, garantizando seguridad, cumplimiento y correcto funcionamiento de las instalaciones residenciales y comerciales. Realizamos inspección, diagnóstico y certificación del sistema de gas, brindando confianza y tranquilidad a nuestros clientes.</p><p>Realizamos revisión periódica de gas con personal capacitado y equipos especializados.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -1433,7 +1433,7 @@ const NEGOCIOS = [
     cat:         "hogar",
     nombre:      "INNOVA ",
     slogan:      "Estamos juntos para ayudarte a construir, asegurar y transformar tu espacio",
-    desc:        "Nos dedicamos a la carpintería y la herrería, ofreciendo servicios de diseño, elaboración y reestructuración de muebles en madera, adaptados a las necesidades y estilos de cada cliente. Trabajamos en la creación y restauración de piezas funcionales y decorativas, cuidando cada detalle para garantizar calidad y durabilidad. Además, complementamos nuestros procesos con trabajos en fabricación de estructuras, soportes y refuerzos que brindan mayor resistencia y estabilidad, logrando así soluciones integrales, personalizadas y de alto nivel para todo tipo de espacios.",
+    desc:        "<p>Nos dedicamos a la carpintería y la herrería, ofreciendo servicios de diseño, elaboración y reestructuración de muebles en madera, adaptados a las necesidades y estilos de cada cliente. Trabajamos en la creación y restauración de piezas funcionales y decorativas, cuidando cada detalle para garantizar calidad y durabilidad.</p><p>Además, complementamos nuestros procesos con trabajos en fabricación de estructuras, soportes y refuerzos que brindan mayor resistencia y estabilidad, logrando así soluciones integrales, personalizadas y de alto nivel para todo tipo de espacios.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -1477,7 +1477,7 @@ const NEGOCIOS = [
     cat:         "hogar",
     nombre:      "MAYTON ARTE Y MADERA",
     slogan:      "Transformamos tus ideas en muebles únicos que se adaptan a tu hogar o negocio.",
-    desc:        "Mayton Arte y Diseño en Madera es un taller de carpintería especializado en la fabricación de muebles a medida, cocinas integrales, closets y proyectos personalizados en madera. Nos enfocamos en crear espacios funcionales, modernos y duraderos, combinando diseño, calidad y acabados detallados para cada cliente.",
+    desc:        "<p>Mayton Arte y Diseño en Madera es un taller de carpintería especializado en la fabricación de muebles a medida, cocinas integrales, closets y proyectos personalizados en madera. Nos enfocamos en crear espacios funcionales, modernos y duraderos, combinando diseño, calidad y acabados detallados para cada cliente.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -1520,7 +1520,7 @@ const NEGOCIOS = [
     cat:         "hogar",
     nombre:      "MULTIEXPRESS CERRAJERIA ",
     slogan:      "Aperturas Cambios de guardas Instalaciones de chapas de seguridad Duplicados de llaves Automóviles",
-    desc:        "Nos encargamos de hacer aperturas, cambios de guardas, instalaciones de chapas de seguridad, sencillas, duplicados de llaves y en general todo lo relacionado con la cerrajería. Aperturas, Cambios de guardas, Instalaciones de chapas de seguridad, Duplicados de llaves, Automóviles",
+    desc:        "<p>Nos encargamos de aperturas, cambios de guardas e instalación de chapas de seguridad sencillas, duplicados de llaves y, en general, todo lo relacionado con la cerrajería.</p><p>Aperturas, cambios de guardas, instalación de chapas de seguridad, duplicados de llaves, automóviles.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -1563,7 +1563,7 @@ const NEGOCIOS = [
     cat:         "hogar",
     nombre:      "ALUMINGLASS",
     slogan:      "Transparencia, resistencia y elegancia en cada detalle.",
-    desc:        "No solo instalamos estructuras; transformamos espacios. Nos especializamos en soluciones arquitectónicas en vidrio y aluminio, destacándose por: Acabados de Excelencia: Cuidamos los detalles que otros ignoran.Cumplimiento Garantizado: Entregas a tiempo porque respetamos tu cronograma.Innovación: Diseños modernos alineados con las tendencias actuales de decoración y arquitectura. divisiones de baño acero inoxidable diseños modernos aluminio arquitectónico vidrio templado ",
+    desc:        "<p>No solo instalamos estructuras: transformamos espacios. Nos especializamos en soluciones arquitectónicas en vidrio y aluminio, destacándonos por acabados de excelencia, cuidando los detalles que otros ignoran, y por un cumplimiento garantizado, entregando a tiempo porque respetamos tu cronograma.</p><p>Innovación: diseños modernos alineados con las tendencias actuales de decoración y arquitectura.</p><p>Divisiones de baño en acero inoxidable, diseños modernos en aluminio arquitectónico, vidrio templado.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -1606,7 +1606,7 @@ const NEGOCIOS = [
     cat:         "hogar",
     nombre:      "FRESCOLOMBIA FP",
     slogan:      "Reparamos hoy, cuidamos siempre.",
-    desc:        "En Servicio Técnico Especializado ofrecemos soluciones rápidas y confiables en        reparación, mantenimiento e instalación de neveras, congeladores, lavadoras y equipos de refrigeración. Trabajamos con atención profesional, diagnóstico preciso y repuestos de calidad para garantizar el óptimo funcionamiento de tus electrodomésticos y la tranquilidad de tu hogar o negocio.Reparación de neveras / arreglo de lavadoras / servicio técnico / mantenimiento de refrigeración / técnicos especializados / servicio a domicilio.",
+    desc:        "<p>En Servicio Técnico Especializado ofrecemos soluciones rápidas y confiables en reparación, mantenimiento e instalación de neveras, congeladores, lavadoras y equipos de refrigeración. Trabajamos con atención profesional, diagnóstico preciso y repuestos de calidad para garantizar el óptimo funcionamiento de tus electrodomésticos y la tranquilidad de tu hogar o negocio.</p><p>Reparación de neveras, arreglo de lavadoras, servicio técnico, mantenimiento de refrigeración, técnicos especializados, servicio a domicilio.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -1653,7 +1653,7 @@ const NEGOCIOS = [
     cat:         "hogar",
     nombre:      "INTERVIDRIOS GUALTEROS",
     slogan:      "Cumplimiento y calidad.",
-    desc:        "Es su aliado estratégico en soluciones arquitectónicas y decorativas en vidrio y aluminio. Nos especializamos en el diseño, fabricación e instalación de ventanería, divisiones de baño, fachadas comerciales, espejos y vidrios de seguridad de alta calidad. Combinamos precisión técnica, materiales resistentes y un servicio experto para transformar y dar elegancia a sus proyectos residenciales, comerciales o empresariales.</P><P>Inter vidrios Gualteros / Vidrios y aluminios / Divisiones de baño en vidrio / Ventaneria arquitectónica / Instalación de vidrios de seguridad.",
+    desc:        "<p>Es su aliado estratégico en soluciones arquitectónicas y decorativas en vidrio y aluminio. Nos especializamos en el diseño, fabricación e instalación de ventanería, divisiones de baño, fachadas comerciales, espejos y vidrios de seguridad de alta calidad. Combinamos precisión técnica, materiales resistentes y un servicio experto para transformar y dar elegancia a sus proyectos residenciales, comerciales o empresariales.</p><p>Inter Vidrios Gualteros: vidrios y aluminios, divisiones de baño en vidrio, ventanería arquitectónica, instalación de vidrios de seguridad.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -1699,7 +1699,7 @@ const NEGOCIOS = [
     cat:         "hogar",
     nombre:      "SISTEMAS Y SERVICIOS GAS NATURAL",
     slogan:      "Eficiencia y seguridad en cada instalación",
-    desc:        "Sistemas y Servicios Gas Natural es una empresa experta en la instalación, mantenimiento y certificación de redes de gas residencial, comercial e industrial. Garantizamos la máxima seguridad, cumplimiento normativo y eficiencia en gasodomésticos con un equipo técnico calificado y confiable.</p><p>Sistemas y servicios gas natural / Instalación de redes de gas, Mantenimiento y reparación de calentadores de agua y estufas, Certificación de gas natural, Técnico de gas certificado",
+    desc:        "<p>Sistemas y Servicios Gas Natural es una empresa experta en la instalación, mantenimiento y certificación de redes de gas residencial, comercial e industrial. Garantizamos la máxima seguridad, cumplimiento normativo y eficiencia en gasodomésticos con un equipo técnico calificado y confiable.</p><p>Instalación de redes de gas, mantenimiento y reparación de calentadores de agua y estufas, certificación de gas natural, técnico de gas certificado.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -1751,7 +1751,7 @@ const NEGOCIOS = [
     destacado:   1,
     nombre:      "PATIKOO PIÑATERIA",
     slogan:      "Celebraciones creativas y llenas de amor.",
-    desc:        "Piñatería Patikoo nace para crear celebraciones creativas y llenas de amor, donde cada detalle cuenta. Es un emprendimiento dedicado a la ambientación y decoración de eventos infantiles y familiares, ofreciendo propuestas personalizadas para cumpleaños, baby showers, bautizos y fechas especiales.Además, en Piñatería Patikoo los clientes pueden encontrar todo lo necesario para decorar sus fiestas en un solo lugar, como guirnaldas, bombas, serpentinas, piñatas, globos metalizados, velas y diversos accesorios para celebraciones. Su trabajo se distingue por la creatividad, el cuidado en los detalles y el compromiso de convertir cada evento en un recuerdo especial.",
+    desc:        "<p>Piñatería Patikoo nace para crear celebraciones creativas y llenas de amor, donde cada detalle cuenta. Es un emprendimiento dedicado a la ambientación y decoración de eventos infantiles y familiares, ofreciendo propuestas personalizadas para cumpleaños, baby showers, bautizos y fechas especiales.</p><p>Además, en Piñatería Patikoo los clientes pueden encontrar todo lo necesario para decorar sus fiestas en un solo lugar, como guirnaldas, bombas, serpentinas, piñatas, globos metalizados, velas y diversos accesorios para celebraciones.</p><p>Su trabajo se distingue por la creatividad, el cuidado en los detalles y el compromiso de convertir cada evento en un recuerdo especial.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -1796,7 +1796,7 @@ const NEGOCIOS = [
     cat:         "shopping",
     nombre:      "COMPRA Y VENTA ",
     slogan:      "Compra ventas lavadoras, neveras y estufas. Servicio técnico de mantenimiento y reparación a domicilio.",
-    desc:        "Nuestro compromiso es hacer que tus equipos vuelvan a funcionar como nuevos, para que puedas seguir disfrutando de la vida sin preocupaciones. Así que no dudes en ponerte en contacto con nosotros y permítenos ser tu solución de confianza en reparaciones. ",
+    desc:        "<p>Nuestro compromiso es hacer que tus equipos vuelvan a funcionar como nuevos, para que puedas seguir disfrutando de la vida sin preocupaciones. Así que no dudes en ponerte en contacto con nosotros y permítenos ser tu solución de confianza en reparaciones.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -1839,7 +1839,7 @@ const NEGOCIOS = [
     cat:         "shopping",
     nombre:      "FLORALIA FLOWER MARKET",
     slogan:      "En floralia flower market convertimos emociones en detalles.",
-    desc:        "En Floralia Flower Market transformamos emociones en detalles inolvidables. Nos especializamos en la creación de arreglos florales, bouquets personalizados, anchetas, peluches y desayunos sorpresa diseñados para celebrar los momentos más importantes de la vida. Cada creación está elaborada con dedicación, elegancia y creatividad, convirtiéndose en el regalo perfecto para expresar amor, gratitud, amistad y admiración. Nuestro compromiso es ayudarte a sorprender a esa persona especial con detalles únicos que hablan por ti. Arreglo de flores, Peluches, Anchetas, Desayunos sorpresa, creatividad.",
+    desc:        "<p>En Floralia Flower Market transformamos emociones en detalles inolvidables. Nos especializamos en la creación de arreglos florales, bouquets personalizados, anchetas, peluches y desayunos sorpresa diseñados para celebrar los momentos más importantes de la vida.</p><p>Cada creación está elaborada con dedicación, elegancia y creatividad, convirtiéndose en el regalo perfecto para expresar amor, gratitud, amistad y admiración. Nuestro compromiso es ayudarte a sorprender a esa persona especial con detalles únicos que hablan por ti.</p><p>Arreglos de flores, peluches, anchetas, desayunos sorpresa, creatividad.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -1883,7 +1883,7 @@ const NEGOCIOS = [
     cat:         "shopping",
     nombre:      "FLORES Y DETALLES CON AMOR",
     slogan:      "DETALLES QUE FLORECEN MOMENTOS QUE SE QUEDAN CON EL ARTE DE REGALAR LA MAGIA DE FLORECER.",
-    desc:        "Una floristería y tienda de detalles dedicada a crear momentos inolvidables a través de arreglos florales elegantes, personalizados y llenos de amor. Ofrecemos bouquets, rosas eternas, cajas sorpresa, desayunos especiales, peluches, globos, anchetas y detalles para toda ocasión como cumpleaños, aniversarios, grados y celebraciones especiales. Nos destacamos por la calidad de nuestros productos, la creatividad en cada diseño y una atención cálida y confiable que convierte cada entrega en una experiencia única.  Arreglos florales, flores naturales, regalos especiales, detalles personalizados, decoración floral ",
+    desc:        "<p>Una floristería y tienda de detalles dedicada a crear momentos inolvidables a través de arreglos florales elegantes, personalizados y llenos de amor. Ofrecemos bouquets, rosas eternas, cajas sorpresa, desayunos especiales, peluches, globos, anchetas y detalles para toda ocasión como cumpleaños, aniversarios, grados y celebraciones especiales.</p><p>Nos destacamos por la calidad de nuestros productos, la creatividad en cada diseño y una atención cálida y confiable que convierte cada entrega en una experiencia única.</p><p>Arreglos florales, flores naturales, regalos especiales, detalles personalizados, decoración floral.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -1926,7 +1926,7 @@ const NEGOCIOS = [
     cat:         "shopping",
     nombre:      "MERKASA",
     slogan:      "Dormir bien no es un lujo, es una decisión. Empieza por tu cama.",
-    desc:        "Contamos con una amplia variedad de sábanas, edredones, cubrelechos, fundas, cobijas y accesorios para cama como los son los cojines y peluches, alfombras, protectores para colchones, cortinas y toallas; elaborados con materiales suaves, duraderos y diseños modernos que se adaptan a todos los gustos. Nuestro compromiso es brindarte productos que no solo embellecen tu hogar, sino que también mejoren tu experiencia de descanso cada día. ",
+    desc:        "<p>Contamos con una amplia variedad de sábanas, edredones, cubrelechos, fundas, cobijas y accesorios para cama como cojines, peluches, alfombras, protectores para colchones, cortinas y toallas, elaborados con materiales suaves, duraderos y diseños modernos que se adaptan a todos los gustos.</p><p>Nuestro compromiso es brindarte productos que no solo embellecen tu hogar, sino que también mejoran tu experiencia de descanso cada día.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -1970,7 +1970,7 @@ const NEGOCIOS = [
     cat:         "shopping",
     nombre:      "OLD SCHOOL",
     slogan:      "Compromiso con la Calidad y la Seguridad",
-    desc:        "Bienvenido a Old School, un establecimiento dedicado a los amantes de la cultura rock y la música metal. Nos especializamos en ofrecer una amplia gama de productos y servicios que destacan por su calidad y autenticidad - Ropa y Accesorios: Encuentra las últimas tendencias en moda rockera, desde camisetas y chaquetas hasta accesorios únicos que te ayudarán a expresar tu estilo personal - Música: Disponemos de una variada selección de CD 's de música nacional e internacional, abarcando distintos géneros de metal. - Insumos para Tatuajes: Ofrecemos una completa gama de insumos para tatuajes, garantizando que encuentres todo lo que necesitas para tu arte corporal - Servicios de Tatuajes, Perforaciones y Modificaciones: Contamos con profesionales altamente capacitados en la industria del tatuaje y perforaciones corporales. Todos nuestros servicios cumplen con las normativas de sanidad y bioseguridad, asegurando un ambiente seguro y confiable para nuestros clientes - Industria Textil: Ofrecemos servicios de estampados personalizados, utilizando materiales de excelente calidad. Además, fabricamos prendas a medida, ajustándonos a tus deseos y necesidades. Compromiso con la Calidad y la Seguridad",
+    desc:        "<p>Bienvenido a Old School, un establecimiento dedicado a los amantes de la cultura rock y la música metal. Nos especializamos en ofrecer una amplia gama de productos y servicios que destacan por su calidad y autenticidad.</p><p>Ropa y accesorios: encuentra las últimas tendencias en moda rockera, desde camisetas y chaquetas hasta accesorios únicos que te ayudarán a expresar tu estilo personal.</p><p>Música: disponemos de una variada selección de CD de música nacional e internacional, abarcando distintos géneros de metal.</p><p>Insumos para tatuajes: ofrecemos una completa gama de insumos para tatuajes, garantizando que encuentres todo lo que necesitas para tu arte corporal.</p><p>Servicios de tatuajes, perforaciones y modificaciones: contamos con profesionales altamente capacitados en la industria del tatuaje y las perforaciones corporales. Todos nuestros servicios cumplen con las normativas de sanidad y bioseguridad, asegurando un ambiente seguro y confiable para nuestros clientes.</p><p>Industria textil: ofrecemos servicios de estampados personalizados, utilizando materiales de excelente calidad. Además, fabricamos prendas a medida, ajustándonos a tus deseos y necesidades.</p><p>Compromiso con la calidad y la seguridad.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -2017,7 +2017,7 @@ const NEGOCIOS = [
     cat:         "shopping",
     nombre:      "PIÑATERIA SAAVEDRA",
     slogan:      "Lo hacemos posible",
-    desc:        "En la Piñatería Saavedra puedes encontrar gran variedad de detalles como anchetas, peluches, mugs, globos de latex, globos metalizados, cortinas, decoración y accesorios según la temática que estés buscando, artículos para la hora loca, bombas infladas con helio certificado (100% seguro), decoración para tortas, velas, Lluvia de sobres, artículos cosméticos, accesorios para el cabello, piñatas personalizadas y relleno, deliciosos snacks, dulces y salados para calmar el antojo, platos, vasos y cubiertos en icopor, plástico o cartón. Dependiendo de la temporada encuentra útiles escolares con los personajes de moda, para San Valentín y Amor y Amistad los detalles más tiernos, lo mejor para recordarle a Mamá y Papá cuánto los amamos. Vive el mejor Halloween con artículos para decoración y accesorios que complementan tu disfraz, en las fiestas decembrinas lleva la mejor decoración, velas navideñas, empacamos tus regalos, armamos tus anchetas, además que contamos con magníficos juguetes para que la diversión no termine. Acá siempre encontrarás todo para festejar como más te guste, elaboramos la decoración para tu fiesta o puedes llevar todo y te asesoramos para hacerlo tú mismo.",
+    desc:        "<p>En la Piñatería Saavedra puedes encontrar gran variedad de detalles como anchetas, peluches, mugs, globos de látex, globos metalizados, cortinas, decoración y accesorios según la temática que estés buscando, artículos para la hora loca, bombas infladas con helio certificado (100% seguro), decoración para tortas, velas, lluvia de sobres, artículos cosméticos, accesorios para el cabello, piñatas personalizadas y relleno, deliciosos snacks dulces y salados para calmar el antojo, y platos, vasos y cubiertos en icopor, plástico o cartón.</p><p>Dependiendo de la temporada, encuentra útiles escolares con los personajes de moda; para San Valentín y Amor y Amistad, los detalles más tiernos; y lo mejor para recordarle a mamá y papá cuánto los amamos.</p><p>Vive el mejor Halloween con artículos de decoración y accesorios que complementan tu disfraz. En las fiestas decembrinas lleva la mejor decoración y velas navideñas: empacamos tus regalos, armamos tus anchetas, y contamos con magníficos juguetes para que la diversión no termine.</p><p>Acá siempre encontrarás todo para festejar como más te guste: elaboramos la decoración para tu fiesta o puedes llevar todo y te asesoramos para hacerlo tú mismo.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -2060,7 +2060,7 @@ const NEGOCIOS = [
     cat:         "shopping",
     nombre:      "AGUATECNICOS",
     slogan:      "Purificador de Carbón Activado elimina:Sedimentos.Bacterias.Metales pesados.Químicos",
-    desc:        "El agua es 99.9% PURA. 100.000 veces del ensayo cíclico estricto bajo la presión máxima de agua 100 PSI. Rango de temperatura: 40-100ºF(4.4-37.7ºC). Capacidad 2000 galones. Certificado por NSF. No requiere electricidad. No cambia el sabor del agua",
+    desc:        "<p>El agua es 99.9% pura, con 100.000 ciclos de ensayo estricto bajo la presión máxima de agua de 100 PSI. Rango de temperatura: 40-100 ºF (4.4-37.7 ºC). Capacidad de 2.000 galones. Certificado por NSF. No requiere electricidad y no cambia el sabor del agua.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -2103,7 +2103,7 @@ const NEGOCIOS = [
     cat:         "shopping",
     nombre:      "BARUCH COMUNICACIONES",
     slogan:      "UN MUNDO DE TECNOLOGÍA A TU ALCANCE ",
-    desc:        "El lugar ideal para encontrar lo último en celulares, accesorios y movilidad eléctrica. Trabajamos con marcas líderes como APPLE, SAMSUNG Y XIAOMI, ofreciendo calidad, respaldo y excelentes precios. Nos destacamos por nuestra atención personalizada y compromiso con la satisfacción del cliente. Visítanos y descubre una nueva forma de vivir la tecnología",
+    desc:        "<p>El lugar ideal para encontrar lo último en celulares, accesorios y movilidad eléctrica. Trabajamos con marcas líderes como Apple, Samsung y Xiaomi, ofreciendo calidad, respaldo y excelentes precios.</p><p>Nos destacamos por nuestra atención personalizada y compromiso con la satisfacción del cliente. Visítanos y descubre una nueva forma de vivir la tecnología.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -2152,7 +2152,7 @@ const NEGOCIOS = [
     destacado:   1,
     nombre:      "EL NOVILLO",
     slogan:      "La calidad y el sabor se cortan a tu medida.",
-    desc:        "Más que Carniceros, Asesores Gastronómicos. El verdadero valor diferencial de Carnicería El Novillo reside en su equipo humano. Detrás del mostrador no solo hay expertos en el manejo del cuchillo, sino auténticos asesores gastronómicos. El cliente de hoy no solo busca un corte; busca el consejo experto sobre el tiempo de maduración, el método de cocción ideal (ya sea a la plancha, al horno o a las brasas) y el maridaje perfecto. En El Novillo, cada interacción es una oportunidad para educar el paladar y honrar el oficio del carnicero tradicional. Calidad premium, productos, pollo y cerdo, cortes especiales, carne fresca ",
+    desc:        "<p>Más que carniceros, asesores gastronómicos. El verdadero valor diferencial de Carnicería El Novillo reside en su equipo humano: detrás del mostrador no solo hay expertos en el manejo del cuchillo, sino auténticos asesores gastronómicos.</p><p>El cliente de hoy no solo busca un corte; busca el consejo experto sobre el tiempo de maduración, el método de cocción ideal (ya sea a la plancha, al horno o a las brasas) y el maridaje perfecto. En El Novillo, cada interacción es una oportunidad para educar el paladar y honrar el oficio del carnicero tradicional.</p><p>Calidad premium, pollo y cerdo, cortes especiales, carne fresca.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -2198,7 +2198,7 @@ const NEGOCIOS = [
     destacado:   1,
     nombre:      "PANADERIA AMARETTO",
     slogan:      "EL SABOR CASERO QUE ALEGRA CADA MAÑANA ",
-    desc:        "En Amaretto encuentras deliciosos desayunos y comidas tradicionales preparadas con sabor casero y productos frescos. Disfruta de caldos, tamales, calentado, huevos al gusto, huevos rancheros, agua de panela con queso, porciones de fruta, yogur, migado y exquisitas ensaladas de frutas. Un lugar ideal para compartir y disfrutar de variedad, calidad y buena atención. Caldo tamales chocolate y pan moñona y jugo huevos rancheros chocolate y pan agua de panela queso y pan porción de fruta cereal con leche o yogurtmigao ensaladas de frutas",
+    desc:        "<p>En Amaretto encuentras deliciosos desayunos y comidas tradicionales preparadas con sabor casero y productos frescos. Disfruta de caldos, tamales, calentado, huevos al gusto, huevos rancheros, agua de panela con queso, porciones de fruta, yogur, migado y exquisitas ensaladas de frutas.</p><p>Un lugar ideal para compartir y disfrutar de variedad, calidad y buena atención.</p><p>Caldo, tamales, chocolate y pan, moñona y jugo, huevos rancheros, chocolate y pan, agua de panela con queso y pan, porción de fruta, cereal con leche o yogur, migado, ensaladas de frutas.</p>",
     tipo:        "restaurante",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -2339,7 +2339,7 @@ const NEGOCIOS = [
     cat:         "consumo",
     nombre:      "FERRELECTRICOS MADENEL",
     slogan:      "Calidad y soluciones que conectan tus proyectos.",
-    desc:        "Construimos tu futuro, Todo en herramientas, electricidad y electrónica en un sololugar, a qui encontrarás lo mejor en calidad y precios; También te brindamos los servicio técnico de instalación y mantenimiento encontrarás la disponibilidad de productos para el hogar y proyectos profesionales. Tu aliado confiable en cada proyecto Herramientas resistentes para trabajos exigentes Calidad que se nota en cada tornillo ¡Dales potencia a tus proyectos! Iluminación, cables y más ¿Necesitas ayuda con tu proyecto? ¡Nosotros te asesoramos!Trae tu muestra y te ayudamos a encontrarla",
+    desc:        "<p>Construimos tu futuro. Todo en herramientas, electricidad y electrónica en un solo lugar: aquí encontrarás lo mejor en calidad y precios. También te brindamos el servicio técnico de instalación y mantenimiento, y encontrarás la disponibilidad de productos para el hogar y proyectos profesionales.</p><p>Tu aliado confiable en cada proyecto. Herramientas resistentes para trabajos exigentes. Calidad que se nota en cada tornillo. ¡Dales potencia a tus proyectos!</p><p>Iluminación, cables y más. ¿Necesitas ayuda con tu proyecto? ¡Nosotros te asesoramos! Trae tu muestra y te ayudamos a encontrarla.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -2383,7 +2383,7 @@ const NEGOCIOS = [
     cat:         "consumo",
     nombre:      "FRUVER'S Y CARNICERIA EL EDEN",
     slogan:      "FRUTAS Y VERDURAS TAMBIEN MANEJAN SALSAMENTARIA Y PRODUCTOS DE ASEO ",
-    desc:        "Verduras frescas, fruta para jugos naturales, mercado saludable, verduras selectas, productos del campo, carnes premium, cortes gourmet, maduración especial, calidad selecta, parilla y asados ",
+    desc:        "<p>Verduras frescas, fruta para jugos naturales, mercado saludable, verduras selectas, productos del campo, carnes premium, cortes gourmet, maduración especial, calidad selecta, parrilla y asados.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -2431,7 +2431,7 @@ const NEGOCIOS = [
     cat:         "consumo",
     nombre:      "VARIEDADES SL",
     slogan:      "Papelería escolar, utiles de oficina, regalos y detalles, variedades y accesorios, fotocopias e impreciones ",
-    desc:        "Nos caracterizamos por ofrecer variedad, calidad y precios competitivos, brindando soluciones prácticas tanto para clientes individuales como empresariales. Adicionalmente, ofrecemos una amplia gama de servicios complementarios, entre los que se destacan la venta de cuentas de entretenimiento, servicios de corresponsalía bancaria, redacción y expedición de documentos, así como servicios de mensajería y envíos a nivel nacional e internacional a través de INTERRAPIDISIMO, garantizando rapidez, seguridad y confiabilidad. Nuestro compromiso es proporcionar a nuestros clientes un servicio ágil, confiable y cercano, convirtiéndonos en un aliado estratégico para sus necesidades comerciales, personales y administrativas.",
+    desc:        "<p>Nos caracterizamos por ofrecer variedad, calidad y precios competitivos, brindando soluciones prácticas tanto para clientes individuales como empresariales.</p><p>Adicionalmente, ofrecemos una amplia gama de servicios complementarios, entre los que se destacan la venta de cuentas de entretenimiento, servicios de corresponsalía bancaria, redacción y expedición de documentos, así como servicios de mensajería y envíos a nivel nacional e internacional a través de Interrápidísimo, garantizando rapidez, seguridad y confiabilidad.</p><p>Nuestro compromiso es proporcionar a nuestros clientes un servicio ágil, confiable y cercano, convirtiéndonos en un aliado estratégico para sus necesidades comerciales, personales y administrativas.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -2480,7 +2480,7 @@ const NEGOCIOS = [
     cat:         "empresarial",
     nombre:      "JD PERFILERIA",
     slogan:      "Herramientas industriales, materiales de construcción, pinturas y acabados, tornilleria y fijaciones, ferretería en general",
-    desc:        "JD perfileria es cdalidad y experiencia en perfileria metalica para proyectos estructurales, arquitectonicos e industriales. Ofrecemos variedad de perfiles y fabricamos tejas arquitectonicas, modernas y resistentes, respaldados por maquinatria industrial y un equipo experto que garantiza confianza en cada proyecto.",
+    desc:        "<p>JD Perfilería es calidad y experiencia en perfilería metálica para proyectos estructurales, arquitectónicos e industriales. Ofrecemos variedad de perfiles y fabricamos tejas arquitectónicas, modernas y resistentes, respaldados por maquinaria industrial y un equipo experto que garantiza confianza en cada proyecto.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -2528,7 +2528,7 @@ const NEGOCIOS = [
     cat:         "servicios",
     nombre:      "LAVANDERIA MYM",
     slogan:      "DONDE LAS MANCHAS DESAPARECEN Y LOS BUENOS MOMENTOS PERMANECEN",
-    desc:        "Somos una  lavandería y tintorería profesional especializada en el cuidado y limpieza de prendas con altos estándares de calidad. Ofrecemos lavado, secado, planchado, desmanchado y tratamiento especializado para ropa de vestir, prendas delicadas, cobijas, edredones y más. Nos destacamos por brindar excelente atención, puntualidad y resultados impecables para que tus prendas luzcan siempre como nuevas. LAVANDERIA Y TINTORERIA LAVADO DE ROPA DE DIARIOTRAJES, VESTIDOS, CUBRELECHOS, SÁBANA, COBIJAS, TENISCAMAS DE PERRO, TAPETES, GUACALES",
+    desc:        "<p>Somos una lavandería y tintorería profesional especializada en el cuidado y limpieza de prendas con altos estándares de calidad. Ofrecemos lavado, secado, planchado, desmanchado y tratamiento especializado para ropa de vestir, prendas delicadas, cobijas, edredones y más.</p><p>Nos destacamos por brindar excelente atención, puntualidad y resultados impecables para que tus prendas luzcan siempre como nuevas.</p><p>Lavandería y tintorería: lavado de ropa de diario, trajes, vestidos, cubrelechos, sábanas, cobijas, tenis, camas de perro, tapetes, guacales.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -2572,7 +2572,7 @@ const NEGOCIOS = [
     cat:         "servicios",
     nombre:      "MIS MUNDO",
     slogan:      "Confección a medida sastrería elegante arreglo de ropa uniformes y bordados moda y costura ",
-    desc:        "Somos una lavandería y sastrería especializada en el cuidado, limpieza y arreglo de prendas. Ofrecemos lavado profesional, planchado, ajustes, confecciones y reparación de ropa para dama, caballero y prendas especiales. Trabajamos con calidad, puntualidad y excelente atención para que cada prenda luzca impecable y como nueva. Arreglo de costuras, Lavado de cortinas, Lavado de tapetes, Lavado de zapatillas, Tinturados de cuero, Tinturados de algodón, Lavado de bolsos, Lavado de forros para colchón, Lavado de cobijas y edredones, Lavado de muñecos",
+    desc:        "<p>Somos una lavandería y sastrería especializada en el cuidado, limpieza y arreglo de prendas. Ofrecemos lavado profesional, planchado, ajustes, confecciones y reparación de ropa para dama, caballero y prendas especiales.</p><p>Trabajamos con calidad, puntualidad y excelente atención para que cada prenda luzca impecable y como nueva.</p><p>Arreglo de costuras, lavado de cortinas, lavado de tapetes, lavado de zapatillas, tinturado de cuero, tinturado de algodón, lavado de bolsos, lavado de forros para colchón, lavado de cobijas y edredones, lavado de muñecos.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -2619,7 +2619,7 @@ const NEGOCIOS = [
     cat:         "servicios",
     nombre:      "PHOTO IMAGEN DIGITAL",
     slogan:      "Detenemos el tiempo para que tus mejores momentos duren para siempre",
-    desc:        "En Imagen Digital, transformamos momentos e ideas en recuerdos tangibles y recursos visuales de alto impacto. Somos un equipo de profesionales de la fotografía comprometidos con la excelencia técnica y la sensibilidad artística. Ya sea retratando la calidez de un evento familiar, capturando la fuerza de un retrato personal o destacando las virtudes de un producto, nos aseguramos de que cada detalle brille con luz propia a través de la lente.",
+    desc:        "<p>En Imagen Digital transformamos momentos e ideas en recuerdos tangibles y recursos visuales de alto impacto. Somos un equipo de profesionales de la fotografía comprometidos con la excelencia técnica y la sensibilidad artística.</p><p>Ya sea retratando la calidez de un evento familiar, capturando la fuerza de un retrato personal o destacando las virtudes de un producto, nos aseguramos de que cada detalle brille con luz propia a través de la lente.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -2667,7 +2667,7 @@ const NEGOCIOS = [
     cat:         "gourmet",
     nombre:      "DIMASHK EXPERIENCIA ARABE",
     slogan:      "Somos un restaurante de comida árabe, la cual recibimos por tradición de nuestro abuelo paterno quien migró desde Damasco, Siria a Colombia. ",
-    desc:        "Comida arabe, shawarma, falafel, cocina mediterránea, kebab artesanal",
+    desc:        "<p>Comida árabe, shawarma, falafel, cocina mediterránea, kebab artesanal.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -2711,7 +2711,7 @@ const NEGOCIOS = [
     cat:         "gourmet",
     nombre:      "PESCADERIA ASPRILLA RIVAS",
     slogan:      "RESTAURANTE Y PESCADERIA",
-    desc:        "Ofrecemos sabor, tradición y calidad en cada plato. Ideal para compartir en familia y con amigos, excelente atención y sabores auténticos que hacen de cada visita un momento especial. Comida del pacífico Pescados y mariscos Comida típica colombiana Encocados y ceviches Sabor a mar",
+    desc:        "<p>Ofrecemos sabor, tradición y calidad en cada plato. Ideal para compartir en familia y con amigos, con excelente atención y sabores auténticos que hacen de cada visita un momento especial.</p><p>Comida del Pacífico, pescados y mariscos, comida típica colombiana, encocados y ceviches, sabor a mar.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -2755,7 +2755,7 @@ const NEGOCIOS = [
     cat:         "gourmet",
     nombre:      "BENDITO CHICHARON ",
     slogan:      "Sabor que reúne y momentos que se disfrutan!",
-    desc:        "En Bendito Chicharrón encontrarás el sabor de la comida tradicional con un ambiente ideal para compartir en familia, con amigos o en eventos especiales. Ofrecemos deliciosos desayunos, almuerzos caseros, almuerzos ejecutivos y una variada carta de platos preparados con calidad y excelente sabor. Además, contamos con atención para eventos empresariales y familiares, acompañados de cócteles, tragos, cervezas y mucho más. Un lugar perfecto para disfrutar de buena comida, buen ambiente y una experiencia inolvidable. Gastrobar gourmet Cocteles de autor Cosina fusión Ambiente nocturno Comida y bebidas gourmet",
+    desc:        "<p>En Bendito Chicharrón encontrarás el sabor de la comida tradicional con un ambiente ideal para compartir en familia, con amigos o en eventos especiales. Ofrecemos deliciosos desayunos, almuerzos caseros, almuerzos ejecutivos y una variada carta de platos preparados con calidad y excelente sabor.</p><p>Además, contamos con atención para eventos empresariales y familiares, acompañados de cócteles, tragos, cervezas y mucho más. Un lugar perfecto para disfrutar de buena comida, buen ambiente y una experiencia inolvidable.</p><p>Gastrobar gourmet, cócteles de autor, cocina fusión, ambiente nocturno, comida y bebidas gourmet.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -2799,7 +2799,7 @@ const NEGOCIOS = [
     cat:         "gourmet",
     nombre:      "POMODORO",
     slogan:      "¡Tradición italiana con manos colombianas!",
-    desc:        "El restaurante Pizza & Pasta Pomodoro funciona desde abril del año 2020, en el municipio de Mosquera-Cundinamarca. Nace con el objetivo de ofrecer un servicio gastronómico novedoso de tipo italiano, en específico pizzas y pastas, así como ofrecer un menú variado, único y de alta calidad a los clientes. Nuestra oferta gastronómica está dirigida a todo cliente que desee probar una receta 100% italiana de pizza con masa multigrano y madurada a 72 horas.<p> Así como una amplia y exclusiva oferta en pastas, lasañas y bebidas. Siempre hemos conservado lineamientos y estandarización de alta calidad en la materia prima de nuestros productos ofrecidos, siendo así reconocidos en la zona como la mejor pizzería.<p>“Pomodoro” traduce del italiano al español algo tan sencillo como “tomate”. Sin lugar a duda, es un ingrediente esencial en toda la gastronomía; su preparación y combinación se fundamenta en el placer, tradición y conocimiento de toda cocina. Esta es la razón por la cual decidimos que este proyecto tuviera este nombre y para resaltar y ser reconocidos por tener la mejor receta italiana de pizza con masa madurada y cocida en horno de piedra 100% italiano.</p><p>Restaurante Italiano, Pastas, Lasagna, Pizza.",
+    desc:        "<p>El restaurante Pizza &amp; Pasta Pomodoro funciona desde abril de 2020 en el municipio de Mosquera, Cundinamarca. Nace con el objetivo de ofrecer un servicio gastronómico novedoso de tipo italiano, en específico pizzas y pastas, así como un menú variado, único y de alta calidad para los clientes. Nuestra oferta gastronómica está dirigida a todo cliente que desee probar una receta 100% italiana de pizza con masa multigrano madurada durante 72 horas.</p><p>Así como una amplia y exclusiva oferta en pastas, lasañas y bebidas. Siempre hemos conservado lineamientos y estandarización de alta calidad en la materia prima de nuestros productos, siendo así reconocidos en la zona como la mejor pizzería.</p><p>“Pomodoro” traduce del italiano al español algo tan sencillo como “tomate”. Sin lugar a duda, es un ingrediente esencial en toda la gastronomía; su preparación y combinación se fundamenta en el placer, la tradición y el conocimiento de toda cocina. Esta es la razón por la cual decidimos que este proyecto tuviera este nombre, para resaltar y ser reconocidos por tener la mejor receta italiana de pizza con masa madurada y cocida en horno de piedra 100% italiano.</p><p>Restaurante italiano, pastas, lasaña, pizza.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -2843,7 +2843,7 @@ const NEGOCIOS = [
     cat:         "gourmet",
     nombre:      "LA GRAN MURALLA",
     slogan:      "El auténtico sabor oriental en cada plato.",
-    desc:        "Un restaurante especializado en comida china y asiática, donde cada plato está preparado con sabor auténtico, ingredientes frescos y recetas tradicionales que conquistan el paladar. Disfruta de una gran variedad de arroz chino, pasta oriental, ramen, verduras salteadas, rollos chinos, carnes, pollo y mucho más. Un lugar ideal para compartir en familia o con amigos, ofreciendo calidad, buen servicio y el verdadero sabor de la cocina oriental en cada bocado. Comida china Arroz oriental Chop suey Pollo agridulce Cocina asiática ",
+    desc:        "<p>Un restaurante especializado en comida china y asiática, donde cada plato está preparado con sabor auténtico, ingredientes frescos y recetas tradicionales que conquistan el paladar. Disfruta de una gran variedad de arroz chino, pasta oriental, ramen, verduras salteadas, rollos chinos, carnes, pollo y mucho más.</p><p>Un lugar ideal para compartir en familia o con amigos, ofreciendo calidad, buen servicio y el verdadero sabor de la cocina oriental en cada bocado.</p><p>Comida china, arroz oriental, chop suey, pollo agridulce, cocina asiática.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -2891,7 +2891,7 @@ const NEGOCIOS = [
     cat:         "movilidad",
     nombre:      "AR MOTOS",
     slogan:      "AR motos: El pulso de tu moto, el récord de tu viaje.",
-    desc:        "En AR motos, entendemos que tu motocicleta no es solo un medio de transporte, es tu estilo de vida. Somos un taller especializado en mantenimiento, diagnóstico y optimización de motos, donde combinamos tecnología de vanguardia con la pasión por las dos ruedas. Nuestro compromiso es garantizar que cada máquina que sale de nuestras manos alcance su máximo rendimiento, seguridad y durabilidad. Llevamos el cuidado de tu moto al siguiente nivel, registrando solo la excelencia en cada kilómetro que recorres.",
+    desc:        "<p>En AR Motos entendemos que tu motocicleta no es solo un medio de transporte, es tu estilo de vida. Somos un taller especializado en mantenimiento, diagnóstico y optimización de motos, donde combinamos tecnología de vanguardia con la pasión por las dos ruedas.</p><p>Nuestro compromiso es garantizar que cada máquina que sale de nuestras manos alcance su máximo rendimiento, seguridad y durabilidad. Llevamos el cuidado de tu moto al siguiente nivel, registrando solo la excelencia en cada kilómetro que recorres.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -2935,7 +2935,7 @@ const NEGOCIOS = [
     cat:         "movilidad",
     nombre:      "MAXIOIL",
     slogan:      "Cuidamos cada detalle de tu motor, porque nuestro compromiso es contigo.",
-    desc:        "Somos una empresa del área automotriz enfocada principalmente en la renovación de aceite para toda clase de vehículos, manejando gran variedad de lubricantes. Además, contamos con una amplia gama de productos para mejorar su funcionamiento (aditivos, refrigerantes, siliconas, entre otros). Más de diez años de trayectoria en el sector nos avalan, y nuestro personal altamente capacitado se caracteriza por brindar atención oportuna y de calidad.",
+    desc:        "<p>Somos una empresa del área automotriz enfocada principalmente en la renovación de aceite para toda clase de vehículos, manejando gran variedad de lubricantes. Además, contamos con una amplia gama de productos para mejorar su funcionamiento, como aditivos, refrigerantes y siliconas, entre otros.</p><p>Más de diez años de trayectoria en el sector nos avalan, y nuestro personal altamente capacitado se caracteriza por brindar atención oportuna y de calidad.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -2979,7 +2979,7 @@ const NEGOCIOS = [
     cat:         "movilidad",
     nombre:      "BARRELEC",
     slogan:      "Barrelec: Rompe la distancia, conecta con tu ciudad",
-    desc:        "En Barrelec transformamos la movilidad urbana combinando tecnología de punta, diseño vanguardista y sostenibilidad. Somos una marca líder en la venta de bicicletas eléctricas pensadas para el ritmo de la vida moderna: ágiles, potentes y respetuosas con el medio ambiente. Nuestras e-bikes están diseñadas para liberarte del tráfico, reducir tu huella de carbono y hacer de cada trayecto diario una experiencia placentera y sin esfuerzo. Descubre una nueva forma de moverte con la autonomía, seguridad y el estilo que solo Barrelec te puede ofrecer.",
+    desc:        "<p>En Barrelec transformamos la movilidad urbana combinando tecnología de punta, diseño vanguardista y sostenibilidad. Somos una marca líder en la venta de bicicletas eléctricas pensadas para el ritmo de la vida moderna: ágiles, potentes y respetuosas con el medio ambiente.</p><p>Nuestras e-bikes están diseñadas para liberarte del tráfico, reducir tu huella de carbono y hacer de cada trayecto diario una experiencia placentera y sin esfuerzo. Descubre una nueva forma de moverte con la autonomía, seguridad y el estilo que solo Barrelec te puede ofrecer.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -3023,7 +3023,7 @@ const NEGOCIOS = [
     cat:         "movilidad",
     nombre:      "BIKE SHOP",
     slogan:      "Innovación y estilo en cada pedaleo ",
-    desc:        "Tienda especializada en bicicletas y bicicletas eléctricas, donde encontrarás variedad de modelos, bicimotos, accesorios, repuestos y artículos para todo tipo de ciclistas. Ofrecemos productos de calidad, mantenimiento, asesoría y soluciones completas para mejorar el rendimiento, la comodidad y la movilidad de nuestros clientes. Bicicleteria, Mantenimiento General, Mantenimiento Especializado, Reparaciones, Lavadas, Alistamiento.",
+    desc:        "<p>Tienda especializada en bicicletas y bicicletas eléctricas, donde encontrarás variedad de modelos, bicimotos, accesorios, repuestos y artículos para todo tipo de ciclistas. Ofrecemos productos de calidad, mantenimiento, asesoría y soluciones completas para mejorar el rendimiento, la comodidad y la movilidad de nuestros clientes.</p><p>Bicicletería, mantenimiento general, mantenimiento especializado, reparaciones, lavadas, alistamiento.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -3070,7 +3070,7 @@ const NEGOCIOS = [
     cat:         "movilidad",
     nombre:      "CRISTAL CARS",
     slogan:      "Cristal Cars: Claridad en tu camino, energía en tu vehículo.",
-    desc:        "En Cristal Cars nos especializamos en encender la seguridad y el confort de tu vehículo. Somos un centro técnico profesional dedicado al diagnóstico y reparación del sistema eléctrico automotriz, optimización e instalación de sistemas de luces de alta gama (LED/HD) y mantenimiento integral de elevavidrios y ventanas. Combinamos precisión técnica con componentes de alta calidad para que tu carro recupere su total funcionalidad y una visibilidad impecable en carretera. En Cristal Cars, hacemos que tu auto funcione a la perfección y brille como el primer día.",
+    desc:        "<p>En Cristal Cars nos especializamos en encender la seguridad y el confort de tu vehículo. Somos un centro técnico profesional dedicado al diagnóstico y reparación del sistema eléctrico automotriz, la optimización e instalación de sistemas de luces de alta gama (LED/HD) y el mantenimiento integral de elevavidrios y ventanas.</p><p>Combinamos precisión técnica con componentes de alta calidad para que tu carro recupere su total funcionalidad y una visibilidad impecable en carretera. En Cristal Cars, hacemos que tu auto funcione a la perfección y brille como el primer día.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -3114,7 +3114,7 @@ const NEGOCIOS = [
     cat:         "movilidad",
     nombre:      "W RECORDS",
     slogan:      "Mecánica de confianza para que nunca dejes de rodar.",
-    desc:        "Somos el taller especializado donde la pasión por las dos ruedas se traduce en un servicio técnico de máxima calidad. Nos dedicamos al mantenimiento preventivo y correctivo, diagnóstico computarizado, sincronización, frenos y reparación de motores para todo tipo de motocicletas. Nuestro equipo de mecánicos expertos trabaja con repuestos garantizados y herramientas de precisión para asegurar que tu moto recupere su potencia, suavidad y, sobre todo, tu seguridad en la ruta. En nuestro taller, cuidamos tu moto como si fuera la nuestra.",
+    desc:        "<p>Somos el taller especializado donde la pasión por las dos ruedas se traduce en un servicio técnico de máxima calidad. Nos dedicamos al mantenimiento preventivo y correctivo, diagnóstico computarizado, sincronización, frenos y reparación de motores para todo tipo de motocicletas.</p><p>Nuestro equipo de mecánicos expertos trabaja con repuestos garantizados y herramientas de precisión para asegurar que tu moto recupere su potencia, suavidad y, sobre todo, tu seguridad en la ruta. En nuestro taller, cuidamos tu moto como si fuera la nuestra.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -3163,7 +3163,7 @@ const NEGOCIOS = [
     destacado:   1,
     nombre:      "Cheramy Spa Mascotas",
     slogan:      "Cuidamos tu mascota como parte de nuestra familia",
-    desc:        "CHERAMY SPA MASCOTAS es un centro de estética y bienestar animal diseñado para ofrecer una experiencia de relajación y cuidado integral a los consentidos del hogar. Su enfoque no es solo la limpieza, sino el equilibrio emocional y físico de cada mascota a través de servicios personalizados. Trato amoroso y responsable. ✔Personal capacitado✔Productos Seleccionados Con Cuidado✔Ambiente limpio y segur✔Experiencia Pensada Para El Bienestar De Tu Mascota",
+    desc:        "<p>Cheramy Spa Mascotas es un centro de estética y bienestar animal diseñado para ofrecer una experiencia de relajación y cuidado integral a los consentidos del hogar. Su enfoque no es solo la limpieza, sino el equilibrio emocional y físico de cada mascota a través de servicios personalizados.</p><p>Trato amoroso y responsable: personal capacitado, productos seleccionados con cuidado, ambiente limpio y seguro, experiencia pensada para el bienestar de tu mascota.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -3207,7 +3207,7 @@ const NEGOCIOS = [
     destacado:   1,
     nombre:      "Medicina Veterinaria Javi Vet",
     slogan:      "Porque tu mascota merece lo mejor, estamos aquí! medicina veterinaria con amor, calidad y profesionalismo",
-    desc:        "Medicina Veterinaria Javi Vet es un centro especializado en el cuidado integral de mascotas, comprometido con la excelencia médica y el bienestar animal. Contamos con un equipo de profesionales dedicados a ofrecer servicios de consulta general, diagnóstico y tratamientos preventivos, utilizando tecnología adecuada y un enfoque ético. En Javi Vet, entendemos que tu mascota es parte de la familia, por lo que priorizamos una atención personalizada y transparente para garantizar su salud en cada etapa de su vida.",
+    desc:        "<p>Medicina Veterinaria Javi Vet es un centro especializado en el cuidado integral de mascotas, comprometido con la excelencia médica y el bienestar animal. Contamos con un equipo de profesionales dedicados a ofrecer servicios de consulta general, diagnóstico y tratamientos preventivos, utilizando tecnología adecuada y un enfoque ético.</p><p>En Javi Vet entendemos que tu mascota es parte de la familia, por lo que priorizamos una atención personalizada y transparente para garantizar su salud en cada etapa de su vida.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -3251,7 +3251,7 @@ const NEGOCIOS = [
     destacado:   1,
     nombre:      "De Maskot-s",
     slogan:      "Todo lo relacionado para tu mascota, pregunta por la comida favorita de tu perro o gato. ",
-    desc:        "<p>Tienda especializada en concentrados, accesorios y productos para el cuidado integral de mascotas, ofreciendo alimentos de las mejores marcas, dieta BARF, juguetes, camas, guacales y artículos esenciales para perros y gatos.</p>     <p>En “De Maskot’s” trabajamos con variedad, calidad y atención personalizada para brindar bienestar, nutrición y comodidad a cada mascota.</p>    <p>Nuestro compromiso es ayudar a las familias a encontrar todo lo necesario para consentir y cuidar a sus compañeros de vida.</p>    <p>Gimnasios/ Suplementos deportivos/ Alimento para mascotas/ Comida para gatos/ Accesorios/ Entretenimientos.</p>",
+    desc:        "<p>Tienda especializada en concentrados, accesorios y productos para el cuidado integral de mascotas, ofreciendo alimentos de las mejores marcas, dieta BARF, juguetes, camas, guacales y artículos esenciales para perros y gatos.</p><p>En “De Maskot's” trabajamos con variedad, calidad y atención personalizada para brindar bienestar, nutrición y comodidad a cada mascota.</p><p>Nuestro compromiso es ayudar a las familias a encontrar todo lo necesario para consentir y cuidar a sus compañeros de vida.</p><p>Gimnasios, suplementos deportivos, alimento para mascotas, comida para gatos, accesorios, entretenimiento.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -3295,7 +3295,7 @@ const NEGOCIOS = [
     cat:         "mascotas",
     nombre:      "Grandes Amigos",
     slogan:      "Lo que necesitas para consentir a tu mascota",
-    desc:        "Grandes Amigos es un espacio dedicado al bienestar y cuidado de las mascotas, donde encontrarás alimentos de excelente calidad, accesorios, juguetes, productos de higiene y salud para perros y gatos. Ofrecemos una amplia variedad de artículos como arenas sanitarias, productos para la orina, desparasitantes y todo lo necesario para brindarles comodidad, diversión y una vida saludable a tus mejores amigos. Nos destacamos por nuestra atención amable, asesoría confiable y compromiso con el cuidado de cada mascota. Alimentación para mascotas, salud y bienestar animal, accesorios para perros y gatos, higiene y cuidado veterinario, desparasitantes y prevención.",
+    desc:        "<p>Grandes Amigos es un espacio dedicado al bienestar y cuidado de las mascotas, donde encontrarás alimentos de excelente calidad, accesorios, juguetes, productos de higiene y salud para perros y gatos. Ofrecemos una amplia variedad de artículos como arenas sanitarias, productos para la orina, desparasitantes y todo lo necesario para brindarles comodidad, diversión y una vida saludable a tus mejores amigos.</p><p>Nos destacamos por nuestra atención amable, asesoría confiable y compromiso con el cuidado de cada mascota.</p><p>Alimentación para mascotas, salud y bienestar animal, accesorios para perros y gatos, higiene y cuidado veterinario, desparasitantes y prevención.</p>",
     tipo:        "estandar",
  
     /* --- IMÁGENES Y LOGOS --- */
@@ -3338,7 +3338,7 @@ const NEGOCIOS = [
     cat:         "mascotas",
     nombre:      "Surgical Care",
     slogan:      "Cuidados para tu mejor amigo",
-    desc:        "Surgical Care: Excelencia en Alta Complejidad Veterinaria Somos un centro especializado en la resolución de patologías quirúrgicas complejas en animales de compañía. Nuestro enfoque se centra en tres pilares fundamentales: cirugía de tejidos blandos, ortopedia avanzada y traumatología.",
+    desc:        "<p>Surgical Care: excelencia en alta complejidad veterinaria. Somos un centro especializado en la resolución de patologías quirúrgicas complejas en animales de compañía.</p><p>Nuestro enfoque se centra en tres pilares fundamentales: cirugía de tejidos blandos, ortopedia avanzada y traumatología.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -3380,7 +3380,7 @@ const NEGOCIOS = [
     cat:         "mascotas",
     nombre:      "DISTRI MASCOTAS",
     slogan:      " lo mejor para tus macotas",
-    desc:        "Distrimascotas de la Sabana, especializada en ofrecer, accesorios, gimnasios para gatos, comida al granel y bultos, medicamentos y desparasitantes para perros y gatos. Brindamos variedad, calidad y atención personalizada para consentir a tus mascotas con todo lo que necesitan, desde concentrados y juguetes hasta artículos de higiene y salud animal. Contamos también con spa para tu canino o felino, nuestro compromiso es ofrecer productos confiables y un servicio cercano que garantice el cuidado, la felicidad y el bienestar de cada mascota. Alimento para perros y gatos, juguetes para mascotas, nutrición canina, accesorios para mascotas, productos veterinarios. Petshop.",
+    desc:        "<p>Distrimascotas de la Sabana está especializada en ofrecer accesorios, gimnasios para gatos, comida al granel y por bultos, medicamentos y desparasitantes para perros y gatos. Brindamos variedad, calidad y atención personalizada para consentir a tus mascotas con todo lo que necesitan, desde concentrados y juguetes hasta artículos de higiene y salud animal.</p><p>Contamos también con spa para tu canino o felino. Nuestro compromiso es ofrecer productos confiables y un servicio cercano que garantice el cuidado, la felicidad y el bienestar de cada mascota.</p><p>Alimento para perros y gatos, juguetes para mascotas, nutrición canina, accesorios para mascotas, productos veterinarios, petshop.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -3421,7 +3421,7 @@ const NEGOCIOS = [
     cat:         "mascotas",
     nombre:      "VETERINARIA & SPA JUDATA VIP",
     slogan:      "Salud integral, atención humana y amor en cada latido.",
-    desc:        "En nuestra veterinaria trabajamos cada día con amor, respeto y compromiso por el bienestar de los animales y sus familias. Creemos que cada mascota merece ser atendida con paciencia, empatía y dedicación, cuidando no solo su salud física, sino también su tranquilidad, su energía y su calidad de vida. Contamos con servicios de consulta veterinaria, toma de exámenes de sangre, ecografía, radiografía, vacunación y desparasitación, además de procedimientos quirúrgicos menores como esterilizaciones, profilaxis y otros procedimientos básicos, siempre realizados con responsabilidad y cuidado. También ofrecemos servicio de spa y baño, porque sabemos que el bienestar también está en sentirse limpios, cómodos y felices. Nuestro propósito es brindar una atención integral, humana y consciente, acompañando a cada paciente y a su familia en cada etapa, generando confianza, tranquilidad y mucho amor. Estamos siempre para servirles y para ayudar a que sus compañeros de vida vibren bonito, estén sanos y reciban el cuidado que merecen. Bienestar/ desparasitanantes / vacunación / salud animal / atención veterinaria.",
+    desc:        "<p>En nuestra veterinaria trabajamos cada día con amor, respeto y compromiso por el bienestar de los animales y sus familias. Creemos que cada mascota merece ser atendida con paciencia, empatía y dedicación, cuidando no solo su salud física, sino también su tranquilidad, su energía y su calidad de vida.</p><p>Contamos con servicios de consulta veterinaria, toma de exámenes de sangre, ecografía, radiografía, vacunación y desparasitación, además de procedimientos quirúrgicos menores como esterilizaciones, profilaxis y otros procedimientos básicos, siempre realizados con responsabilidad y cuidado. También ofrecemos servicio de spa y baño, porque sabemos que el bienestar también está en sentirse limpios, cómodos y felices.</p><p>Nuestro propósito es brindar una atención integral, humana y consciente, acompañando a cada paciente y a su familia en cada etapa, generando confianza, tranquilidad y mucho amor. Estamos siempre para servirles y para ayudar a que sus compañeros de vida vibren bonito, estén sanos y reciban el cuidado que merecen.</p><p>Bienestar, desparasitantes, vacunación, salud animal, atención veterinaria.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -3473,7 +3473,7 @@ const NEGOCIOS = [
     destacado:   1,
     nombre:      "TIENDA NATURISTA ORIGEN VITAL",
     slogan:      "Consiente tu salud de manera natural. ¡ tenemos lo que buscas!",
-    desc:        "Origen Vital es una tienda naturista dedicada al bienestar, la salud y el cuidado integral de las personas.<p> Ofrecemos productos naturales, suplementos, vitaminas, cuidado personal y alternativas saludables para mejorar la calidad de vida de nuestros clientes.<p> Brindamos atención personalizada y asesoría para ayudarte a encontrar opciones naturales que aporten equilibrio, energía y bienestar para tu día a día.<p> Un espacio pensado para quienes buscan vivir de manera más saludable y natural. Bienestar integral, alimentos saludables, medicina natural, suplemento vitamínico, productos naturales</p><p>TIENDA NATURISTA/BIENESTAR/NATURAL/ORGANICO/PRODUCTOS SALUDABLES.",
+    desc:        "<p>Origen Vital es una tienda naturista dedicada al bienestar, la salud y el cuidado integral de las personas.</p><p>Ofrecemos productos naturales, suplementos, vitaminas, cuidado personal y alternativas saludables para mejorar la calidad de vida de nuestros clientes.</p><p>Brindamos atención personalizada y asesoría para ayudarte a encontrar opciones naturales que aporten equilibrio, energía y bienestar para tu día a día. Un espacio pensado para quienes buscan vivir de manera más saludable y natural.</p><p>Bienestar integral, alimentos saludables, medicina natural, suplemento vitamínico, productos naturales.</p><p>Tienda naturista, bienestar, natural, orgánico, productos saludables.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -3517,7 +3517,7 @@ const NEGOCIOS = [
     cat:         "bienestar",
     nombre:      "ESTÉTICA FIGURA ARMONIOSA SPA",
     slogan:      "Relajación, belleza y bienestar en perfecta armonía.",
-    desc:        "Figura Armoniosa Spa es un espacio dedicado al bienestar, la relajación y el cuidado integral de la belleza. Ofrecemos servicios especiales como sauna, jacuzzi, masajes relajantes, tratamientos corporales y faciales, diseñados para brindar armonía, descanso y renovación tanto física como emocional. Contamos con atención personalizada, un ambiente tranquilo y profesionales comprometidos en hacer de cada visita una experiencia única de relajación y bienestar. Estética integral, ambiente armonioso, relajación y bienestar, facial, cuidado corporal",
+    desc:        "<p>Figura Armoniosa Spa es un espacio dedicado al bienestar, la relajación y el cuidado integral de la belleza. Ofrecemos servicios especiales como sauna, jacuzzi, masajes relajantes, tratamientos corporales y faciales, diseñados para brindar armonía, descanso y renovación tanto física como emocional.</p><p>Contamos con atención personalizada, un ambiente tranquilo y profesionales comprometidos en hacer de cada visita una experiencia única de relajación y bienestar.</p><p>Estética integral, ambiente armonioso, relajación y bienestar, facial, cuidado corporal.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -3562,7 +3562,7 @@ const NEGOCIOS = [
     cat:         "bienestar",
     nombre:      "GUHO LEN´S ",
     slogan:      "¡Vuelve a ver el mundo con claridad!",
-    desc:        "Óptica es un espacio especializado en el cuidado de la salud visual, ofreciendo monturas modernas, lentes de alta calidad y atención confiable para toda la familia. Contamos con examen visual profesional, asesoría personalizada y una amplia variedad de estilos que se adaptan a cada necesidad y personalidad. Nuestro compromiso es brindar comodidad, claridad y confianza, ayudando a nuestros clientes a cuidar su visión con productos y servicios de excelente calidad. Examen visual profesional • Monturas modernas • Lentes de alta calidad a precios justos. Gafas formuladas, examen visual, optica profesional, lentes de alta calidad, monturas modernas.",
+    desc:        "<p>Óptica es un espacio especializado en el cuidado de la salud visual, ofreciendo monturas modernas, lentes de alta calidad y atención confiable para toda la familia. Contamos con examen visual profesional, asesoría personalizada y una amplia variedad de estilos que se adaptan a cada necesidad y personalidad.</p><p>Nuestro compromiso es brindar comodidad, claridad y confianza, ayudando a nuestros clientes a cuidar su visión con productos y servicios de excelente calidad. Examen visual profesional, monturas modernas, lentes de alta calidad a precios justos.</p><p>Gafas formuladas, examen visual, óptica profesional, lentes de alta calidad, monturas modernas.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -3606,7 +3606,7 @@ const NEGOCIOS = [
     cat:         "bienestar",
     nombre:      "VICTORIA GOMEZ COSMETICA",
     slogan:      "Realzamos tu belleza, cuidamos tu bienestar",
-    desc:        "Victoria Gomez Cosmiatría es un espacio dedicado al cuidado, bienestar y belleza integral, ofreciendo tratamientos faciales y corporales diseñados para resaltar la belleza natural de cada persona. Especialistas en cosmiatría y cuidado estético, brindando atención personalizada, calidad en cada procedimiento y un ambiente cómodo y profesional. Además, cuentan con servicios especiales y detalles pensados para consentir a sus clientes y hacer de cada visita una experiencia única. Belleza, cosmiatría, bienestar, estética, cuidado facial.",
+    desc:        "<p>Victoria Gómez Cosmiatría es un espacio dedicado al cuidado, bienestar y belleza integral, ofreciendo tratamientos faciales y corporales diseñados para resaltar la belleza natural de cada persona. Especialistas en cosmiatría y cuidado estético, brindando atención personalizada, calidad en cada procedimiento y un ambiente cómodo y profesional.</p><p>Además, cuentan con servicios especiales y detalles pensados para consentir a sus clientes y hacer de cada visita una experiencia única.</p><p>Belleza, cosmiatría, bienestar, estética, cuidado facial.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -3655,7 +3655,7 @@ const NEGOCIOS = [
     destacado:   1,
     nombre:      "CORTES Y ESTILOS",
     slogan:      "SOMOS UNA SALA DE BELLEZA ( DISEÑADORES DE COLOR)",
-    desc:        "Sala de belleza especializada en realzar la imagen y el estilo de cada cliente mediante servicios profesionales de colorimetría, keratina, uñas, peinados y maquillaje. En “Cortes y Estilos” trabajamos con técnicas modernas, productos de alta calidad y atención personalizada para brindar experiencias de belleza, cuidado y transformación. Nuestro compromiso es resaltar tu esencia con elegancia, creatividad y las últimas tendencias en estética y cuidado personal. Peluqueria, Peinados profesionales, Sala de belleza, Alisado, Maquillaje, Uñas, Keratina, Spa de belleza",
+    desc:        "<p>Sala de belleza especializada en realzar la imagen y el estilo de cada cliente mediante servicios profesionales de colorimetría, keratina, uñas, peinados y maquillaje. En “Cortes y Estilos” trabajamos con técnicas modernas, productos de alta calidad y atención personalizada para brindar experiencias de belleza, cuidado y transformación.</p><p>Nuestro compromiso es resaltar tu esencia con elegancia, creatividad y las últimas tendencias en estética y cuidado personal.</p><p>Peluquería, peinados profesionales, sala de belleza, alisado, maquillaje, uñas, keratina, spa de belleza.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -3703,7 +3703,7 @@ const NEGOCIOS = [
     cat:         "imagen",
     nombre:      "LA PELUQUERÍA (Centro avanzado de belleza) ",
     slogan:      "TECNICOS CAPILARES Y ESTÉTICOS AL SERVICIO DE TU IMAGEN",
-    desc:        "Peluquería especializada en realzar la belleza y el estilo de cada persona, ofreciendo servicios de cortes, peinados, coloración, cepillados, tratamientos capilares y cuidado integral del cabello. Brindamos atención personalizada, productos de alta calidad y un ambiente moderno y acogedor donde cada cliente vive una experiencia de confianza, renovación y bienestar. Nuestro compromiso es resaltar tu imagen con profesionalismo, creatividad y las últimas tendencias en belleza. PELUQUERÍA:Corte ¿dama y caballero, Colorimetría, Peinados de alta gama, Peinados de niña, Cepillados, Maquillaje, Extensiones de cabello punto a punto y tira, Arreglos de novia, quinceañera, Keratina y keramix Peluquería profesional, Técnicos capilares, Estética integral, Tratamientos capilares, Belleza y cuidado",
+    desc:        "<p>Peluquería especializada en realzar la belleza y el estilo de cada persona, ofreciendo servicios de cortes, peinados, coloración, cepillados, tratamientos capilares y cuidado integral del cabello. Brindamos atención personalizada, productos de alta calidad y un ambiente moderno y acogedor donde cada cliente vive una experiencia de confianza, renovación y bienestar.</p><p>Nuestro compromiso es resaltar tu imagen con profesionalismo, creatividad y las últimas tendencias en belleza.</p><p>Peluquería: corte dama y caballero, colorimetría, peinados de alta gama, peinados de niña, cepillados, maquillaje, extensiones de cabello punto a punto y tira, arreglos de novia y quinceañera, keratina y keramix.</p><p>Peluquería profesional, técnicos capilares, estética integral, tratamientos capilares, belleza y cuidado.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -3751,7 +3751,7 @@ const NEGOCIOS = [
     cat:         "educacion",
     nombre:      "NOVA ",
     slogan:      "¡Transforma tu pasión en arte y tu arte en ingresos! ",
-    desc:        "Capacitate con nuestros talleres semi personalizados, especialistas en manicura rusa semipermanente (técnicas en tendencia) acrílico básico intermedio polygel soft gel sistema dual y sistemas híbridos. Contamos con clases entre semana y domingos . De 9:00am a 6:00pm Studio de uñas y pestañas nova by shalom !! Somos especialistas en resaltar tu belleza nuestros servicios 👇🏻👇🏻 Manicure y pedicure tradicional y semipermanente Recubrimientos en uña natural Acrílico, Polygel, Pestañas pelo a pelo, Soft gel, Dual System. Acrílico, Polygel, Pestañas pelo a pelo, Soft gel, Dual System",
+    desc:        "<p>Capacítate con nuestros talleres semipersonalizados, especialistas en manicura rusa semipermanente (técnicas en tendencia), acrílico básico e intermedio, polygel, soft gel, sistema dual y sistemas híbridos. Contamos con clases entre semana y domingos, de 9:00 a. m. a 6:00 p. m.</p><p>Studio de uñas y pestañas Nova by Shalom. Somos especialistas en resaltar tu belleza. Nuestros servicios: manicure y pedicure tradicional y semipermanente, recubrimientos en uña natural.</p><p>Acrílico, polygel, pestañas pelo a pelo, soft gel, dual system.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -3795,7 +3795,7 @@ const NEGOCIOS = [
     cat:         "educacion",
     nombre:      "ACADEMIA VALENTINA",
     slogan:      "Aquí no solo aprendes, aquí cocinas.",
-    desc:        "Academia presencial de cocina, repostería y panadería con clases prácticas y preparaciones para llevar. 🎓✨ ¡Aprende, Emprende y Disfruta con Nuestros Cursos Disponibles 1-)Repostería y Pastelería (tortas, rellenos, cubiertas y decoración). 2-)Panadería básica, pizza y hojaldre 3-)Repostería saludable (sin gluten y sin azúcar) 4-)Asados al barril 5-)Amasijos colombianos (almojábanas, avena cubana, buñuelos, mantecadas, garullas, pan de bono y pan de yuca) 6-)Cocina internacional para principiantes 7-)Chorizos artesanales 8-)Yogurt artesanal para emprender 9-)Repostería para emprender (mesa dulce, donas, brownies, fresas con chocolate, postres, galletas, cupcakes y chocolatería) 10-)Comidas rápidas para negocio 11-)Sushi para principiantes 12-)Curso para niños 👦 Manejamos horarios flexibles entre semana y domingos. Cocina profesional, repostería artesanal, panadería técnica, formacion gastronomica, técnicas culinarias",
+    desc:        "<p>Academia presencial de cocina, repostería y panadería con clases prácticas y preparaciones para llevar. ¡Aprende, emprende y disfruta con nuestros cursos disponibles!</p><p>1. Repostería y pastelería (tortas, rellenos, cubiertas y decoración). 2. Panadería básica, pizza y hojaldre. 3. Repostería saludable (sin gluten y sin azúcar). 4. Asados al barril. 5. Amasijos colombianos (almojábanas, avena cubana, buñuelos, mantecadas, garullas, pan de bono y pan de yuca). 6. Cocina internacional para principiantes. 7. Chorizos artesanales. 8. Yogurt artesanal para emprender. 9. Repostería para emprender (mesa dulce, donas, brownies, fresas con chocolate, postres, galletas, cupcakes y chocolatería). 10. Comidas rápidas para negocio. 11. Sushi para principiantes. 12. Curso para niños.</p><p>Manejamos horarios flexibles entre semana y domingos.</p><p>Cocina profesional, repostería artesanal, panadería técnica, formación gastronómica, técnicas culinarias.</p>",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
