@@ -3,13 +3,13 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://newplacemosquera.com/</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/categoria/salud</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/categoria/salud/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -18,8 +18,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/categoria/antojos</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/categoria/antojos/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -28,8 +28,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/categoria/hogar</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/categoria/hogar/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -38,8 +38,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/categoria/consumo</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/categoria/consumo/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -48,8 +48,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/categoria/empresarial</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/categoria/empresarial/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -58,8 +58,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/categoria/servicios</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/categoria/servicios/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -68,8 +68,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/categoria/gourmet</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/categoria/gourmet/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -78,8 +78,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/categoria/bienestar</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/categoria/bienestar/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -88,8 +88,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/categoria/shopping</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/categoria/shopping/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -98,8 +98,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/categoria/imagen</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/categoria/imagen/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -108,8 +108,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/categoria/mascotas</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/categoria/mascotas/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -118,8 +118,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/categoria/educacion</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/categoria/educacion/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -128,8 +128,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/categoria/movilidad</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/categoria/movilidad/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -138,8 +138,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/dra-ingrid</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/dra-ingrid/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -147,8 +147,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/dra-julia</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/dra-julia/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -156,8 +156,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/consultorio-terapeutico</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/consultorio-terapeutico/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -165,8 +165,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/lida-tovar</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/lida-tovar/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -174,8 +174,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/laboratorioclinico</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/laboratorioclinico/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -183,17 +183,17 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/fast-medical</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/fast-medical/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosquera.com/assets/logos/fast/inicio-fast- medical.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/fast/inicio-fast-medical.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/odontologa-claudia</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/odontologa-claudia/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -201,8 +201,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/psicologa-yer</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/psicologa-yer/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -210,8 +210,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/lagranparada</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/lagranparada/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -219,8 +219,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/gustoso</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/gustoso/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -228,8 +228,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/elbroasterdelchef</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/elbroasterdelchef/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -237,8 +237,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/rapiexpress</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/rapiexpress/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -246,8 +246,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/hojaviva</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/hojaviva/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -255,8 +255,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/donhojaldre</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/donhojaldre/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -264,8 +264,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/pizzaexpress</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/pizzaexpress/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -273,8 +273,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/ricatentacion</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/ricatentacion/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -282,8 +282,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/sandwichyburger</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/sandwichyburger/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -291,8 +291,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/servipollosla22</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/servipollosla22/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -300,8 +300,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/lacasadelosarroces</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/lacasadelosarroces/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -309,8 +309,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/steel304</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/steel304/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -318,8 +318,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/modularesvr</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/modularesvr/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -327,8 +327,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/maxsecuri</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/maxsecuri/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -336,8 +336,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/galleryhome</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/galleryhome/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -345,8 +345,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/gama</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/gama/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -354,8 +354,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/innova</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/innova/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -363,8 +363,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/mayton</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/mayton/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -372,8 +372,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/multiexpress</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/multiexpress/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -381,8 +381,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/aluminglas</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/aluminglas/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -390,8 +390,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/frescolombiafp</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/frescolombiafp/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -399,8 +399,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/intervidriosgualteros</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/intervidriosgualteros/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -408,8 +408,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/serviciosgasnatural</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/serviciosgasnatural/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -417,8 +417,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/patikoo</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/patikoo/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -426,8 +426,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/compraventa</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/compraventa/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -435,8 +435,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/floraliaflowermarket</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/floraliaflowermarket/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -444,8 +444,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/floresconamor</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/floresconamor/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -453,8 +453,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/merkasa</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/merkasa/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -462,8 +462,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/oldschool</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/oldschool/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -471,8 +471,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/pinateriasaavedra</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/pinateriasaavedra/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -480,8 +480,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/aguatecnicos</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/aguatecnicos/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -489,8 +489,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/baruch</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/baruch/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -498,8 +498,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/elnovillo</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/elnovillo/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -507,8 +507,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/amaretto</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/amaretto/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -516,8 +516,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/madenel</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/madenel/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -525,8 +525,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/eleden</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/eleden/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -534,8 +534,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/variedadessl</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/variedadessl/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -543,8 +543,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/perfileriajd</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/perfileriajd/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -552,8 +552,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/lavanderiamym</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/lavanderiamym/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -561,8 +561,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/lavanderiamismundo</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/lavanderiamismundo/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -570,8 +570,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/imagendigital</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/imagendigital/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -579,8 +579,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/dimashk</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/dimashk/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -588,8 +588,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/asprillarivas</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/asprillarivas/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -597,8 +597,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/benditochicharron</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/benditochicharron/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -606,17 +606,17 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/pomodoro</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/pomodoro/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosquera.com/assets/logos/pomodoro/inicio-pomodoro.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/pomodoro/inicio-pomodoro.webp</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/lagranmuralla</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/lagranmuralla/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -624,8 +624,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/armotos</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/armotos/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -633,8 +633,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/maxioil</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/maxioil/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -642,8 +642,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/barrelec</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/barrelec/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -651,8 +651,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/bikeshop</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/bikeshop/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -660,8 +660,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/cristal</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/cristal/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -669,8 +669,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/wrecords</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/wrecords/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -678,8 +678,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/cheramy</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/cheramy/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -687,8 +687,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/javivet</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/javivet/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -696,8 +696,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/de-maskot-s</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/de-maskot-s/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -705,8 +705,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/grandes-amigos</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/grandes-amigos/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -714,8 +714,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/surgical-care</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/surgical-care/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -723,8 +723,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/distri-mascotas</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/distri-mascotas/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -732,8 +732,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/veterinariajudata</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/veterinariajudata/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -741,8 +741,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/armoniosaspa</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/armoniosaspa/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -750,8 +750,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/guholens</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/guholens/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -759,17 +759,17 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/origenvital</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/origenvital/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosquera.com/assets/logos/origenvital/inicio-origen-vital.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/origenvital/inicio-origen-vital.webp</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/victoriacosmetica</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/victoriacosmetica/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -777,8 +777,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/cortesyestilos</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/cortesyestilos/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -786,8 +786,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/lapeluqueria</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/lapeluqueria/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -795,8 +795,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/nova</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/nova/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -804,8 +804,8 @@
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosquera.com/valentina</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://newplacemosquera.com/valentina/</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>

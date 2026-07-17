@@ -17,6 +17,14 @@
    También regenera sitemap.xml automáticamente con TODAS las
    categorías y negocios (ya no hay que mantenerlo a mano).
 
+   🔧 CORRECCIÓN (2026-07-16): todas las URLs generadas ahora
+   terminan en "/" (barra final), tanto en canonical/OG/JSON-LD
+   como en el sitemap. Esto evita que Netlify responda con un
+   redirect 301 de "/negocio" -> "/negocio/" (porque las carpetas
+   generadas siempre sirven vía index.html dentro de una carpeta),
+   lo cual causaba que Google marcara 28 URLs como "Página con
+   redirección" y no las indexara (confirmado en Search Console).
+
    CÓMO USARLO:
    1. node prerender.js
    2. Arrastra la carpeta completa del proyecto a Netlify, como
@@ -60,10 +68,6 @@ function encontrarArchivo(nombre) {
 
 function cargarDatos() {
   let codigo = fs.readFileSync(encontrarArchivo('datos.js'), 'utf8');
-  // NOTA: esto NO modifica datos.js en disco, solo la copia en memoria.
-  // "const" de nivel superior no se adjunta al objeto global del sandbox
-  // de Node (vm module), así que la cambiamos por "var" únicamente
-  // para poder leer las variables desde este script.
   codigo = codigo
     .replace(/\bconst\s+BLOG\s*=/, 'var BLOG =')
     .replace(/\bconst\s+CATS\s*=/, 'var CATS =')
@@ -87,13 +91,12 @@ function escapeHtml(str) {
     .replace(/>/g, '&gt;');
 }
 
-// Quita etiquetas HTML simples de las descripciones largas para meta description
 function textoPlano(str, maxLen = 160) {
   const limpio = String(str || '').replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
   return limpio.length > maxLen ? limpio.slice(0, maxLen - 1).trim() + '…' : limpio;
 }
 
-/* ─── 3. GENERAR JSON-LD (misma lógica que generateBusinessJSON en app.js) ─── */
+/* ─── 3. GENERAR JSON-LD ─── */
 function jsonLdNegocio(neg, cat, url) {
   const domain = CONFIG.domain;
   let jsonLd = {
@@ -134,10 +137,11 @@ function jsonLdNegocio(neg, cat, url) {
   return jsonLd;
 }
 
-/* ─── 4. GENERAR BLOQUE <head> PARA UN NEGOCIO ─── */
+/* ─── 4. GENERAR BLOQUE <head> PARA UN NEGOCIO ───
+   🔧 CORREGIDO: url ahora termina en "/" */
 function headNegocio(neg, cat, plantillaHead) {
   const domain = CONFIG.domain;
-  const url = `${domain}/${neg.id}`;
+  const url = `${domain}/${neg.id}/`;
   const titulo = `${neg.nombre} — ${CONFIG.siteName}`;
   const descripcion = textoPlano(neg.slogan || neg.desc, 160);
 
@@ -179,10 +183,11 @@ function headNegocio(neg, cat, plantillaHead) {
   </script>`;
 }
 
-/* ─── 5. GENERAR BLOQUE <head> PARA UNA CATEGORÍA ─── */
+/* ─── 5. GENERAR BLOQUE <head> PARA UNA CATEGORÍA ───
+   🔧 CORREGIDO: url ahora termina en "/" */
 function headCategoria(cat, negocios) {
   const domain = CONFIG.domain;
-  const url = `${domain}/categoria/${cat.id}`;
+  const url = `${domain}/categoria/${cat.id}/`;
   const nombreCat = cat.n.charAt(0) + cat.n.slice(1).toLowerCase();
   const titulo = `${nombreCat} en ${CONFIG.ciudad} — ${CONFIG.siteName}`;
   const descripcion = `Encuentra los mejores negocios de ${nombreCat.toLowerCase()} en ${CONFIG.ciudad}, ${CONFIG.region}. Contacto directo por WhatsApp con negocios locales verificados.`;
@@ -234,11 +239,6 @@ function construirPagina(plantillaHTML, nuevoBloqueHead) {
   if (inicio === -1) {
     throw new Error('No se encontró el marcador <!-- SEO BASICO --> en index.html. ¿Se modificó la estructura del head?');
   }
-  // En vez de buscar un comentario fijo tipo "<!-- GOOGLE ANALYTICS -->"
-  // (que cambia de formato entre Funza/Facatativa/Mosquera), cortamos
-  // justo después del </script> que cierra el bloque JSON-LD. Así,
-  // sea cual sea el comentario o código que venga después (Analytics,
-  // manifest, etc.), queda intacto sin depender de su redacción exacta.
   const ldMarker = 'application/ld+json';
   const ldPos = plantillaHTML.indexOf(ldMarker, inicio);
   if (ldPos === -1) {
@@ -259,7 +259,8 @@ function escribirArchivo(rutaRelativa, contenido) {
   fs.writeFileSync(rutaAbs, contenido, 'utf8');
 }
 
-/* ─── 7. GENERAR SITEMAP.XML COMPLETO Y AUTOMÁTICO ─── */
+/* ─── 7. GENERAR SITEMAP.XML COMPLETO Y AUTOMÁTICO ───
+   🔧 CORREGIDO: <loc> de categorías y negocios ahora termina en "/" */
 function generarSitemap(CATS, NEGOCIOS) {
   const hoy = new Date().toISOString().slice(0, 10);
   const domain = CONFIG.domain;
@@ -274,12 +275,12 @@ function generarSitemap(CATS, NEGOCIOS) {
 
   CATS.forEach(cat => {
     const negs = NEGOCIOS.filter(n => n.cat === cat.id);
-    if (!negs.length) return; // no indexamos categorías vacías
+    if (!negs.length) return;
     const imgTag = cat.imgHdr
       ? `\n    <image:image>\n      <image:loc>${domain}/${cat.imgHdr}</image:loc>\n      <image:title>${escapeHtml(cat.n)} en ${CONFIG.ciudad}</image:title>\n    </image:image>`
       : '';
     urls += `  <url>
-    <loc>${domain}/categoria/${cat.id}</loc>
+    <loc>${domain}/categoria/${cat.id}/</loc>
     <lastmod>${hoy}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>${imgTag}
@@ -288,14 +289,14 @@ function generarSitemap(CATS, NEGOCIOS) {
   });
 
   NEGOCIOS.forEach(neg => {
-    if (!neg.id) return; // ignora la plantilla vacía de ejemplo
-    if (!CATS.find(c => c.id === neg.cat)) return; // ignora negocios de ejemplo sin categoría real
+    if (!neg.id) return;
+    if (!CATS.find(c => c.id === neg.cat)) return;
     let imagen = neg.cardImage || neg.portada || (neg.galeria && neg.galeria[0]);
     const imgTag = imagen
       ? `\n    <image:image>\n      <image:loc>${domain}/${imagen}</image:loc>\n    </image:image>`
       : '';
     urls += `  <url>
-    <loc>${domain}/${neg.id}</loc>
+    <loc>${domain}/${neg.id}/</loc>
     <lastmod>${hoy}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>${imgTag}
@@ -312,19 +313,16 @@ ${urls}</urlset>
 
 /* ─── 8. EJECUCIÓN PRINCIPAL ─── */
 function main() {
-  console.log('🔧 Generando páginas estáticas para SEO...\n');
+  console.log('🔧 Generando páginas estáticas para SEO (Mosquera)...\n');
 
   const { CATS, NEGOCIOS } = cargarDatos();
   const plantillaHTML = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
 
   let contadorNeg = 0;
   NEGOCIOS.forEach(neg => {
-    if (!neg.id) return; // ignora el bloque de plantilla vacío en datos.js
+    if (!neg.id) return;
     const cat = CATS.find(c => c.id === neg.cat);
     if (!cat) {
-      // Sin categoría real (ej: "restaurante-ejemplo", "tienda-ejemplo")
-      // = negocio de ejemplo/plantilla, igual que lo trata app.js
-      // (nunca aparece en ningún grid porque ninguna categoría hace match).
       console.log(`  ⏭️  omitido (sin categoría real): ${neg.id}`);
       return;
     }
@@ -338,7 +336,7 @@ function main() {
   let contadorCat = 0;
   CATS.forEach(cat => {
     const negs = NEGOCIOS.filter(n => n.cat === cat.id);
-    if (!negs.length) return; // no generamos página estática para categorías vacías
+    if (!negs.length) return;
     const bloqueHead = headCategoria(cat, negs);
     const pagina = construirPagina(plantillaHTML, bloqueHead);
     escribirArchivo(`categoria/${cat.id}/index.html`, pagina);

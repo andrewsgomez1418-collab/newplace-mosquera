@@ -42,7 +42,7 @@ const CATS = [
   { id:"empresarial",  n:"SOLUCIONES EMPRESARIALES",       e:"", c:"#2c3e50", img:"assets/categorias/categoria-empresarial.webp", imgHdr:"assets/categorias/destacados/salud.webp", showTitle: false},
   { id:"servicios",    n:"SERVICIOS",                      e:"", c:"#d35400", img:"assets/categorias/categoria-servicios.webp", imgHdr:"assets/categorias/destacados/salud.jpg", showTitle: false},
   { id:"gourmet",      n:"EXPERIENCIA GOURMET",            e:"", c:"#922b21", img:"assets/categorias/categoria-gourmet.webp", imgHdr:"assets/categorias/destacados/destacados-gourmet.webp", showTitle: false},
-  { id:"bienestar",    n:"SALUD Y BIENESTAR",              e:"", c:"#1abc9c", img:"assets/categorias/categoria-bienestar.webp", imgHdr:"assets/categorias/destacados/destacado-bienestar.webp", showTitle: false},
+  { id:"bienestar",    n:"SALUD Y BIENESTAR",              e:"", c:"#1abc9c", img:"assets/categorias/categoria-bienestar.webp", imgHdr:"assets/categorias/destacados/destacados-bienestar.webp", showTitle: false},
   { id:"shopping",     n:"SHOPPING",                       e:"", c:"#e5007d", img:"assets/categorias/categoria-shopping.webp", imgHdr:"assets/categorias/destacados/destacados-shopping.webp", showTitle: false},
   { id:"imagen",       n:"IMAGEN Y ESTILO",                e:"", c:"#9b59b6", img:"assets/categorias/categoria-estilo.webp", imgHdr:"assets/categorias/destacados/destacados-imagen-estilo.webp", showTitle: false},
   { id:"mascotas",     n:"MUNDO MASCOTAS",                 e:"", c:"#f39c12", img:"assets/categorias/mascotas.webp", imgHdr:"assets/categorias/destacados/destacados-macotas.webp", showTitle: false},
@@ -377,7 +377,7 @@ const NEGOCIOS = [
     cat:         "salud",
     nombre:      "CONSULTORIO TERAPEUTICO",
     slogan:      "Cada servicio es orientado a tus necesidades garantizando un tratamiento seguro y efectivo. Nuestros servicios realizados por profesionales en fisioterapia",
-    desc:        "Valoración de terapia física Sesión de terapia física Descarga muscular Masajes de relajación y deportivos Valoración y masajes reductores Terapias especializadas Recuperación y maneja de lecciones Prevención de sobrecargas musculares Hidroterapia Vendaje neuromuscular y funcional sanación emocional acompañamiento terapéuticoequilibrio mental desarrollo personal escucha activa",
+    desc:        "Valoración de terapia física<p>Sesión de terapia física<p>Descarga muscular<p>Masajes de relajación y deportivos<p>Valoración y masajes reductores<p>Terapias especializadas<p>Recuperación y manejo de lesiones<p>Prevención de sobrecargas musculares<p>Hidroterapia<p>Vendaje neuromuscular y funcional<p>Sanación emocional<p>Acompañamiento terapéutico<p>Equilibrio mental<p>Desarrollo personal<p>Escucha activa",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -421,7 +421,7 @@ const NEGOCIOS = [
     cat:         "salud",
     nombre:      "LYDA TOVAR ODONTOLOGIA",
     slogan:      "Sonrisa saludable, rehabilitacion dental, blanqueamiento dental, estética dental, diseño de la sonrisa.",
-    desc:        "en “ odontología estética e integral Lyda Tovar” te ofrecemos una atención odontológica integral y personalizada, con las últimas tecnologías y tratamientos innovadores.",
+    desc:        "En “ odontología estética e integral Lyda Tovar” te ofrecemos una atención odontológica integral y personalizada, con las últimas tecnologías y tratamientos innovadores.",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -516,8 +516,8 @@ const NEGOCIOS = [
     /* ─── IMÁGENES Y LOGOS ─── */
     logoFill:    false,
     logoBg:      "#ffffff",
-    logoPerfil:  "assets/logos/fast/logo-fast- medical.jpg",
-    cardImage:   "assets/logos/fast/inicio-fast- medical.jpg",
+    logoPerfil:  "assets/logos/fast/logo-fast-medical.jpg",
+    cardImage:   "assets/logos/fast/inicio-fast-medical.jpg",
     portada:     "assets/logos/fast/portada-fast-medical.jpg",
  
     /* ─── TAMAÑOS RESPONSIVOS (clamp: min, preferido, max) ─── */
@@ -3461,7 +3461,52 @@ const NEGOCIOS = [
   // ══ BIENESTAR ════════════════════════════════════════════════
   // ══ BIENESTAR ════════════════════════════════════════════════
   // ══ BIENESTAR ════════════════════════════════════════════════
-  // ══ BIENESTAR ═══════════════════════════════════════════════
+  // ══ BIENESTAR ════════════════════════════════════════════════
+  {
+    /* ══════════════════════════════════════════════════════════════
+       TIENDA NATURISTA ORIGEN VITAL
+       ══════════════════════════════════════════════════════════════ */
+ 
+    /* ─── INFORMACIÓN BÁSICA ─── */
+    id:          "origenvital",
+    cat:         "bienestar",
+    destacado:   1,
+    nombre:      "TIENDA NATURISTA ORIGEN VITAL",
+    slogan:      "Consiente tu salud de manera natural. ¡ tenemos lo que buscas!",
+    desc:        "Origen Vital es una tienda naturista dedicada al bienestar, la salud y el cuidado integral de las personas.<p> Ofrecemos productos naturales, suplementos, vitaminas, cuidado personal y alternativas saludables para mejorar la calidad de vida de nuestros clientes.<p> Brindamos atención personalizada y asesoría para ayudarte a encontrar opciones naturales que aporten equilibrio, energía y bienestar para tu día a día.<p> Un espacio pensado para quienes buscan vivir de manera más saludable y natural. Bienestar integral, alimentos saludables, medicina natural, suplemento vitamínico, productos naturales</p><p>TIENDA NATURISTA/BIENESTAR/NATURAL/ORGANICO/PRODUCTOS SALUDABLES.",
+    tipo:        "estandar",
+ 
+    /* ─── IMÁGENES Y LOGOS ─── */
+    logoFill:    false,
+    logoBg:      "#ffffff",
+    logoPerfil:  "assets/logos/origenvital/logo-origen-vital.webp",
+    cardImage:   "assets/logos/origenvital/inicio-origen-vital.webp",
+    portada:     "assets/logos/origenvital/portada-origen-vital.webp",
+ 
+    /* ─── TAMAÑOS RESPONSIVOS (clamp: min, preferido, max) ─── */
+    cardHeight:      "clamp(350px, 180vw, 250px)",
+    logoHeight:      "clamp(90px, 8vw, 60px)",
+    portadaHeight:   "clamp(180px, 25vh, 200px)",
+    galeriaHeight:   "clamp(150px, 20vw, 240px)",
+ 
+    /* ─── CONTACTO Y REDES SOCIALES ─── */
+    wa:          "573114023108",
+    tel:         "3114023108",
+    ig:          "https://www.instagram.com/tiendanaturistaorigenvital?igsh=dzZlNWdtcG85OGU3",
+    fb:          "",
+    tk:          "",
+    web:         "",
+ 
+    /* ─── UBICACIÓN Y MAPA ─── */
+    dir:         "3 A 17 sur 96 Moll meridiano novatora local 155 MOSQUERA<P>Calle 7 8 - 16 local 62 Cc Los Pinos MADRID",
+    mapUrl:      "",
+    mapsLink:    "https://maps.app.goo.gl/nYTqYr8v5Rd5EX9R7",
+ 
+    /* ─── GALERÍA DE FOTOS ─── */
+    galeria:     [
+      "assets/logos/origenvital/vital1.webp","assets/logos/origenvital/vital2.webp","assets/logos/origenvital/vital3.webp","assets/logos/origenvital/vital4.webp","assets/logos/origenvital/vital5.webp","assets/logos/origenvital/vital6.webp","assets/logos/origenvital/vital7.webp","assets/logos/origenvital/vital8.webp","assets/logos/origenvital/vital9.webp",
+    ],
+  },
   {
     /* ══════════════════════════════════════════════════════════════
        ESTÉTICA FIGURA ARMONIOSA SPA  
@@ -3549,50 +3594,6 @@ const NEGOCIOS = [
     /* ─── GALERÍA DE FOTOS ─── */
     galeria:     [
       "assets/logos/guholens/hugolens1.jpeg","assets/logos/guholens/hugolens2.jpeg","assets/logos/guholens/hugolens3.jpeg","assets/logos/guholens/hugolens4.jpeg","assets/logos/guholens/hugolens5.jpeg",
-    ],
-  },
-  {
-    /* ══════════════════════════════════════════════════════════════
-       TIENDA NATURISTA ORIGEN VITAL
-       ══════════════════════════════════════════════════════════════ */
- 
-    /* ─── INFORMACIÓN BÁSICA ─── */
-    id:          "origenvital",
-    cat:         "bienestar",
-    nombre:      "TIENDA NATURISTA ORIGEN VITAL",
-    slogan:      "Consiente tu salud de manera natural. ¡ tenemos lo que buscas!",
-    desc:        "Origen Vital es una tienda naturista dedicada al bienestar, la salud y el cuidado integral de las personas. Ofrecemos productos naturales, suplementos, vitaminas, cuidado personal y alternativas saludables para mejorar la calidad de vida de nuestros clientes. Brindamos atención personalizada y asesoría para ayudarte a encontrar opciones naturales que aporten equilibrio, energía y bienestar para tu día a día. Un espacio pensado para quienes buscan vivir de manera más saludable y natural. Bienestar integral, alimentos saludables, medicina natural, suplemento vitamínico, productos naturales",
-    tipo:        "estandar",
- 
-    /* ─── IMÁGENES Y LOGOS ─── */
-    logoFill:    false,
-    logoBg:      "#ffffff",
-    logoPerfil:  "assets/logos/origenvital/logo-origen-vital.webp",
-    cardImage:   "assets/logos/origenvital/inicio-origen-vital.webp",
-    portada:     "assets/logos/origenvital/portada-origen-vital.webp",
- 
-    /* ─── TAMAÑOS RESPONSIVOS (clamp: min, preferido, max) ─── */
-    cardHeight:      "clamp(350px, 180vw, 250px)",
-    logoHeight:      "clamp(90px, 8vw, 60px)",
-    portadaHeight:   "clamp(180px, 25vh, 200px)",
-    galeriaHeight:   "clamp(150px, 20vw, 240px)",
- 
-    /* ─── CONTACTO Y REDES SOCIALES ─── */
-    wa:          "573114023108",
-    tel:         "3114023108",
-    ig:          "https://www.instagram.com/tiendanaturistaorigenvital?igsh=dzZlNWdtcG85OGU3",
-    fb:          "",
-    tk:          "",
-    web:         "",
- 
-    /* ─── UBICACIÓN Y MAPA ─── */
-    dir:         "3 A 17 sur 96 Moll meridiano novatora local 155 MOSQUERA<P>Calle 7 8 - 16 local 62 Cc Los Pinos MADRID",
-    mapUrl:      "",
-    mapsLink:    "https://maps.app.goo.gl/nYTqYr8v5Rd5EX9R7",
- 
-    /* ─── GALERÍA DE FOTOS ─── */
-    galeria:     [
-      "assets/logos/origenvital/vital1.webp","assets/logos/origenvital/vital2.webp","assets/logos/origenvital/vital3.webp","assets/logos/origenvital/vital4.webp","assets/logos/origenvital/vital5.webp","assets/logos/origenvital/vital6.webp",
     ],
   },
   {

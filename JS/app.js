@@ -714,6 +714,16 @@ if (neg.portada) {
   } else {
     logoEl.innerHTML = `<span class="prof-logo-emoji">${logoSrc || cat.e}</span>`;
   }
+
+  const logoBg = document.getElementById('profLogoBg');
+  if (logoBg) {
+    logoBg.style.backgroundColor = neg.logoBg || (cat.c ? cat.c + '12' : '#f5f6fa');
+    if (logoSrc && logoSrc.startsWith('assets')) {
+      logoBg.style.backgroundImage = `url('/${logoSrc}')`;
+    } else {
+      logoBg.style.backgroundImage = 'none';
+    }
+  }
  
   /* ─── ESTILOS DE LOGO APLICADOS A TODOS LOS NEGOCIOS ─── */
   logoEl.style.padding = '4px';
@@ -745,7 +755,11 @@ if (neg.portada) {
     greviews: '<svg viewBox="0 0 24 24"><path fill="#4285F4" d="M23.04 12.27c0-.79-.07-1.54-.2-2.27H12v4.3h6.18a5.28 5.28 0 01-2.29 3.47v2.88h3.7c2.17-2 3.42-4.95 3.42-8.38z"/><path fill="#34A853" d="M12 24c3.1 0 5.7-1.03 7.6-2.79l-3.7-2.88c-1.03.69-2.35 1.1-3.9 1.1-3 0-5.55-2.03-6.46-4.75H1.7v2.98A11.99 11.99 0 0012 24z"/><path fill="#FBBC05" d="M5.54 14.68A7.2 7.2 0 015.16 12c0-.93.16-1.83.38-2.68V6.34H1.7A12 12 0 000 12c0 1.94.46 3.77 1.7 6l3.84-2.98z"/><path fill="#EA4335" d="M12 4.75c1.68 0 3.19.58 4.38 1.71l3.28-3.28C17.7 1.19 15.1 0 12 0 7.4 0 3.4 2.6 1.7 6.34l3.84 2.98C6.45 6.6 9 4.75 12 4.75z"/></svg>',
     compartir: '<svg viewBox="0 0 24 24"><path fill="#E6007A" d="M18 8a3 3 0 10-2.83-4H15a3 3 0 00-2.98 2.66l-5.35 3.06a3 3 0 100 4.56l5.35 3.06A3 3 0 1015 15a2.99 2.99 0 00-.94.15l-5.14-2.94a3.03 3.03 0 000-.42l5.14-2.94c.45.14.93.15.94.15z"/></svg>',
     menu: '<svg viewBox="0 0 24 24"><path fill="#111" d="M6 2v7a2 2 0 002 2v11h2V11a2 2 0 002-2V2H6zm7 0v8c0 1.66 1.34 3 3 3v9h2v-9c1.66 0 3-1.34 3-3V2h-2v6h-1V2h-2v6h-1V2h-2z"/></svg>',
+    menuWhite: '<svg viewBox="0 0 24 24"><path fill="#fff" d="M6 2v7a2 2 0 002 2v11h2V11a2 2 0 002-2V2H6zm7 0v8c0 1.66 1.34 3 3 3v9h2v-9c1.66 0 3-1.34 3-3V2h-2v6h-1V2h-2v6h-1V2h-2z"/></svg>',
     bolsa: '<svg viewBox="0 0 24 24"><path fill="#111" d="M7 7V6a5 5 0 0110 0v1h3l-1.36 13.6A2 2 0 0116.66 22H7.34a2 2 0 01-1.98-1.4L4 7h3zm2 0h6V6a3 3 0 00-6 0v1z"/></svg>',
+    bolsaWhite: '<svg viewBox="0 0 24 24"><path fill="#fff" d="M7 7V6a5 5 0 0110 0v1h3l-1.36 13.6A2 2 0 0116.66 22H7.34a2 2 0 01-1.98-1.4L4 7h3zm2 0h6V6a3 3 0 00-6 0v1z"/></svg>',
+    maps: '<svg viewBox="0 0 24 24"><path fill="#4285F4" d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7z"/><circle cx="12" cy="9" r="2.6" fill="#fff"/></svg>',
+    info: '<svg viewBox="0 0 24 24"><path fill="#111" d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-6h2zm0-8h-2V7h2z"/></svg>',
     rappi: '<svg viewBox="0 0 24 24"><path fill="#fff" d="M2 12.5c1-2 3-3 5-1 1 1 2 1.5 3 1.5 1.5 0 2.5-.7 3.5-1.5 1-.8 2-1 3 0s1 2.5-.5 3.5c-1.5 1-3.5 1.5-6 1.5s-4.5-.5-6-1.5c-1.3-.9-2.5-2.1-2-3.5z"/></svg>',
     didi: '<svg viewBox="0 0 24 24"><path fill="#3D2B1F" d="M7 8a5 5 0 0110 0v5h-2V8a3 3 0 00-6 0v5H7V8z"/><rect x="6.5" y="14" width="2" height="4" rx="1" fill="#3D2B1F"/><rect x="10.5" y="14" width="2" height="4" rx="1" fill="#3D2B1F"/></svg>'
   };
@@ -758,18 +772,25 @@ if (neg.portada) {
       ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_whatsapp',{'business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}','phone':'${neg.wa}'}); window.open('https://wa.me/${neg.wa}?text=Hola!%20Vi%20tu%20negocio%20en%20Newplace%20Store%20y%20quiero%20más%20información', '_blank');" class="abtn wa"><span class="abtn-ico">${ICOS.wa}</span><span class="abtn-txt">WhatsApp</span></a>`;
     }
   if (neg.tel) ab.innerHTML += `<a href="tel:+57${neg.tel}" class="abtn tel"><span class="abtn-ico">${ICOS.tel}</span><span class="abtn-txt">Llamar</span></a>`;
+  if (neg.mapsLinks && neg.mapsLinks.length > 0) {
+    neg.mapsLinks.forEach(sede => {
+      ab.innerHTML += `<a href="${sede.url}" target="_blank" class="abtn maps"><span class="abtn-ico">${ICOS.maps}</span><span class="abtn-txt">${sede.nombre}</span></a>`;
+    });
+  } else if (neg.mapsLink) {
+    ab.innerHTML += `<a href="${neg.mapsLink}" target="_blank" class="abtn maps"><span class="abtn-ico">${ICOS.maps}</span><span class="abtn-txt">Google Maps</span></a>`;
+  }
   if (neg.ig)  ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_social',{'platform':'Instagram','business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}'}); window.open('${neg.ig}', '_blank');" class="abtn ig"><span class="abtn-ico">${ICOS.ig}</span><span class="abtn-txt">Instagram</span></a>`;
 if (neg.tk)  ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_social',{'platform':'TikTok','business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}'}); window.open('${neg.tk}', '_blank');" class="abtn tk"><span class="abtn-ico">${ICOS.tk}</span><span class="abtn-txt">TikTok</span></a>`;
 if (neg.fb)  ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_social',{'platform':'Facebook','business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}'}); window.open('${neg.fb}', '_blank');" class="abtn fb"><span class="abtn-ico">${ICOS.fb}</span><span class="abtn-txt">Facebook</span></a>`;
 if (neg.web) ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_social',{'platform':'Sitio Web','business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}'}); window.open('${neg.web}', '_blank');" class="abtn web"><span class="abtn-ico">${ICOS.web}</span><span class="abtn-txt">${neg.web.replace('https://','')}</span></a>`;
-if (neg.greviews) ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_social',{'platform':'Google Reviews','business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}'}); window.open('${neg.greviews}', '_blank');" class="abtn greviews"><span class="abtn-ico">${ICOS.greviews}</span><span class="abtn-txt">Google Reviews</span></a>`;
+if (neg.greviews) ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_social',{'platform':'Google Reviews','business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}'}); window.open('${neg.greviews}', '_blank');" class="abtn greviews"><span class="abtn-ico">${ICOS.greviews}</span><span class="abtn-txt">Calificar en Google</span></a>`;
 if (neg.rappi) ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_social',{'platform':'Rappi','business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}'}); window.open('${neg.rappi}', '_blank');" class="abtn rappi"><span class="abtn-ico">${ICOS.rappi}</span><span class="abtn-txt">Rappi</span></a>`;
 if (neg.didi) ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_social',{'platform':'DidiFood','business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}'}); window.open('${neg.didi}', '_blank');" class="abtn didi"><span class="abtn-ico">${ICOS.didi}</span><span class="abtn-txt">DidiFood</span></a>`;
   ab.innerHTML += `<button class="abtn compartir-neg" onclick="compartirNegocio('${neg.id}', '${neg.nombre.replace(/'/g, "\\'")}')"><span class="abtn-ico">${ICOS.compartir}</span><span class="abtn-txt">Compartir</span></button>`;
  
   /* Tabs */
   const tabs = document.getElementById('negTabs');
-  tabs.innerHTML = `<button class="tab active" data-tab="info">📋 Información</button>`;
+  tabs.innerHTML = `<button class="tab tab-card active" data-tab="info"><span class="tab-card-ico">${ICOS.info}</span><span>Información</span></button>`;
   document.querySelectorAll('.tab-body').forEach(p => { p.classList.remove('active'); p.innerHTML = ''; });
  
   /* Tab Info */
@@ -787,8 +808,6 @@ if (neg.didi) ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent(
   if (neg.ig)  contactHTML += `<div class="ci"><span>📸</span><a href="${neg.ig}" target="_blank">Instagram</a></div>`;
   if (neg.tk)  contactHTML += `<div class="ci"><span>🎵</span><a href="${neg.tk}" target="_blank">TikTok</a></div>`;
   if (neg.fb)  contactHTML += `<div class="ci"><span>🔵</span><a href="${neg.fb}" target="_blank">Facebook</a></div>`;
-  if (neg.didi) contactHTML += `<div class="ci"><span>🛵</span><a href="${neg.didi}" target="_blank">Didi Food</a></div>`;
-  if (neg.rappi) contactHTML += `<div class="ci"><span>🛵</span><a href="${neg.rappi}" target="_blank">Rappi</a></div>`;
   if (neg.web) contactHTML += `<div class="ci"><span>🌐</span><a href="${neg.web}" target="_blank">${neg.web.replace('https://','')}</a></div>`;
  
   let galHTML = '';
@@ -808,24 +827,10 @@ if (neg.didi) ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent(
       </div></div>`;
   }
  
-  let mapHTML = '';
-  if (neg.mapUrl || neg.mapsLink || (neg.mapsLinks && neg.mapsLinks.length > 0)) {
-    const btnMaps = neg.mapsLinks && neg.mapsLinks.length > 0
-      ? neg.mapsLinks.map(sede => `<a href="${sede.url}" target="_blank" style="display:inline-block;background:var(--primary);color:#fff;padding:10px 22px;border-radius:50px;text-decoration:none;font-weight:700;font-size:.83rem;margin-bottom:14px;margin-right:8px;">📍 ${sede.nombre}</a>`).join('')
-      : (neg.mapsLink ? `<a href="${neg.mapsLink}" target="_blank" style="display:inline-block;background:var(--primary);color:#fff;padding:10px 22px;border-radius:50px;text-decoration:none;font-weight:700;font-size:.83rem;margin-bottom:14px;">📍 Ver en Google Maps / GPS</a>` : '');
-    const iframeMap = neg.mapUrl
-      ? `<iframe src="${neg.mapUrl}" width="100%" height="260" style="border:0;border-radius:16px;display:block" allowfullscreen loading="lazy"></iframe>`
-      : '';
-    mapHTML = `<div class="info-sec"><h3 class="info-ttl">📍 Ubicación</h3>
-      ${neg.dir ? `<p style="font-size:.85rem;color:var(--muted);margin-bottom:10px">${neg.dir}</p>` : ''}
-      ${btnMaps}${iframeMap}
-    </div>`;
-  }
- 
   document.getElementById('tab-info').innerHTML = `
     <div class="info-sec"><h3 class="info-ttl">Sobre nosotros</h3><div class="info-desc">${neg.desc}</div></div>
     ${contactHTML ? `<div class="info-sec"><h3 class="info-ttl">Contacto</h3><div class="contact-list">${contactHTML}</div></div>` : ''}
-    ${mapHTML}${galHTML}`;
+    ${galHTML}`;
   document.getElementById('tab-info').classList.add('active');
  
   /* Tab Menú */
@@ -844,7 +849,7 @@ if (neg.didi) ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent(
   if (neg.tipo === 'catalogo' && neg.catalogo && neg.catalogo.length) {
     const catEsMenu = neg.catalogoNombre === 'menu';
     const catLabel = catEsMenu ? '🍽️ Menú' : '🛍️ Catálogo';
-    tabs.innerHTML += `<button class="tab tab-card tab-catalogo" data-tab="catalogo"><span class="tab-card-ico">${catEsMenu ? ICOS.menu : ICOS.bolsa}</span><span>${catEsMenu ? 'Menú' : 'Catálogo'}</span></button>`;
+    tabs.innerHTML += `<button class="tab tab-card tab-catalogo" data-tab="catalogo"><span class="tab-card-ico">${catEsMenu ? ICOS.menuWhite : ICOS.bolsaWhite}</span><span>${catEsMenu ? 'Menú' : 'Catálogo'}</span></button>`;
     document.getElementById('tab-catalogo').innerHTML = `<div class="prod-grid">
       ${neg.catalogo.map(p => `<div class="prod-card">
         <div class="prod-img-box">${p.img && p.img.includes('.') ? `<img src="/${p.img}" alt="${p.n}">` : `<div class="prod-img-emoji">${p.img||'📦'}</div>`}</div>
@@ -852,7 +857,7 @@ if (neg.didi) ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent(
           <div class="prod-name">${p.n}</div>
           <div class="prod-desc">${p.d||''}</div>
           <div class="prod-price">${p.p}</div>
-          ${(neg.wa || (neg.was && neg.was[0]?.numero)) ? `<a href="https://wa.me/${neg.wa || neg.was[0].numero}?text=Hola!%20Quiero%20${neg.cat === 'salud' ? 'agendar%20cita%20para' : 'comprar'}:%20${encodeURIComponent(p.n)}" class="prod-btn" target="_blank">${neg.cat === 'salud' ? '📅 Agendar cita' : '🛒 Comprar'}</a>` : ''}
+          ${(neg.wa || (neg.was && neg.was[0]?.numero)) ? `<a href="https://wa.me/${neg.wa || neg.was[0].numero}?text=Hola!%20Quiero%20${neg.cat === 'salud' ? 'agendar%20cita%20para' : 'cotizar'}:%20${encodeURIComponent(p.n)}" class="prod-btn" target="_blank"><span class="prod-btn-ico">${neg.cat === 'salud' ? ICOS.cal.replace('#111','currentColor') : '<svg viewBox="0 0 24 24"><path fill="currentColor" d="M7 4h-2l-1 2H2v2h2l3.6 7.59-1.35 2.44A2 2 0 008 21h12v-2H8l1.1-2h7.45a2 2 0 001.79-1.11L21.7 8H6.21l-.94-2H7V4zM6 21a2 2 0 100-4 2 2 0 000 4zm12 0a2 2 0 100-4 2 2 0 000 4z"/></svg>'}</span><span class="prod-btn-txt">${neg.cat === 'salud' ? 'Agendar cita' : 'Cotizar'}</span></a>` : ''}
         </div>
       </div>`).join('')}
     </div>`;
@@ -1000,7 +1005,7 @@ function enviarFormulario() {
   const cuerpo = [
     '¡Hola equipo Newplace Store!',
     '',
-    'Solicito inscribir mi negocio en la revista digital.',
+    'Solicito inscribir mi negocio en Centro Comercial digital.',
     '',
     'DATOS DEL NEGOCIO:',
     '──────────────────',
@@ -1154,7 +1159,7 @@ initSearch();
 /* ─── FUNCIÓN PARA COMPARTIR ─── */
 function compartirPlataforma() {
   const urlActual = window.location.href;
-  const titulo = 'Newplace Store - Revista Publicitaria Digital';
+  const titulo = 'Newplace Store -  Centro Comercial Digital';
   const descripcion = 'Descubre los mejores negocios locales de tu zona en Newplace Store. Conectamos negocios con comunidades.';
   
   // Si el navegador soporta Web Share API (celulares modernos)
