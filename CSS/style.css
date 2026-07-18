@@ -294,7 +294,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--text)}
 .prof-slogan{font-size:.82rem;color:var(--muted);margin-top:3px}
 
 /* BOTONES ACCIÓN */
-.action-bar{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:16px 20px;background:#fff;border-bottom:1px solid #eee}
+.action-bar{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:16px 20px;background:transparent;border-bottom:1px solid #eee}
 .abtn{display:flex;align-items:center;gap:10px;padding:13px 14px;border-radius:16px;text-decoration:none;font-weight:700;font-size:.85rem;transition:all .2s;border:1px solid #f0f0f0;cursor:pointer;font-family:var(--font);background:#fff;color:#1a1a1a;box-shadow:0 2px 6px rgba(0,0,0,.05)}
 .abtn:hover{transform:translateY(-2px);box-shadow:0 4px 14px rgba(0,0,0,.1)}
 .abtn-ico{width:26px;height:26px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
