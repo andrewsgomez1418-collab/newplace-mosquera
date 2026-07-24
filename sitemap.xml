@@ -2,814 +2,814 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://newplacemosqueras.netlify.app/</loc>
+    <loc>https://newplacemosquera.com/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/categoria/salud/</loc>
+    <loc>https://newplacemosquera.com/categoria/salud/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/categorias/destacados/destacados-salud.webp</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/categorias/destacados/destacados-salud.webp</image:loc>
       <image:title>SALUD en Mosquera</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/categoria/antojos/</loc>
+    <loc>https://newplacemosquera.com/categoria/antojos/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/categorias/destacados/destacados-antojos.webp</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/categorias/destacados/destacados-antojos.webp</image:loc>
       <image:title>ANTOJOS en Mosquera</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/categoria/hogar/</loc>
+    <loc>https://newplacemosquera.com/categoria/hogar/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/categorias/destacados/destacados-soluciones-hogar.webp</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/categorias/destacados/destacados-soluciones-hogar.webp</image:loc>
       <image:title>SOLUCIONES DEL HOGAR en Mosquera</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/categoria/consumo/</loc>
+    <loc>https://newplacemosquera.com/categoria/consumo/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/categorias/destacados/destacados-negocios- frecuentes.webp</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/categorias/destacados/destacados-negocios- frecuentes.webp</image:loc>
       <image:title>CONSUMO FRECUENTE en Mosquera</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/categoria/empresarial/</loc>
+    <loc>https://newplacemosquera.com/categoria/empresarial/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/categorias/destacados/salud.webp</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/categorias/destacados/salud.webp</image:loc>
       <image:title>SOLUCIONES EMPRESARIALES en Mosquera</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/categoria/servicios/</loc>
+    <loc>https://newplacemosquera.com/categoria/servicios/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/categorias/destacados/salud.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/categorias/destacados/salud.jpg</image:loc>
       <image:title>SERVICIOS en Mosquera</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/categoria/gourmet/</loc>
+    <loc>https://newplacemosquera.com/categoria/gourmet/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/categorias/destacados/destacados-gourmet.webp</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/categorias/destacados/destacados-gourmet.webp</image:loc>
       <image:title>EXPERIENCIA GOURMET en Mosquera</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/categoria/bienestar/</loc>
+    <loc>https://newplacemosquera.com/categoria/bienestar/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/categorias/destacados/destacados-bienestar.webp</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/categorias/destacados/destacados-bienestar.webp</image:loc>
       <image:title>SALUD Y BIENESTAR en Mosquera</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/categoria/shopping/</loc>
+    <loc>https://newplacemosquera.com/categoria/shopping/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/categorias/destacados/destacados-shopping.webp</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/categorias/destacados/destacados-shopping.webp</image:loc>
       <image:title>SHOPPING en Mosquera</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/categoria/imagen/</loc>
+    <loc>https://newplacemosquera.com/categoria/imagen/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/categorias/destacados/destacados-imagen-estilo.webp</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/categorias/destacados/destacados-imagen-estilo.webp</image:loc>
       <image:title>IMAGEN Y ESTILO en Mosquera</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/categoria/mascotas/</loc>
+    <loc>https://newplacemosquera.com/categoria/mascotas/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/categorias/destacados/destacados-macotas.webp</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/categorias/destacados/destacados-macotas.webp</image:loc>
       <image:title>MUNDO MASCOTAS en Mosquera</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/categoria/educacion/</loc>
+    <loc>https://newplacemosquera.com/categoria/educacion/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/categorias/destacados/destacados-educacion.webp</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/categorias/destacados/destacados-educacion.webp</image:loc>
       <image:title>EDUCACION Y DEPORTES en Mosquera</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/categoria/movilidad/</loc>
+    <loc>https://newplacemosquera.com/categoria/movilidad/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/categorias/destacados/salud.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/categorias/destacados/salud.jpg</image:loc>
       <image:title>TALLERES Y MOVILIDAD en Mosquera</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/dra-ingrid/</loc>
+    <loc>https://newplacemosquera.com/dra-ingrid/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/draingrid/inicio-doctora-ingrid.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/draingrid/inicio-doctora-ingrid.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/dra-julia/</loc>
+    <loc>https://newplacemosquera.com/dra-julia/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/drajulia/inicio-doctora-julia.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/drajulia/inicio-doctora-julia.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/consultorio-terapeutico/</loc>
+    <loc>https://newplacemosquera.com/consultorio-terapeutico/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/terapeutico/inicio-terapeutico.webp</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/terapeutico/inicio-terapeutico.webp</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/lida-tovar/</loc>
+    <loc>https://newplacemosquera.com/lida-tovar/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/lydatovar/inicio-doctora-tovar.webp</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/lydatovar/inicio-doctora-tovar.webp</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/laboratorioclinico/</loc>
+    <loc>https://newplacemosquera.com/laboratorioclinico/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/rosenberg/inicio-centro-medico-rosenber.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/rosenberg/inicio-centro-medico-rosenber.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/fast-medical/</loc>
+    <loc>https://newplacemosquera.com/fast-medical/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/fast/inicio-fast-medical.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/fast/inicio-fast-medical.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/odontologa-claudia/</loc>
+    <loc>https://newplacemosquera.com/odontologa-claudia/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/zalaque/inicio-doctora-claudia.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/zalaque/inicio-doctora-claudia.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/psicologa-yer/</loc>
+    <loc>https://newplacemosquera.com/psicologa-yer/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/yer/inicio-doctora-yolima.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/yer/inicio-doctora-yolima.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/lagranparada/</loc>
+    <loc>https://newplacemosquera.com/lagranparada/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/granparada/inicio-gran-parada.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/granparada/inicio-gran-parada.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/gustoso/</loc>
+    <loc>https://newplacemosquera.com/gustoso/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/gustoso/inicio-gustoso.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/gustoso/inicio-gustoso.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/elbroasterdelchef/</loc>
+    <loc>https://newplacemosquera.com/elbroasterdelchef/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/broasterdelchef/inicio-broaster-chef.webp</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/broasterdelchef/inicio-broaster-chef.webp</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/rapiexpress/</loc>
+    <loc>https://newplacemosquera.com/rapiexpress/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/rapiexpress/inicio-rapi-express.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/rapiexpress/inicio-rapi-express.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/hojaviva/</loc>
+    <loc>https://newplacemosquera.com/hojaviva/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/hojaviva/inicio-hoja-viva.png</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/hojaviva/inicio-hoja-viva.png</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/donhojaldre/</loc>
+    <loc>https://newplacemosquera.com/donhojaldre/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/hojaldre/inicio-hojaldre.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/hojaldre/inicio-hojaldre.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/pizzaexpress/</loc>
+    <loc>https://newplacemosquera.com/pizzaexpress/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/pizzaexpress/inicio-pizza-express.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/pizzaexpress/inicio-pizza-express.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/ricatentacion/</loc>
+    <loc>https://newplacemosquera.com/ricatentacion/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/TENTACION/inicio-rica-tentacion.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/TENTACION/inicio-rica-tentacion.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/sandwichyburger/</loc>
+    <loc>https://newplacemosquera.com/sandwichyburger/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/SANDWICH/inicio-sandwich-burguer.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/SANDWICH/inicio-sandwich-burguer.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/servipollosla22/</loc>
+    <loc>https://newplacemosquera.com/servipollosla22/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/POLLOSLA22/inicio-servipollos.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/POLLOSLA22/inicio-servipollos.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/lacasadelosarroces/</loc>
+    <loc>https://newplacemosquera.com/lacasadelosarroces/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/casadearroces/Inicio-casa-de-los-arroces.webp</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/casadearroces/Inicio-casa-de-los-arroces.webp</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/steel304/</loc>
+    <loc>https://newplacemosquera.com/steel304/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/STTEL/inicio-stell.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/STTEL/inicio-stell.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/modularesvr/</loc>
+    <loc>https://newplacemosquera.com/modularesvr/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/modulares/inicio-modulares-vr.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/modulares/inicio-modulares-vr.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/maxsecuri/</loc>
+    <loc>https://newplacemosquera.com/maxsecuri/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/MAXSECURITY/inicio-cerrajeria-maxsecurity.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/MAXSECURITY/inicio-cerrajeria-maxsecurity.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/galleryhome/</loc>
+    <loc>https://newplacemosquera.com/galleryhome/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/GALLERY/inicio-gallery-home.webp</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/GALLERY/inicio-gallery-home.webp</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/gama/</loc>
+    <loc>https://newplacemosquera.com/gama/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/gama/inicio-gama.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/gama/inicio-gama.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/innova/</loc>
+    <loc>https://newplacemosquera.com/innova/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/innova/inicio-innova.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/innova/inicio-innova.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/mayton/</loc>
+    <loc>https://newplacemosquera.com/mayton/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/mayton/inicio-mayton.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/mayton/inicio-mayton.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/multiexpress/</loc>
+    <loc>https://newplacemosquera.com/multiexpress/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/multiexpress/inicio-multiexpress.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/multiexpress/inicio-multiexpress.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/aluminglas/</loc>
+    <loc>https://newplacemosquera.com/aluminglas/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/ALUMINGLASS/inicio-aluminglass.webp</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/ALUMINGLASS/inicio-aluminglass.webp</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/frescolombiafp/</loc>
+    <loc>https://newplacemosquera.com/frescolombiafp/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/frescolombia/inicio-frescolombia.webp</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/frescolombia/inicio-frescolombia.webp</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/intervidriosgualteros/</loc>
+    <loc>https://newplacemosquera.com/intervidriosgualteros/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/gualteros/inicio-intervidrios.webp</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/gualteros/inicio-intervidrios.webp</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/serviciosgasnatural/</loc>
+    <loc>https://newplacemosquera.com/serviciosgasnatural/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/gasnatural/inicio-gas.webp</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/gasnatural/inicio-gas.webp</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/patikoo/</loc>
+    <loc>https://newplacemosquera.com/patikoo/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/patikoo/inicio-patikoo-pañalera.webp</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/patikoo/inicio-patikoo-pañalera.webp</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/compraventa/</loc>
+    <loc>https://newplacemosquera.com/compraventa/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/compraventa/inicio-compra-y-venta.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/compraventa/inicio-compra-y-venta.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/floraliaflowermarket/</loc>
+    <loc>https://newplacemosquera.com/floraliaflowermarket/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/floralia/inicio-floralia.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/floralia/inicio-floralia.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/floresconamor/</loc>
+    <loc>https://newplacemosquera.com/floresconamor/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/conamor/inicio-flores-y-detalles-con-amor.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/conamor/inicio-flores-y-detalles-con-amor.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/merkasa/</loc>
+    <loc>https://newplacemosquera.com/merkasa/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/merkasa/inicio-merkasa.webp</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/merkasa/inicio-merkasa.webp</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/oldschool/</loc>
+    <loc>https://newplacemosquera.com/oldschool/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/oldschool/inicio-old-school.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/oldschool/inicio-old-school.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/pinateriasaavedra/</loc>
+    <loc>https://newplacemosquera.com/pinateriasaavedra/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/saavedra/inicio-piñateria-saavedra.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/saavedra/inicio-piñateria-saavedra.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/aguatecnicos/</loc>
+    <loc>https://newplacemosquera.com/aguatecnicos/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/aguatecnicos/inicio-aguatecnicos.webp</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/aguatecnicos/inicio-aguatecnicos.webp</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/baruch/</loc>
+    <loc>https://newplacemosquera.com/baruch/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/baruch/inicio-baruch.webp</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/baruch/inicio-baruch.webp</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/elnovillo/</loc>
+    <loc>https://newplacemosquera.com/elnovillo/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/novillo/inicio-el-novillo.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/novillo/inicio-el-novillo.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/amaretto/</loc>
+    <loc>https://newplacemosquera.com/amaretto/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/amaretto/inicio-amaretto.webp</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/amaretto/inicio-amaretto.webp</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/madenel/</loc>
+    <loc>https://newplacemosquera.com/madenel/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/ferrelectricos/inicio-madenel.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/ferrelectricos/inicio-madenel.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/eleden/</loc>
+    <loc>https://newplacemosquera.com/eleden/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/eleden/inicio- fruvery-carniceria.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/eleden/inicio- fruvery-carniceria.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/variedadessl/</loc>
+    <loc>https://newplacemosquera.com/variedadessl/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/variedadessl/inicio-papeleria-y-variedades.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/variedadessl/inicio-papeleria-y-variedades.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/perfileriajd/</loc>
+    <loc>https://newplacemosquera.com/perfileriajd/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/jd/inicio-jd-perfileria.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/jd/inicio-jd-perfileria.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/lavanderiamym/</loc>
+    <loc>https://newplacemosquera.com/lavanderiamym/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/mym/inicio-lavanderia-mym.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/mym/inicio-lavanderia-mym.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/lavanderiamismundo/</loc>
+    <loc>https://newplacemosquera.com/lavanderiamismundo/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/mismundo/inicio-mis-mundo.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/mismundo/inicio-mis-mundo.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/imagendigital/</loc>
+    <loc>https://newplacemosquera.com/imagendigital/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/imagendigital/inicio-imagen-digital.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/imagendigital/inicio-imagen-digital.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/dimashk/</loc>
+    <loc>https://newplacemosquera.com/dimashk/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/dimashk/inicio-arabe-dimashk.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/dimashk/inicio-arabe-dimashk.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/asprillarivas/</loc>
+    <loc>https://newplacemosquera.com/asprillarivas/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/asprilla/inicio-asprilla-rivas.webp</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/asprilla/inicio-asprilla-rivas.webp</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/benditochicharron/</loc>
+    <loc>https://newplacemosquera.com/benditochicharron/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/chicharron/inicio-bendito-chicharron.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/chicharron/inicio-bendito-chicharron.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/pomodoro/</loc>
+    <loc>https://newplacemosquera.com/pomodoro/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/pomodoro/inicio-pomodoro.webp</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/pomodoro/inicio-pomodoro.webp</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/lagranmuralla/</loc>
+    <loc>https://newplacemosquera.com/lagranmuralla/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/muralla/inicio-la-gran-muralla.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/muralla/inicio-la-gran-muralla.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/armotos/</loc>
+    <loc>https://newplacemosquera.com/armotos/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/armotos/inicio-ar-motos.webp</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/armotos/inicio-ar-motos.webp</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/maxioil/</loc>
+    <loc>https://newplacemosquera.com/maxioil/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/maxioil/inicio-max-oil.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/maxioil/inicio-max-oil.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/barrelec/</loc>
+    <loc>https://newplacemosquera.com/barrelec/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/barrelec/inicio-barrelet.webp</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/barrelec/inicio-barrelet.webp</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/bikeshop/</loc>
+    <loc>https://newplacemosquera.com/bikeshop/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/bikeshop/inicio-bike.webp</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/bikeshop/inicio-bike.webp</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/cristal/</loc>
+    <loc>https://newplacemosquera.com/cristal/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/cristal/inicio-cristal-cars.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/cristal/inicio-cristal-cars.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/wrecords/</loc>
+    <loc>https://newplacemosquera.com/wrecords/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/wrecords/inicio-w-records.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/wrecords/inicio-w-records.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/cheramy/</loc>
+    <loc>https://newplacemosquera.com/cheramy/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/cheramy/inicio-cheramy.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/cheramy/inicio-cheramy.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/javivet/</loc>
+    <loc>https://newplacemosquera.com/javivet/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/javi-vet/inicio-javivet.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/javi-vet/inicio-javivet.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/de-maskot-s/</loc>
+    <loc>https://newplacemosquera.com/de-maskot-s/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/demaskot-s/inicio-demaskots.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/demaskot-s/inicio-demaskots.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/grandes-amigos/</loc>
+    <loc>https://newplacemosquera.com/grandes-amigos/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/grandes-amigos/inicio-grandesamigos.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/grandes-amigos/inicio-grandesamigos.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/surgical-care/</loc>
+    <loc>https://newplacemosquera.com/surgical-care/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/surgical/inicio-surgicalcare.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/surgical/inicio-surgicalcare.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/distri-mascotas/</loc>
+    <loc>https://newplacemosquera.com/distri-mascotas/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/distri-mascotas/inicio-distrimascotas.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/distri-mascotas/inicio-distrimascotas.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/veterinariajudata/</loc>
+    <loc>https://newplacemosquera.com/veterinariajudata/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/judata/Portada-judata.webp</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/judata/Portada-judata.webp</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/origenvital/</loc>
+    <loc>https://newplacemosquera.com/origenvital/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/origenvital/inicio-origen-vital.webp</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/origenvital/inicio-origen-vital.webp</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/armoniosaspa/</loc>
+    <loc>https://newplacemosquera.com/armoniosaspa/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/ARMONIOSA/inicio-estetica-figura.webp</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/ARMONIOSA/inicio-estetica-figura.webp</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/guholens/</loc>
+    <loc>https://newplacemosquera.com/guholens/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/guholens/inicio-guho-lens-optica.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/guholens/inicio-guho-lens-optica.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/victoriacosmetica/</loc>
+    <loc>https://newplacemosquera.com/victoriacosmetica/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/VICTORIAESTETICA/inicio-victoria-estetica.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/VICTORIAESTETICA/inicio-victoria-estetica.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/cortesyestilos/</loc>
+    <loc>https://newplacemosquera.com/cortesyestilos/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/cortes/inicio-cortes-y-estilos.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/cortes/inicio-cortes-y-estilos.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/lapeluqueria/</loc>
+    <loc>https://newplacemosquera.com/lapeluqueria/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/lapeluqueria/inicio-la-peluqueria.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/lapeluqueria/inicio-la-peluqueria.jpg</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/nova/</loc>
+    <loc>https://newplacemosquera.com/nova/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/nova/inicio-nova.webp</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/nova/inicio-nova.webp</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://newplacemosqueras.netlify.app/valentina/</loc>
+    <loc>https://newplacemosquera.com/valentina/</loc>
     <lastmod>2026-07-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://newplacemosqueras.netlify.app/assets/logos/valentina/inicio-academia-valentina.jpg</image:loc>
+      <image:loc>https://newplacemosquera.com/assets/logos/valentina/inicio-academia-valentina.jpg</image:loc>
     </image:image>
   </url>
 </urlset>
