@@ -42,7 +42,7 @@ const vm   = require('vm');
 
 /* ─── CONFIGURACIÓN DEL SITIO ─── */
 const CONFIG = {
-  domain:   'https://newplacemosquera.com',
+  domain:   'https://newplacemosqueras.netlify.app',
   ciudad:   'Mosquera',
   region:   'Cundinamarca',
   siteName: 'Newplace Store',

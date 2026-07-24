@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://newplacemosquera.com/sitemap.xml
+Sitemap: https://newplacemosqueras.etlify.app/sitemap.xml
