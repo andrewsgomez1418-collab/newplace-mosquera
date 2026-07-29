@@ -1736,6 +1736,52 @@ const NEGOCIOS = [
       "assets/logos/gasnatural/GAS1.webp","assets/logos/gasnatural/GAS2.webp","assets/logos/gasnatural/GAS3.webp","assets/logos/gasnatural/GAS4.webp","assets/logos/gasnatural/GAS5.webp",
     ],
   },
+  {
+    /* ══════════════════════════════════════════════════════════════
+       HERNÁNDEZ REDES Y MONTAJES ELÉCTRICOS
+       ══════════════════════════════════════════════════════════════ */
+ 
+    /* ─── INFORMACIÓN BÁSICA ─── */
+    id:          "hernandeselectricos",
+    cat:         "hogar",
+    destacado:   1,
+    nombre:      "HERNÁNDEZ REDES Y MONTAJES ELÉCTRICOS",
+    slogan:      "Conectamos tu energía con calidad y seguridad.",
+    desc:        "Somos una empresa especializada en redes y montajes eléctricos, comprometida con brindar soluciones seguras, eficientes y de alta calidad para proyectos residenciales, comerciales e industriales.<p> Contamos con personal capacitado y utilizamos materiales certificados para garantizar instalaciones confiables, cumpliendo con las normas técnicas vigentes.<p> Nuestro objetivo es conectar tus proyectos con energía, innovación y confianza.</p><p>Redes eléctricas/Montajes eléctricos/Instalaciones eléctricas/Mantenimiento eléctrico/Tableros eléctricos/Cableado estructurado/Iluminación LED/Adecuaciones eléctricas/Automatización eléctrica/Proyectos eléctricos.",
+    tipo:        "estandar",
+ 
+    /* ─── IMÁGENES Y LOGOS ─── */
+    logoFill:    false,
+    logoBg:      "#ffffff",
+    logoPerfil:  "assets/logos/hernandeselectricos/logo-hernandez.webp",
+    cardImage:   "assets/logos/hernandeselectricos/inicio-hernandez.webp",
+    portada:     "assets/logos/hernandeselectricos/portada-hernandez.webp",
+ 
+    /* ─── TAMAÑOS RESPONSIVOS (clamp: min, preferido, max) ─── */
+    cardHeight:      "clamp(350px, 180vw, 250px)",
+    logoHeight:      "clamp(90px, 8vw, 60px)",
+    portadaHeight:   "clamp(180px, 25vh, 200px)",
+    galeriaHeight:   "clamp(150px, 20vw, 240px)",
+ 
+    /* ─── CONTACTO Y REDES SOCIALES ─── */
+    wa:          "573114495203",
+    tel:         "3114495203",
+    ig:          "https://www.instagram.com/redesymontajes?igsh=eTF1ZDNzZnc3anR6",
+    fb:          "https://www.facebook.com/share/1NuBKfDMCz/",
+    tk:          "",
+    web:         "",
+    greviews:    "https://g.page/r/Ca8-l_g5AkbQEBM/review",
+ 
+    /* ─── UBICACIÓN Y MAPA ─── */
+    dir:         "",
+    mapUrl:      "",
+    mapsLink:    "https://share.google/T08tcb7T9DGc1m129",
+ 
+    /* ─── GALERÍA DE FOTOS ─── */
+    galeria:     [
+      "assets/logos/hernandeselectricos/1hernandez.webp","assets/logos/hernandeselectricos/2hernandez.webp","assets/logos/hernandeselectricos/3hernandez.webp","assets/logos/hernandeselectricos/4hernandez.webp","assets/logos/hernandeselectricos/5hernandez.webp","assets/logos/hernandeselectricos/6hernandez.webp","assets/logos/hernandeselectricos/7hernandez.webp","assets/logos/hernandeselectricos/8hernandez.webp","assets/logos/hernandeselectricos/9hernandez.webp","assets/logos/hernandeselectricos/10hernandez.webp",
+      ],
+    },
 // ══ SHOPPING ════════════════════════════════════════════════
 // ══ SHOPPING ════════════════════════════════════════════════
 // ══ SHOPPING ════════════════════════════════════════════════

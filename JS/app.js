@@ -840,7 +840,7 @@ if (neg.didi) ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent(
       <div class="menu-sec">
         <div class="menu-sec-ttl">${sec.s}</div>
         <div class="menu-items-box">
-          ${sec.items.map(it => `<div class="mi"><div><div class="mi-name">${it.n}</div><div class="mi-desc">${it.d||''}</div></div><div class="mi-right"><div class="mi-price">${it.p}</div>${(neg.wa || (neg.was && neg.was[0]?.numero)) ? `<a href="https://wa.me/${neg.wa || neg.was[0].numero}?text=${encodeURIComponent('Hola! Quiero ordenar este plato: ' + it.n)}" class="mi-wa" target="_blank" aria-label="Pedir por WhatsApp">${ICOS.waWhite}</a>` : ''}</div></div>`).join('')}
+          ${sec.items.map(it => `<div class="mi"><div class="mi-name">${it.n}</div><div class="mi-desc">${it.d||''}</div><div class="mi-right"><div class="mi-price">${it.p}</div>${(neg.wa || (neg.was && neg.was[0]?.numero)) ? `<a href="https://wa.me/${neg.wa || neg.was[0].numero}?text=${encodeURIComponent('Hola! Quiero ordenar este plato: ' + it.n)}" class="mi-wa" target="_blank" aria-label="Pedir por WhatsApp">${ICOS.waWhite}</a>` : ''}</div></div>`).join('')}
         </div>
       </div>`).join('');
   }
@@ -851,16 +851,108 @@ if (neg.didi) ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent(
     const catLabel = catEsMenu ? '🍽️ Menú' : '🛍️ Catálogo';
     tabs.innerHTML += `<button class="tab tab-card tab-catalogo" data-tab="catalogo"><span class="tab-card-ico">${catEsMenu ? ICOS.menuWhite : ICOS.bolsaWhite}</span><span>${catEsMenu ? 'Menú' : 'Catálogo'}</span></button>`;
     document.getElementById('tab-catalogo').innerHTML = `<div class="prod-grid">
-      ${neg.catalogo.map(p => `<div class="prod-card">
-        <div class="prod-img-box">${p.img && p.img.includes('.') ? `<img src="/${p.img}" alt="${p.n}">` : `<div class="prod-img-emoji">${p.img||'📦'}</div>`}</div>
+      ${neg.catalogo.map(p => {
+        const waNum = neg.wa || (neg.was && neg.was[0]?.numero);
+        const ctaHref = waNum ? `https://wa.me/${waNum}?text=Hola!%20Quiero%20${neg.cat === 'salud' ? 'agendar%20cita%20para' : 'cotizar'}:%20${encodeURIComponent(p.n)}` : '';
+        const ctaLabel = neg.cat === 'salud' ? 'Agendar cita' : 'Cotizar';
+        const ctaIco = neg.cat === 'salud' ? ICOS.cal.replace('#111','currentColor') : '<svg viewBox="0 0 24 24"><path fill="currentColor" d="M7 4h-2l-1 2H2v2h2l3.6 7.59-1.35 2.44A2 2 0 008 21h12v-2H8l1.1-2h7.45a2 2 0 001.79-1.11L21.7 8H6.21l-.94-2H7V4zM6 21a2 2 0 100-4 2 2 0 000 4zm12 0a2 2 0 100-4 2 2 0 000 4z"/></svg>';
+        const esImg = p.img && p.img.includes('.');
+        const nombreSeguro = (p.n||'').replace(/"/g,'&quot;');
+        return `<div class="prod-card">
+        <div class="${esImg ? 'prod-img-box prod-img-expandable' : 'prod-img-box'}" ${esImg ? `data-img="/${p.img}" data-name="${nombreSeguro}" data-cta-href="${ctaHref}" data-cta-label="${ctaLabel}" onclick="abrirProductoExpandido(this)"` : ''}>${esImg ? `<img src="/${p.img}" alt="${p.n}">` : `<div class="prod-img-emoji">${p.img||'📦'}</div>`}</div>
         <div class="prod-body">
           <div class="prod-name">${p.n}</div>
           <div class="prod-desc">${p.d||''}</div>
           <div class="prod-price">${p.p}</div>
-          ${(neg.wa || (neg.was && neg.was[0]?.numero)) ? `<a href="https://wa.me/${neg.wa || neg.was[0].numero}?text=Hola!%20Quiero%20${neg.cat === 'salud' ? 'agendar%20cita%20para' : 'cotizar'}:%20${encodeURIComponent(p.n)}" class="prod-btn" target="_blank"><span class="prod-btn-ico">${neg.cat === 'salud' ? ICOS.cal.replace('#111','currentColor') : '<svg viewBox="0 0 24 24"><path fill="currentColor" d="M7 4h-2l-1 2H2v2h2l3.6 7.59-1.35 2.44A2 2 0 008 21h12v-2H8l1.1-2h7.45a2 2 0 001.79-1.11L21.7 8H6.21l-.94-2H7V4zM6 21a2 2 0 100-4 2 2 0 000 4zm12 0a2 2 0 100-4 2 2 0 000 4z"/></svg>'}</span><span class="prod-btn-txt">${neg.cat === 'salud' ? 'Agendar cita' : 'Cotizar'}</span></a>` : ''}
+          ${ctaHref ? `<a href="${ctaHref}" class="prod-btn" target="_blank"><span class="prod-btn-ico">${ctaIco}</span><span class="prod-btn-txt">${ctaLabel}</span></a>` : ''}
         </div>
-      </div>`).join('')}
+      </div>`;
+      }).join('')}
     </div>`;
+  }
+
+  /* Ampliar foto de producto a pantalla completa, con swipe entre fotos y CTA fijo abajo */
+  window.abrirProductoExpandido = function(el) {
+    const grid = el.closest('.prod-grid');
+    const items = Array.from(grid.querySelectorAll('.prod-img-expandable'));
+    window._prodExpandList = items.map(it => ({
+      img: it.dataset.img,
+      name: it.dataset.name,
+      ctaHref: it.dataset.ctaHref,
+      ctaLabel: it.dataset.ctaLabel
+    }));
+    window._prodExpandIndex = items.indexOf(el);
+    renderProdExpand();
+    document.addEventListener('keydown', prodExpandKeyHandler);
+  };
+
+  function renderProdExpand() {
+    document.querySelectorAll('.prod-expand-overlay').forEach(o => o.remove());
+    const lista = window._prodExpandList || [];
+    const idx = window._prodExpandIndex || 0;
+    const total = lista.length;
+    if (!total) return;
+    const p = lista[idx];
+
+    const overlay = document.createElement('div');
+    overlay.className = 'prod-expand-overlay';
+    overlay.innerHTML = `
+      <button class="prod-expand-close" aria-label="Cerrar">✕</button>
+      ${total > 1 ? '<button class="prod-expand-arrow prod-expand-prev" aria-label="Anterior">‹</button>' : ''}
+      <img src="${p.img}" alt="${p.name}" class="prod-expand-img">
+      ${total > 1 ? '<button class="prod-expand-arrow prod-expand-next" aria-label="Siguiente">›</button>' : ''}
+      ${total > 1 ? `<div class="prod-expand-counter">${idx + 1} / ${total}</div>` : ''}
+      ${p.ctaHref ? `<a href="${p.ctaHref}" target="_blank" class="prod-btn prod-expand-cta"><span class="prod-btn-txt">${p.ctaLabel}</span></a>` : ''}
+    `;
+    document.body.appendChild(overlay);
+    document.body.style.overflow = 'hidden';
+
+    const cerrar = () => {
+      overlay.remove();
+      document.body.style.overflow = '';
+      document.removeEventListener('keydown', prodExpandKeyHandler);
+    };
+    overlay.querySelector('.prod-expand-close').onclick = cerrar;
+    overlay.addEventListener('click', e => { if (e.target === overlay) cerrar(); });
+
+    if (total > 1) {
+      overlay.querySelector('.prod-expand-prev').onclick = e => { e.stopPropagation(); prodExpandIrA((idx - 1 + total) % total); };
+      overlay.querySelector('.prod-expand-next').onclick = e => { e.stopPropagation(); prodExpandIrA((idx + 1) % total); };
+    }
+
+    /* Swipe táctil */
+    let touchStartX = 0, touchStartY = 0;
+    overlay.addEventListener('touchstart', e => {
+      touchStartX = e.touches[0].clientX;
+      touchStartY = e.touches[0].clientY;
+    }, { passive: true });
+
+    overlay.addEventListener('touchend', e => {
+      const dx = e.changedTouches[0].clientX - touchStartX;
+      const dy = e.changedTouches[0].clientY - touchStartY;
+      if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) && total > 1) {
+        if (dx > 0) prodExpandIrA((idx - 1 + total) % total);
+        else prodExpandIrA((idx + 1) % total);
+      }
+    }, { passive: true });
+  }
+
+  function prodExpandIrA(nuevoIndex) {
+    window._prodExpandIndex = nuevoIndex;
+    renderProdExpand();
+  }
+
+  function prodExpandKeyHandler(e) {
+    const total = (window._prodExpandList || []).length;
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.prod-expand-overlay').forEach(o => o.remove());
+      document.body.style.overflow = '';
+      document.removeEventListener('keydown', prodExpandKeyHandler);
+      return;
+    }
+    if (!total) return;
+    if (e.key === 'ArrowLeft' && total > 1) prodExpandIrA((window._prodExpandIndex - 1 + total) % total);
+    if (e.key === 'ArrowRight' && total > 1) prodExpandIrA((window._prodExpandIndex + 1) % total);
   }
  
   /* Cambio de tabs */
