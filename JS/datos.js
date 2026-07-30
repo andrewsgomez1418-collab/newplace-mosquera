@@ -1745,7 +1745,7 @@ const NEGOCIOS = [
     id:          "hernandeselectricos",
     cat:         "hogar",
     destacado:   1,
-    nombre:      "HERNÁNDEZ REDES Y MONTAJES ELÉCTRICOS",
+    nombre:      "REDES Y MONTAJES ELÉCTRICOS HERNÁNDEZ SAS NIT:901359503",
     slogan:      "Conectamos tu energía con calidad y seguridad.",
     desc:        "Somos una empresa especializada en redes y montajes eléctricos, comprometida con brindar soluciones seguras, eficientes y de alta calidad para proyectos residenciales, comerciales e industriales.<p> Contamos con personal capacitado y utilizamos materiales certificados para garantizar instalaciones confiables, cumpliendo con las normas técnicas vigentes.<p> Nuestro objetivo es conectar tus proyectos con energía, innovación y confianza.</p><p>Redes eléctricas/Montajes eléctricos/Instalaciones eléctricas/Mantenimiento eléctrico/Tableros eléctricos/Cableado estructurado/Iluminación LED/Adecuaciones eléctricas/Automatización eléctrica/Proyectos eléctricos.",
     tipo:        "estandar",
@@ -1769,7 +1769,7 @@ const NEGOCIOS = [
     ig:          "https://www.instagram.com/redesymontajes?igsh=eTF1ZDNzZnc3anR6",
     fb:          "https://www.facebook.com/share/1NuBKfDMCz/",
     tk:          "",
-    web:         "",
+    web:         "https://redeselectricashernandez.com.co/?fbclid=IwdGRjcATNDGtjbGNrBM0MWGV4dG4DYWVtAjExAHNydGMGYXBwX2lkDDM1MDY4NTUzMTcyOAABHpnK61PL_Fm7CkVwcPR_WnDR3EUmeCpk7P38cRvYkAbND8WX5vgRKrKJKKGC_aem_QeXyRW7mmmiIpoJcA0N4sg",
     greviews:    "https://g.page/r/Ca8-l_g5AkbQEBM/review",
  
     /* ─── UBICACIÓN Y MAPA ─── */
@@ -3216,9 +3216,9 @@ const NEGOCIOS = [
     logo:        "assets/logos/logo-cheramy.jpeg",
     logoFill:    false,
     logoBg:      "#ffffff",
-    logoPerfil:  "assets/logos/cheramy/logo-cheramy.jpg",
-    cardImage:   "assets/logos/cheramy/inicio-cheramy.jpg",
-    portada:     "assets/logos/cheramy/portada-cheramy.jpg",
+    logoPerfil:  "assets/logos/cheramy/logocheramy.webp",
+    cardImage:   "assets/logos/cheramy/iniciocheramy.webp",
+    portada:     "assets/logos/cheramy/portadacheramy.webp",
  
     /* ─── TAMAÑOS RESPONSIVOS (clamp: min, preferido, max) ─── */
     cardHeight:      "clamp(350px, 180vw, 250px)",
@@ -3240,7 +3240,8 @@ const NEGOCIOS = [
     mapUrl:      "",
     mapsLink:    "https://maps.app.goo.gl/7fKRfQu7PC8ve27x6",
     /* --- GALERÍA DE FOTOS --- */
-    galeria:     ["assets/logos/cheramy/cheramy-foto1.jpg", "assets/logos/cheramy/cheramy-foto2.jpg","assets/logos/cheramy/cheramy-foto3.jpg",],
+    galeria:     ["assets/logos/cheramy/cheramy1.webp","assets/logos/cheramy/cheramy2.webp",
+      ],
   },
   {
     /* ══════════════════════════════════════════════════════════════

@@ -419,7 +419,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--text)}
 /* PÁGINAS */
 .page{display:none}
 .page.active{display:block}
-.prof-logo-bg{position:fixed;inset:0;background-repeat:no-repeat;background-position:center;background-size:min(85vw,600px);opacity:1;pointer-events:none;z-index:-1}
+.prof-logo-bg{position:fixed;inset:0;background-repeat:no-repeat;background-position:center;background-size:min(85vw,600px);opacity:.30;pointer-events:none;z-index:-1}
 
 /* BLOG MOSQUERA */
 .blog-section{max-width:1080px;margin:36px auto 0;padding:0 20px}
