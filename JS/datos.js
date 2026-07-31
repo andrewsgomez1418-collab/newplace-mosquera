@@ -1748,7 +1748,7 @@ const NEGOCIOS = [
     nombre:      "REDES Y MONTAJES ELÉCTRICOS HERNÁNDEZ SAS NIT:901359503",
     slogan:      "Conectamos tu energía con calidad y seguridad.",
     desc:        "Somos una empresa especializada en redes y montajes eléctricos, comprometida con brindar soluciones seguras, eficientes y de alta calidad para proyectos residenciales, comerciales e industriales.<p> Contamos con personal capacitado y utilizamos materiales certificados para garantizar instalaciones confiables, cumpliendo con las normas técnicas vigentes.<p> Nuestro objetivo es conectar tus proyectos con energía, innovación y confianza.</p><p>Redes eléctricas/Montajes eléctricos/Instalaciones eléctricas/Mantenimiento eléctrico/Tableros eléctricos/Cableado estructurado/Iluminación LED/Adecuaciones eléctricas/Automatización eléctrica/Proyectos eléctricos.",
-    tipo:        "estandar",
+    tipo:        "catalogo",
  
     /* ─── IMÁGENES Y LOGOS ─── */
     logoFill:    false,
@@ -1781,7 +1781,22 @@ const NEGOCIOS = [
     galeria:     [
       "assets/logos/hernandeselectricos/1hernandez.webp","assets/logos/hernandeselectricos/2hernandez.webp","assets/logos/hernandeselectricos/3hernandez.webp","assets/logos/hernandeselectricos/4hernandez.webp","assets/logos/hernandeselectricos/5hernandez.webp","assets/logos/hernandeselectricos/6hernandez.webp","assets/logos/hernandeselectricos/7hernandez.webp","assets/logos/hernandeselectricos/8hernandez.webp","assets/logos/hernandeselectricos/9hernandez.webp","assets/logos/hernandeselectricos/10hernandez.webp",
       ],
-    },
+       /* ─── CATÁLOGO DE SERVICIOS ─── */
+    catalogo: [
+      { n:"Mantenimiento correctivo y preventivo", p:"", img:"assets/logos/hernandeselectricos/1electricidad.webp", d:"Mantenimiento correctivo y preventivo de redes de distribución eléctrica" },
+      { n:"Diseño y construcción de redes eléctricas", p:"", img:"assets/logos/hernandeselectricos/2electricidad.webp", d:"Diseño y construcción de tus redes eléctricas para el área residencial, comercial e industrial" },
+      { n:"CCTV", p:"", img:"assets/logos/hernandeselectricos/3electricidad.webp", d:"Sistema de circuitos cerrados de televisión, incluye mantenimiento e instalación de cámaras" },
+      { n:"Alumbrado público", p:"", img:"assets/logos/hernandeselectricos/4electricidad.webp", d:"Alumbrado público para todas las áreas requeridas" },
+      { n:"Sistema fotovoltaico", p:"", img:"assets/logos/hernandeselectricos/5electricidad.webp", d:"Sistema de energía fotovoltaica con conexiones a la red, híbrido y aislado" },
+      { n:"Medidores y aumento de carga", p:"", img:"assets/logos/hernandeselectricos/6electricidad.webp", d:"Indemnización de cuentas, aumento de carga, traslado de medidores" },
+      { n:"Subestaciones de transformación", p:"", img:"assets/logos/hernandeselectricos/7electricidad.webp", d:"Construcción y mantenimiento de subestaciones de transformación para la distribución general de circuitos" },
+      { n:"Trámites ante operadores de red", p:"", img:"assets/logos/hernandeselectricos/8electricidad.webp", d:"Diseño, radicación y acompañamiento ante los diferentes operadores de la red" },
+      { n:"Venta de materiales certificados", p:"", img:"assets/logos/hernandeselectricos/9electricidad.webp", d:"Venta de materiales certificados para redes de BT y MT e iluminación" },
+      { n:"Voz y datos", p:"", img:"assets/logos/hernandeselectricos/10electricidad.webp", d:"Diseño e instalación de voz y datos para pequeñas, medianas y grandes empresas" },
+      { n:"Visita técnica en terreno", p:"", img:"assets/logos/hernandeselectricos/11electricidad.webp", d:"Visita técnica en terreno con personal calificado y experto según su necesidad, incluye informe preliminar" },
+    ],
+  },
+    
 // ══ SHOPPING ════════════════════════════════════════════════
 // ══ SHOPPING ════════════════════════════════════════════════
 // ══ SHOPPING ════════════════════════════════════════════════
