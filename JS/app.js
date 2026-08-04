@@ -849,16 +849,28 @@ if (neg.didi) ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent(
   if (neg.tipo === 'catalogo' && neg.catalogo && neg.catalogo.length) {
     const catEsMenu = neg.catalogoNombre === 'menu';
     const catLabel = catEsMenu ? '🍽️ Menú' : '🛍️ Catálogo';
-    tabs.innerHTML += `<button class="tab tab-card tab-catalogo" data-tab="catalogo"><span class="tab-card-ico">${catEsMenu ? ICOS.menuWhite : ICOS.bolsaWhite}</span><span>${catEsMenu ? 'Menú' : 'Catálogo'}</span></button>`;
-    document.getElementById('tab-catalogo').innerHTML = `<div class="prod-grid">
-      ${neg.catalogo.map(p => {
-        const waNum = neg.wa || (neg.was && neg.was[0]?.numero);
-        const ctaHref = waNum ? `https://wa.me/${waNum}?text=Hola!%20Quiero%20${neg.cat === 'salud' ? 'agendar%20cita%20para' : 'cotizar'}:%20${encodeURIComponent(p.n)}` : '';
-        const ctaLabel = neg.cat === 'salud' ? 'Agendar cita' : 'Cotizar';
-        const ctaIco = neg.cat === 'salud' ? ICOS.cal.replace('#111','currentColor') : '<svg viewBox="0 0 24 24"><path fill="currentColor" d="M7 4h-2l-1 2H2v2h2l3.6 7.59-1.35 2.44A2 2 0 008 21h12v-2H8l1.1-2h7.45a2 2 0 001.79-1.11L21.7 8H6.21l-.94-2H7V4zM6 21a2 2 0 100-4 2 2 0 000 4zm12 0a2 2 0 100-4 2 2 0 000 4z"/></svg>';
-        const esImg = p.img && p.img.includes('.');
-        const nombreSeguro = (p.n||'').replace(/"/g,'&quot;');
-        return `<div class="prod-card">
+    const esPorSecciones = Array.isArray(neg.catalogo[0]?.items);
+    const secTitulos = esPorSecciones ? neg.catalogo.map(sec => sec.s).filter(Boolean) : [];
+
+    ensureCatalogoMenuStyles();
+    tabs.innerHTML += `<div class="tab-catalogo-wrap">
+      <button class="tab tab-card tab-catalogo" data-tab="catalogo">
+        <span class="tab-card-ico">${catEsMenu ? ICOS.menuWhite : ICOS.bolsaWhite}</span><span>${catEsMenu ? 'Menú' : 'Catálogo'}</span>${secTitulos.length > 1 ? `<span class="tab-catalogo-caret">▾</span>` : ''}
+      </button>
+      ${secTitulos.length > 1 ? `<div class="tab-catalogo-menu" id="tab-catalogo-menu">
+        ${secTitulos.map((t, i) => `<button type="button" class="tab-catalogo-menu-item" data-catsec="cat-sec-${i}">${t}</button>`).join('')}
+      </div>` : ''}
+    </div>`;
+
+    /* Genera la tarjeta HTML de un producto individual */
+    const renderTarjetaProducto = (p) => {
+      const waNum = neg.wa || (neg.was && neg.was[0]?.numero);
+      const ctaHref = waNum ? `https://wa.me/${waNum}?text=Hola!%20Quiero%20${neg.cat === 'salud' ? 'agendar%20cita%20para' : 'cotizar'}:%20${encodeURIComponent(p.n)}` : '';
+      const ctaLabel = neg.cat === 'salud' ? 'Agendar cita' : 'Cotizar';
+      const ctaIco = neg.cat === 'salud' ? ICOS.cal.replace('#111','currentColor') : '<svg viewBox="0 0 24 24"><path fill="currentColor" d="M7 4h-2l-1 2H2v2h2l3.6 7.59-1.35 2.44A2 2 0 008 21h12v-2H8l1.1-2h7.45a2 2 0 001.79-1.11L21.7 8H6.21l-.94-2H7V4zM6 21a2 2 0 100-4 2 2 0 000 4zm12 0a2 2 0 100-4 2 2 0 000 4z"/></svg>';
+      const esImg = p.img && p.img.includes('.');
+      const nombreSeguro = (p.n||'').replace(/"/g,'&quot;');
+      return `<div class="prod-card">
         <div class="${esImg ? 'prod-img-box prod-img-expandable' : 'prod-img-box'}" ${esImg ? `data-img="/${p.img}" data-name="${nombreSeguro}" data-cta-href="${ctaHref}" data-cta-label="${ctaLabel}" onclick="abrirProductoExpandido(this)"` : ''}>${esImg ? `<img src="/${p.img}" alt="${p.n}">` : `<div class="prod-img-emoji">${p.img||'📦'}</div>`}</div>
         <div class="prod-body">
           <div class="prod-name">${p.n}</div>
@@ -867,8 +879,24 @@ if (neg.didi) ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent(
           ${ctaHref ? `<a href="${ctaHref}" class="prod-btn" target="_blank"><span class="prod-btn-ico">${ctaIco}</span><span class="prod-btn-txt">${ctaLabel}</span></a>` : ''}
         </div>
       </div>`;
-      }).join('')}
-    </div>`;
+    };
+
+    /* Detecta si el catálogo viene dividido por secciones con título (igual que el Menú de Amaretto)
+       Formato con secciones:  catalogo: [ { s:"Título", items:[ {n,p,img,d}, ... ] }, ... ]
+       Formato plano (viejo):  catalogo: [ {n,p,img,d}, ... ]  → sigue funcionando igual, sin títulos */
+    if (esPorSecciones) {
+      document.getElementById('tab-catalogo').innerHTML = neg.catalogo.map((sec, i) => `
+        <div class="menu-sec" id="cat-sec-${i}">
+          <div class="menu-sec-ttl">${sec.s}</div>
+          <div class="prod-grid">
+            ${sec.items.map(p => renderTarjetaProducto(p)).join('')}
+          </div>
+        </div>`).join('');
+    } else {
+      document.getElementById('tab-catalogo').innerHTML = `<div class="prod-grid">
+        ${neg.catalogo.map(p => renderTarjetaProducto(p)).join('')}
+      </div>`;
+    }
   }
 
   /* Ampliar foto de producto a pantalla completa, con swipe entre fotos y CTA fijo abajo */
@@ -964,11 +992,52 @@ if (neg.didi) ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent(
       document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
     });
   });
+
+  /* Menú desplegable con los títulos (s) de las secciones del Catálogo */
+  const catWrap = tabs.querySelector('.tab-catalogo-wrap');
+  if (catWrap) {
+    const catBtn = catWrap.querySelector('.tab-catalogo');
+    const catMenu = catWrap.querySelector('.tab-catalogo-menu');
+    if (catMenu) {
+      catBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        catWrap.classList.toggle('open');
+      });
+      catMenu.querySelectorAll('.tab-catalogo-menu-item').forEach(item => {
+        item.addEventListener('click', (e) => {
+          e.stopPropagation();
+          catWrap.classList.remove('open');
+          const target = document.getElementById(item.dataset.catsec);
+          if (target) setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
+        });
+      });
+      document.addEventListener('click', (e) => {
+        if (!catWrap.contains(e.target)) catWrap.classList.remove('open');
+      });
+    }
+  }
  
   updateMetaTags(neg, cat);
   showPage('neg');
 }
  
+
+function ensureCatalogoMenuStyles() {
+  if (document.getElementById('catalogo-menu-styles')) return;
+  const style = document.createElement('style');
+  style.id = 'catalogo-menu-styles';
+  style.textContent = `
+    .tab-catalogo-wrap{position:relative;display:inline-block;}
+    .tab-catalogo-caret{margin-left:4px;font-size:.75em;transition:transform .2s;display:inline-block;}
+    .tab-catalogo-wrap.open .tab-catalogo-caret{transform:rotate(180deg);}
+    .tab-catalogo-menu{position:absolute;top:calc(100% + 6px);left:0;min-width:220px;max-width:320px;max-height:0;overflow:hidden;background:#fff;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.15);border:1px solid rgba(0,0,0,.06);z-index:50;opacity:0;transform:translateY(-6px);transition:max-height .25s ease,opacity .2s ease,transform .2s ease;padding:0;}
+    .tab-catalogo-wrap.open .tab-catalogo-menu{max-height:320px;overflow-y:auto;opacity:1;transform:translateY(0);padding:6px;}
+    .tab-catalogo-menu-item{display:block;width:100%;text-align:left;background:none;border:none;padding:10px 12px;font-size:.9rem;font-weight:600;color:#222;cursor:pointer;border-radius:6px;line-height:1.3;}
+    .tab-catalogo-menu-item:hover{background:rgba(0,0,0,.06);}
+    .tab-catalogo-menu-item + .tab-catalogo-menu-item{margin-top:2px;}
+  `;
+  document.head.appendChild(style);
+}
 
 function ensureLBStyles() {
   if (document.getElementById('lb-carousel-styles')) return;

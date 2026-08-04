@@ -1744,7 +1744,6 @@ const NEGOCIOS = [
     /* ─── INFORMACIÓN BÁSICA ─── */
     id:          "hernandeselectricos",
     cat:         "hogar",
-    destacado:   1,
     nombre:      "REDES Y MONTAJES ELÉCTRICOS HERNÁNDEZ SAS NIT:901359503",
     slogan:      "Conectamos tu energía con calidad y seguridad.",
     desc:        "Somos una empresa especializada en redes y montajes eléctricos, comprometida con brindar soluciones seguras, eficientes y de alta calidad para proyectos residenciales, comerciales e industriales.<p> Contamos con personal capacitado y utilizamos materiales certificados para garantizar instalaciones confiables, cumpliendo con las normas técnicas vigentes.<p> Nuestro objetivo es conectar tus proyectos con energía, innovación y confianza.</p><p>Redes eléctricas/Montajes eléctricos/Instalaciones eléctricas/Mantenimiento eléctrico/Tableros eléctricos/Cableado estructurado/Iluminación LED/Adecuaciones eléctricas/Automatización eléctrica/Proyectos eléctricos.",
@@ -3536,7 +3535,7 @@ const NEGOCIOS = [
     nombre:      "TIENDA NATURISTA ORIGEN VITAL",
     slogan:      "Consiente tu salud de manera natural. ¡ tenemos lo que buscas!",
     desc:        "<p>Origen Vital es una tienda naturista dedicada al bienestar, la salud y el cuidado integral de las personas.</p><p>Ofrecemos productos naturales, suplementos, vitaminas, cuidado personal y alternativas saludables para mejorar la calidad de vida de nuestros clientes.</p><p>Brindamos atención personalizada y asesoría para ayudarte a encontrar opciones naturales que aporten equilibrio, energía y bienestar para tu día a día. Un espacio pensado para quienes buscan vivir de manera más saludable y natural.</p><p>Bienestar integral, alimentos saludables, medicina natural, suplemento vitamínico, productos naturales.</p><p>Tienda naturista, bienestar, natural, orgánico, productos saludables.</p>",
-    tipo:        "estandar",
+    tipo:        "catalogo",
  
     /* ─── IMÁGENES Y LOGOS ─── */
     logoFill:    false,
@@ -3567,6 +3566,54 @@ const NEGOCIOS = [
     /* ─── GALERÍA DE FOTOS ─── */
     galeria:     [
       "assets/logos/origenvital/vital1.webp","assets/logos/origenvital/vital2.webp","assets/logos/origenvital/vital3.webp","assets/logos/origenvital/vital4.webp","assets/logos/origenvital/vital5.webp","assets/logos/origenvital/vital6.webp","assets/logos/origenvital/vital7.webp","assets/logos/origenvital/vital8.webp","assets/logos/origenvital/vital9.webp",
+    ],
+    /* ─── CATÁLOGO DE PRODUCTOS ─── */
+    catalogo: [
+      {
+        s: "SUPLEMENTOS DIETARIOS",
+  items: [
+  { n:"TNT Ultra Creatina 100% Monohidrato", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/1origen.webp", d:"Creatina monohidrato Creapure, 150g, 50 porciones, sin sabor" },
+  { n:"Vitanas Creatine Time", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/2origen.webp", d:"Creatina monohidrato micronizada, 150g, 50 porciones, sin sabor" },
+  { n:"Bi Pro Classic Whey Protein Isolate", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/3origen.webp", d:"Nutramerican, aislado de proteína de suero, sabor vainilla, 910g (2Lb), 40g proteína por medidor, 0g azúcares añadidos" },
+  { n:"Healthy Sports Vegan Protein", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/4origen.webp", d:"Proteína vegana a base de guisante, amaranto, alcachofa y quinua, sabor vainilla, 910g (2.01 Lbs), 21g proteína por porción" },
+  { n:"Megaplex Creatine Power", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/5origen.webp", d:"Nutramerican, con creatina, BCAA y HMB, 908g (3.5Lb), 44g proteína y 1000 calorías por porción" },
+  { n:"Titán Army 1000", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/6origen.webp", d:"Vitanas, fórmula con carbohidratos y proteína whey, BCAA, glutamina y probióticos, sabor vainilla, 908g (2Lb), 40g proteína" },
+  { n:"Super Mega GMN", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/7origen.webp", d:"Ganador de peso con maltodextrina y proteína de suero, sabor vainilla gourmet, 908g, 53g proteína, 983 calorías, 180g carbohidratos" },
+  { n:"Crea Stack", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/8origen.webp", d:"Nutramerican, complejo de creatina todo en uno con HMB, ácido alfa lipoico y sulfato de vanadilo, 600g (1.3Lb), 6g creatina por porción" },
+  { n:"CR7+ Creatine Monohydrate", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/9origen.webp", d:"VitalBoostt, creatina monohidrato sin sabor, 350g (12.34oz), 70 porciones" },
+  { n:"Zupram 4g", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/10origen.webp", d:"Barber, citrato y bis glicinato de magnesio con colágeno hidrolizado, calcio y vitamina D3, 90g" },
+  { n:"Uriled", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/11origen.webp", d:"Ledmar, suplemento líquido a base de proteína de soya, manzana, apio, cereza y omega 3, 360ml" },
+  { n:"Raizan Flomecol", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/12origen.webp", d:"Solución oral coadyuvante en la inflamación leve de vías urinarias bajas, 330ml" },
+  { n:"Diuremax", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/13origen.webp", d:"Freshly, diurético natural con tratamientos científicos, 50 cápsulas" },
+  { n:"Cranberry 25.000mg", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/14origen.webp", d:"Fito Medic's, arándanos rojos, coadyuvante en el manejo de recidivas de infecciones urinarias, 60 cápsulas de gelatina blanda" },
+  { n:"Collagen & Biotin Complex", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/15origen.webp", d:"Suplemento dietario de colágeno y biotina, 60 softgels" },
+  { n:"Colagmin", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/16origen.webp", d:"Funat, colágeno + biotina + vitamina C + vitamina E, 60 tabletas" },
+  { n:"Zinc Plus", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/17origen.webp", d:"Funat, zinc para fortalecer las defensas del organismo, 30 tabletas" },
+  { n:"Vitasource", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/18origen.webp", d:"Funat, multivitamínico con calcio, magnesio y zinc, 60 cápsulas blandas" },
+   ]
+      },
+      {
+        s: "ACEITES",
+  items: [   
+  { n:"Mano de Res", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/19origen.webp", d:"Casvior, aceite de masajes corporal 100% vegetal, hidratante y emoliente, 240ml" },
+  { n:"Almendras Dulces", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/20origen.webp", d:"Casvior, aceite de masajes corporal 100% vegetal, hidratante y emoliente, 240ml" },
+  { n:"Romero", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/21origen.webp", d:"Casvior, aceite de masajes corporal y capilar 100% vegetal, hidratante y emoliente, 60ml" },
+  { n:"Argán 60ml Casvior", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/22origen.webp", d:"Casvior, aceite de masajes corporal y capilar 100% vegetal, hidratante y emoliente, 60ml" },
+  { n:"Argán 120ml OK", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/23origen.webp", d:"Natural's OK, aceite emoliente que hidrata y suaviza el cabello, 120ml" },
+  { n:"Ricino Aceite Esencial", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/24origen.webp", d:"Natural's OK, aceite esencial de ricino, 10ml" },
+  { n:"Linaza", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/25origen.webp", d:"Casvior, aceite de masajes corporal y capilar 100% vegetal, hidratante y emoliente, 60ml" },
+  { n:"Aceite de Café y Té Verde", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/26origen.webp", d:"Herbacol, aceite corporal antioxidante enriquecido con vitamina E, tonifica e hidrata la piel, 150ml" },
+  { n:"Argán 60ml OK", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/27origen.webp", d:"Natural's OK, aceite emoliente que hidrata y suaviza el cabello, 60ml" },
+  { n:"Ricino 60ml", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/28origen.webp", d:"Natural's OK, aceite emoliente para el crecimiento del cabello, 60ml" },
+  { n:"Salvia", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/29origen.webp", d:"Laboratorio Bio Nature, aceite emoliente de masaje corporal, suavidad y sedosidad natural para la piel, 60ml" },
+  { n:"Mineral Vitamina E 60ml", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/30origen.webp", d:"Solo Natural, aceite emoliente mineral con vitamina E, uso tópico, natural para la piel suave y sedosa, 60ml" },
+  { n:"Mineral Vitamina E 120ml", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/31origen.webp", d:"Solo Natural, aceite emoliente mineral con vitamina E, uso tópico, natural para la piel suave y sedosa, 120ml" },
+  { n:"Aceite de Café Hidratante", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/32origen.webp", d:"Casvior, aceite hidratante apropiado para masajes corporales que activa la circulación dérmica, 120g" },
+  { n:"Ricino 120ml", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/33origen.webp", d:"Natural's OK, aceite emoliente que estimula el crecimiento del cabello, 120ml" },
+  { n:"Limón", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/34origen.webp", d:"Natural's OK, aceite emoliente que ayuda a prevenir la caída del cabello, 120ml" },
+  { n:"Menta", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/35origen.webp", d:"Natural's OK, aceite emoliente que ayuda a reducir los niveles de grasa, 120ml" },
+  ],
+  },
     ],
   },
   {
