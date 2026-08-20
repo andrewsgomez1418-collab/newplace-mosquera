@@ -1199,6 +1199,51 @@ const NEGOCIOS = [
       },
     ],
   },
+  {
+    /* ══════════════════════════════════════════════════════════════
+       COMA MAS POR MENOS 
+       ══════════════════════════════════════════════════════════════ */
+ 
+    /* ─── INFORMACIÓN BÁSICA ─── */
+    id:          "comamaspormenos",
+    cat:         "antojos",
+    nombre:      "COMA MAS POR MENOS",
+    slogan:      "Una delicia con precio justo.",
+    desc:        "Coma más por menos pesos somos un negocio de comidas rápidas especializados en una gran variedad de platos como hamburguesas 100 % artesanales perros salchipapas salvajadas platos a la carta burritos fritos mazorcadas dorilocos alitas y mucho más manejamos domicilios sin costo adicional.</p><p>Hamburguesas/ Perros calientes/ Comidas rapidas/ Combos.",
+    tipo:        "estandar",
+ 
+    /* ─── IMÁGENES Y LOGOS ─── */
+    logoFill:    false,
+    logoBg:      "#ffffff",
+    logoPerfil:  "assets/logos/comamas/logo-comamas.webp",
+    cardImage:   "assets/logos/comamas/inicio-comamas.webp",
+    portada:     "assets/logos/comamas/portada-comamas.webp",
+ 
+    /* ─── TAMAÑOS RESPONSIVOS (clamp: min, preferido, max) ─── */
+    cardHeight:      "clamp(350px, 180vw, 250px)",
+    logoHeight:      "clamp(90px, 8vw, 60px)",
+    portadaHeight:   "clamp(180px, 25vh, 200px)",
+    galeriaHeight:   "clamp(150px, 20vw, 240px)",
+ 
+    /* ─── CONTACTO Y REDES SOCIALES ─── */
+    wa:          "573028409134 ",
+    tel:         "3028409134",
+    ig:          "https://www.instagram.com/andre_karito1428?igsh=Y2plY2plazZidnR4",
+    fb:          "https://www.facebook.com/share/1E6CuCrFCw/",
+    tk:          "https://www.tiktok.com/@comamaspormenospesos?_r=1&_t=ZS-98Rm2Th7WY0",
+    web:         "",
+ 
+    /* ─── UBICACIÓN Y MAPA ─── */
+    dir:         "Cll 9 h 14 b 21 poblado, MOSQUERA",
+    mapUrl:      "",
+    mapsLink:    "",
+ 
+    /* ─── GALERÍA DE FOTOS ─── */
+    galeria:     [
+      "assets/logos/comamas/comamas-1.webp","assets/logos/comamas/comamas-2.webp","assets/logos/comamas/comamas-3.webp","assets/logos/comamas/comamas-4.webp","assets/logos/comamas/comamas-5.webp","assets/logos/comamas/comamas-6.webp","assets/logos/comamas/comamas-7.webp","assets/logos/comamas/comamas-8.webp","assets/logos/comamas/comamas-9.webp","assets/logos/comamas/comamas-10.webp",
+    ],
+  },
+
 // ══ HOGAR ════════════════════════════════════════════════
 // ══ HOGAR ════════════════════════════════════════════════
 // ══ HOGAR ════════════════════════════════════════════════
@@ -3614,6 +3659,37 @@ const NEGOCIOS = [
   { n:"Menta", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/35origen.webp", d:"Natural's OK, aceite emoliente que ayuda a reducir los niveles de grasa, 120ml" },
   ],
   },
+  {
+        s: "FIBRAS",
+  items: [   
+{ n:"Linazamix Piña", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/36origen.webp", d:"Alimento en polvo a base de linaza molida, salvado de trigo y sen, con nopal, pitaya, piña, arándano, apio, zanahoria, té verde y estevia. Sabor piña, 450g, 25 porciones" },
+  { n:"Linazamix Naranja Menta", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/37origen.webp", d:"Alimento en polvo a base de linaza molida, salvado de trigo y sen, con noni, linaza, pitaya, flor de jamaica, alcachofa, chía, espirulina y té verde. Sabor naranja menta, 450g, 25 porciones" },
+  { n:"Fuxion TT3", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/38origen.webp", d:"FuXion, alimento en polvo a base de té verde con té negro, té rojo, camu camu y ácido alfa lipoico, endulzado con stevia, sabor té limón, 28 sobres" },
+  { n:"Fuxion Flora Liv", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/39origen.webp", d:"FuXion, alimento en polvo a base de pulpa de granadilla con fibra prebiótica, inulina de achicoria, cultivos probióticos y uchuva, endulzado con stevia, sabor granadilla, 7 sobres, 35g" },
+  { n:"Fuxion Prunex 1 (140g)", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/40origen.webp", d:"FuXion, alimento en polvo a base de linaza, endulzado con stevia, sabor guindón, 28 sobres, 140g" },
+  { n:"Té Verde Jengibre y Canela", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/41origen.webp", d:"Mineralin, mezcla en polvo a base de almidón hidrolizado con té verde, jengibre y canela para bebidas frías o calientes, sabor piña, 300g" },
+  { n:"Fuxion Prunex 1 (35g)", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/42origen.webp", d:"FuXion, alimento en polvo a base de linaza, endulzado con stevia, sabor guindón, 7 sobres, 35g" },
+  ],
+  },
+  {
+        s: "ALIMENTOS",
+  items: [   
+{ n:"Ajonjolí Crudo 500g", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/ajonjolicrudo500.webp", d:"Productos CQ, ajonjolí crudo 100% natural, 500g" },
+  { n:"Fenogreco 125g", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/fenogreco125.webp", d:"Productos CQ, fenogreco 100% natural, 125g y 250g" },
+  { n:"Carbón Activado", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/carbonactivado125.webp", d:"Productos CQ, carbón activado 100% natural, presentaciones de 50g y 125g" },
+  { n:"Amaranto Molido", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/amarantomolido250.webp", d:"Productos CQ, amaranto molido semilla y pop 100% natural, presentaciones de 100g, 250g y 500g" },
+  { n:"Salvado de Avena", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/salvadodeavena.webp", d:"Productos CQ, salvado de avena 100% natural, presentaciones de 250g y 500g" },
+  { n:"Sal del Himalaya", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/salhimalaya250.webp", d:"Productos CQ, sal del Himalaya, 500g" },
+  { n:"Polen", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/polen250.webp", d:"Productos CQ, polen 100% natural, 250g" },
+  { n:"Semilla de Calabaza", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/semillacalabaza500.webp", d:"Productos CQ, semilla de calabaza 100% natural, 500g" },
+  { n:"Acacia de la India", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/acaciaindia40.webp", d:"Productos CQ, acacia de la India 100% natural, 20g y 40g" },
+  { n:"Flor de Jamaica", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/florjamaica20.webp", d:"Productos CQ, flor de Jamaica 100% natural, 20g" },
+  { n:"Ajonjolí Tostado 500g", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/ajonjolitostado500.webp", d:"Productos CQ, ajonjolí tostado 100% natural, 500g" },
+  { n:"Sen", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/sen40.webp", d:"Productos CQ, sen deshidratado 100% natural, 40g" },
+  { n:"Stevia", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/stevia500.webp", d:"Stevia natural, hoja deshidratada, 50g" },
+  { n:"Boldo", p:"", img:"ASSETS/LOGOS/ORIGENVITAL/boldo40.webp", d:"Productos CQ, boldo 100% natural, 40g" },  
+  ],
+  },
     ],
   },
   {
@@ -3938,11 +4014,4 @@ const NEGOCIOS = [
       "assets/logos/valentina/valentina1.jpeg","assets/logos/valentina/valentina2.jpeg","assets/logos/valentina/valentina3.jpeg","assets/logos/valentina/valentina4.jpeg","assets/logos/valentina/valentina5.jpeg",
     ],
   },
-
-
-  
-
-
-  
- 
 ];

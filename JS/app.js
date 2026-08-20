@@ -795,20 +795,20 @@ if (neg.didi) ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent(
  
   /* Tab Info */
   let contactHTML = '';
-  if (neg.agendamiento) contactHTML += `<div class="ci"><span>📅</span><a href="${neg.agendamiento}" target="_blank">Agendar Cita</a></div>`;
+    if (neg.agendamiento) contactHTML += `<div class="ci"><span class="ci-ico">${ICOS.cal}</span><a href="${neg.agendamiento}" target="_blank">Agendar Cita</a></div>`;
   if (neg.was && neg.was.length > 0) {
       neg.was.forEach(w => {
-        contactHTML += `<div class="ci"><span>💬</span><span>${w.nombre}: ${w.numero.replace('57','')}</span></div>`;
+        contactHTML += `<div class="ci"><span class="ci-ico">${ICOS.wa}</span><span>${w.nombre}: ${w.numero.replace('57','')}</span></div>`;
       });
     } else if (neg.wa) {
-      contactHTML += `<div class="ci"><span>💬</span><span>${neg.wa.replace('57','')}</span></div>`;
+      contactHTML += `<div class="ci"><span class="ci-ico">${ICOS.wa}</span><span>${neg.wa.replace('57','')}</span></div>`;
     }
-  if (neg.tel) contactHTML += `<div class="ci"><span>📞</span><span>${neg.tel}</span></div>`;
-  if (neg.dir) contactHTML += `<div class="ci"><span>📍</span><span>${neg.dir}</span></div>`;
-  if (neg.ig)  contactHTML += `<div class="ci"><span>📸</span><a href="${neg.ig}" target="_blank">Instagram</a></div>`;
-  if (neg.tk)  contactHTML += `<div class="ci"><span>🎵</span><a href="${neg.tk}" target="_blank">TikTok</a></div>`;
-  if (neg.fb)  contactHTML += `<div class="ci"><span>🔵</span><a href="${neg.fb}" target="_blank">Facebook</a></div>`;
-  if (neg.web) contactHTML += `<div class="ci"><span>🌐</span><a href="${neg.web}" target="_blank">Página web</a></div>`;
+  if (neg.tel) contactHTML += `<div class="ci"><span class="ci-ico">${ICOS.tel}</span><span>${neg.tel}</span></div>`;
+  if (neg.dir) contactHTML += `<div class="ci"><span class="ci-ico">${ICOS.web}</span><span>${neg.dir}</span></div>`;
+  if (neg.ig)  contactHTML += `<div class="ci"><span class="ci-ico">${ICOS.ig}</span><a href="${neg.ig}" target="_blank">Instagram</a></div>`;
+  if (neg.tk)  contactHTML += `<div class="ci"><span class="ci-ico">${ICOS.tk}</span><a href="${neg.tk}" target="_blank">TikTok</a></div>`;
+  if (neg.fb)  contactHTML += `<div class="ci"><span class="ci-ico">${ICOS.fb}</span><a href="${neg.fb}" target="_blank">Facebook</a></div>`;
+  if (neg.web) contactHTML += `<div class="ci"><span class="ci-ico">${ICOS.web}</span><a href="${neg.web}" target="_blank">Página web</a></div>`;
  
   let galHTML = '';
   if (neg.galeria && neg.galeria.length) {
@@ -1497,6 +1497,98 @@ function copiarAlPortapapelesNeg() {
   } catch (err) {
     alert('No se pudo copiar el enlace');
   }
+}
+
+/* ─── CARTELERA DE AVISOS Y OFERTAS COMERCIALES ─── */
+function toggleCartelera() {
+  const flyersActivos = NEGOCIOS.filter(n => n.flyerActivo);
+  if (!flyersActivos.length) {
+    alert('Aún no hay avisos publicados');
+    return;
+  }
+  ensureCarteleraStyles();
+  renderCarteleraModal(flyersActivos);
+}
+
+function renderCarteleraModal(flyers) {
+  document.querySelectorAll('.cartelera-modal').forEach(el => el.remove());
+
+  const modal = document.createElement('div');
+  modal.className = 'cartelera-modal';
+  modal.innerHTML = `
+    <div class="cartelera-modal-header">
+      <button class="cartelera-modal-close" aria-label="Cerrar">✕</button>
+      <span class="cartelera-modal-title">Cartelera de Avisos</span>
+    </div>
+    <button class="cartelera-modal-volver">← Volver</button>
+    <div class="cartelera-feed">
+      ${flyers.map(neg => `
+        <div class="cartelera-card">
+          <span class="cartelera-badge">${(CATS.find(c => c.id === neg.cat) || {}).n || ''}</span>
+          <div class="cartelera-photo">
+            ${neg.flyer
+              ? `<img src="/${neg.flyer}" alt="${neg.flyerTitulo || neg.nombre || 'Aviso comercial'}" loading="lazy">`
+              : `<span class="cartelera-photo-placeholder">Foto próximamente</span>`}
+          </div>
+          <div class="cartelera-sub">${(neg.nombre || '').toUpperCase()}</div>
+          <div class="cartelera-title">${neg.flyerTitulo || ''}</div>
+          ${neg.flyerPrecio ? `<div class="cartelera-price">${neg.flyerPrecio} <span>COP</span></div>` : ''}
+          <button class="cartelera-wa-btn" onclick="irAWhatsappCartelera('${neg.id}')">Escribir por WhatsApp</button>
+        </div>
+      `).join('')}
+    </div>
+  `;
+  document.body.appendChild(modal);
+  modal.querySelector('.cartelera-modal-close').onclick = () => modal.remove();
+  modal.querySelector('.cartelera-modal-volver').onclick = () => modal.remove();
+}
+
+function irAWhatsappCartelera(negocioId) {
+  const neg = NEGOCIOS.find(n => n.id === negocioId);
+  if (!neg) return;
+  const waNum = neg.wa || (neg.was && neg.was[0]?.numero);
+  if (!waNum) { console.warn('El negocio no tiene WhatsApp configurado:', negocioId); return; }
+  trackEvent('click_whatsapp_flyer', { 'business_name': neg.nombre, 'business_id': neg.id, 'phone': waNum });
+ const mensaje = neg.flyerTitulo
+    ? `Hola! Vi tu aviso de ${neg.flyerTitulo} en www.newplacemosquera.com y quiero más información`
+    : 'Hola! Vi tu aviso en Newplace Store y quiero más información';
+  window.open(`https://wa.me/${waNum}?text=${encodeURIComponent(mensaje)}`, '_blank');
+}
+
+function ensureCarteleraStyles() {
+  if (document.getElementById('cartelera-modal-styles')) return;
+  const style = document.createElement('style');
+  style.id = 'cartelera-modal-styles';
+  style.textContent = `
+    .cartelera-modal{position:fixed;inset:0;background:#f0f1f5;z-index:99999;overflow:hidden}
+    .cartelera-modal-header{position:relative;display:flex;align-items:center;justify-content:center;background:#fff;padding:18px 20px;box-shadow:0 2px 10px rgba(0,0,0,.06);z-index:2}
+    .cartelera-modal-close{position:absolute;left:16px;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:none;background:#f5f6fa;font-size:1.1rem;cursor:pointer;color:#1c1c1b}
+    .cartelera-modal-title{font-family:var(--font);font-weight:800;font-size:1.05rem;color:#1c1c1b}
+    .cartelera-modal-volver{
+      position:fixed;bottom:24px;right:24px;z-index:9999;
+      color:#fff;font-weight:700;font-size:.92rem;cursor:pointer;
+      border:none;background:#1c1c1b;font-family:var(--font);
+      display:flex;align-items:center;gap:6px;
+      padding:12px 22px;border-radius:50px;
+      box-shadow:0 6px 24px rgba(0,0,0,.25);
+      transition:all .25s ease;
+    }
+    .cartelera-modal-volver:hover{background:#e5007d;transform:translateY(-2px);box-shadow:0 10px 28px rgba(229,0,125,.3)}
+    .cartelera-feed{height:calc(100% - 62px);max-width:100%;margin:0 auto;padding:24px 20px;display:flex;flex-direction:row;align-items:center;gap:28px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+    .cartelera-card{flex:0 0 auto;width:78vw;max-width:320px;max-height:100%;overflow-y:auto;scroll-snap-align:center;position:relative;background:#fff;border-radius:20px;padding:16px 16px 20px;box-shadow:0 10px 30px rgba(0,0,0,.1)}
+    .cartelera-card::before{content:'';position:absolute;top:-10px;left:50%;transform:translateX(-50%);width:16px;height:16px;border-radius:50%;background:#e5007d;box-shadow:0 4px 10px rgba(229,0,125,.4);z-index:2}
+    .cartelera-card::after{content:'';position:absolute;top:-14px;right:14%;width:56px;height:22px;background:#e9e0a3;opacity:.9;transform:rotate(-7deg);border-radius:2px}
+    .cartelera-badge{display:inline-block;background:#fde3ef;color:#e5007d;font-family:var(--font);font-weight:700;font-size:.72rem;letter-spacing:.03em;padding:6px 12px;border-radius:8px;margin-bottom:10px}
+    .cartelera-photo{width:100%;aspect-ratio:1/1;background:#e9eaee;border-radius:14px;display:flex;align-items:center;justify-content:center;overflow:hidden;margin-bottom:14px}
+    .cartelera-photo img{width:100%;height:100%;object-fit:cover}
+    .cartelera-photo-placeholder{color:#9d9c9c;font-family:var(--font);font-size:.9rem}
+    .cartelera-sub{font-family:var(--font);font-size:.72rem;font-weight:600;letter-spacing:.03em;color:#9d9c9c;margin-bottom:4px}
+    .cartelera-title{font-family:var(--font);font-weight:800;font-size:1.3rem;color:#1c1c1b;margin-bottom:10px}
+    .cartelera-price{font-family:var(--font);font-weight:800;font-size:1.5rem;color:#e5007d;margin-bottom:16px}
+    .cartelera-price span{font-size:.85rem;font-weight:600;color:#9d9c9c;margin-left:4px}
+    .cartelera-wa-btn{width:100%;background:#1c1c1b;color:#fff;border:none;padding:16px;border-radius:12px;font-family:var(--font);font-weight:700;font-size:.95rem;cursor:pointer}
+  `;
+  document.head.appendChild(style);
 }
 
 /* ─── MENÚ DROPDOWN DE ZONAS ─── */
