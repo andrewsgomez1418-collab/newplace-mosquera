@@ -7,6 +7,26 @@
    📊 GOOGLE ANALYTICS — FUNCIONES DE TRACKING
    ═══════════════════════════════════════════════════════════ */
 
+/* ═══ CONEXIÓN CON EL HUB DE ANALÍTICA ═══ */
+const HUB_URL = 'https://newplace-analytics.netlify.app';
+const SITE_ID = 'mosquera';
+
+function trackToHub(eventName, data) {
+  if (!data.business_id) return;
+  fetch(`${HUB_URL}/api/track`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      site: SITE_ID,
+      business_id: data.business_id,
+      event_type: eventName,
+      business_name: data.business_name,
+      business_category: data.business_category,
+      platform: data.platform,
+    }),
+  }).catch(() => {});
+}
+
 const ANALYTICS_CONFIG = {
   enabled: true,
   trackPageViews: true,
@@ -24,6 +44,7 @@ function trackEvent(eventName, eventData = {}) {
   
   try {
     gtag('event', eventName, eventData);
+    trackToHub(eventName, eventData);
     if (ANALYTICS_CONFIG.debug) {
       console.log(`📊 [GA Event] ${eventName}`, eventData);
     }
@@ -771,13 +792,13 @@ if (neg.portada) {
     } else if (neg.wa) {
       ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_whatsapp',{'business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}','phone':'${neg.wa}'}); window.open('https://wa.me/${neg.wa}?text=Hola!%20Vi%20tu%20negocio%20en%20Newplace%20Store%20y%20quiero%20más%20información', '_blank');" class="abtn wa"><span class="abtn-ico">${ICOS.wa}</span><span class="abtn-txt">WhatsApp</span></a>`;
     }
-  if (neg.tel) ab.innerHTML += `<a href="tel:+57${neg.tel}" class="abtn tel"><span class="abtn-ico">${ICOS.tel}</span><span class="abtn-txt">Llamar</span></a>`;
+  if (neg.tel) ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_call',{'business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}'}); window.location.href='tel:+57${neg.tel}';" class="abtn tel"><span class="abtn-ico">${ICOS.tel}</span><span class="abtn-txt">Llamar</span></a>`;
   if (neg.mapsLinks && neg.mapsLinks.length > 0) {
     neg.mapsLinks.forEach(sede => {
-      ab.innerHTML += `<a href="${sede.url}" target="_blank" class="abtn maps"><span class="abtn-ico">${ICOS.maps}</span><span class="abtn-txt">${sede.nombre}</span></a>`;
+      ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_maps',{'business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}','sede':'${sede.nombre.replace(/'/g,"\\'")}'}); window.open('${sede.url}', '_blank');" class="abtn maps"><span class="abtn-ico">${ICOS.maps}</span><span class="abtn-txt">${sede.nombre}</span></a>`;
     });
   } else if (neg.mapsLink) {
-    ab.innerHTML += `<a href="${neg.mapsLink}" target="_blank" class="abtn maps"><span class="abtn-ico">${ICOS.maps}</span><span class="abtn-txt">Google Maps</span></a>`;
+    ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_maps',{'business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}'}); window.open('${neg.mapsLink}', '_blank');" class="abtn maps"><span class="abtn-ico">${ICOS.maps}</span><span class="abtn-txt">Google Maps</span></a>`;
   }
   if (neg.ig)  ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_social',{'platform':'Instagram','business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}'}); window.open('${neg.ig}', '_blank');" class="abtn ig"><span class="abtn-ico">${ICOS.ig}</span><span class="abtn-txt">Instagram</span></a>`;
 if (neg.tk)  ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_social',{'platform':'TikTok','business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}'}); window.open('${neg.tk}', '_blank');" class="abtn tk"><span class="abtn-ico">${ICOS.tk}</span><span class="abtn-txt">TikTok</span></a>`;
@@ -1413,7 +1434,9 @@ function compartirNegocio(negocioId, nombreNegocio) {
   const urlNegocio = window.location.origin + '/' + negocioId;
   const titulo = nombreNegocio + ' - Newplace Store';
   const descripcion = 'Descubre este excelente negocio en Newplace Store. ¡Te recomiendo que lo visites!';
-  
+
+  trackEvent('click_social', {'platform': 'Compartir', 'business_name': nombreNegocio, 'business_id': negocioId});
+
   // Si el navegador soporta Web Share API (celulares modernos)
   if (navigator.share) {
     navigator.share({
