@@ -760,6 +760,22 @@ if (neg.portada) {
   document.getElementById('profBadge').style.cssText = `background:${cat.c}20;color:${cat.c}`;
   document.getElementById('profName').textContent = neg.nombre;
   document.getElementById('profSlogan').textContent = neg.slogan || '';
+  window._negNombreActual = neg.nombre;
+  window._negIdActual = neg.id;
+
+  /* Contador de visualizaciones (ojito) */
+  let contadorEl = document.getElementById('profViews');
+  if (!contadorEl) {
+    contadorEl = document.createElement('div');
+    contadorEl.id = 'profViews';
+    contadorEl.style.cssText = 'font-size:.8rem;color:#6f6f6e;margin-top:4px;display:flex;align-items:center;gap:4px;';
+    document.getElementById('profSlogan').insertAdjacentElement('afterend', contadorEl);
+  }
+  contadorEl.textContent = '';
+  fetch(`${HUB_URL}/api/public-count?business_id=${encodeURIComponent(neg.id)}&site=${SITE_ID}`)
+    .then(r => r.json())
+    .then(d => { contadorEl.textContent = `👁 ${d.views_total || 0} visualizaciones`; })
+    .catch(() => {});
  
   /* Botones acción */
   const ab = document.getElementById('profActions');
@@ -861,7 +877,7 @@ if (neg.didi) ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent(
       <div class="menu-sec">
         <div class="menu-sec-ttl">${sec.s}</div>
         <div class="menu-items-box">
-          ${sec.items.map(it => `<div class="mi"><div class="mi-name">${it.n}</div><div class="mi-desc">${it.d||''}</div><div class="mi-right"><div class="mi-price">${it.p}</div>${(neg.wa || (neg.was && neg.was[0]?.numero)) ? `<a href="https://wa.me/${neg.wa || neg.was[0].numero}?text=${encodeURIComponent('Hola! Quiero ordenar este plato: ' + it.n)}" class="mi-wa" target="_blank" aria-label="Pedir por WhatsApp">${ICOS.waWhite}</a>` : ''}</div></div>`).join('')}
+          ${sec.items.map(it => `<div class="mi"><div class="mi-name">${it.n}</div><div class="mi-desc">${it.d||''}</div><div class="mi-right"><div class="mi-price">${it.p}</div>${(neg.wa || (neg.was && neg.was[0]?.numero)) ? `<a href="https://wa.me/${neg.wa || neg.was[0].numero}?text=${encodeURIComponent('Hola! Quiero ordenar este plato: ' + it.n)}" class="mi-wa" target="_blank" aria-label="Pedir por WhatsApp" onclick="trackEvent('click_whatsapp',{'business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}','plato':'${(it.n||'').replace(/'/g,"\\'")}'})">${ICOS.waWhite}</a>` : ''}</div></div>`).join('')}
         </div>
       </div>`).join('');
   }
@@ -875,7 +891,7 @@ if (neg.didi) ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent(
 
     ensureCatalogoMenuStyles();
     tabs.innerHTML += `<div class="tab-catalogo-wrap">
-      <button class="tab tab-card tab-catalogo" data-tab="catalogo">
+      <button class="tab tab-card tab-catalogo" data-tab="catalogo" onclick="trackEvent('click_catalogo',{'business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}'})">
         <span class="tab-card-ico">${catEsMenu ? ICOS.menuWhite : ICOS.bolsaWhite}</span><span>${catEsMenu ? 'Menú' : 'Catálogo'}</span>${secTitulos.length > 1 ? `<span class="tab-catalogo-caret">▾</span>` : ''}
       </button>
       ${secTitulos.length > 1 ? `<div class="tab-catalogo-menu" id="tab-catalogo-menu">
@@ -897,7 +913,7 @@ if (neg.didi) ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent(
           <div class="prod-name">${p.n}</div>
           <div class="prod-desc">${p.d||''}</div>
           <div class="prod-price">${p.p}</div>
-          ${ctaHref ? `<a href="${ctaHref}" class="prod-btn" target="_blank"><span class="prod-btn-ico">${ctaIco}</span><span class="prod-btn-txt">${ctaLabel}</span></a>` : ''}
+          ${ctaHref ? `<a href="${ctaHref}" class="prod-btn" target="_blank" onclick="trackEvent('click_cotizar',{'business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}','producto':'${nombreSeguro.replace(/'/g,"\\'")}'})"><span class="prod-btn-ico">${ctaIco}</span><span class="prod-btn-txt">${ctaLabel}</span></a>` : ''}
         </div>
       </div>`;
     };
@@ -951,7 +967,7 @@ if (neg.didi) ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent(
       <img src="${p.img}" alt="${p.name}" class="prod-expand-img">
       ${total > 1 ? '<button class="prod-expand-arrow prod-expand-next" aria-label="Siguiente">›</button>' : ''}
       ${total > 1 ? `<div class="prod-expand-counter">${idx + 1} / ${total}</div>` : ''}
-      ${p.ctaHref ? `<a href="${p.ctaHref}" target="_blank" class="prod-btn prod-expand-cta"><span class="prod-btn-txt">${p.ctaLabel}</span></a>` : ''}
+      ${p.ctaHref ? `<a href="${p.ctaHref}" target="_blank" class="prod-btn prod-expand-cta" onclick="trackEvent('click_cotizar',{'business_name':'${(window._negNombreActual||'').replace(/'/g,"\\'")}','business_id':'${window._negIdActual||''}','producto':'${(p.name||'').replace(/'/g,"\\'")}'})"><span class="prod-btn-txt">${p.ctaLabel}</span></a>` : ''}
     `;
     document.body.appendChild(overlay);
     document.body.style.overflow = 'hidden';

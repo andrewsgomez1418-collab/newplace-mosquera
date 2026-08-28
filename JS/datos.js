@@ -680,7 +680,239 @@ const NEGOCIOS = [
       "assets/logos/granparada/parada1.jpeg","assets/logos/granparada/parada2.jpeg","assets/logos/granparada/parada3.jpeg","assets/logos/granparada/parada4.jpeg","assets/logos/granparada/parada5.jpeg",
     ],
   },
-  
+  {
+    /* ══════════════════════════════════════════════════════════════
+       COMA MAS POR MENOS 
+       ══════════════════════════════════════════════════════════════ */
+ 
+    /* ─── INFORMACIÓN BÁSICA ─── */
+    id:          "comamaspormenos",
+    cat:         "antojos",
+    destacado:   1,
+    nombre:      "COMA MAS POR MENOS",
+    slogan:      "Una delicia con precio justo.",
+    desc:        "Coma más por menos pesos somos un negocio de comidas rápidas especializados en una gran variedad de platos como hamburguesas 100 % artesanales perros salchipapas salvajadas platos a la carta burritos fritos mazorcadas dorilocos alitas y mucho más manejamos domicilios sin costo adicional.</p><p>Hamburguesas/ Perros calientes/ Comidas rapidas/ Combos.",
+    tipo:        "restaurante",
+ 
+    /* ─── IMÁGENES Y LOGOS ─── */
+    logoFill:    false,
+    logoBg:      "#ffffff",
+    logoPerfil:  "assets/logos/comamas/logo-comamas.webp",
+    cardImage:   "assets/logos/comamas/inicio-comamas.webp",
+    portada:     "assets/logos/comamas/portada-comamas.webp",
+ 
+    /* ─── TAMAÑOS RESPONSIVOS (clamp: min, preferido, max) ─── */
+    cardHeight:      "clamp(350px, 180vw, 250px)",
+    logoHeight:      "clamp(90px, 8vw, 60px)",
+    portadaHeight:   "clamp(180px, 25vh, 200px)",
+    galeriaHeight:   "clamp(150px, 20vw, 240px)",
+ 
+    /* ─── CONTACTO Y REDES SOCIALES ─── */
+    wa:          "573028409134 ",
+    tel:         "3028409134",
+    ig:          "https://www.instagram.com/andre_karito1428?igsh=Y2plY2plazZidnR4",
+    fb:          "https://www.facebook.com/share/1E6CuCrFCw/",
+    tk:          "https://www.tiktok.com/@comamaspormenospesos?_r=1&_t=ZS-98Rm2Th7WY0",
+    web:         "",
+ 
+    /* ─── UBICACIÓN Y MAPA ─── */
+    dir:         "Cll 9 h 14 b 21 poblado, MOSQUERA",
+    mapUrl:      "",
+    mapsLink:    "",
+ 
+    /* ─── GALERÍA DE FOTOS ─── */
+    galeria:     [
+      "assets/logos/comamas/comamas-1.webp","assets/logos/comamas/comamas-2.webp","assets/logos/comamas/comamas-3.webp","assets/logos/comamas/comamas-4.webp","assets/logos/comamas/comamas-5.webp","assets/logos/comamas/comamas-6.webp","assets/logos/comamas/comamas-7.webp","assets/logos/comamas/comamas-8.webp","assets/logos/comamas/comamas-9.webp","assets/logos/comamas/comamas-10.webp",
+    ],
+        /* ─── MENÚ DE COMIDAS ─── */
+    menu: [
+      {
+        s: "PERROS CALIENTES",
+        items: [
+          { n:"Perro Full Queso (solo)",   p:"$17.000", d:"Salchicha americana, queso fundido, cebolla caramelizada, papa chip y salsas" },
+          { n:"Perro Full Queso (combo)",  p:"$25.000", d:"Incluye papas + gaseosa" },
+          { n:"Perro Americano (solo)",    p:"$20.000", d:"Salchicha americana, jamón, tocineta, queso, cebolla caramelizada, papa chip y salsas" },
+          { n:"Perro Americano (combo)",   p:"$28.000", d:"Incluye papas + gaseosa" },
+          { n:"Perro Criollo (solo)",      p:"$25.000", d:"Salchicha americana, carne, maíz, queso, cebolla caramelizada, papa chip y salsas" },
+          { n:"Perro Criollo (combo)",     p:"$33.000", d:"Incluye papas + gaseosa" },
+          { n:"Perro Premium (solo)",      p:"$29.000", d:"Salchicha americana, pollo, carne, maíz, queso, cebolla caramelizada, papa chip y salsas" },
+          { n:"Perro Premium (combo)",     p:"$37.000", d:"Incluye papas + gaseosa" },
+        ]
+      },
+      {
+        s: "COMBOS DOBLES",
+        items: [
+          { n:"Combo Full Queso",  p:"$38.000", d:"2 perros + 2 papas francesas + 2 gaseosas mini" },
+          { n:"Combo Americanos",  p:"$43.000", d:"2 perros + 2 papas francesas + 2 gaseosas mini" },
+          { n:"Combo Criollos",    p:"$53.000", d:"2 perros + 2 papas francesas + 2 gaseosas mini" },
+          { n:"Combo Premium",     p:"$61.000", d:"2 perros + 2 papas francesas + 2 gaseosas mini" },
+        ]
+      },
+      {
+        s: "ALITAS BBQ",
+        items: [
+          { n:"12 Alitas", p:"$28.000", d:"Acompañadas de papa francesa" },
+          { n:"24 Alitas", p:"$48.000", d:"Acompañadas de papa francesa" },
+          { n:"40 Alitas", p:"$68.000", d:"Acompañadas de papa francesa" },
+        ]
+      },
+      {
+        s: "SALCHIPAPAS",
+        items: [
+          { n:"Salchipapa Sencilla",   p:"$12.000", d:"Papa francesa, salchicha y salsas" },
+          { n:"Salchipapa Americana",  p:"$18.000", d:"Jamón, maíz tierno, salchicha americana, queso y salsas" },
+          { n:"Papas Locas",           p:"$25.000", d:"Pollo, carne, maíz tierno, vegetales, jamón, salsas, queso y papá chip" },
+          { n:"Salchipapa Personal",   p:"$27.000", d:"Pollo, carne, maíz tierno, vegetales, jamón, salsas, queso y papá chip" },
+        ]
+      },
+      {
+        s: "PORCIONES PARA GRUPOS",
+        items: [
+          { n:"Maxi Dúo (2 personas)",     p:"$48.000",  d:"Pollo, carne, maíz tierno, vegetales, jamón, salsas, queso y papá chip" },
+          { n:"Premium (4 personas)",      p:"$68.000",  d:"Pollo, carne, maíz tierno, vegetales, jamón, salsas, queso, papá chip y tocineta, plátano" },
+          { n:"Suprema (6 personas)",      p:"$85.000",  d:"Pollo, carne, maíz tierno, vegetales, jamón, salsas, queso, papá chip, tocineta, plátano y chicharrón" },
+          { n:"Gigante (8 a 10 personas)", p:"$110.000", d:"Pollo, carne, maíz tierno, vegetales, jamón, salsas, queso, papá chip, tocineta, chicharrón y alitas" },
+        ]
+      },
+      {
+        s: "COMBO FAMILIAR",
+        items: [
+          { n:"Combo Familiar", p:"$62.000", d:"Salchipapa Maxi Dúo + porción de chicharrón + Coca-Cola 1.5 L" },
+        ]
+      },
+      {
+        s: "BURRITOS",
+        items: [
+          { n:"Burrito Supremo", p:"$30.000", d:"Tortilla, lechuga, pollo o carne, queso, maíz y papa francesa" },
+          { n:"Burrito Premium", p:"$37.000", d:"Tortilla, lechuga, pollo o carne, queso, jamón, tocineta, maíz y papa francesa" },
+        ]
+      },
+      {
+        s: "MAZORCADAS",
+        items: [
+          { n:"Mazorcada Personal", p:"$29.000", d:"Maíz tierno, cebolla caramelizada, pollo, carne, chorizo, jamón, papa chip, papa francesa, queso y salsas" },
+          { n:"Mazorcada Premium",  p:"$42.000", d:"Maíz tierno, cebolla caramelizada, pollo, carne, chorizo, jamón, tocineta, papa francesa, queso y salsas" },
+          { n:"Mazorcada Dúo",      p:"$57.000", d:"Maíz tierno, cebolla caramelizada, pollo, carne, chorizo, maduritos, chicharrón, alitas, papa chip, papa francesa y queso" },
+        ]
+      },
+      {
+        s: "COMBO BURRITO",
+        items: [
+          { n:"Combo Burrito", p:"$63.000", d:"2 burritos + 2 papas + 2 gaseosas" },
+        ]
+      },
+      {
+        s: "ADICIONALES",
+        items: [
+          { n:"Papas Francesas", p:"$8.000",  d:"" },
+          { n:"Chicharrón",      p:"$13.000", d:"" },
+          { n:"Maduritos",       p:"$7.000",  d:"" },
+          { n:"Queso",           p:"$7.000",  d:"" },
+          { n:"Tocineta",        p:"$7.000",  d:"" },
+          { n:"Jamón",           p:"$5.000",  d:"" },
+        ]
+      },
+      {
+        s: "PATACÓN RELLENO",
+        items: [
+          { n:"Patacón Relleno", p:"$28.000", d:"Patacón, pollo, jamón, maíz tierno, cebolla caramelizada, queso, papa chip y salsas" },
+        ]
+      },
+      {
+        s: "DORILOCOS",
+        items: [
+          { n:"Dorilocos Personal",  p:"$15.000", d:"Maíz tierno, lechuga, salsas y queso" },
+          { n:"Dorilocos Familiar",  p:"$45.000", d:"Doritos grandes, pollo o carne, maíz tierno, lechuga, queso y salsas" },
+        ]
+      },
+      {
+        s: "PLATOS ESPECIALES",
+        items: [
+          { n:"Carne Asada",           p:"$30.000", d:"Incluye papa francesa, patacón y ensalada" },
+          { n:"Pechuga a la Plancha",  p:"$30.000", d:"Incluye papa francesa, patacón y ensalada" },
+          { n:"Pechuga Gratinada",     p:"$34.000", d:"Incluye papa francesa, patacón y ensalada" },
+          { n:"Lomo de Cerdo",         p:"$30.000", d:"Incluye papa francesa, patacón y ensalada" },
+        ]
+      },
+      {
+        s: "PICADA PA' DOS",
+        items: [
+          { n:"Picada Pa' Dos", p:"$75.000", d:"Carne de res, carne de cerdo, pechuga, patacón, papa francesa y chicharrón + gaseosa 1.5 L. Ideal para compartir" },
+        ]
+      },
+      {
+        s: "HAMBURGUESAS ARTESANALES",
+        items: [
+          { n:"Clásica Normal",              p:"$18.000", d:"Carne artesanal, queso, cebolla caramelizada, vegetales, papa chip y salsas" },
+          { n:"Clásica Doble Carne",         p:"$24.000", d:"Carne artesanal, queso, cebolla caramelizada, vegetales, papa chip y salsas" },
+          { n:"Clásica Triple Carne",        p:"$29.000", d:"Carne artesanal, queso, cebolla caramelizada, vegetales, papa chip y salsas" },
+          { n:"Suprema Normal",              p:"$23.000", d:"Carne artesanal, queso, jamón, tocineta, cebolla caramelizada, vegetales, papa chip y salsas" },
+          { n:"Suprema Doble Carne",         p:"$30.000", d:"Carne artesanal, queso, jamón, tocineta, cebolla caramelizada, vegetales, papa chip y salsas" },
+          { n:"Suprema Triple Carne",        p:"$35.000", d:"Carne artesanal, queso, jamón, tocineta, cebolla caramelizada, vegetales, papa chip y salsas" },
+          { n:"Premium Normal",              p:"$26.000", d:"Carne artesanal, huevo frito, doble jamón, doble tocineta, queso, vegetales, papa chip y salsas" },
+          { n:"Premium Doble Carne",         p:"$32.000", d:"Carne artesanal, huevo frito, doble jamón, doble tocineta, queso, vegetales, papa chip y salsas" },
+          { n:"Premium Triple Carne",        p:"$38.000", d:"Carne artesanal, huevo frito, doble jamón, doble tocineta, queso, vegetales, papa chip y salsas" },
+          { n:"Criolla Normal",              p:"$29.000", d:"Carne artesanal, maíz tierno, huevo frito, plátano, queso, papa chip y salsas" },
+          { n:"Criolla Doble Carne",         p:"$35.000", d:"Carne artesanal, maíz tierno, huevo frito, plátano, queso, papa chip y salsas" },
+          { n:"Criolla Triple Carne",        p:"$40.000", d:"Carne artesanal, maíz tierno, huevo frito, plátano, queso, papa chip y salsas" },
+          { n:"Patacón Burger Normal",       p:"$28.000", d:"Carne artesanal, jamón, queso, huevo frito, tocineta, vegetales y salsas" },
+          { n:"Patacón Burger Doble Carne",  p:"$35.000", d:"Carne artesanal, jamón, queso, huevo frito, tocineta, vegetales y salsas" },
+          { n:"Patacón Burger Triple Carne", p:"$40.000", d:"Carne artesanal, jamón, queso, huevo frito, tocineta, vegetales y salsas" },
+        ]
+      },
+      {
+        s: "COMBOS AGRANDADOS",
+        items: [
+          { n:"Combo Clásica Normal",              p:"$26.000", d:"Incluye 250 gr de papas francesas + gaseosa" },
+          { n:"Combo Clásica Doble Carne",         p:"$33.000", d:"Incluye 250 gr de papas francesas + gaseosa" },
+          { n:"Combo Clásica Triple Carne",        p:"$38.000", d:"Incluye 250 gr de papas francesas + gaseosa" },
+          { n:"Combo Suprema Normal",              p:"$31.000", d:"Incluye 250 gr de papas francesas + gaseosa" },
+          { n:"Combo Suprema Doble Carne",         p:"$41.000", d:"Incluye 250 gr de papas francesas + gaseosa" },
+          { n:"Combo Suprema Triple Carne",        p:"$47.000", d:"Incluye 250 gr de papas francesas + gaseosa" },
+          { n:"Combo Premium Normal",              p:"$33.000", d:"Incluye 250 gr de papas francesas + gaseosa" },
+          { n:"Combo Premium Doble Carne",         p:"$44.000", d:"Incluye 250 gr de papas francesas + gaseosa" },
+          { n:"Combo Premium Triple Carne",        p:"$50.000", d:"Incluye 250 gr de papas francesas + gaseosa" },
+          { n:"Combo Criolla Normal",              p:"$36.000", d:"Incluye 250 gr de papas francesas + gaseosa" },
+          { n:"Combo Criolla Doble Carne",         p:"$43.000", d:"Incluye 250 gr de papas francesas + gaseosa" },
+          { n:"Combo Criolla Triple Carne",        p:"$48.000", d:"Incluye 250 gr de papas francesas + gaseosa" },
+          { n:"Combo Patacón Burger Normal",       p:"$35.000", d:"Incluye 250 gr de papas francesas + gaseosa" },
+          { n:"Combo Patacón Burger Doble Carne",  p:"$43.000", d:"Incluye 250 gr de papas francesas + gaseosa" },
+          { n:"Combo Patacón Burger Triple Carne", p:"$48.000", d:"Incluye 250 gr de papas francesas + gaseosa" },
+        ]
+      },
+      {
+        s: "NUESTROS COMBOS",
+        items: [
+          { n:"Combo Pa' Dos",       p:"$39.000", d:"2 hamburguesas + 2 papas francesas + 2 gaseosas" },
+          { n:"Combo Parche",        p:"$70.000", d:"4 hamburguesas + 4 papas francesas + gaseosa 1.5 L" },
+          { n:"Combo Supremo",       p:"$52.000", d:"2 hamburguesas supremas + 2 papas francesas + 2 gaseosas" },
+          { n:"Combo Premium",       p:"$58.000", d:"2 hamburguesas premium + 2 papas francesas + 2 gaseosas" },
+        ]
+      },
+      {
+        s: "COMBOS PARA COMPARTIR",
+        items: [
+          { n:"Combo Criollo",         p:"$65.000", d:"2 hamburguesas criollas + 2 papas francesas + 2 gaseosas" },
+          { n:"Combo Patacón",         p:"$58.000", d:"2 hamburguesas de patacón + 2 papas francesas + gaseosa 1.9 L" },
+          { n:"Combo Variado",         p:"$60.000", d:"1 hamburguesa clásica + 1 perro full queso + 1 salchipapa americana + gaseosa 1.5 L" },
+          { n:"Combo Trio",            p:"$60.000", d:"3 hamburguesas clásicas + 3 papas francesas + gaseosa 1.5 L" },
+          { n:"Combo Parche Supremo",  p:"$90.000", d:"4 hamburguesas supremas + 4 papas francesas + gaseosa 1.5 L" },
+        ]
+      },
+      {
+        s: "EMPANADAS",
+        items: [
+          { n:"Papa Rellena",              p:"$4.000",  d:"" },
+          { n:"Empanadas Unidad",          p:"$1.200",  d:"Empanadas tradicionales" },
+          { n:"Empanadas x 6",             p:"$6.500",  d:"Empanadas tradicionales" },
+          { n:"Empanadas x 12",            p:"$13.000", d:"Empanadas tradicionales" },
+          { n:"Empanadas x 18",            p:"$19.500", d:"Empanadas tradicionales" },
+          { n:"Empanadas x 24",            p:"$26.000", d:"Empanadas tradicionales" },
+          { n:"Empanadas x 30",            p:"$32.000", d:"Empanadas tradicionales" },
+        ]
+      },
+    ],
+  },
   {
     /* ══════════════════════════════════════════════════════════════
        GUSTOSO ARROZ PAISA 
@@ -1199,50 +1431,7 @@ const NEGOCIOS = [
       },
     ],
   },
-  {
-    /* ══════════════════════════════════════════════════════════════
-       COMA MAS POR MENOS 
-       ══════════════════════════════════════════════════════════════ */
- 
-    /* ─── INFORMACIÓN BÁSICA ─── */
-    id:          "comamaspormenos",
-    cat:         "antojos",
-    nombre:      "COMA MAS POR MENOS",
-    slogan:      "Una delicia con precio justo.",
-    desc:        "Coma más por menos pesos somos un negocio de comidas rápidas especializados en una gran variedad de platos como hamburguesas 100 % artesanales perros salchipapas salvajadas platos a la carta burritos fritos mazorcadas dorilocos alitas y mucho más manejamos domicilios sin costo adicional.</p><p>Hamburguesas/ Perros calientes/ Comidas rapidas/ Combos.",
-    tipo:        "estandar",
- 
-    /* ─── IMÁGENES Y LOGOS ─── */
-    logoFill:    false,
-    logoBg:      "#ffffff",
-    logoPerfil:  "assets/logos/comamas/logo-comamas.webp",
-    cardImage:   "assets/logos/comamas/inicio-comamas.webp",
-    portada:     "assets/logos/comamas/portada-comamas.webp",
- 
-    /* ─── TAMAÑOS RESPONSIVOS (clamp: min, preferido, max) ─── */
-    cardHeight:      "clamp(350px, 180vw, 250px)",
-    logoHeight:      "clamp(90px, 8vw, 60px)",
-    portadaHeight:   "clamp(180px, 25vh, 200px)",
-    galeriaHeight:   "clamp(150px, 20vw, 240px)",
- 
-    /* ─── CONTACTO Y REDES SOCIALES ─── */
-    wa:          "573028409134 ",
-    tel:         "3028409134",
-    ig:          "https://www.instagram.com/andre_karito1428?igsh=Y2plY2plazZidnR4",
-    fb:          "https://www.facebook.com/share/1E6CuCrFCw/",
-    tk:          "https://www.tiktok.com/@comamaspormenospesos?_r=1&_t=ZS-98Rm2Th7WY0",
-    web:         "",
- 
-    /* ─── UBICACIÓN Y MAPA ─── */
-    dir:         "Cll 9 h 14 b 21 poblado, MOSQUERA",
-    mapUrl:      "",
-    mapsLink:    "",
- 
-    /* ─── GALERÍA DE FOTOS ─── */
-    galeria:     [
-      "assets/logos/comamas/comamas-1.webp","assets/logos/comamas/comamas-2.webp","assets/logos/comamas/comamas-3.webp","assets/logos/comamas/comamas-4.webp","assets/logos/comamas/comamas-5.webp","assets/logos/comamas/comamas-6.webp","assets/logos/comamas/comamas-7.webp","assets/logos/comamas/comamas-8.webp","assets/logos/comamas/comamas-9.webp","assets/logos/comamas/comamas-10.webp",
-    ],
-  },
+  
 
 // ══ HOGAR ════════════════════════════════════════════════
 // ══ HOGAR ════════════════════════════════════════════════
