@@ -582,7 +582,7 @@ function bizCardHTML(neg, cat) {
     </div>
     <div class="biz-foot">
       ${neg.agendamiento ? '<span class="btag agendamiento">📅 Agendar</span>' : ''}
-      ${neg.wa ? '<span class="btag wa">💬 WhatsApp</span>' : ''}
+      ${(neg.wa || (neg.was && neg.was.length > 0)) ? '<span class="btag wa">💬 WhatsApp</span>' : ''}
       ${neg.tk ? '<span class="btag tk">🎵 TikTok</span>' : ''}
       ${neg.ig ? '<span class="btag ig">📸 Instagram</span>' : ''}
       ${neg.fb ? '<span class="btag fb">🔵 Facebook</span>' : ''}
