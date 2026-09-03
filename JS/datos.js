@@ -37,7 +37,7 @@ const BLOG = {
 const CATS = [
   { id:"salud",        n:"SALUD",                          e:"", c:"#27ae60", img:"assets/categorias/categoria-salud.webp", imgHdr:"assets/categorias/destacados/destacados-salud.webp", showTitle: false},
   { id:"antojos",      n:"ANTOJOS",                        e:"", c:"#e74c3c", img:"assets/categorias/categoria-antojos.webp", imgHdr:"assets/categorias/destacados/destacados-antojos.webp", showTitle: false},
-  { id:"hogar",        n:"SOLUCIONES DEL HOGAR",           e:"", c:"#2980b9", img:"assets/categorias/categoria-hogar.webp", imgHdr:"assets/categorias/destacados/destacados-soluciones-hogar.webp", showTitle: false},
+  { id:"hogar",        n:"SOLUCIONES DEL HOGAR",           e:"", c:"#2980b9", img:"assets/categorias/categoria-hogar.webp", imgHdr:"assets/categorias/destacados/destacado-hogar.webp", showTitle: false},
   { id:"consumo",      n:"CONSUMO FRECUENTE",              e:"", c:"#8e44ad", img:"assets/categorias/categoria-consumofrecuente.webp", imgHdr:"assets/categorias/destacados/destacados-negocios- frecuentes.webp", showTitle: false},
   { id:"empresarial",  n:"SOLUCIONES EMPRESARIALES",       e:"", c:"#2c3e50", img:"assets/categorias/categoria-empresarial.webp", imgHdr:"assets/categorias/destacados/salud.webp", showTitle: false},
   { id:"servicios",    n:"SERVICIOS",                      e:"", c:"#d35400", img:"assets/categorias/categoria-servicios.webp", imgHdr:"assets/categorias/destacados/salud.jpg", showTitle: false},
@@ -1484,6 +1484,51 @@ const NEGOCIOS = [
     },
     {
     /* ══════════════════════════════════════════════════════════════
+       ELECTRO HOME SERVICE 
+       ══════════════════════════════════════════════════════════════ */
+ 
+    /* ─── INFORMACIÓN BÁSICA ─── */
+    id:          "electrohomeservice",
+    cat:         "hogar",
+    destacado: 1,
+    nombre:      "ELECTRO HOME SERVICE",
+    slogan:      "Mas que una solución es la tranquilidad.",
+    desc:        "Empresa con 11 años de experiencia dedidicada al mantenimiento, reparación e instalación de electrodomésticos para el hogar de todas las marcas<</p><p>Lavadoras,/ Neveras,/ Estufas,/ Reparacion linea blanca",
+    tipo:        "estandar",
+ 
+    /* ─── IMÁGENES Y LOGOS ─── */
+    logoFill:    false,
+    logoBg:      "#ffffff",
+    logoPerfil:  "assets/logos/homeservice/logo-home.webp",
+    cardImage:   "assets/logos/homeservice/inicio-home .webp",
+    portada:     "assets/logos/homeservice/portada-home.webp",
+ 
+    /* ─── TAMAÑOS RESPONSIVOS (clamp: min, preferido, max) ─── */
+    cardHeight:      "clamp(350px, 180vw, 250px)",
+    logoHeight:      "clamp(90px, 8vw, 60px)",
+    portadaHeight:   "clamp(180px, 25vh, 200px)",
+    galeriaHeight:   "clamp(150px, 20vw, 240px)",
+ 
+    /* ─── CONTACTO Y REDES SOCIALES ─── */
+    wa:          "573183847309",
+    tel:         "3183847309",
+    ig:          "https://www.instagram.com/electrohomeservices?igsh=angycG1yYnVhdjNo",
+    fb:          "https://www.facebook.com/share/1E8zb4WeCY/",
+    tk:          "https://www.tiktok.com/@electrohomeservices?_r=1&_t=ZS-98sp8rsvPoT",
+    web:         "https://electrohome.online/",
+ 
+    /* ─── UBICACIÓN Y MAPA ─── */
+    dir:         "Cra. 7 4-50  MOSQUERA",
+    mapUrl:      "",
+    mapsLink:    "",
+ 
+    /* ─── GALERÍA DE FOTOS ─── */
+    galeria:     [
+      "assets/logos/homeservice/home-1.webp","assets/logos/homeservice/home-2.webp","assets/logos/homeservice/home-3.webp","assets/logos/homeservice/home-4.webp","assets/logos/homeservice/home-5.webp","assets/logos/homeservice/home-6.webp","assets/logos/homeservice/home-7.webp","assets/logos/homeservice/home-8.webp","assets/logos/homeservice/home-9.webp","assets/logos/homeservice/home-10.webp",
+    ],
+  },
+    {
+    /* ══════════════════════════════════════════════════════════════
        MODULARES Vr
        ══════════════════════════════════════════════════════════════ */
  
@@ -2029,6 +2074,7 @@ const NEGOCIOS = [
       { n:"Visita técnica en terreno", p:"", img:"assets/logos/hernandeselectricos/11electricidad.webp", d:"Visita técnica en terreno con personal calificado y experto según su necesidad, incluye informe preliminar" },
     ],
   },
+  
     
 // ══ SHOPPING ════════════════════════════════════════════════
 // ══ SHOPPING ════════════════════════════════════════════════
@@ -2947,6 +2993,7 @@ const NEGOCIOS = [
       "assets/logos/imagendigital/digital1.jpeg","assets/logos/imagendigital/digital2.jpeg","assets/logos/imagendigital/digital3.jpeg","assets/logos/imagendigital/digital4.jpeg","assets/logos/imagendigital/digital5.jpeg",
     ],
   },
+  
   // ══ GOURMET ════════════════════════════════════════════════
   // ══ GOURMET ════════════════════════════════════════════════
   // ══ GOURMET ════════════════════════════════════════════════
@@ -4201,6 +4248,50 @@ const NEGOCIOS = [
     /* ─── GALERÍA DE FOTOS ─── */
     galeria:     [
       "assets/logos/valentina/valentina1.jpeg","assets/logos/valentina/valentina2.jpeg","assets/logos/valentina/valentina3.jpeg","assets/logos/valentina/valentina4.jpeg","assets/logos/valentina/valentina5.jpeg",
+    ],
+  },
+  {
+    /* ══════════════════════════════════════════════════════════════
+       ACADEMIA ABICUN
+       ══════════════════════════════════════════════════════════════ */
+ 
+    /* ─── INFORMACIÓN BÁSICA ─── */
+    id:          "abicun",
+    cat:         "educacion",
+    nombre:      "ACADEMIA ABICUN",
+    slogan:      "Técnico en cosmetología y belleza integral educación para el trabajo y desarrollo humano.",
+    desc:        "Abicun Academia es un centro de formación especializado en cosmetología y belleza integral, comprometido con preparar profesionales altamente capacitados en el mundo de la estética.</p> Ofrecemos cursos y capacitaciones en maquillaje, peluquería, barbería, uñas, tratamientos faciales y corporales, brindando enseñanza práctica, técnicas actualizadas y acompañamiento profesional.</p> Nos destacamos por formar talentos con creatividad, disciplina y pasión por la belleza, en un ambiente moderno y de aprendizaje continuo.</p><p>Academia,/Estética integral,/Cuidado facial y corporal,/ Belleza avanzada,/ Tecnicas de spa,/ Cosmetologia profecional",
+    tipo:        "estandar",
+ 
+    /* ─── IMÁGENES Y LOGOS ─── */
+    logoFill:    false,
+    logoBg:      "#ffffff",
+    logoPerfil:  "assets/logos/abicun/logo-abicun.webp",
+    cardImage:   "assets/logos/abicun/inicio-abicun.webp",
+    portada:     "assets/logos/abicun/portada-abicun.webp",
+ 
+    /* ─── TAMAÑOS RESPONSIVOS (clamp: min, preferido, max) ─── */
+    cardHeight:      "clamp(350px, 180vw, 250px)",
+    logoHeight:      "clamp(90px, 8vw, 60px)",
+    portadaHeight:   "clamp(180px, 25vh, 200px)",
+    galeriaHeight:   "clamp(150px, 20vw, 240px)",
+ 
+    /* ─── CONTACTO Y REDES SOCIALES ─── */
+    wa:          "573123883183",
+    tel:         "3123883183",
+    ig:          "",
+    fb:          "",
+    tk:          "",
+    web:         "",
+ 
+    /* ─── UBICACIÓN Y MAPA ─── */
+    dir:         "Calle 22 #2a - 30 barrio el cabrero, MOSQUERA",
+    mapUrl:      "",
+    mapsLink:    "https://maps.app.goo.gl/jJhS7V84DYKrXhoG9",
+ 
+    /* ─── GALERÍA DE FOTOS ─── */
+    galeria:     [
+      "assets/logos/abicun/abicun-1.webp","assets/logos/abicun/abicun-2.webp","assets/logos/abicun/abicun-3.webp",
     ],
   },
 ];

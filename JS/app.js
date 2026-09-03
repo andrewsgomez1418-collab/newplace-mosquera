@@ -500,6 +500,15 @@ blogEl.innerHTML = `
       </div>
     </div>
   </div>`;
+
+/* FILTRAR NEGOCIOS DE PLANTILLA/EJEMPLO SIN COMPLETAR */
+for (let i = NEGOCIOS.length - 1; i >= 0; i--) {
+  const n = NEGOCIOS[i];
+  const catValida = CATS.some(c => c.id === n.cat);
+  if (!catValida || !n.nombre) {
+    NEGOCIOS.splice(i, 1);
+  }
+}
  
 /* RENDER CATEGORÍAS */
 const catGrid = document.getElementById('catGrid');
@@ -559,6 +568,16 @@ if (bizGrid) {
     });
   }
 }
+
+const ICOS_G = {
+  cal: '<svg viewBox="0 0 24 24"><path fill="#111" d="M7 2v2H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V6a2 2 0 00-2-2h-2V2h-2v2H9V2H7zm12 8H5v10h14V10zM5 6h14v2H5V6z"/></svg>',
+  wa: '<svg viewBox="0 0 24 24"><path fill="#25D366" d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2m5.98 14.09c-.24.68-1.42 1.32-1.96 1.4-.5.08-1.13.11-1.83-.11-.42-.13-.96-.31-1.65-.61-2.91-1.26-4.8-4.19-4.95-4.38-.15-.2-1.19-1.58-1.19-3.01s.75-2.13 1.02-2.42c.26-.29.58-.36.77-.36h.55c.18 0 .42-.07.65.5.24.58.81 2 .88 2.15.07.15.11.32.02.51-.09.19-.13.3-.26.46-.13.15-.27.34-.39.46-.13.13-.26.27-.11.53.15.26.68 1.12 1.46 1.81 1 .89 1.85 1.17 2.11 1.3.26.13.41.11.56-.06.15-.18.65-.75.82-1.01.17-.26.35-.22.58-.13.24.09 1.5.71 1.76.84.26.13.43.19.5.3.07.11.07.63-.17 1.31"/></svg>',
+  tk: '<svg viewBox="0 0 24 24"><path fill="#000" d="M16.6 5.82s.51.5 0 0A4.278 4.278 0 0115.54 3h-3.09v12.4a2.592 2.592 0 01-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 004.3 1.38V7.3s-1.88.09-3.24-1.48z"/></svg>',
+  ig: '<svg viewBox="0 0 24 24"><defs><linearGradient id="igGradCard" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f09433"/><stop offset="25%" stop-color="#e6683c"/><stop offset="50%" stop-color="#dc2743"/><stop offset="75%" stop-color="#cc2366"/><stop offset="100%" stop-color="#bc1888"/></linearGradient></defs><rect width="24" height="24" rx="6" fill="url(#igGradCard)"/><rect x="6" y="6" width="12" height="12" rx="4" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="12" cy="12" r="3" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="17" cy="7" r="1" fill="#fff"/></svg>',
+  fb: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#1877F2"/><path fill="#fff" d="M15.12 12.5h-2.2V20h-3.1v-7.5H8.3V9.9h1.52V8.3c0-1.5.72-3.4 3.4-3.4l2.5.01v2.6h-1.8c-.3 0-.72.15-.72.8v1.6h2.5z"/></svg>',
+  didi: '<svg viewBox="0 0 24 24"><path fill="#3D2B1F" d="M7 8a5 5 0 0110 0v5h-2V8a3 3 0 00-6 0v5H7V8z"/><rect x="6.5" y="14" width="2" height="4" rx="1" fill="#3D2B1F"/><rect x="10.5" y="14" width="2" height="4" rx="1" fill="#3D2B1F"/></svg>',
+  rappi: '<svg viewBox="0 0 24 24"><path fill="#fff" d="M2 12.5c1-2 3-3 5-1 1 1 2 1.5 3 1.5 1.5 0 2.5-.7 3.5-1.5 1-.8 2-1 3 0s1 2.5-.5 3.5c-1.5 1-3.5 1.5-6 1.5s-4.5-.5-6-1.5c-1.3-.9-2.5-2.1-2-3.5z"/></svg>'
+};
  
 function bizCardHTML(neg, cat) {
   let logoBoxHTML = '';
@@ -581,13 +600,12 @@ function bizCardHTML(neg, cat) {
       <div class="biz-slogan">${neg.slogan || ''}</div>
     </div>
     <div class="biz-foot">
-      ${neg.agendamiento ? '<span class="btag agendamiento">📅 Agendar</span>' : ''}
-      ${(neg.wa || (neg.was && neg.was.length > 0)) ? '<span class="btag wa">💬 WhatsApp</span>' : ''}
-      ${neg.tk ? '<span class="btag tk">🎵 TikTok</span>' : ''}
-      ${neg.ig ? '<span class="btag ig">📸 Instagram</span>' : ''}
-      ${neg.fb ? '<span class="btag fb">🔵 Facebook</span>' : ''}
-      ${neg.didi ? '<span class="btag didi">🛵 Didi Food</span>' : ''}
-      ${neg.rappi ? '<span class="btag rappi">🛵 Rappi</span>' : ''}
+      ${neg.agendamiento ? `<span class="btag agendamiento"><span class="btag-ico">${ICOS_G.cal}</span>Agendar</span>` : ''}
+      ${(neg.wa || (neg.was && neg.was.length)) ? `<span class="btag wa"><span class="btag-ico">${ICOS_G.wa}</span>WhatsApp</span>` : ''}
+      ${neg.tk ? `<span class="btag tk"><span class="btag-ico">${ICOS_G.tk}</span>TikTok</span>` : ''}
+      ${neg.ig ? `<span class="btag ig"><span class="btag-ico">${ICOS_G.ig}</span>Instagram</span>` : ''}
+      ${neg.fb ? `<span class="btag fb"><span class="btag-ico">${ICOS_G.fb}</span>Facebook</span>` : ''}      ${neg.didi ? `<span class="btag didi"><span class="btag-ico">${ICOS_G.didi}</span>Didi Food</span>` : ''}
+      ${neg.rappi ? `<span class="btag rappi"><span class="btag-ico">${ICOS_G.rappi}</span>Rappi</span>` : ''}
     </div>`;
 }
  
@@ -785,7 +803,7 @@ if (neg.portada) {
     wa: '<svg viewBox="0 0 24 24"><path fill="#25D366" d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2m5.98 14.09c-.24.68-1.42 1.32-1.96 1.4-.5.08-1.13.11-1.83-.11-.42-.13-.96-.31-1.65-.61-2.91-1.26-4.8-4.19-4.95-4.38-.15-.2-1.19-1.58-1.19-3.01s.75-2.13 1.02-2.42c.26-.29.58-.36.77-.36h.55c.18 0 .42-.07.65.5.24.58.81 2 .88 2.15.07.15.11.32.02.51-.09.19-.13.3-.26.46-.13.15-.27.34-.39.46-.13.13-.26.27-.11.53.15.26.68 1.12 1.46 1.81 1 .89 1.85 1.17 2.11 1.3.26.13.41.11.56-.06.15-.18.65-.75.82-1.01.17-.26.35-.22.58-.13.24.09 1.5.71 1.76.84.26.13.43.19.5.3.07.11.07.63-.17 1.31"/></svg>',
     waWhite: '<svg viewBox="0 0 24 24"><path fill="#fff" d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2m5.98 14.09c-.24.68-1.42 1.32-1.96 1.4-.5.08-1.13.11-1.83-.11-.42-.13-.96-.31-1.65-.61-2.91-1.26-4.8-4.19-4.95-4.38-.15-.2-1.19-1.58-1.19-3.01s.75-2.13 1.02-2.42c.26-.29.58-.36.77-.36h.55c.18 0 .42-.07.65.5.24.58.81 2 .88 2.15.07.15.11.32.02.51-.09.19-.13.3-.26.46-.13.15-.27.34-.39.46-.13.13-.26.27-.11.53.15.26.68 1.12 1.46 1.81 1 .89 1.85 1.17 2.11 1.3.26.13.41.11.56-.06.15-.18.65-.75.82-1.01.17-.26.35-.22.58-.13.24.09 1.5.71 1.76.84.26.13.43.19.5.3.07.11.07.63-.17 1.31"/></svg>',
     tel: '<svg viewBox="0 0 24 24"><path fill="#111" d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.55.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.55 1 1 0 01-.25 1.01l-2.2 2.23z"/></svg>',
-    ig: '<svg viewBox="0 0 24 24"><defs><linearGradient id="igGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f09433"/><stop offset="25%" stop-color="#e6683c"/><stop offset="50%" stop-color="#dc2743"/><stop offset="75%" stop-color="#cc2366"/><stop offset="100%" stop-color="#bc1888"/></linearGradient></defs><rect width="24" height="24" rx="6" fill="url(#igGrad)"/><rect x="6" y="6" width="12" height="12" rx="4" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="12" cy="12" r="3" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="17" cy="7" r="1" fill="#fff"/></svg>',
+    ig: '<svg viewBox="0 0 24 24"><defs><linearGradient id="igGradProfile" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f09433"/><stop offset="25%" stop-color="#e6683c"/><stop offset="50%" stop-color="#dc2743"/><stop offset="75%" stop-color="#cc2366"/><stop offset="100%" stop-color="#bc1888"/></linearGradient></defs><rect width="24" height="24" rx="6" fill="url(#igGradProfile)"/><rect x="6" y="6" width="12" height="12" rx="4" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="12" cy="12" r="3" fill="none" stroke="#fff" stroke-width="1.5"/><circle cx="17" cy="7" r="1" fill="#fff"/></svg>',
     tk: '<svg viewBox="0 0 24 24"><path fill="#000" d="M16.6 5.82s.51.5 0 0A4.278 4.278 0 0115.54 3h-3.09v12.4a2.592 2.592 0 01-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 004.3 1.38V7.3s-1.88.09-3.24-1.48z"/></svg>',
     fb: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#1877F2"/><path fill="#fff" d="M15.12 12.5h-2.2V20h-3.1v-7.5H8.3V9.9h1.52V8.3c0-1.5.72-3.4 3.4-3.4l2.5.01v2.6h-1.8c-.3 0-.72.15-.72.8v1.6h2.5z"/></svg>',
     web: '<svg viewBox="0 0 24 24"><path fill="#111" d="M12 2a10 10 0 100 20 10 10 0 000-20zm6.93 8h-3.1a15.6 15.6 0 00-1.2-4.87A8.02 8.02 0 0118.93 10zM12 4.07c.86 1.1 1.6 2.94 1.94 5.93H10.06c.34-2.99 1.08-4.83 1.94-5.93zM4.07 12H7.1a15.6 15.6 0 001.2 4.87A8.02 8.02 0 014.07 12zM4.07 10a8.02 8.02 0 014.23-5.87A15.6 15.6 0 007.1 10H4.07zm3.03 4h3.03c.34 2.99 1.08 4.83 1.94 5.93a8.02 8.02 0 01-4.97-5.93zm5.86 5.93c.86-1.1 1.6-2.94 1.94-5.93h3.03a8.02 8.02 0 01-4.97 5.93zM13.94 12H10.06a13.9 13.9 0 010-4h3.88a13.9 13.9 0 010 4zm2.69 4.87A15.6 15.6 0 0017.9 12h2.96a8.02 8.02 0 01-4.23 4.87z"/></svg>',
@@ -800,7 +818,7 @@ if (neg.portada) {
     rappi: '<svg viewBox="0 0 24 24"><path fill="#fff" d="M2 12.5c1-2 3-3 5-1 1 1 2 1.5 3 1.5 1.5 0 2.5-.7 3.5-1.5 1-.8 2-1 3 0s1 2.5-.5 3.5c-1.5 1-3.5 1.5-6 1.5s-4.5-.5-6-1.5c-1.3-.9-2.5-2.1-2-3.5z"/></svg>',
     didi: '<svg viewBox="0 0 24 24"><path fill="#3D2B1F" d="M7 8a5 5 0 0110 0v5h-2V8a3 3 0 00-6 0v5H7V8z"/><rect x="6.5" y="14" width="2" height="4" rx="1" fill="#3D2B1F"/><rect x="10.5" y="14" width="2" height="4" rx="1" fill="#3D2B1F"/></svg>'
   };
-  if (neg.agendamiento) ab.innerHTML += `<a href="${neg.agendamiento}" class="abtn agendamiento" target="_blank"><span class="abtn-ico">${ICOS.cal}</span><span class="abtn-txt">Agendar Cita</span></a>`;
+  if (neg.agendamiento) ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_agendamiento',{'business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}'}); window.open('${neg.agendamiento}', '_blank');" class="abtn agendamiento" target="_blank"><span class="abtn-ico">${ICOS.cal}</span><span class="abtn-txt">Agendar Cita</span></a>`;
   if (neg.was && neg.was.length > 0) {
       neg.was.forEach(w => {
         ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_whatsapp',{'business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}','phone':'${w.numero}'}); window.open('https://wa.me/${w.numero}?text=Hola!%20Vi%20tu%20negocio%20en%20Newplace%20Store%20y%20quiero%20más%20información', '_blank');" class="abtn wa"><span class="abtn-ico">${ICOS.wa}</span><span class="abtn-txt">${w.nombre}</span></a>`;
