@@ -36,7 +36,7 @@ const POSTS = [
     etiquetaTipo: "📜 Cultura e Historia",
     titulo: "Mosquera, Cundinamarca: la ciudad que crece a un paso de Bogotá",
     resumen: "Un vistazo a la historia y el presente del municipio que combina tranquilidad, industria y comercio local a solo 15 minutos de la capital.",
-    imagen: "assets/blog/cultura-mosquera.jpg",
+    imagen: "assets/blog/cultura-mosquera.webp",
     fecha: "2026-09-01",
     fechaTexto: "Cultura local",
     tags: ["Cultura", "Historia", "Mosquera"],
@@ -52,7 +52,7 @@ const POSTS = [
     etiquetaTipo: "🍽️ Guía",
     titulo: "5 antojos para probar este mes en Mosquera",
     resumen: "Una selección de sabores locales para quienes buscan qué comer hoy en el municipio, directo desde el directorio de Newplace Store.",
-    imagen: "assets/blog/guia-antojos-mosquera.jpg",
+    imagen: "assets/blog/guia-antojos-mosquera.webp",
     fecha: "2026-09-03",
     fechaTexto: "Guía del mes",
     tags: ["Guías", "Antojos", "Gourmet"],
@@ -64,20 +64,20 @@ const POSTS = [
     ]
   },
   {
-    id: "destacado-la-gran-parada",
+    id: "perfileriajd",
     tipo: "destacado",
     etiquetaTipo: "⭐ Negocio Destacado",
-    titulo: "La Gran Parada: el placer de comer, ahora en Newplace Store",
-    resumen: "Conoce el negocio destacado de esta semana en Mosquera, especialista en buñuelos, pan de bono y amasijos tradicionales.",
-    imagen: "assets/blog/destacado-lagranparada.jpg",
+    titulo: "Herramientas industriales, materiales de construcción, pinturas y acabados, tornilleria y fijaciones, ferretería en general, ahora en Newplace Store",
+    resumen: "Conoce el negocio destacado de esta semana en Mosquera, <p>JD Perfilería es calidad y experiencia en perfilería metálica para proyectos estructurales, arquitectónicos e industriales. Ofrecemos variedad de perfiles y fabricamos tejas arquitectónicas, modernas y resistentes, respaldados por maquinaria industrial y un equipo experto que garantiza confianza en cada proyecto.</p>",
+    imagen: "assets/blog/inicio-jd-perfileria.webp",
     fecha: "2026-09-05",
     fechaTexto: "Destacado de la semana",
-    tags: ["Negocio Destacado", "Antojos"],
+    tags: ["Negocio Destacado", "empresarial"],
     negocioId: "lagranparada",
     contenido: [
-      "Cada semana destacamos un negocio local que hace parte de Newplace Store. Esta semana el turno es para La Gran Parada, bajo el lema 'El placer de comer'.",
-      "Ofrecen sabores tradicionales y productos frescos todos los días: buñuelos, pan de bono, empanadas, palitos de queso, arepas de maíz con queso y masa lista para preparar en casa.",
-      "Si quieres surtir tu negocio o simplemente darte un antojo, puedes ver su perfil completo y escribirles directo por WhatsApp desde la plataforma."
+      "Cada semana destacamos un negocio local que hace parte de Newplace Store. Esta semana el turno es para JD PERFILERIA, bajo el lema 'Especialistas en Perfileria y Productor de teja arquitectonica'.",
+      "Ofrecen Perfileria metalica, Teja arquitectonica, Servicios de dobladora y Troquelados.",
+      "Somos tu aliado en construcción y obra civil. Ofrecemos perfiles metálicos y servicio de dobladora para garantizar estructuras seguras, resistentes y a la medida de tu proyecto."
     ]
   },
   {
@@ -86,7 +86,7 @@ const POSTS = [
     etiquetaTipo: "🚨 Seguridad y Emergencias",
     titulo: "Números de emergencia y seguridad en Mosquera",
     resumen: "Guarda esta guía: Policía, Bomberos y la línea nacional de emergencias, a un toque de distancia.",
-    imagen: "assets/blog/seguridad-mosquera.jpg",
+    imagen: "assets/blog/seguridad-mosquera.webp",
     fecha: "2026-09-07",
     fechaTexto: "Guía de seguridad · Actualizado septiembre 2026",
     tags: ["Seguridad", "Emergencias", "Comunidad"],
