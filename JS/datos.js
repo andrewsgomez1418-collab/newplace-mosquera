@@ -73,7 +73,7 @@ const POSTS = [
     fecha: "2026-09-05",
     fechaTexto: "Destacado de la semana",
     tags: ["Negocio Destacado", "empresarial"],
-    negocioId: "lagranparada",
+    negocioId: "perfileriajd",
     contenido: [
       "Cada semana destacamos un negocio local que hace parte de Newplace Store. Esta semana el turno es para JD PERFILERIA, bajo el lema 'Especialistas en Perfileria y Productor de teja arquitectonica'.",
       "Ofrecen Perfileria metalica, Teja arquitectonica, Servicios de dobladora y Troquelados.",
