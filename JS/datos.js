@@ -12,18 +12,96 @@ const BLOG = {
   subtitulo: "El municipio que crece contigo",
   descripcion: "Mosquera es uno de los municipios de mayor crecimiento y desarrollo de Cundinamarca. Ubicado a solo 15 minutos de Bogotá, combina la tranquilidad del municipio con la dinámica empresarial y comercial de la región. Aquí encontrarás los mejores negocios locales, todos a tu alcance.",
   cualidades: [
-    // Para editar: cambia el emoji (icon), el título y la descripción de cada tarjeta
-    // Para agregar una: copia un bloque { icon, titulo, desc } y pégalo antes del ]
-    { icon:"📍", titulo:"Ubicación Estratégica",   desc:"A 15 minutos del centro de Bogotá, con fácil acceso por la Calle 13 y Autopista Sur." },
-    { icon:"🏘️", titulo:"Comunidad en Crecimiento", desc:"Más de 180.000 habitantes y en constante expansión residencial y comercial." },
-    { icon:"🏭", titulo:"Zona Empresarial",         desc:"Sede de importantes empresas y parques industriales de la región." },
-    { icon:"🌿", titulo:"Calidad de Vida",          desc:"Municipio seguro, con parques, colegios y servicios de primera calidad." },
-    { icon:"🛒", titulo:"Comercio Local",           desc:"Una vibrante oferta de negocios locales que impulsan la economía del municipio." },
-    { icon:"🚀", titulo:"Ciudad del Futuro",        desc:"Proyectos de infraestructura y desarrollo que posicionan a Mosquera como referente regional." },
   ],
   etiquetas: ["📌 Mosquera, Cundinamarca", "🇨🇴 Colombia", "⭐ Negocios Locales"],
 };
- 
+ /* ──────────────────────────────────────────────────────────
+   POSTS — Publicaciones del blog (eventos, guías, destacados, cultura)
+   ⭐ Para agregar una publicación nueva:
+   1. Copia un bloque { ... } completo (desde { hasta },)
+   2. Pégalo debajo de la última publicación, antes del ]
+   3. Cambia id (único, sin espacios), tipo, titulo, fecha, etc.
+   4. Si el tipo es "destacado", pon el id exacto del negocio en negocioId
+      (debe existir en el array NEGOCIOS)
+   5. Si el tipo es "guia", puedes poner el id exacto de la categoría en catId
+      (debe existir en el array CATS)
+   6. Guarda con Ctrl+S → el sitio se actualiza solo
+
+   tipo puede ser: "evento" | "destacado" | "guia" | "cultura" | "seguridad"
+   ────────────────────────────────────────────────────────── */
+const POSTS = [
+  {
+    id: "conociendo-mosquera-cundinamarca",
+    tipo: "cultura",
+    etiquetaTipo: "📜 Cultura e Historia",
+    titulo: "Mosquera, Cundinamarca: la ciudad que crece a un paso de Bogotá",
+    resumen: "Un vistazo a la historia y el presente del municipio que combina tranquilidad, industria y comercio local a solo 15 minutos de la capital.",
+    imagen: "assets/blog/cultura-mosquera.jpg",
+    fecha: "2026-09-01",
+    fechaTexto: "Cultura local",
+    tags: ["Cultura", "Historia", "Mosquera"],
+    contenido: [
+      "Mosquera fue fundada el 27 de septiembre de 1861, cuando se separó del municipio de Funza y tomó el nombre del expresidente Tomás Cipriano de Mosquera.",
+      "Hoy en día es uno de los municipios de mayor crecimiento de Cundinamarca, con acceso directo a Bogotá por la Calle 13 y la Autopista Sur, y una economía que combina zonas industriales, comercio local y una comunidad en constante expansión.",
+      "Newplace Store nace justamente para conectar ese comercio local —desde restaurantes hasta talleres y consultorios de salud— con los vecinos de Mosquera, todo desde el celular."
+    ]
+  },
+  {
+    id: "guia-antojos-mosquera",
+    tipo: "guia",
+    etiquetaTipo: "🍽️ Guía",
+    titulo: "5 antojos para probar este mes en Mosquera",
+    resumen: "Una selección de sabores locales para quienes buscan qué comer hoy en el municipio, directo desde el directorio de Newplace Store.",
+    imagen: "assets/blog/guia-antojos-mosquera.jpg",
+    fecha: "2026-09-03",
+    fechaTexto: "Guía del mes",
+    tags: ["Guías", "Antojos", "Gourmet"],
+    catId: "antojos",
+    contenido: [
+      "Mosquera tiene una oferta gastronómica cada vez más variada, desde comida rápida tradicional hasta arroces, pollos asados y postres artesanales.",
+      "En esta guía te invitamos a explorar la categoría Antojos de Newplace Store, donde ya están inscritos negocios como asaderos, fruterías y sitios de comida rápida del municipio.",
+      "Entra a la categoría completa para ver fotos, menú y el botón directo de WhatsApp de cada negocio, sin necesidad de buscar por separado en redes sociales."
+    ]
+  },
+  {
+    id: "destacado-la-gran-parada",
+    tipo: "destacado",
+    etiquetaTipo: "⭐ Negocio Destacado",
+    titulo: "La Gran Parada: el placer de comer, ahora en Newplace Store",
+    resumen: "Conoce el negocio destacado de esta semana en Mosquera, especialista en buñuelos, pan de bono y amasijos tradicionales.",
+    imagen: "assets/blog/destacado-lagranparada.jpg",
+    fecha: "2026-09-05",
+    fechaTexto: "Destacado de la semana",
+    tags: ["Negocio Destacado", "Antojos"],
+    negocioId: "lagranparada",
+    contenido: [
+      "Cada semana destacamos un negocio local que hace parte de Newplace Store. Esta semana el turno es para La Gran Parada, bajo el lema 'El placer de comer'.",
+      "Ofrecen sabores tradicionales y productos frescos todos los días: buñuelos, pan de bono, empanadas, palitos de queso, arepas de maíz con queso y masa lista para preparar en casa.",
+      "Si quieres surtir tu negocio o simplemente darte un antojo, puedes ver su perfil completo y escribirles directo por WhatsApp desde la plataforma."
+    ]
+  },
+  {
+    id: "seguridad-emergencias-mosquera",
+    tipo: "seguridad",
+    etiquetaTipo: "🚨 Seguridad y Emergencias",
+    titulo: "Números de emergencia y seguridad en Mosquera",
+    resumen: "Guarda esta guía: Policía, Bomberos y la línea nacional de emergencias, a un toque de distancia.",
+    imagen: "assets/blog/seguridad-mosquera.jpg",
+    fecha: "2026-09-07",
+    fechaTexto: "Guía de seguridad · Actualizado septiembre 2026",
+    tags: ["Seguridad", "Emergencias", "Comunidad"],
+    contenido: [
+      "Reunimos los contactos más importantes de seguridad y atención de emergencias de Mosquera para que los tengas a la mano cuando los necesites.",
+      "Para cualquier emergencia real (incendio, accidente, delito en curso, urgencia médica), la Línea Nacional de Emergencias 123 es el canal más rápido: funciona las 24 horas en todo el país y coordina Policía, Bomberos, Cruz Roja y ambulancias.",
+      "Los números directos de la estación de Policía y del Cuerpo de Bomberos Voluntarios de Mosquera son útiles para trámites, seguimiento o contacto administrativo — no reemplazan al 123 en una emergencia en curso. Verificamos estos datos con fuentes oficiales, pero al ser líneas administrativas pueden cambiar; confírmalos antes de publicar y, ante cualquier duda, usa siempre el 123."
+    ],
+    contactos: [
+      { nombre: "Línea Nacional de Emergencias", numero: "123", nota: "Policía, Bomberos, Cruz Roja y ambulancias — 24/7" },
+      { nombre: "Policía Nacional · Estación Mosquera", numero: "3137122951", nota: "Directorio oficial Policía Nacional (policia.gov.co)" },
+      { nombre: "Bomberos Voluntarios de Mosquera", numero: "6018277245", nota: "Calle 17 #3-42 Este, Mosquera · bomberosmosquera.org" },
+    ]
+  },
+];
 /* ──────────────────────────────────────────────────────────
    CATEGORÍAS — No necesitas cambiar nada aquí
    ────────────────────────────────────────────────────────── */
@@ -46,7 +124,7 @@ const CATS = [
   { id:"shopping",     n:"SHOPPING",                       e:"", c:"#e5007d", img:"assets/categorias/categoria-shopping.webp", imgHdr:"assets/categorias/destacados/destacados-shopping.webp", showTitle: false},
   { id:"imagen",       n:"IMAGEN Y ESTILO",                e:"", c:"#9b59b6", img:"assets/categorias/categoria-estilo.webp", imgHdr:"assets/categorias/destacados/destacados-imagen-estilo.webp", showTitle: false},
   { id:"mascotas",     n:"MUNDO MASCOTAS",                 e:"", c:"#f39c12", img:"assets/categorias/mascotas.webp", imgHdr:"assets/categorias/destacados/destacados-macotas.webp", showTitle: false},
-  { id:"educacion",    n:"EDUCACION Y DEPORTES",        e:"", c:"#3498db", img:"assets/categorias/categoria-educacion.webp", imgHdr:"assets/categorias/destacados/destacados-educacion.webp", showTitle: false},
+  { id:"educacion",    n:"EDUCACION Y DEPORTES",           e:"", c:"#3498db", img:"assets/categorias/categoria-educacion.webp", imgHdr:"assets/categorias/destacados/destacados-educacion.webp", showTitle: false},
   { id:"movilidad",    n:"TALLERES Y MOVILIDAD",           e:"", c:"#616161", img:"assets/categorias/categoria-talleres.webp", imgHdr:"assets/categorias/destacados/salud.jpg", showTitle: false},
   { id:"clasificados",    n:"CLASIFICADOS",                e:"", c:"#e65100", img:"assets/categorias/categoria-clasificados.webp", imgHdr:"assets/categorias/destacados/salud.jpg", showTitle: false},
   { id:"entretenimiento", n:"ENTRETENIMIENTO",             e:"", c:"#7b1fa2", img:"assets/categorias/categoria-entretenimiento.webp", imgHdr:"assets/categorias/destacados/salud.jpg", showTitle: false},
@@ -4259,8 +4337,8 @@ const NEGOCIOS = [
     id:          "abicun",
     cat:         "educacion",
     nombre:      "ACADEMIA ABICUN",
-    slogan:      "Técnico en cosmetología y belleza integral educación para el trabajo y desarrollo humano.",
-    desc:        "Abicun Academia es un centro de formación especializado en cosmetología y belleza integral, comprometido con preparar profesionales altamente capacitados en el mundo de la estética.</p> Ofrecemos cursos y capacitaciones en maquillaje, peluquería, barbería, uñas, tratamientos faciales y corporales, brindando enseñanza práctica, técnicas actualizadas y acompañamiento profesional.</p> Nos destacamos por formar talentos con creatividad, disciplina y pasión por la belleza, en un ambiente moderno y de aprendizaje continuo.</p><p>Academia,/Estética integral,/Cuidado facial y corporal,/ Belleza avanzada,/ Tecnicas de spa,/ Cosmetologia profecional",
+    slogan:      "Programas técnicos laborales en belleza ,certificados y avalados por secretaría de educación poner franja 15 años del volante.",
+    desc:        "Abicun 15 años capacitando profesionales.</p>Comprometidos en educar y resaltar dones y aptitudes de cada persona proyectándola hacia el futuro con metas y características de competitividad en su hacer laboral en el ámbito de la belleza integral como el mejor aporte a la familia y a la sociedad en general.</p> Contamos con varias opciones de capacitación. </p>Programas técnicos  avalados y certificados en:</p>Manícure y pedicure</p>Esté lista integral</p>Cosmetologia y estética</p>Seminarios</p>Especializaciones</p>Homologaciones</p>Otorgamos Becas y vinculaciones laborales.",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
@@ -4291,7 +4369,7 @@ const NEGOCIOS = [
  
     /* ─── GALERÍA DE FOTOS ─── */
     galeria:     [
-      "assets/logos/abicun/abicun-1.webp","assets/logos/abicun/abicun-2.webp","assets/logos/abicun/abicun-3.webp",
+      "assets/logos/abicun/instructora-abicun.webp","assets/logos/abicun/abicun-1.webp","assets/logos/abicun/abicun-2.webp","assets/logos/abicun/abicun-3.webp",
     ],
   },
 ];

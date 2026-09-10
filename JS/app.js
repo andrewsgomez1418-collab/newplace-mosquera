@@ -306,6 +306,39 @@ function updateCategoryMetaTags(cat) {
     updateMetaTag('twitter:image', imgUrl);
   }
 }
+
+/**
+ * Actualiza title, description y OG tags para una publicación del blog
+ */
+function updatePostMetaTags(post) {
+  const domain = window.location.origin;
+  const urlPost = `${domain}/blog/${post.id}`;
+  const titulo = `${post.titulo} — Newplace Store`;
+
+  document.title = titulo;
+  updateMetaTag('description', post.resumen);
+  updateMetaTag('og:title', post.titulo);
+  updateMetaTag('og:description', post.resumen);
+  updateMetaTag('og:url', urlPost);
+  updateMetaTag('twitter:title', post.titulo);
+  updateMetaTag('twitter:description', post.resumen);
+  updateCanonicalTag(urlPost);
+
+  const imgUrl = `${domain}/${post.imagen}`;
+  updateMetaTag('og:image', imgUrl);
+  updateMetaTag('twitter:image', imgUrl);
+
+  updateJsonLd({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": post.titulo,
+    "description": post.resumen,
+    "image": imgUrl,
+    "datePublished": post.fecha,
+    "url": urlPost,
+    "publisher": { "@type": "Organization", "name": "Newplace Store Mosquera" }
+  });
+}
  
 /* ═══════════════════════════════════════════════════════════
    MOTOR DEL SITIO — No necesitas modificar nada de aquí abajo
@@ -350,6 +383,38 @@ function updateCategoryMetaTags(cat) {
     }
  
     esperarCategoria();
+ 
+    return;
+  }
+ 
+  // PUBLICACIÓN DEL BLOG
+  if (pathParts[0] === 'blog') {
+ 
+    const postID = pathParts[1];
+ 
+    function esperarPost() {
+ 
+      if (
+        typeof POSTS !== 'undefined' &&
+        typeof openPost === 'function'
+      ) {
+ 
+        const post = POSTS.find(
+          p => p.id.toLowerCase() === (postID || '').toLowerCase()
+        );
+ 
+        if (post) {
+          openPost(post);
+        }
+ 
+      } else {
+ 
+        setTimeout(esperarPost, 100);
+ 
+      }
+    }
+ 
+    esperarPost();
  
     return;
   }
@@ -499,7 +564,101 @@ blogEl.innerHTML = `
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="posts-section">
+    <h2 class="sec-title">Vida en Mosquera</h2>
+    <div class="posts-grid" id="postsGrid"></div>
   </div>`;
+
+/* Color de respaldo por tipo de publicación (se ve si la imagen aún no existe) */
+const POST_TIPO_GRADIENT = {
+  evento:     'linear-gradient(135deg,#e5007d,#922b21)',
+  destacado:  'linear-gradient(135deg,#f39c12,#e5007d)',
+  guia:       'linear-gradient(135deg,#922b21,#2c3e50)',
+  cultura:    'linear-gradient(135deg,#2c3e50,#1c1c1b)',
+  seguridad:  'linear-gradient(135deg,#c0392b,#1c1c1b)',
+};
+
+/* RENDER GRID DE PUBLICACIONES (POSTS) */
+const postsGrid = document.getElementById('postsGrid');
+const postsOrdenados = [...POSTS].sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
+postsOrdenados.forEach(post => {
+  const card = document.createElement('div');
+  card.className = 'post-card post-card--' + post.tipo;
+  const fondo = POST_TIPO_GRADIENT[post.tipo] || 'linear-gradient(135deg,#e5007d,#1c1c1b)';
+  card.innerHTML = `
+    <div class="post-card-img" style="background-image:url('/${post.imagen}'), ${fondo}">
+      <span class="post-card-tipo">${post.etiquetaTipo}</span>
+    </div>
+    <div class="post-card-body">
+      <div class="post-card-fecha">${post.fechaTexto}</div>
+      <div class="post-card-title">${post.titulo}</div>
+      <p class="post-card-resumen">${post.resumen}</p>
+    </div>`;
+  card.addEventListener('click', () => openPost(post));
+  postsGrid.appendChild(card);
+});
+
+/* ABRIR PUBLICACIÓN (detalle de post) */
+function openPost(post) {
+  trackEvent('view_post', {
+    'post_id': post.id,
+    'post_tipo': post.tipo,
+    'post_title': post.titulo,
+    'timestamp': new Date().toISOString()
+  });
+
+  if (window.location.pathname !== '/blog/' + post.id) {
+    history.pushState({ page: 'post', post: post.id }, '', '/blog/' + post.id);
+  }
+  navHistory.push('post');
+
+  const fondoDetalle = POST_TIPO_GRADIENT[post.tipo] || 'linear-gradient(135deg,#e5007d,#1c1c1b)';
+  document.getElementById('postCover').style.backgroundImage = `url('/${post.imagen}'), ${fondoDetalle}`;
+  document.getElementById('postTipo').textContent = post.etiquetaTipo;
+  document.getElementById('postTitulo').textContent = post.titulo;
+  document.getElementById('postFecha').textContent = post.fechaTexto + (post.lugar ? ' · ' + post.lugar : '');
+  document.getElementById('postCuerpo').innerHTML = post.contenido.map(p => `<p>${p}</p>`).join('');
+  document.getElementById('postTags').innerHTML = (post.tags || []).map(t => `<span class="blog-tag">${t}</span>`).join('');
+
+  // LISTA DE CONTACTOS (si el post trae números, ej: guía de seguridad)
+  const contactosEl = document.getElementById('postContactos');
+  if (post.contactos && post.contactos.length) {
+    contactosEl.innerHTML = post.contactos.map(c => {
+      const telHref = c.numero.length <= 3 ? `tel:${c.numero}` : `tel:+57${c.numero}`;
+      return `
+        <div class="contacto-item">
+          <div class="contacto-info">
+            <div class="contacto-nombre">${c.nombre}</div>
+            ${c.nota ? `<div class="contacto-nota">${c.nota}</div>` : ''}
+          </div>
+          <a class="contacto-call-btn" href="${telHref}" onclick="trackEvent('call_contact',{'contact_name':'${c.nombre}'})">📞 Llamar</a>
+        </div>`;
+    }).join('');
+  } else {
+    contactosEl.innerHTML = '';
+  }
+
+  // CTA contextual según el tipo de publicación
+  const ctaEl = document.getElementById('postCta');
+  if (post.tipo === 'destacado' && post.negocioId) {
+    const neg = NEGOCIOS.find(n => n.id === post.negocioId);
+    ctaEl.innerHTML = neg
+      ? `<button class="post-cta-btn" onclick="openNeg(NEGOCIOS.find(n=>n.id==='${neg.id}'))">Ver perfil de ${neg.nombre} →</button>`
+      : '';
+  } else if (post.tipo === 'guia' && post.catId) {
+    const cat = CATS.find(c => c.id === post.catId);
+    ctaEl.innerHTML = cat
+      ? `<button class="post-cta-btn" onclick="openCat(CATS.find(c=>c.id==='${cat.id}'))">Ver negocios de ${cat.n} →</button>`
+      : '';
+  } else {
+    ctaEl.innerHTML = '';
+  }
+
+  updatePostMetaTags(post);
+  showPage('post');
+}
 
 /* FILTRAR NEGOCIOS DE PLANTILLA/EJEMPLO SIN COMPLETAR */
 for (let i = NEGOCIOS.length - 1; i >= 0; i--) {
@@ -1557,7 +1716,8 @@ function copiarAlPortapapelesNeg() {
 }
 
 /* ─── CARTELERA DE AVISOS Y OFERTAS COMERCIALES ─── */
-function toggleCartelera() {
+function toggleCartelera()
+ {
   const flyersActivos = NEGOCIOS.filter(n => n.flyerActivo);
   if (!flyersActivos.length) {
     alert('Aún no hay avisos publicados');
@@ -1566,7 +1726,23 @@ function toggleCartelera() {
   ensureCarteleraStyles();
   renderCarteleraModal(flyersActivos);
 }
+/* ─── BOTÓN PRODUCTOS Y SERVICIOS ─── */
+function toggleProductosServicios() {
+  const btn = document.getElementById('prodServBtn');
+  const section = document.getElementById('catSection');
+  const abierto = section.style.display !== 'none';
 
+  if (abierto) {
+    section.style.display = 'none';
+    btn.classList.remove('active');
+  } else {
+    section.style.display = 'block';
+    btn.classList.add('active');
+    setTimeout(() => {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 50);
+  }
+}
 function renderCarteleraModal(flyers) {
   document.querySelectorAll('.cartelera-modal').forEach(el => el.remove());
 

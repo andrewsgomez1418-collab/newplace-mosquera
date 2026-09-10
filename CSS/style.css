@@ -67,7 +67,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--text)}
   width:100%;
   display:flex;align-items:center;justify-content:center;gap:10px;
   background:#fff;
-  color:#e5007d;
+  color:#6f6f6e;
   border:2px solid #e5007d;
   border-radius:16px;
   padding:14px 20px;
@@ -75,16 +75,16 @@ body{font-family:var(--font);background:var(--bg);color:var(--text)}
   font-weight:800;
   font-size:.92rem;
   letter-spacing:.2px;
+  text-align:center;
   cursor:pointer;
-  box-shadow:0 6px 0 #f3c2dd, 0 12px 26px rgba(229,0,125,.18);
-  transform:translateY(0);
+  position:relative;
   transition:transform .15s ease, box-shadow .15s ease;
 }
-.cartelera-btn:hover{transform:translateY(-2px);box-shadow:0 8px 0 #f3c2dd,0 16px 32px rgba(229,0,125,.25)}
-.cartelera-btn:active,.cartelera-btn.active{transform:translateY(4px);box-shadow:0 2px 0 #f3c2dd,0 4px 14px rgba(229,0,125,.15)}
+.cartelera-btn:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(229,0,125,.18)}
+.cartelera-btn:active,.cartelera-btn.active{transform:translateY(0)}
 .cartelera-icon{font-size:1.2rem}
-.cartelera-arrow{margin-left:auto;font-size:1.3rem;transition:transform .25s ease}
-.cartelera-btn.active .cartelera-arrow{transform:rotate(90deg)}
+.cartelera-arrow{position:absolute;right:20px;top:50%;transform:translateY(-50%);font-size:1.3rem;transition:transform .25s ease}
+.cartelera-btn.active .cartelera-arrow{transform:translateY(-50%) rotate(90deg)}
 
 /* SECCIONES */
 .section{max-width:1080px;margin:0 auto;padding:36px 20px}
@@ -472,6 +472,43 @@ body{font-family:var(--font);background:var(--bg);color:var(--text)}
 .blog-footer{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-top:16px;border-top:1px solid #f0f0f0}
 .blog-tag{display:inline-flex;align-items:center;gap:5px;font-size:.72rem;font-weight:600;padding:5px 12px;border-radius:99px;background:var(--primary)15;color:var(--primary)}
 
+/* ── GRID DE PUBLICACIONES (POSTS) ───────────────────── */
+.posts-section{margin-top:36px}
+.posts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px}
+.post-card{background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);border:1px solid #eee;cursor:pointer;transition:all .25s ease;display:flex;flex-direction:column}
+.post-card:hover{transform:translateY(-4px);box-shadow:var(--sh2)}
+.post-card-img{height:150px;background-size:cover;background-position:center;background-color:#eee;position:relative;display:flex;align-items:flex-start;padding:12px}
+.post-card-tipo{background:rgba(28,28,27,.72);color:#fff;font-size:.68rem;font-weight:700;padding:5px 12px;border-radius:99px;backdrop-filter:blur(4px)}
+.post-card-body{padding:16px 18px;display:flex;flex-direction:column;gap:6px;flex:1}
+.post-card-fecha{font-size:.68rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.5px}
+.post-card-title{font-size:.98rem;font-weight:800;color:var(--primary);line-height:1.3}
+.post-card-resumen{font-size:.8rem;color:var(--muted);line-height:1.5;margin:0}
+
+/* ── PÁGINA DE DETALLE DE PUBLICACIÓN ───────────────────── */
+.post-cover{height:260px;background-size:cover;background-position:center;background-color:#1c1c1b}
+.post-detail-wrap{max-width:760px;margin:-40px auto 0;padding:0 20px 40px;position:relative}
+.post-detail-tipo{display:inline-block;background:var(--accent);color:#fff;font-size:.72rem;font-weight:700;padding:6px 14px;border-radius:99px;margin-bottom:14px;box-shadow:0 6px 18px rgba(229,0,125,.3)}
+.post-detail-title{font-size:clamp(1.4rem,4vw,2rem);font-weight:900;color:var(--primary);line-height:1.25;background:#fff;border-radius:20px 20px 0 0;padding:0 24px}
+.post-detail-fecha{font-size:.82rem;color:var(--muted);font-weight:600;background:#fff;padding:8px 24px 0}
+.post-detail-cuerpo{background:#fff;padding:16px 24px 8px;border-radius:0 0 20px 20px;box-shadow:var(--sh)}
+.post-detail-cuerpo p{font-size:.94rem;color:#444;line-height:1.8;margin-bottom:16px}
+.post-detail-cta{margin-top:18px;text-align:center}
+.post-cta-btn{background:#e5007d;color:#fff;border:none;padding:14px 32px;border-radius:50px;font-weight:800;font-size:.92rem;cursor:pointer;font-family:var(--font);box-shadow:0 6px 20px rgba(229,0,125,.3);transition:opacity .2s}
+.post-cta-btn:hover{opacity:.88}
+.post-detail-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;justify-content:center}
+
+/* ── LISTA DE CONTACTOS (guías de seguridad/emergencia) ───────────────────── */
+.post-detail-contactos{background:#fff;margin-top:2px;padding:6px 24px 20px;box-shadow:var(--sh);border-radius:0 0 20px 20px;display:flex;flex-direction:column;gap:10px}
+.contacto-item{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--bg);border-radius:12px;padding:12px 16px}
+.contacto-nombre{font-size:.88rem;font-weight:700;color:var(--primary)}
+.contacto-nota{font-size:.74rem;color:var(--muted);margin-top:2px}
+.contacto-call-btn{flex-shrink:0;background:#1c1c1b;color:#fff;text-decoration:none;font-size:.78rem;font-weight:700;padding:9px 16px;border-radius:99px;white-space:nowrap;transition:opacity .2s}
+.contacto-call-btn:hover{opacity:.85}
+
+@media(max-width:600px){
+  .post-detail-wrap{margin-top:-30px}
+  .post-cover{height:200px}
+}
 /* ── SECCIÓN NEWPLACE INFO ───────────────────── */
 .np-hero{background:#ffffff;color:#1c1c1b;padding:60px 20px;text-align:center;border-top:1px solid #eee;border-bottom:3px solid #e5007d}
 .np-hero::before{display:none}
@@ -572,13 +609,13 @@ body{font-family:var(--font);background:var(--bg);color:var(--text)}
   border: 3px solid;
 }
 .biz-card.featured-1 {
-  border-color: #ff00aa; /* ORO */
+  border-color: #e5007d; /* ORO */
 }
 .biz-card.featured-2 {
-  border-color: #ff00aa; /* PLATA */
+  border-color: #e5007d; /* PLATA */
 }
 .biz-card.featured-3 {
-  border-color: #ff00aa; /* BRONCE */
+  border-color: #e5007d; /* BRONCE */
 }
 /* ─── MENÚ DROPDOWN DE ZONAS ─── */
 .zonas-dropdown-wrapper {

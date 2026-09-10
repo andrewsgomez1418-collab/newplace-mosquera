@@ -279,7 +279,7 @@
 <!-- NAVEGACIÓN -->
 <nav class="top-nav">
   <button class="nav-back" id="backBtn" onclick="goBack()">← Volver</button>
-  <div class="nav-brand"><span class="np-new">new</span><span class="np-place">place</span> <span class="np-store">store</span></div>
+  <div class="nav-brand"><img src="assets/img/logo-horizontal.webp" alt="Newplace Store" style="height:36px;object-fit:contain;display:block;"></div>
   
   <!-- BOTÓN ZONAS -->
   <div class="zonas-dropdown-wrapper nav-zonas">
@@ -298,7 +298,7 @@
 <div class="page active" id="page-index">
   <header class="site-header">
     <div class="hdr-inner">
-      <img src="/assets/img/logo-color.jpeg" class="hdr-logo-img" style="height: 180px; object-fit: contain; filter: drop-shadow(0 4px 16px rgba(255, 255, 255, 0.3));" alt="Logo New Place Store">
+      <img src="/assets/img/logo-color.jpeg" class="hdr-logo-img" style="height: 126px; object-fit: contain; filter: drop-shadow(0 4px 16px rgba(255, 255, 255, 0.3));" alt="Logo New Place Store">
       <div style="
         font-family:'Poppins',sans-serif;
         font-size:clamp(1.4rem,5vw,2.2rem);
@@ -312,28 +312,30 @@
     </div>
     <div class="wave"><svg viewBox="0 0 1440 56" preserveAspectRatio="none"><path d="M0,28 C360,56 1080,0 1440,28 L1440,56 L0,56 Z" fill="#f5f6fa"/></svg></div>
   </header>
- <div class="search-wrap">
-    <div class="search-box">
-      <span>🔍</span>
-      <input type="text" id="searchInput" placeholder="Buscar negocios o categorías..." autocomplete="off">
-    </div>
-    <div id="searchResults" class="search-results"></div>
+  <!-- BOTÓN PRODUCTOS Y SERVICIOS -->
+  <div class="cartelera-wrap">
+    <button class="cartelera-btn" id="prodServBtn" onclick="toggleProductosServicios()">
+      <span class="cartelera-icon"></span>
+      <span class="cartelera-text">PRODUCTOS Y SERVICIOS</span>
+      <span class="cartelera-arrow">›</span>
+    </button>
+  </div>
+
+  <div class="section" id="catSection" style="display:none">
+    <h2 class="sec-title">Categorías</h2>
+    <div class="cat-grid" id="catGrid"></div>
   </div>
 
   <!-- CARTELERA DE AVISOS Y OFERTAS COMERCIALES -->
   <div class="cartelera-wrap">
     <button class="cartelera-btn" id="carteleraBtn" onclick="toggleCartelera()">
-      <span class="cartelera-icon">📌</span>
+      <span class="cartelera-icon"></span>
       <span class="cartelera-text">Cartelera de Avisos y Ofertas Comerciales</span>
       <span class="cartelera-arrow">›</span>
     </button>
   </div>
   
   <div class="blog-section" id="blogSection"></div>
-  <div class="section">
-    <h2 class="sec-title">Categorías</h2>
-    <div class="cat-grid" id="catGrid"></div>
-  </div>
   <!-- ══ HERO NEWPLACE ══════════════════════════════════════ -->
   <div class="np-hero">
     <div class="np-hero-inner">
@@ -376,7 +378,7 @@
   <div class="prof-header">
     <div class="prof-logo-wrap">
       <div class="prof-logo" id="profLogo"></div>
-    </div>
+    </div>€
     <div class="prof-info">
       <span class="prof-badge" id="profBadge"></span>
       <h1 class="prof-name" id="profName"></h1>
@@ -391,6 +393,22 @@
     <div class="tab-body active" id="tab-info"></div>
     <div class="tab-body" id="tab-menu"></div>
     <div class="tab-body" id="tab-catalogo"></div>
+  </div>
+  <footer class="site-footer" style="margin-top:40px">
+    <p style="font-size:.78rem;opacity:.7">Publicado en <strong>Newplace Store</strong></p>
+  </footer>
+</div>
+<!-- PÁGINA: PUBLICACIÓN DEL BLOG -->
+<div class="page" id="page-post">
+  <div class="post-cover" id="postCover"></div>
+  <div class="post-detail-wrap">
+    <span class="post-detail-tipo" id="postTipo"></span>
+    <h1 class="post-detail-title" id="postTitulo"></h1>
+    <p class="post-detail-fecha" id="postFecha"></p>
+    <div class="post-detail-cuerpo" id="postCuerpo"></div>
+    <div class="post-detail-contactos" id="postContactos"></div>
+    <div class="post-detail-cta" id="postCta"></div>
+    <div class="post-detail-tags" id="postTags"></div>
   </div>
   <footer class="site-footer" style="margin-top:40px">
     <p style="font-size:.78rem;opacity:.7">Publicado en <strong>Newplace Store</strong></p>
