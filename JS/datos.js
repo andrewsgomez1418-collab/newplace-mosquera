@@ -2884,6 +2884,7 @@ const NEGOCIOS = [
     ],
   },
   
+  
 // ══ EMPRESARIAL ════════════════════════════════════════════════
 // ══ EMPRESARIAL ════════════════════════════════════════════════
 // ══ EMPRESARIAL ════════════════════════════════════════════════
@@ -4357,7 +4358,7 @@ const NEGOCIOS = [
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573123883183",
     tel:         "3123883183",
-    ig:          "",
+    ig:          "https://www.instagram.com/abicun22230/?hl=es-la",
     fb:          "",
     tk:          "",
     web:         "",
@@ -4369,7 +4370,7 @@ const NEGOCIOS = [
  
     /* ─── GALERÍA DE FOTOS ─── */
     galeria:     [
-      "assets/logos/abicun/instructora-abicun.webp","assets/logos/abicun/abicun-1.webp","assets/logos/abicun/abicun-2.webp","assets/logos/abicun/abicun-3.webp",
+      "assets/logos/abicun/instructora-abicun.webp","assets/logos/abicun/abicun-1.webp","assets/logos/abicun/abicun-2.webp","assets/logos/abicun/abicun-3.webp","assets/logos/abicun/abicun-4.webp","assets/logos/abicun/abicun-5.webp","assets/logos/abicun/abicun-6.webp","assets/logos/abicun/abicun-7.webp",
     ],
   },
 ];
