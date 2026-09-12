@@ -4338,8 +4338,8 @@ const NEGOCIOS = [
     id:          "abicun",
     cat:         "educacion",
     nombre:      "ACADEMIA ABICUN",
-    slogan:      "Programas técnicos laborales en belleza ,certificados y avalados por secretaría de educación poner franja 15 años del volante.",
-    desc:        "Abicun 15 años capacitando profesionales.</p>Comprometidos en educar y resaltar dones y aptitudes de cada persona proyectándola hacia el futuro con metas y características de competitividad en su hacer laboral en el ámbito de la belleza integral como el mejor aporte a la familia y a la sociedad en general.</p> Contamos con varias opciones de capacitación. </p>Programas técnicos  avalados y certificados en:</p>Manícure y pedicure</p>Esté lista integral</p>Cosmetologia y estética</p>Seminarios</p>Especializaciones</p>Homologaciones</p>Otorgamos Becas y vinculaciones laborales.",
+    slogan:      "Transforma tu pasion en una carrera profecional: el arte de la belleza en tus manos",
+    desc:        "Abicun 15 años capacitando.</p>Comprometidos en educar y resaltar dones y aptitudes de cada persona proyectándola hacia el futuro con metas y características de competitividad en su hacer laboral en el ámbito de la belleza integral como el mejor aporte a la familia y a la sociedad en general.</p> Contamos con varias opciones de capacitación. </p>Programas técnicos  avalados y certificados en:</p>Manícure y pedicure</p>Esté lista integral</p>Cosmetologia y estética</p>Seminarios</p>Especializaciones</p>Homologaciones</p>Otorgamos Becas y vinculaciones laborales.",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
