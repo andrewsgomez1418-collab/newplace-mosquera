@@ -4370,7 +4370,7 @@ const NEGOCIOS = [
  
     /* ─── GALERÍA DE FOTOS ─── */
     galeria:     [
-      "assets/logos/abicun/instructora-abicun.webp","assets/logos/abicun/abicun-1.webp","assets/logos/abicun/abicun-2.webp","assets/logos/abicun/abicun-3.webp","assets/logos/abicun/abicun-4.webp","assets/logos/abicun/abicun-5.webp","assets/logos/abicun/abicun-6.webp","assets/logos/abicun/abicun-7.webp",
+      "assets/logos/abicun/instuctora-abicun.webp","assets/logos/abicun/abicun-1.webp","assets/logos/abicun/abicun-2.webp","assets/logos/abicun/abicun-3.webp","assets/logos/abicun/abicun-4.webp","assets/logos/abicun/abicun-5.webp","assets/logos/abicun/abicun-6.webp","assets/logos/abicun/abicun-7.webp",
     ],
   },
 ];
