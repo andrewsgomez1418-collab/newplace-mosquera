@@ -4310,7 +4310,7 @@ const NEGOCIOS = [
     logoHeight:      "clamp(90px, 8vw, 60px)",
     portadaHeight:   "clamp(180px, 25vh, 200px)",
     galeriaHeight:   "clamp(150px, 20vw, 240px)",
- 
+  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     wa:          "573144503449",
     tel:         "3144503449",

@@ -980,10 +980,10 @@ if (neg.portada) {
   if (neg.agendamiento) ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_agendamiento',{'business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}'}); window.open('${neg.agendamiento}', '_blank');" class="abtn agendamiento" target="_blank"><span class="abtn-ico">${ICOS.cal}</span><span class="abtn-txt">Agendar Cita</span></a>`;
   if (neg.was && neg.was.length > 0) {
       neg.was.forEach(w => {
-        ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_whatsapp',{'business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}','phone':'${w.numero}'}); window.open('https://wa.me/${w.numero}?text=Hola!%20Vi%20tu%20negocio%20en%20Newplace%20Store%20y%20quiero%20más%20información', '_blank');" class="abtn wa"><span class="abtn-ico">${ICOS.wa}</span><span class="abtn-txt">${w.nombre}</span></a>`;
+        ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_whatsapp',{'business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}','phone':'${w.numero}'}); window.open('https://wa.me/${w.numero}?text=${encodeURIComponent('Hola! Te escribo desde Newplace Store (newplacemosquera.com) y necesito de tu servicio ' + neg.nombre)}', '_blank');" class="abtn wa"><span class="abtn-ico">${ICOS.wa}</span><span class="abtn-txt">${w.nombre}</span></a>`;
       });
     } else if (neg.wa) {
-      ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_whatsapp',{'business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}','phone':'${neg.wa}'}); window.open('https://wa.me/${neg.wa}?text=Hola!%20Vi%20tu%20negocio%20en%20Newplace%20Store%20y%20quiero%20más%20información', '_blank');" class="abtn wa"><span class="abtn-ico">${ICOS.wa}</span><span class="abtn-txt">WhatsApp</span></a>`;
+      ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_whatsapp',{'business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}','phone':'${neg.wa}'}); window.open('https://wa.me/${neg.wa}?text=${encodeURIComponent('Hola! Te escribo desde Newplace Store (newplacemosquera.com) y necesito de tu servicio ' + neg.nombre)}', '_blank');" class="abtn wa"><span class="abtn-ico">${ICOS.wa}</span><span class="abtn-txt">WhatsApp</span></a>`;
     }
   if (neg.tel) ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent('click_call',{'business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}'}); window.location.href='tel:+57${neg.tel}';" class="abtn tel"><span class="abtn-ico">${ICOS.tel}</span><span class="abtn-txt">Llamar</span></a>`;
   if (neg.mapsLinks && neg.mapsLinks.length > 0) {
@@ -1054,7 +1054,7 @@ if (neg.didi) ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent(
       <div class="menu-sec">
         <div class="menu-sec-ttl">${sec.s}</div>
         <div class="menu-items-box">
-          ${sec.items.map(it => `<div class="mi"><div class="mi-name">${it.n}</div><div class="mi-desc">${it.d||''}</div><div class="mi-right"><div class="mi-price">${it.p}</div>${(neg.wa || (neg.was && neg.was[0]?.numero)) ? `<a href="https://wa.me/${neg.wa || neg.was[0].numero}?text=${encodeURIComponent('Hola! Quiero ordenar este plato: ' + it.n)}" class="mi-wa" target="_blank" aria-label="Pedir por WhatsApp" onclick="trackEvent('click_whatsapp',{'business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}','plato':'${(it.n||'').replace(/'/g,"\\'")}'})">${ICOS.waWhite}</a>` : ''}</div></div>`).join('')}
+          ${sec.items.map(it => `<div class="mi"><div class="mi-name">${it.n}</div><div class="mi-desc">${it.d||''}</div><div class="mi-right"><div class="mi-price">${it.p}</div>${(neg.wa || (neg.was && neg.was[0]?.numero)) ? `<a href="https://wa.me/${neg.wa || neg.was[0].numero}?text=${encodeURIComponent('Hola! Te escribo desde Newplace Store (newplacemosquera.com) y quiero ordenar este plato de ' + neg.nombre + ': ' + it.n)}" class="mi-wa" target="_blank" aria-label="Pedir por WhatsApp" onclick="trackEvent('click_whatsapp',{'business_name':'${neg.nombre.replace(/'/g,"\\'")}','business_id':'${neg.id}','plato':'${(it.n||'').replace(/'/g,"\\'")}'})">${ICOS.waWhite}</a>` : ''}</div></div>`).join('')}
         </div>
       </div>`).join('');
   }
@@ -1079,7 +1079,7 @@ if (neg.didi) ab.innerHTML += `<a href="javascript:void(0)" onclick="trackEvent(
     /* Genera la tarjeta HTML de un producto individual */
     const renderTarjetaProducto = (p) => {
       const waNum = neg.wa || (neg.was && neg.was[0]?.numero);
-      const ctaHref = waNum ? `https://wa.me/${waNum}?text=Hola!%20Quiero%20${neg.cat === 'salud' ? 'agendar%20cita%20para' : 'cotizar'}:%20${encodeURIComponent(p.n)}` : '';
+      const ctaHref = waNum ? `https://wa.me/${waNum}?text=${encodeURIComponent('Hola! Te escribo desde Newplace Store (newplacemosquera.com) y quiero ' + (neg.cat === 'salud' ? 'agendar cita para' : 'cotizar') + ' en ' + neg.nombre + ': ' + p.n)}` : '';
       const ctaLabel = neg.cat === 'salud' ? 'Agendar cita' : 'Cotizar';
       const ctaIco = neg.cat === 'salud' ? ICOS.cal.replace('#111','currentColor') : '<svg viewBox="0 0 24 24"><path fill="currentColor" d="M7 4h-2l-1 2H2v2h2l3.6 7.59-1.35 2.44A2 2 0 008 21h12v-2H8l1.1-2h7.45a2 2 0 001.79-1.11L21.7 8H6.21l-.94-2H7V4zM6 21a2 2 0 100-4 2 2 0 000 4zm12 0a2 2 0 100-4 2 2 0 000 4z"/></svg>';
       const esImg = p.img && p.img.includes('.');
@@ -1783,8 +1783,8 @@ function irAWhatsappCartelera(negocioId) {
   if (!waNum) { console.warn('El negocio no tiene WhatsApp configurado:', negocioId); return; }
   trackEvent('click_whatsapp_flyer', { 'business_name': neg.nombre, 'business_id': neg.id, 'phone': waNum });
  const mensaje = neg.flyerTitulo
-    ? `Hola! Vi tu aviso de ${neg.flyerTitulo} en www.newplacemosquera.com y quiero más información`
-    : 'Hola! Vi tu aviso en Newplace Store y quiero más información';
+    ? `Hola! Te escribo desde Newplace Store (newplacemosquera.com), vi tu aviso de ${neg.flyerTitulo} y necesito tu servicio ${neg.nombre}`
+    : `Hola! Te escribo desde Newplace Store (newplacemosquera.com) y necesito tu servicio ${neg.nombre}`;
   window.open(`https://wa.me/${waNum}?text=${encodeURIComponent(mensaje)}`, '_blank');
 }
 
