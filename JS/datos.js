@@ -3479,6 +3479,10 @@ const NEGOCIOS = [
     galeria:     [
       "assets/logos/bikeshop/bike1.webp","assets/logos/bikeshop/bike2.webp","assets/logos/bikeshop/bike3.webp","assets/logos/bikeshop/bike4.webp","assets/logos/bikeshop/bike5.webp",
     ],
+  /* ─── CARTELERA (FLYER DE AVISOS Y OFERTAS) ───*/
+    flyer:        "ASSETS/LOGOS/BIKESHOP/flyer-bikeshop.webp",
+    flyerTitulo:  "ELECTRICA Y PRACTICA",
+    flyerActivo:  true,
   },
   {
     /* ══════════════════════════════════════════════════════════════
@@ -4339,7 +4343,7 @@ const NEGOCIOS = [
     cat:         "educacion",
     nombre:      "ACADEMIA ABICUN",
     slogan:      "Transforma tu pasion en una carrera profecional: el arte de la belleza en tus manos",
-    desc:        "Abicun 15 años capacitando.</p>Comprometidos en educar y resaltar dones y aptitudes de cada persona proyectándola hacia el futuro con metas y características de competitividad en su hacer laboral en el ámbito de la belleza integral como el mejor aporte a la familia y a la sociedad en general.</p> Contamos con varias opciones de capacitación. </p>Programas técnicos  avalados y certificados en:</p>Manícure y pedicure</p>Esté lista integral</p>Cosmetologia y estética</p>Seminarios</p>Especializaciones</p>Homologaciones</p>Otorgamos Becas y vinculaciones laborales.",
+    desc:        "Abicun 15 años capacitando profesionales. Comprometidos en educar y resaltar dones y aptitudes de cada persona proyectándola hacia el futuro con metas y características de competitividad en su hacer laboral en el ámbito de la belleza integral como elMejor aporte a la familia y a la sociedad en general . Contamos con varias opciones de capacitación :</p><p>Programas técnicos  avalados y certificados en:</p><p>Belleza</p><p>Seminarios</p><p>Especializaciones</p><p>Homologaciones</p><p>Otorgamos becas y vinculaciones laboral",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
