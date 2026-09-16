@@ -3481,7 +3481,7 @@ const NEGOCIOS = [
     ],
   /* ─── CARTELERA (FLYER DE AVISOS Y OFERTAS) ───*/
     flyer:        "ASSETS/LOGOS/BIKESHOP/flyer-bikeshop.webp",
-    flyerTitulo:  "ELECTRICA Y PRACTICA",
+    flyerTitulo:  "Bicicleta Eléctrica Fusión Bolt",
     flyerActivo:  true,
   },
   {
