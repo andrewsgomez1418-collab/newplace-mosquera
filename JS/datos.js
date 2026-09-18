@@ -1327,8 +1327,8 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     was: [
-  { nombre: "VILLA MARIA 2", numero: "573118984012" },
   { nombre: "SEDE CENTRAL", numero: "573212860408" },
+  { nombre: "VILLA MARIA 2", numero: " 573118984012" },
 ],
     tel:         "3118984012",
     ig:          "",
