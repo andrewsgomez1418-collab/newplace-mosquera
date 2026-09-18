@@ -1310,14 +1310,14 @@ const NEGOCIOS = [
     nombre:      "SANDWICH Y BURGER",
     slogan:      "Más sabor en cada mordida.",
     desc:        "<p>En Sándwich &amp; Burger ofrecemos una experiencia llena de sabor con hamburguesas y sándwiches preparados al momento, utilizando ingredientes frescos y de excelente calidad. Disfruta de combinaciones irresistibles, acompañamientos deliciosos y bebidas perfectas para compartir en familia o con amigos.</p><p>Somos el lugar ideal para quienes buscan comida rápida con sabor casero, buena atención y el mejor ambiente.</p><p>Hamburguesas artesanales, sándwich gourmet, comida rápida, ingredientes frescos, sabor irresistible.</p>",
-    tipo:        "estandar",
+    tipo:        "restaurante",
  
     /* ─── IMÁGENES Y LOGOS ─── */
     logoFill:    false,
     logoBg:      "#ffffff",
-    logoPerfil:  "assets/logos/SANDWICH/logo-sandwich-burguer.jpg",
-    cardImage:   "assets/logos/SANDWICH/inicio-sandwich-burguer.jpg",
-    portada:     "assets/logos/SANDWICH/portada-sandwich-burguer.jpg",
+    logoPerfil:  "assets/logos/SANDWICH/logo-sandwich-burguer.webp",
+    cardImage:   "assets/logos/SANDWICH/inicio-sandwich-burguer.webp",
+    portada:     "assets/logos/SANDWICH/portada-sandwich-burguer.webp",
  
     /* ─── TAMAÑOS RESPONSIVOS (clamp: min, preferido, max) ─── */
     cardHeight:      "clamp(350px, 180vw, 250px)",
@@ -1327,13 +1327,17 @@ const NEGOCIOS = [
  
     /* ─── CONTACTO Y REDES SOCIALES ─── */
     was: [
-  { nombre: "WHATSAPP", numero: "573118984012" },
-  { nombre: "WHATSAPP", numero: "573212860408" },
+  { nombre: "VILLA MARIA 2", numero: "573118984012" },
+  { nombre: "SEDE CENTRAL", numero: "573212860408" },
 ],
     tel:         "3118984012",
     ig:          "",
     fb:          "",
+    tk:          "",
+    didi:        "",
+    rappi:       "",
     web:         "",
+    greviews:    "",
  
     /* ─── UBICACIÓN Y MAPA ─── */
     dir:         "CALLE 19 # 1-29 VILLA MARIA 2 (sede principal)-/-CARRERA 3 # 3-67 (SEDE CENTRAL)",
@@ -1345,7 +1349,136 @@ const NEGOCIOS = [
  
     /* ─── GALERÍA DE FOTOS ─── */
     galeria:     [
-      "assets/logos/SANDWICH/samdwich1.jpeg","assets/logos/SANDWICH/samdwich2.jpeg","assets/logos/SANDWICH/samdwich3.jpg","assets/logos/SANDWICH/samdwich4.jpg","assets/logos/SANDWICH/samdwich5.jpg",
+      "assets/logos/SANDWICH/samdwich1.webp","assets/logos/SANDWICH/samdwich2.webp","assets/logos/SANDWICH/samdwich3.webp","assets/logos/SANDWICH/samdwich4.webp","assets/logos/SANDWICH/samdwich5.webp",
+    ],
+  menu: [
+      {
+        s: "Sandwich",
+        items: [
+          { n:"Del Rancho", p:"Junior $21.400", d:"Combo Junior $29.400 · Grande $29.200 · Combo Grande $37.200 — Pollo, roastbeef, jamón, lechuga, queso mozzarella, salsa de la casa, salsa bbq" },
+          { n:"Lomitos de Pechuga", p:"Junior $20.000", d:"Combo Junior $28.000 · Grande $27.800 · Combo Grande $35.800 — Lomitos de pechuga a la plancha, tomate, lechuga, queso mozzarella" },
+          { n:"Pollo Tocineta", p:"Junior $20.300", d:"Combo Junior $28.300 · Grande $28.100 · Combo Grande $36.100 — Pollo desmechado, tocineta, lechuga, queso cheddar, salsa de la casa" },
+          { n:"Costillas", p:"Junior $20.000", d:"Combo Junior $28.000 · Grande $27.800 · Combo Grande $35.800 — Costillas de cerdo, tomate, lechuga, queso mozzarella, salsa bbq, salsa de la casa" },
+          { n:"Del Mar", p:"Junior $21.500", d:"Combo Junior $29.500 · Grande $29.300 · Combo Grande $37.300 — Camarones, atún, cebolla, lechuga, tomate, queso mozzarella, salsa de la casa" },
+          { n:"Mexicano", p:"Junior $20.500", d:"Combo Junior $28.500 · Grande $28.300 · Combo Grande $36.300 — Frijoles, carne de hamburguesa, tocineta, lechuga, tomate, queso mozzarella, salsa bbq, salsa de la casa" },
+          { n:"Pernil", p:"Junior $21.000", d:"Combo Junior $29.000 · Grande $28.800 · Combo Grande $36.800 — Pernil de cerdo ahumado, carne de res horneada, lechuga, tomate, queso mozzarella, salsa bbq, salsa de la casa" },
+          { n:"Roast Beef", p:"Junior $21.200", d:"Combo Junior $29.200 · Grande $29.000 · Combo Grande $37.000 — Carne de res horneada, lechuga, tomate, queso mozzarella, salsa bbq, salsa de la casa" },
+          { n:"Agridulce", p:"Junior $19.300", d:"Combo Junior $27.300 · Grande $27.100 · Combo Grande $35.100 — Jamón de cerdo, pernil ahumado, pepinillos agridulces, tomate, salami ahumado, queso mozzarella, salsa de la casa" },
+          { n:"Mixto", p:"Junior $20.500", d:"Combo Junior $28.500 · Grande $28.300 · Combo Grande $36.300 — Pechuga de pollo desmechado, tomate, lechuga, carne desmechada, queso mozzarella, salsa bbq, salsa de la casa" },
+          { n:"Pollo", p:"Junior $20.000", d:"Combo Junior $28.000 · Grande $27.800 · Combo Grande $35.800 — Pechuga de pollo desmechada, lechuga, rodajas de champiñón, pepinillos, queso mozzarella, salsa de la casa" },
+          { n:"Champiñones", p:"Junior $20.000", d:"Combo Junior $28.000 · Grande $27.800 · Combo Grande $35.800 — Verificar precio exacto en la carta" },
+          { n:"De Carne", p:"Junior $20.300", d:"Combo Junior $28.300 · Grande $28.100 · Combo Grande $36.100 — Carne desmechada, tocineta, pimentón, lechuga, tomate, queso mozzarella, salsa bbq, salsa de la casa" },
+          { n:"Criollo", p:"Junior $20.300", d:"Combo Junior $28.300 · Grande $28.100 · Combo Grande $36.100 — Maíz tierno, tocineta, jamón de cerdo, chorizo coctel, lechuga, tomate" },
+          { n:"Hawaiano", p:"Junior $19.000", d:"Combo Junior $27.000 · Grande $26.800 · Combo Grande $34.800 — Jamón de cerdo, piña en trozos, queso mozzarella, mayonesa, salsa de la casa" },
+          { n:"Atún", p:"Junior $18.200", d:"Combo Junior $26.200 · Grande $26.000 · Combo Grande $34.000 — Lomitos de atún, queso mozzarella, tomate, lechuga, salsa de la casa" },
+          { n:"Vegetariano", p:"Junior $19.000", d:"Combo Junior $27.000 · Grande $26.800 · Combo Grande $34.800 — Maíz tierno, rodajas de champiñón, pepinillos, queso mozzarella, salsa de la casa" },
+          { n:"Cordero", p:"Junior $18.500", d:"Combo Junior $26.500 · Grande $26.300 · Combo Grande $34.300 — Jamón de cordero, tomate, lechuga, queso mozzarella, salsa de la casa" },
+          { n:"Tropical", p:"Junior $19.300", d:"Combo Junior $27.300 · Grande $27.100 · Combo Grande $35.100 — Pechuga de pollo desmechada, queso mozzarella, piña en trozos, salsa de la casa" },
+          { n:"De la Casa", p:"Junior $19.600", d:"Combo Junior $27.600 · Grande $27.400 · Combo Grande $35.600 — Mortadela, jamón de cerdo, jamón de cordero, salami ahumado, tomate, lechuga, queso mozzarella, salsa de la casa" },
+          { n:"Super Mexicano", p:"Junior $21.700", d:"Combo Junior $29.700 · Grande $29.500 · Combo Grande $37.500 — Frijoles, carne de hamburguesa, guacamole, tacos picantes, tomate, lechuga, salsa de la casa" },
+          { n:"Salami", p:"Junior $19.200", d:"Combo Junior $27.200 · Grande $27.000 · Combo Grande $34.000 — Salami ahumado, pimiento, tomate, lechuga, queso mozzarella, salsa de la casa" },
+        ]
+      },
+      {
+        s: "Hot Dogs",
+        items: [
+          { n:"Hot Dog Especial", p:"Sola $14.700", d:"Combo $22.700 — Salchicha americana, tocineta en trozos, papa chip, queso mozzarella, salsa roja, salsa rosada" },
+          { n:"Hot Dog Hawaiano", p:"Sola $15.200", d:"Combo $23.200 — Salchicha americana, piña en trozos, tomate, papa chip, mostaza, salsa rosada" },
+          { n:"Hot Dog de la Casa", p:"Sola $13.700", d:"Combo $21.700 — Salchicha americana, cebolla en trozos, papa chip, queso mozzarella, salsa roja, salsa rosada" },
+          { n:"Hot Dog Tijuana", p:"Sola $18.200", d:"Combo $26.200 — Salchicha americana, queso mozzarella, carne desmechada, guacamole, nachos, huevo de codorniz y salsas" },
+        ]
+      },
+      {
+        s: "Hamburguesas",
+        items: [
+          { n:"Burguer Hawaiana", p:"Sola $17.000", d:"Combo $25.000 — Piña en trozos, jamón, queso mozzarella, lechuga, carne de res 130gr, salsa roja y blanca" },
+          { n:"Burguer Texana", p:"Sola $18.000", d:"Combo $26.000 — Carne de res 130gr, tomate, queso mozzarella, tocineta en trozos, frijoles, cebolla, salsa roja y blanca" },
+          { n:"Burguer Sencilla", p:"Sola $16.500", d:"Combo $24.500 — Carne de res 130gr, tomate, lechuga, queso mozzarella, cebolla, salsa roja y blanca" },
+          { n:"Burguer Tocineta", p:"Sola $17.500", d:"Combo $25.500 — Carne de res 130gr, tomate, queso mozzarella, tocineta en trozos, cebolla, salsa roja y blanca" },
+          { n:"Guaca Burguer", p:"Sola $18.000", d:"Combo $26.000 — Carne de res 130gr, tomate, guacamole, frijoles, cebolla, salsa roja y blanca" },
+          { n:"Burguer Cholla", p:"Sola $17.500", d:"Combo $25.500 — Carne de res 130gr, tomate, lechuga, queso mozzarella, huevo frito, cebolla, salsa roja y blanca" },
+          { n:"Burguer Pollo Champiñones", p:"Sola $19.800", d:"Combo $27.800 — Carne de res 130gr, tomate, lechuga, rodajas de champiñón, pechuga de pollo desmechado, cebolla, salsa roja y blanca" },
+          { n:"Burguer Chip", p:"Sola $17.500", d:"Combo $25.500 — Carne de res 130gr, tomate, queso mozzarella, papa chip, jamón de cerdo, cebolla, salsa roja y blanca" },
+          { n:"Burguer Ranchera", p:"Sola $19.000", d:"Combo $27.000 — Carne de res 130gr, tomate, lechuga, maíz tierno, chorizo coctel, queso mozzarella, cebolla, salsa roja y blanca" },
+          { n:"Burguer Super", p:"Sola $22.500", d:"Combo $30.500 — Doble carne de res 130gr o apanado, tomate, lechuga, queso mozzarella, tocineta en trozos, cebolla, salsa roja y blanca" },
+          { n:"Burguer Pollo Apanado", p:"Sola $17.000", d:"Combo $25.000 — Pollo apanado, tomate, lechuga, queso mozzarella, cebolla, salsa roja y blanca" },
+          { n:"Burguer Trifásica", p:"Sola $32.000", d:"Combo $40.000 — Cerdo, pollo y res 130gr, tomate, lechuga, triple queso, tocineta, cebolla, huevo frito, chorizo coctel, salsa roja y blanca" },
+          { n:"Burguer Cerdo", p:"Sola $16.500", d:"Combo $24.500 — Carne de cerdo 130gr, tomate, lechuga, queso mozzarella, cebolla, salsa roja y blanca" },
+          { n:"Burguer Clásica", p:"Sola $17.500", d:"Combo $25.500 — Carne de res 130gr, tomate, lechuga, queso mozzarella, cebolla, pepinillos agridulces, salsa roja y blanca" },
+        ]
+      },
+      {
+        s: "Mazorcadas",
+        items: [
+          { n:"Mazorcada de Carne", p:"Sola $21.500", d:"Combo $29.500 — Maíz tierno 300gr, salsa de la casa, carne desmechada, queso mozzarella, papa rallada, huevo de codorniz y salsa tártara" },
+          { n:"Mazorcada de Pollo", p:"Sola $20.500", d:"Combo $28.500 — Maíz tierno 300gr, salsa de la casa, pollo desmechado, queso mozzarella, papa rallada, huevo de codorniz y salsa tártara" },
+          { n:"Mazorcada Mixta", p:"Sola $23.500", d:"Combo $31.500 — Maíz tierno 300gr, salsa de la casa, champiñón, carne desmechada, queso mozzarella, papa rallada, huevo de codorniz y salsa tártara" },
+          { n:"Mazorcada Super", p:"Sola $26.500", d:"Combo $34.500 — Maíz tierno 300gr, chorizo coctel, champiñones, tocineta, salsa de la casa, carne desmechada, pollo desmechado, papa chip, huevo de codorniz y salsa" },
+        ]
+      },
+      {
+        s: "Ensaladas",
+        items: [
+          { n:"Especial de la Casa", p:"Sola $18.000", d:"Combo $26.000 — Lechuga, jamón de cerdo, queso mozzarella, maíz tierno, arveja, pollo desmechado, huevo duro, parmesano, vinagreta y salsa shawy" },
+          { n:"Ensalada Hawaiana", p:"Sola $17.000", d:"Combo $25.000 — Pechuga de pollo desmechada, lechuga, jamón de cerdo, piña en trozos y mayonesa" },
+        ]
+      },
+      {
+        s: "Otros",
+        items: [
+          { n:"Salchipapa", p:"$11.800", d:"200gr de papa, salchicha americana, salsas al gusto" },
+          { n:"Papa a la Francesa", p:"$8.000", d:"200gr de papa y salsas al gusto" },
+          { n:"Salchipapa Especial", p:"$15.800", d:"250gr de papa, salchicha americana, 4 huevos de codorniz, queso mozzarella, salsas al gusto" },
+          { n:"Salchipapa Super Especial", p:"$26.800", d:"300gr de papa, salchicha, tocineta, carne desmechada, maíz tierno, 4 huevos de codorniz, queso mozzarella, salsas al gusto" },
+          { n:"Salchipapa Brutal de la Casa", p:"$38.000", d:"Papa francesa, salchicha, papa chip, tocineta, maíz, costilla, carne de hamburguesa, pollo desmechado, huevo de codorniz y extra de queso" },
+          { n:"Nuggets de Pollo", p:"$11.500", d:"Trozos de pollo apanado, papa a la francesa, miel y salsa" },
+          { n:"Nachos", p:"$8.000", d:"Nachos con salsa de queso cheddar y guacamole" },
+          { n:"Combo Infantil", p:"$22.200", d:"Mini sandwich o nuggets de pollo, jugo en caja, papa mini y juguete sorpresa" },
+          { n:"Porción de Huevos", p:"$9.500", d:"" },
+        ]
+      },
+      {
+        s: "Adiciones",
+        items: [
+          { n:"Roast Beef", p:"$7.000", d:"" },
+          { n:"Carne", p:"$6.000", d:"" },
+          { n:"Desmechada", p:"$6.500", d:"" },
+          { n:"Mixto", p:"$6.500", d:"" },
+          { n:"Pollo", p:"$5.500", d:"" },
+          { n:"Atún", p:"$6.500", d:"" },
+          { n:"Pernil", p:"$6.500", d:"" },
+          { n:"Cordero", p:"$4.800", d:"" },
+          { n:"Salami", p:"$4.500", d:"" },
+          { n:"Jamón", p:"$4.000", d:"" },
+          { n:"Mortadela", p:"$4.500", d:"" },
+          { n:"Apanada", p:"$4.000", d:"" },
+          { n:"Hamburguesa", p:"$5.500", d:"" },
+          { n:"Champiñones", p:"$3.500", d:"" },
+          { n:"Piña", p:"$3.000", d:"" },
+          { n:"Maíz", p:"$3.500", d:"" },
+          { n:"Pepinillos", p:"$3.000", d:"" },
+          { n:"Queso", p:"$4.000", d:"" },
+          { n:"Queso Mozzarella", p:"$4.000", d:"" },
+          { n:"Parmesano", p:"$4.800", d:"" },
+          { n:"Tocineta", p:"$4.000", d:"" },
+          { n:"Costillas", p:"$6.000", d:"" },
+          { n:"Huevo Frito", p:"$2.500", d:"" },
+          { n:"Frijol", p:"$4.000", d:"" },
+          { n:"Guacamole", p:"$2.000", d:"" },
+        ]
+      },
+      {
+        s: "Bebidas",
+        items: [
+          { n:"Agua", p:"$3.500", d:"" },
+          { n:"Jugo en Agua", p:"$7.000", d:"" },
+          { n:"Jugo en Leche", p:"$8.500", d:"" },
+          { n:"Limonada Natural", p:"$8.500", d:"" },
+          { n:"Limonada de Coco", p:"$9.000", d:"" },
+          { n:"Cerveza", p:"$11.000", d:"" },
+          { n:"Sodas", p:"$13.000", d:"" },
+        ]
+      },
     ],
   },
   {
