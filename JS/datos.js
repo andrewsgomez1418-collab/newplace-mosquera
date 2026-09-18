@@ -1340,7 +1340,7 @@ const NEGOCIOS = [
     greviews:    "",
  
     /* ─── UBICACIÓN Y MAPA ─── */
-    dir:         "CALLE 19 # 1-29 VILLA MARIA 2 (sede principal)-/-CARRERA 3 # 3-67 (SEDE CENTRAL)",
+    dir:         "CALLE 19 # 1-29 VILLA MARIA 2 (sede principal)</p><p>CARRERA 3 # 3-67 (SEDE CENTRAL)",
     mapUrl:      "",
     mapsLinks: [
       { nombre: "VILLA MARIA 2", url: "https://maps.app.goo.gl/qrXDUXNJrox4NwL5A" },
