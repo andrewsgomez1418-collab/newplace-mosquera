@@ -4476,7 +4476,7 @@ const NEGOCIOS = [
     cat:         "educacion",
     nombre:      "ACADEMIA ABICUN",
     slogan:      "Transforma tu pasion en una carrera profecional: el arte de la belleza en tus manos",
-    desc:        "Abicun 15 años capacitando profesionales. Comprometidos en educar y resaltar dones y aptitudes de cada persona proyectándola hacia el futuro con metas y características de competitividad en su hacer laboral en el ámbito de la belleza integral como elMejor aporte a la familia y a la sociedad en general . Contamos con varias opciones de capacitación :</p><p>Programas técnicos  avalados y certificados en:</p><p>Belleza</p><p>Seminarios</p><p>Especializaciones</p><p>Homologaciones</p><p>Otorgamos becas y vinculaciones laboral",
+    desc:        "Abicun 15 años capacitando profesionales. Comprometidos en educar y resaltar dones y aptitudes de cada persona proyectándola hacia el futuro con metas y características de competitividad en su hacer laboral en el ámbito de la belleza integral como el mejor aporte a la familia y a la sociedad en general . Contamos con varias opciones de capacitación :</p><p>Programas técnicos  avalados y certificados en:</p><p>Belleza</p><p>Seminarios</p><p>Especializaciones</p><p>Homologaciones</p><p>Otorgamos becas y vinculaciones laboral",
     tipo:        "estandar",
  
     /* ─── IMÁGENES Y LOGOS ─── */
