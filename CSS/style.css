@@ -754,3 +754,27 @@ body{font-family:var(--font);background:var(--bg);color:var(--text)}
 .share-input{flex:1;padding:10px 12px;border-radius:10px;border:1px solid #e0e0e0;font-size:.8rem;color:#555;background:#fafafa}
 .share-copy-btn{padding:10px 14px;border-radius:10px;border:none;background:var(--primary,#222);color:#fff;font-weight:700;font-size:.8rem;cursor:pointer;white-space:nowrap;transition:all .2s}
 .share-copy-btn:hover{opacity:.88}
+/* BUSCADOR DENTRO DE PRODUCTOS Y SERVICIOS */
+#catSection .search-wrap{max-width:none;margin:0 0 22px 0;padding:0}
+#catSection .search-results{left:0;right:0;max-height:60vh;overflow-y:auto}
+.sr-info{flex:1;min-width:0}
+.sr-title{font-size:.9rem;font-weight:700;color:var(--text)}
+.sr-sub{font-size:.72rem;color:var(--muted);margin-top:2px}
+.sr-tag{display:inline-block;font-size:.62rem;font-weight:700;padding:2px 8px;border-radius:99px;background:#f0f0f0;color:#6f6f6e;margin-right:4px}
+.sr-tag.neg{background:#fde3ef;color:#e5007d}
+/* ── MENÚ PRINCIPAL (FIJO, ENCIMA DEL LOGO) ── */
+.menu-principal{position:sticky;top:57px;z-index:90;background:#fff;border-bottom:1px solid #eee;box-shadow:0 2px 8px rgba(0,0,0,.05);padding:0 16px}
+.menu-principal ul{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:0 30px;max-width:1080px;margin:0 auto;padding:0}
+.menu-principal li{margin:0}
+.menu-principal a{display:inline-block;position:relative;padding:14px 2px;font-family:var(--font);font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#1c1c1b;text-decoration:none;transition:color .2s ease}
+.menu-principal a::after{content:'';position:absolute;left:0;right:0;bottom:8px;height:2px;background:#e5007d;transform:scaleX(0);transform-origin:center;transition:transform .25s ease}
+.menu-principal a:hover,.menu-principal a:focus-visible{color:#e5007d;outline:none}
+.menu-principal a:hover::after,.menu-principal a:focus-visible::after{transform:scaleX(1)}
+#catSection,#blogSection,#inscribir{scroll-margin-top:130px}
+@media(max-width:600px){
+  .menu-principal{padding:0 10px}
+  .menu-principal ul{gap:0 16px}
+  .menu-principal a{font-size:.66rem;letter-spacing:.06em;padding:10px 2px}
+  .menu-principal a::after{bottom:5px}
+  #catSection,#blogSection,#inscribir{scroll-margin-top:150px}
+}

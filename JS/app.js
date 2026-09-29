@@ -1735,6 +1735,10 @@ function toggleProductosServicios() {
   if (abierto) {
     section.style.display = 'none';
     btn.classList.remove('active');
+    const si = document.getElementById('searchInput');
+    const sr = document.getElementById('searchResults');
+    if (si) si.value = '';
+    if (sr) { sr.classList.remove('show'); sr.innerHTML = ''; }
   } else {
     section.style.display = 'block';
     btn.classList.add('active');
@@ -1844,4 +1848,34 @@ document.addEventListener('click', function(event) {
       dropdown.classList.remove('active');
     }
   }
-});
+});/* ─── MENÚ PRINCIPAL: NAVEGACIÓN ENTRE SECCIONES DEL INICIO ─── */
+function menuIr(e, destino) {
+  if (e) e.preventDefault();
+
+  const scrollA = (id) => {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
+  trackEvent('click_menu', {
+    'menu_item': destino,
+    'timestamp': new Date().toISOString()
+  });
+
+  if (destino === 'inicio') {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  } else if (destino === 'productos') {
+    const section = document.getElementById('catSection');
+    if (section && section.style.display === 'none') {
+      toggleProductosServicios();
+    } else {
+      scrollA('catSection');
+    }
+  } else if (destino === 'cartelera') {
+    toggleCartelera();
+  } else if (destino === 'blog') {
+    scrollA('blogSection');
+  } else if (destino === 'inscribir') {
+    scrollA('inscribir');
+  }
+}
