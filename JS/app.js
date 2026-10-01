@@ -940,7 +940,7 @@ if (neg.portada) {
   window._negNombreActual = neg.nombre;
   window._negIdActual = neg.id;
 
-  /* Contador de visualizaciones (ojito) */
+  /* Contador de visualizaciones (ojito) — DESACTIVADO TEMPORALMENTE
   let contadorEl = document.getElementById('profViews');
   if (!contadorEl) {
     contadorEl = document.createElement('div');
@@ -953,6 +953,7 @@ if (neg.portada) {
     .then(r => r.json())
     .then(d => { contadorEl.textContent = `👁 ${d.views_total || 0} visualizaciones`; })
     .catch(() => {});
+  */
  
   /* Botones acción */
   const ab = document.getElementById('profActions');
