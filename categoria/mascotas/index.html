@@ -292,6 +292,7 @@
     <div class="zonas-dropdown" id="zonasDropdown">
       <a href="https://www.newplacefunza.com" class="zonas-option">FUNZA.COM</a>
       <a href="https://www.newplacefacatativa.com" class="zonas-option">FACATATIVA.COM</a>
+      <a href="https://www.newplacesoacha.com" class="zonas-option">SOACHA.COM</a>
     </div>
   </div>
   
@@ -299,9 +300,17 @@
 </nav>
 <!-- PÁGINA: INICIO -->
 <div class="page active" id="page-index">
+  <nav class="menu-principal" aria-label="Menú principal">
+    <ul>
+      <li><a href="#inicio" onclick="menuIr(event,'inicio')">Inicio</a></li>
+      <li><a href="#catSection" onclick="menuIr(event,'productos')">Productos y Servicios</a></li>
+      <li><a href="#carteleraBtn" onclick="menuIr(event,'cartelera')">Cartelera de Ofertas</a></li>
+      <li><a href="#blogSection" onclick="menuIr(event,'blog')">Vida en Facatativá</a></li>
+      <li><a href="#inscribir" onclick="menuIr(event,'inscribir')">Inscribe tu negocio</a></li>
+    </ul>
+  </nav>
   <header class="site-header">
     <div class="hdr-inner">
-      <img src="/assets/img/logo-color.jpeg" class="hdr-logo-img" style="height: 126px; object-fit: contain; filter: drop-shadow(0 4px 16px rgba(255, 255, 255, 0.3));" alt="Logo New Place Store">
       <div style="
         font-family:'Poppins',sans-serif;
         font-size:clamp(1.4rem,5vw,2.2rem);
@@ -326,6 +335,13 @@
 
   <div class="section" id="catSection" style="display:none">
     <h2 class="sec-title">Categorías</h2>
+    <div class="search-wrap">
+      <div class="search-box">
+        <span>🔍</span>
+        <input type="text" id="searchInput" placeholder="Buscar negocio o categoría..." autocomplete="off">
+      </div>
+      <div class="search-results" id="searchResults"></div>
+    </div>
     <div class="cat-grid" id="catGrid"></div>
   </div>
 
@@ -340,7 +356,7 @@
   
   <div class="blog-section" id="blogSection"></div>
   <!-- ══ HERO NEWPLACE ══════════════════════════════════════ -->
-  <div class="np-hero">
+  <div class="np-hero" id="inscribir">
     <div class="np-hero-inner">
       <div class="np-hero-badge">📢 Impulsa tu negocio local</div>
       <h2 style="margin-bottom:4px;color:#1c1c1b">Haz parte de</h2>
