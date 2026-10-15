@@ -108,10 +108,10 @@ function openExternalLink(url, platform, businessName = '') {
  */
 function updateMetaTags(negocio, categoria) {
   const domain = window.location.origin;
-  const urlNegocio = `${domain}/${negocio.id}`;
+  const urlNegocio = `${domain}/${negocio.id}/`;
 
-  document.title = `${negocio.nombre} — Newplace Store`;
-  updateMetaTag('description', negocio.slogan || negocio.desc);
+  document.title = `${negocio.nombre} en Mosquera, Cundinamarca — Newplace Store`;
+  updateMetaTag('description', (negocio.nombre + ' en Mosquera. ' + (negocio.slogan || '') + ' ' + (negocio.desc || '').replace(/<[^>]*>/g, ' ')).replace(/\s+/g, ' ').trim().slice(0, 200));
   updateMetaTag('og:title', negocio.nombre);
   updateMetaTag('og:description', negocio.slogan || negocio.desc);
   updateMetaTag('og:url', urlNegocio);
@@ -286,7 +286,7 @@ function resetMetaTags() {
  */
 function updateCategoryMetaTags(cat) {
   const domain = window.location.origin;
-  const urlCat = `${domain}/categoria/${cat.id}`;
+  const urlCat = `${domain}/categoria/${cat.id}/`;
   const nombreCat = cat.n.charAt(0) + cat.n.slice(1).toLowerCase();
   const titulo = `${nombreCat} en Mosquera — Newplace Store`;
   const descripcion = `Encuentra los mejores negocios de ${nombreCat.toLowerCase()} en Mosquera, Cundinamarca. Contacto directo por WhatsApp con negocios locales verificados.`;
@@ -532,6 +532,10 @@ window.addEventListener('popstate', (e) => {
   }
 });
  
+/* QUITAR BLOQUE ESTÁTICO SEO (solo lo lee Google/usuarios sin JS) */
+const seoStaticEl = document.getElementById('seo-static');
+if (seoStaticEl) seoStaticEl.remove();
+
 /* RENDER BLOG MOSQUERA */
 const blogEl = document.getElementById('blogSection');
 blogEl.innerHTML = `
@@ -711,6 +715,20 @@ CATS.forEach(cat => {
   catGrid.appendChild(el);
 });
  
+/* DIRECTORIO CON ENLACES REALES (requiere el bloque #seoTexto en index.html) */
+(function () {
+  const wrap = document.getElementById('seoTexto');
+  if (!wrap) return;
+  let html = '<h3 class="sec-title" style="margin-top:20px">Directorio de negocios en Mosquera</h3>';
+  CATS.forEach(cat => {
+    const negs = NEGOCIOS.filter(n => n.cat === cat.id);
+    if (!negs.length) return;
+    html += `<p style="font-size:.85rem;line-height:2"><a href="/categoria/${cat.id}/" style="color:#1c1c1b;font-weight:700">${cat.n} en Mosquera</a>: ` +
+      negs.map(n => `<a href="/${n.id}/" style="color:#e5007d">${n.nombre}</a>`).join(' · ') + '</p>';
+  });
+  wrap.insertAdjacentHTML('beforeend', html);
+})();
+
 /* RENDER NEGOCIOS EN INICIO */
 const bizGrid = document.getElementById('bizGrid');
 if (bizGrid) {
@@ -880,12 +898,12 @@ function openNeg(neg) {
     'timestamp': new Date().toISOString()
   });
  
-  if (window.location.pathname !== '/' + neg.id) {
+  if (window.location.pathname !== '/' + neg.id + '/') {
  
     history.pushState(
       { page: 'neg', negocio: neg.id },
       '',
-      '/' + neg.id
+      '/' + neg.id + '/'
     );
  
   }
@@ -1625,7 +1643,7 @@ function copiarAlPortapapeles() {
  
 /* ─── FUNCIÓN PARA COMPARTIR NEGOCIO ESPECÍFICO ─── */
 function compartirNegocio(negocioId, nombreNegocio) {
-  const urlNegocio = window.location.origin + '/' + negocioId;
+  const urlNegocio = window.location.origin + '/' + negocioId + '/';
   const titulo = nombreNegocio + ' - Newplace Store';
   const descripcion = 'Descubre este excelente negocio en Newplace Store. ¡Te recomiendo que lo visites!';
 

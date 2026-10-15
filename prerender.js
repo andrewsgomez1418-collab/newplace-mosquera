@@ -96,15 +96,71 @@ function textoPlano(str, maxLen = 160) {
   return limpio.length > maxLen ? limpio.slice(0, maxLen - 1).trim() + '…' : limpio;
 }
 
+function urlImg(ruta) {
+  return `${CONFIG.domain}/${encodeURI(String(ruta).replace(/^\/+/, ''))}`;
+}
+
+const TIPOS_SCHEMA = {
+  antojos: 'Restaurant',
+  gourmet: 'Restaurant',
+  salud: 'MedicalBusiness',
+  mascotas: 'PetStore',
+  imagen: 'BeautySalon',
+  bienestar: 'HealthAndBeautyBusiness',
+  educacion: 'EducationalOrganization',
+  movilidad: 'AutoRepair',
+  hogar: 'HomeAndConstructionBusiness',
+  shopping: 'Store',
+  consumo: 'Store'
+};
+
+function bodyNegocio(neg, cat, todos) {
+  const nombreCat = cat.n.charAt(0) + cat.n.slice(1).toLowerCase();
+  const wa = neg.wa || (neg.was && neg.was[0] && neg.was[0].numero) || '';
+  const relacionados = todos
+    .filter(n => n.cat === neg.cat && n.id !== neg.id)
+    .slice(0, 6)
+    .map(n => `<a href="/${n.id}/">${escapeHtml(n.nombre)}</a>`)
+    .join(' · ');
+  const prods = [];
+  (neg.menu || []).forEach(s => (s.items || []).forEach(i => prods.push(i.n + (i.d ? ' — ' + textoPlano(i.d, 200) : ''))));
+  (neg.catalogo || []).forEach(p => {
+    if (p.items) p.items.forEach(i => prods.push(i.n + (i.d ? ' — ' + textoPlano(i.d, 200) : '')));
+    else prods.push(p.n + (p.d ? ' — ' + textoPlano(p.d, 200) : ''));
+  });
+  return `<section id="seo-static" style="max-width:760px;margin:0 auto;padding:20px;font-family:Poppins,sans-serif">
+<h1>${escapeHtml(neg.nombre)} en ${CONFIG.ciudad}, ${CONFIG.region}</h1>
+<p><strong>${escapeHtml(textoPlano(neg.slogan, 300))}</strong></p>
+<p>${escapeHtml(textoPlano(neg.desc, 5000))}</p>
+${neg.dir ? `<p>Dirección: ${escapeHtml(textoPlano(neg.dir, 300))}, ${CONFIG.ciudad}</p>` : ''}
+${neg.tel ? `<p>Teléfono: ${escapeHtml(neg.tel)}</p>` : ''}
+${wa ? `<p>WhatsApp: ${escapeHtml(String(wa).trim())}</p>` : ''}
+${prods.length ? `<h2>Productos y servicios de ${escapeHtml(neg.nombre)}</h2><ul>${prods.map(p => `<li>${escapeHtml(p)}</li>`).join('')}</ul>` : ''}
+<p>Categoría: <a href="/categoria/${cat.id}/">${escapeHtml(nombreCat)} en ${CONFIG.ciudad}</a></p>
+${relacionados ? `<p>Más en ${escapeHtml(nombreCat)}: ${relacionados}</p>` : ''}
+<p><a href="/">Newplace Store ${CONFIG.ciudad}</a></p>
+</section>`;
+}
+
+function bodyCategoria(cat, negs) {
+  const nombreCat = cat.n.charAt(0) + cat.n.slice(1).toLowerCase();
+  return `<section id="seo-static" style="max-width:760px;margin:0 auto;padding:20px;font-family:Poppins,sans-serif">
+<h1>${escapeHtml(nombreCat)} en ${CONFIG.ciudad}, ${CONFIG.region}</h1>
+<ul>${negs.map(n => `<li><a href="/${n.id}/">${escapeHtml(n.nombre)}</a> — ${escapeHtml(textoPlano(n.slogan, 160))}</li>`).join('')}</ul>
+<p><a href="/">Newplace Store ${CONFIG.ciudad}</a></p>
+</section>`;
+}
+
 /* ─── 3. GENERAR JSON-LD ─── */
 function jsonLdNegocio(neg, cat, url) {
   const domain = CONFIG.domain;
   let jsonLd = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": TIPOS_SCHEMA[cat && cat.id] || 'LocalBusiness',
     "name": neg.nombre,
     "url": url,
-    "description": textoPlano(neg.slogan || neg.desc, 300),
+    "description": textoPlano((neg.slogan || '') + ' ' + (neg.desc || ''), 300),
+    "areaServed": { "@type": "City", "name": CONFIG.ciudad },
   };
 
   if (neg.cardImage) jsonLd.image = `${domain}/${neg.cardImage}`;
@@ -121,7 +177,10 @@ function jsonLdNegocio(neg, cat, url) {
     };
   }
 
-  if (neg.tel) jsonLd.telephone = neg.tel;
+  if (neg.tel) {
+    const t = String(neg.tel).replace(/\D/g, '');
+    jsonLd.telephone = '+57' + (t.length === 12 && t.startsWith('57') ? t.slice(2) : t);
+  }
 
   const numeroWa = neg.wa || (neg.was && neg.was[0] && neg.was[0].numero);
   if (numeroWa) {
@@ -142,13 +201,13 @@ function jsonLdNegocio(neg, cat, url) {
 function headNegocio(neg, cat, plantillaHead) {
   const domain = CONFIG.domain;
   const url = `${domain}/${neg.id}/`;
-  const titulo = `${neg.nombre} — ${CONFIG.siteName}`;
-  const descripcion = textoPlano(neg.slogan || neg.desc, 160);
+  const titulo = `${neg.nombre} en ${CONFIG.ciudad}, ${CONFIG.region} — ${CONFIG.siteName}`;
+  const descripcion = textoPlano(`${neg.nombre} en ${CONFIG.ciudad}. ${neg.slogan || ''} ${neg.desc || ''}`, 200);
 
   let imagen = `${domain}/assets/img/og-image.jpg`;
-  if (neg.cardImage) imagen = `${domain}/${neg.cardImage}`;
-  else if (neg.portada) imagen = `${domain}/${neg.portada}`;
-  else if (neg.galeria && neg.galeria.length > 0) imagen = `${domain}/${neg.galeria[0]}`;
+  if (neg.cardImage) imagen = urlImg(neg.cardImage);
+  else if (neg.portada) imagen = urlImg(neg.portada);
+  else if (neg.galeria && neg.galeria.length > 0) imagen = urlImg(neg.galeria[0]);
 
   const jsonLd = jsonLdNegocio(neg, cat, url);
 
@@ -191,7 +250,7 @@ function headCategoria(cat, negocios) {
   const nombreCat = cat.n.charAt(0) + cat.n.slice(1).toLowerCase();
   const titulo = `${nombreCat} en ${CONFIG.ciudad} — ${CONFIG.siteName}`;
   const descripcion = `Encuentra los mejores negocios de ${nombreCat.toLowerCase()} en ${CONFIG.ciudad}, ${CONFIG.region}. Contacto directo por WhatsApp con negocios locales verificados.`;
-  const imagen = cat.imgHdr || cat.img ? `${domain}/${cat.imgHdr || cat.img}` : `${domain}/assets/img/og-image.jpg`;
+  const imagen = (cat.imgHdr || cat.img) ? urlImg(cat.imgHdr || cat.img) : `${domain}/assets/img/og-image.jpg`;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -234,7 +293,7 @@ function headCategoria(cat, negocios) {
 }
 
 /* ─── 6. REEMPLAZAR EL BLOQUE SEO DENTRO DE index.html ─── */
-function construirPagina(plantillaHTML, nuevoBloqueHead) {
+function construirPagina(plantillaHTML, nuevoBloqueHead, bloqueBody) {
   const inicio = plantillaHTML.indexOf('<!-- SEO BASICO -->');
   if (inicio === -1) {
     throw new Error('No se encontró el marcador <!-- SEO BASICO --> en index.html. ¿Se modificó la estructura del head?');
@@ -250,7 +309,9 @@ function construirPagina(plantillaHTML, nuevoBloqueHead) {
     throw new Error('No se encontró el cierre </script> del bloque JSON-LD en index.html.');
   }
   const fin = cierrePos + cierreScript.length;
-  return plantillaHTML.slice(0, inicio) + nuevoBloqueHead + '\n' + plantillaHTML.slice(fin);
+  let html = plantillaHTML.slice(0, inicio) + nuevoBloqueHead + '\n' + plantillaHTML.slice(fin);
+  if (bloqueBody) html = html.replace('<body>', () => '<body>\n' + bloqueBody);
+  return html;
 }
 
 function escribirArchivo(rutaRelativa, contenido) {
@@ -277,8 +338,7 @@ function generarSitemap(CATS, NEGOCIOS) {
     const negs = NEGOCIOS.filter(n => n.cat === cat.id);
     if (!negs.length) return;
     const imgTag = cat.imgHdr
-      ? `\n    <image:image>\n      <image:loc>${domain}/${cat.imgHdr}</image:loc>\n      <image:title>${escapeHtml(cat.n)} en ${CONFIG.ciudad}</image:title>\n    </image:image>`
-      : '';
+      ? `\n    <image:image>\n      <image:loc>${urlImg(cat.imgHdr)}</image:loc>\n      <image:title>${escapeHtml(cat.n)} en ${CONFIG.ciudad}</image:title>\n    </image:image>`      : '';
     urls += `  <url>
     <loc>${domain}/categoria/${cat.id}/</loc>
     <lastmod>${hoy}</lastmod>
@@ -293,8 +353,7 @@ function generarSitemap(CATS, NEGOCIOS) {
     if (!CATS.find(c => c.id === neg.cat)) return;
     let imagen = neg.cardImage || neg.portada || (neg.galeria && neg.galeria[0]);
     const imgTag = imagen
-      ? `\n    <image:image>\n      <image:loc>${domain}/${imagen}</image:loc>\n    </image:image>`
-      : '';
+      ? `\n    <image:image>\n      <image:loc>${urlImg(imagen)}</image:loc>\n    </image:image>`      : '';
     urls += `  <url>
     <loc>${domain}/${neg.id}/</loc>
     <lastmod>${hoy}</lastmod>
@@ -327,7 +386,7 @@ function main() {
       return;
     }
     const bloqueHead = headNegocio(neg, cat, plantillaHTML);
-    const pagina = construirPagina(plantillaHTML, bloqueHead);
+    const pagina = construirPagina(plantillaHTML, bloqueHead, bodyNegocio(neg, cat, NEGOCIOS));
     escribirArchivo(`${neg.id}/index.html`, pagina);
     contadorNeg++;
     console.log(`  ✅ /${neg.id}/index.html`);
@@ -338,7 +397,7 @@ function main() {
     const negs = NEGOCIOS.filter(n => n.cat === cat.id);
     if (!negs.length) return;
     const bloqueHead = headCategoria(cat, negs);
-    const pagina = construirPagina(plantillaHTML, bloqueHead);
+    const pagina = construirPagina(plantillaHTML, bloqueHead, bodyCategoria(cat, negs));
     escribirArchivo(`categoria/${cat.id}/index.html`, pagina);
     contadorCat++;
     console.log(`  ✅ /categoria/${cat.id}/index.html`);
