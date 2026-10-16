@@ -912,7 +912,7 @@ function openNeg(neg) {
   const profCover = document.getElementById('profCover');
 if (neg.portada) {
   const portadaHeight = neg.portadaHeight || '120px';
-  profCover.style.backgroundImage = `url('${neg.portada}')`;
+  profCover.style.backgroundImage = `url('${neg.portada.startsWith('http') ? neg.portada : '/' + neg.portada.replace(/^\/+/, '')}')`;
   profCover.style.backgroundSize = 'contain';
   profCover.style.backgroundRepeat = 'no-repeat';
   profCover.style.backgroundPosition = 'center';
