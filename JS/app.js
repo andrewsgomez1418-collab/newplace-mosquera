@@ -919,7 +919,7 @@ if (neg.portada) {
   profCover.style.backgroundColor = '#ffffff'; // ← CAMBIO: transparent en lugar del color
   profCover.style.height = portadaHeight;
 }
- 
+
   const logoEl = document.getElementById('profLogo');
   const logoSrc = neg.logoPerfil || neg.logo;
   const perfilFillStyle = neg.logoPerfil ? 'style="width:100%;height:100%;object-fit:cover;padding:0;"' : '';
